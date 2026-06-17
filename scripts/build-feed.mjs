@@ -78,7 +78,9 @@ const PROG_FEEDS = [
   { outlet: '경향신문', url: 'https://www.khan.co.kr/rss/rssdata/society_news.xml' },
   { outlet: '경향신문', url: 'https://www.khan.co.kr/rss/rssdata/kh_world.xml' },
   { outlet: '오마이뉴스', url: 'http://rss.ohmynews.com/rss/ohmynews.xml' },
+  { outlet: '오마이뉴스', url: 'http://rss.ohmynews.com/rss/politics.xml' }, // 정치 보강
   { outlet: '프레시안', url: 'https://www.pressian.com/api/v3/site/rss/news' },
+  { outlet: '프레시안', url: 'https://www.pressian.com/api/v3/site/rss/section/65' }, // 정치 보강
   { outlet: '미디어오늘', url: 'http://www.mediatoday.co.kr/rss/allArticle.xml' },
 ]
 
@@ -283,7 +285,28 @@ function recomputeEvent(e) {
 }
 
 // 너무 흔해서 단독으로 매칭하면 엉뚱한 사건에 붙는 단어들 (이재명·정부 두 개만 겹치는 식)
-const MATCH_STOP = new Set(['이재명', '대통령', '정부', '국민', '한국', '우리', '오늘', '당원'])
+const MATCH_STOP = new Set([
+  '이재명', '대통령', '정부', '국민', '한국', '우리', '오늘', '당원',
+  '의혹', '간부', '위원장', '조사', '논란', '만에', '이후', '당일', '직후',
+])
+
+// 한국어 조사 제거(간단 어간) — "위원장은/위원장에"→"위원장", "선관위가"→"선관위"로 맞춤
+const PARTICLES2 = ['으로써', '에게서', '으로', '에서', '에게', '한테', '까지', '부터', '조차', '마저', '이라', '라고', '이나', '에는', '에도', '으론', '과의', '와의', '로의', '라는']
+const PARTICLES1 = ['은', '는', '이', '가', '을', '를', '에', '의', '로', '와', '과', '도', '만', '서', '나', '며']
+function stem(t) {
+  if (t.length <= 2) return t
+  for (const p of PARTICLES2) if (t.length - p.length >= 2 && t.endsWith(p)) return t.slice(0, -p.length)
+  if (PARTICLES1.includes(t.slice(-1))) return t.slice(0, -1)
+  return t
+}
+const stemSet = (s) => new Set([...s].map(stem))
+
+// 매칭용 핵심 단어 = 제목의 '…'(또는 ...) 앞 주절만 사용 (뒤 곁가지 문구의 우연 매칭 방지) + 흔한 단어 제외
+function coreTokens(title) {
+  const core = String(title).split(/…|\.\.\./)[0]
+  const base = core.replace(/[^가-힣a-zA-Z0-9]+/g, '').length >= 6 ? core : title
+  return new Set([...stemSet(tokenize(base))].filter((x) => !MATCH_STOP.has(x)))
+}
 
 // 진보 RSS 기사를 제목이 겹치는 사건에 붙인다 (같은 사건의 진보 시각 보강)
 function enrichWithProg(events, progArticles) {
@@ -293,25 +316,27 @@ function enrichWithProg(events, progArticles) {
     e.articles = e.articles.filter((a) => a.lean !== 'prog')
     e.outletCount = Math.max(0, (e.outletCount || 0) - removedOutlets.size)
   }
-  // 사건별 단어 사전 = 대표제목 + 그 사건 '모든 기사' 제목의 단어 합집합 (흔한 단어 제외)
-  const evToks = events.map((e) => {
-    const toks = new Set()
-    for (const t of tokenize(e.title)) if (!MATCH_STOP.has(t)) toks.add(t)
-    for (const ar of e.articles) for (const t of tokenize(ar.title)) if (!MATCH_STOP.has(t)) toks.add(t)
-    return { e, toks }
-  })
+  // 사건은 대표 제목의 '주절'(…앞)만 사용 — 곁가지 문구로 엉뚱한 기사가 붙는 걸 막음
+  const evToks = events.map((e) => ({ e, toks: coreTokens(e.title) }))
   let added = 0
   for (const a of progArticles) {
-    const at = [...tokenize(a.title)].filter((t) => !MATCH_STOP.has(t))
+    // 진보 기사는 제목 전체를 사용 (재현율 확보)
+    const at = [...stemSet(tokenize(a.title))].filter((t) => !MATCH_STOP.has(t))
     if (at.length < 2) continue
     let best = null
-    let bestShared = 1 // 의미있는 단어 2개 이상 겹쳐야 같은 사건으로 봄
+    let bestShared = 1 // 대표 제목과 의미있는 단어 2개 이상 겹쳐야 같은 사건으로 봄
     for (const { e, toks } of evToks) {
       let s = 0
-      for (const x of at) if (toks.has(x)) s++
+      // 어미·부분 단어도 같은 단어로 인정 (구속영장↔영장, 재선거↔재선거론 등)
+      for (const x of at) {
+        for (const y of toks) {
+          if (x === y || (x.length >= 3 && y.includes(x)) || (y.length >= 3 && x.includes(y))) { s++; break }
+        }
+      }
       if (s > bestShared) { bestShared = s; best = e }
     }
-    if (!best || best.articles.length >= 8) continue
+    // 진보는 비교를 위해 자리 제한을 넉넉히(12) — 큰 사건이 이미 8개로 꽉 차도 진보가 들어가게
+    if (!best || best.articles.length >= 12) continue
     if (best.articles.some((x) => x.outlet === a.outlet)) continue // 같은 매체 중복 방지
     best.articles.push({
       id: `${best.id}-p${best.articles.length}`,
