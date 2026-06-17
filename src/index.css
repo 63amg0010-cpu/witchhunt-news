@@ -214,6 +214,97 @@ ul { list-style: none; margin: 0; padding: 0; }
 .dot-cons { background: var(--lean-cons); }
 
 /* ===========================================================
+   오늘의 편향 브리핑 (홈 헤더) — 이 앱의 정체성
+   =========================================================== */
+.briefing {
+  margin-top: 14px;
+  padding: 16px;
+  border-radius: var(--radius-card);
+  background: var(--card);
+  box-shadow: var(--shadow-card);
+}
+.briefing__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.briefing__kicker {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--ink);
+  background: #f0f1f4;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+.briefing__count { font-size: 12px; font-weight: 700; color: var(--ink-faint); }
+.briefing__headline {
+  margin: 12px 2px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--ink-soft);
+  word-break: keep-all;
+}
+.briefing__big { font-size: 22px; font-weight: 800; color: var(--ink); }
+.briefing__bar {
+  display: flex;
+  height: 12px;
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  background: var(--line);
+}
+.briefing__seg--prog { background: var(--lean-prog); }
+.briefing__seg--center { background: var(--lean-center); }
+.briefing__seg--cons { background: var(--lean-cons); }
+.briefing__legend {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.briefing__hint { margin-left: auto; font-size: 11px; font-weight: 600; color: var(--ink-faint); }
+.briefing__cta {
+  width: 100%;
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.briefing__cta-arrow { font-weight: 700; }
+
+/* ===========================================================
+   사건 카드 편향 뱃지 (쏠림 / 블라인드스팟)
+   =========================================================== */
+.ev-badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 800;
+}
+.ev-badge--tilt::before { content: "⚠ "; }
+.ev-badge--blindspot::before { content: "👁 "; }
+.ev-badge--tilt.ev-badge--prog { color: var(--lean-prog); background: rgba(59, 111, 224, 0.12); }
+.ev-badge--tilt.ev-badge--cons { color: var(--lean-cons); background: rgba(225, 73, 63, 0.12); }
+.ev-badge--tilt.ev-badge--center { color: var(--lean-center); background: rgba(138, 144, 156, 0.16); }
+.ev-badge--blindspot { background: transparent; border: 1.5px solid currentColor; }
+.ev-badge--blindspot.ev-badge--prog { color: var(--lean-prog); }
+.ev-badge--blindspot.ev-badge--cons { color: var(--lean-cons); }
+.ev-badge--blindspot.ev-badge--center { color: var(--lean-center); }
+
+.biasbar__unit { font-size: 11px; font-weight: 600; color: var(--ink-faint); }
+
+/* ===========================================================
    성향 막대 (카드용 작은 막대)
    =========================================================== */
 .biasbar {

@@ -1,6 +1,7 @@
 import type { NewsEvent } from '../types'
 import Header from '../components/Header'
 import EventCard from '../components/EventCard'
+import BiasBriefing from '../components/BiasBriefing'
 
 const CATEGORIES = ['주요 사건', '정치', '경제', '사회', '국제'] as const
 
@@ -18,7 +19,6 @@ interface Props {
 // 카테고리는 App(브라우저 기록)이 관리 → 기사 보고 뒤로 와도 보던 카테고리 유지
 export default function HomeScreen({ events, usingSample, category, onCategoryChange, onOpenEvent, onOpenBiasFeed, onOpenOutletBias }: Props) {
   const list = category === '주요 사건' ? events : events.filter((e) => e.category === category)
-  const warnCount = events.filter((e) => e.biasWarning).length
 
   const [top, ...rest] = list
 
@@ -33,6 +33,9 @@ export default function HomeScreen({ events, usingSample, category, onCategoryCh
         </div>
       )}
 
+      {/* 오늘의 편향 브리핑 — 이 앱의 핵심(진영별 보도 비교) */}
+      <BiasBriefing events={events} onOpenBiasFeed={onOpenBiasFeed} />
+
       {/* 카테고리 탭 (둥근 알약형) */}
       <div className="tabs">
         {CATEGORIES.map((c) => (
@@ -45,13 +48,6 @@ export default function HomeScreen({ events, usingSample, category, onCategoryCh
           </button>
         ))}
       </div>
-
-      {/* 편향 경고 배너 */}
-      <button className="warn-banner" onClick={onOpenBiasFeed}>
-        <span className="warn-banner__icon">⚠️</span>
-        <span>편향 경고 {warnCount}건 — 한쪽 진영만 보도 중인 사건이 있어요</span>
-        <span className="warn-banner__arrow">›</span>
-      </button>
 
       {/* 언론사 성향 분류표 바로가기 */}
       <button className="outlet-link" onClick={onOpenOutletBias}>

@@ -1,6 +1,7 @@
 import type { NewsEvent } from '../types'
 import BiasBar from './BiasBar'
 import Thumbnail from './Thumbnail'
+import { biasBadge, leanCounts } from '../lib/bias'
 
 interface Props {
   event: NewsEvent
@@ -8,8 +9,17 @@ interface Props {
   onClick: () => void
 }
 
+// 한쪽 쏠림/블라인드스팟 뱃지 (편향 비교 강조)
+function BiasTag({ event }: { event: NewsEvent }) {
+  const b = biasBadge(event)
+  if (!b) return null
+  return <span className={`ev-badge ev-badge--${b.kind} ev-badge--${b.lean}`}>{b.text}</span>
+}
+
 // 사건 카드 — 대표 사건은 큰 카드(사진+굵은 제목), 나머지는 작은 카드(오른쪽 작은 사진)
 export default function EventCard({ event, variant, onClick }: Props) {
+  const counts = leanCounts(event)
+
   if (variant === 'large') {
     return (
       <button className="card-large" onClick={onClick}>
@@ -19,7 +29,8 @@ export default function EventCard({ event, variant, onClick }: Props) {
             {event.category} · {event.outletCount}개 언론사 보도 · {event.timeAgo}
           </div>
           <h2 className="card-large__title">{event.title}</h2>
-          <BiasBar bias={event.bias} />
+          <BiasTag event={event} />
+          <BiasBar bias={event.bias} counts={counts} />
         </div>
       </button>
     )
@@ -33,10 +44,11 @@ export default function EventCard({ event, variant, onClick }: Props) {
             {event.category} · {event.outletCount}개 언론사 보도 · {event.timeAgo}
           </div>
           <h3 className="card-small__title">{event.title}</h3>
+          <BiasTag event={event} />
         </div>
         <Thumbnail src={event.imageUrl} ogUrl={event.imageSourceUrl} className="thumb--small" />
       </div>
-      <BiasBar bias={event.bias} />
+      <BiasBar bias={event.bias} counts={counts} />
     </button>
   )
 }
