@@ -44,6 +44,10 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy to Vercel
-        run: npx vercel deploy --prebuilt --prod --yes --token "$VERCEL_TOKEN"
+        run: >
+          npx vercel deploy --prebuilt --prod --yes
+          --meta githubCommitAuthorName=63amg0010-cpu
+          --meta githubCommitAuthorEmail=63amg0010@gmail.com
+          --token "$VERCEL_TOKEN"
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
