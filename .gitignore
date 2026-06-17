@@ -1,0 +1,19 @@
+# 비밀키 — 절대 올리면 안 됨 (네이버 API 키 등)
+.env
+.env.*
+
+# 의존성 / 빌드 결과물 (Vercel이 알아서 설치·빌드함)
+node_modules
+dist
+
+# 파이프라인 중간 파일 (계속 바뀜, 웹엔 불필요)
+_articles.json
+_summaries.json
+
+# 큰 실행파일 / 로컬 도구
+cloudflared.exe
+.vercel
+
+# OS / 에디터 부산물
+.DS_Store
+Thumbs.db
