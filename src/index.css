@@ -305,6 +305,41 @@ ul { list-style: none; margin: 0; padding: 0; }
 .biasbar__unit { font-size: 11px; font-weight: 600; color: var(--ink-faint); }
 
 /* ===========================================================
+   같은 사건, 진영별 시각 (상세화면 핵심 — 진보 vs 보수 대비)
+   =========================================================== */
+.compare__title { font-size: 18px; font-weight: 800; margin: 26px 2px 4px; }
+.compare__sub { font-size: 13px; color: var(--ink-soft); margin: 0 2px 12px; word-break: keep-all; line-height: 1.5; }
+.compare__pair { display: flex; flex-direction: column; gap: 10px; }
+.vs-pane {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 14px 16px;
+  border-radius: var(--radius-card);
+  background: var(--card);
+  box-shadow: var(--shadow-card);
+  border-left: 5px solid var(--line);
+}
+.vs-pane--prog { border-left-color: var(--lean-prog); background: rgba(59, 111, 224, 0.04); }
+.vs-pane--cons { border-left-color: var(--lean-cons); background: rgba(225, 73, 63, 0.04); }
+.vs-pane__tag { font-size: 12px; font-weight: 800; margin-bottom: 8px; }
+.vs-pane__tag--prog { color: var(--lean-prog); }
+.vs-pane__tag--cons { color: var(--lean-cons); }
+.vs-pane__quote {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--ink);
+  word-break: keep-all;
+}
+.vs-pane__more { display: inline-block; margin-top: 10px; font-size: 12px; font-weight: 700; }
+.vs-pane__more--prog { color: var(--lean-prog); }
+.vs-pane__more--cons { color: var(--lean-cons); }
+.vs-pane--empty { background: var(--bg); border-left-color: var(--line); box-shadow: none; }
+.vs-pane__empty { margin: 0; font-size: 14px; color: var(--ink-faint); }
+
+/* ===========================================================
    성향 막대 (카드용 작은 막대)
    =========================================================== */
 .biasbar {
