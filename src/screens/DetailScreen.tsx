@@ -3,7 +3,7 @@ import LeanBadge from '../components/LeanBadge'
 import Thumbnail from '../components/Thumbnail'
 import SummaryBox from '../components/SummaryBox'
 import { splitSentences } from '../lib/text'
-import { leanCounts } from '../lib/bias'
+import { leanCounts, LEAN_KO } from '../lib/bias'
 
 interface Props {
   event: NewsEvent
@@ -11,29 +11,13 @@ interface Props {
   onOpenArticle: (articleId: string) => void
 }
 
-// 진영별 시각 대비 한 칸 (진보/보수) — 이 앱의 핵심
-function ComparePane({
-  lean,
-  article,
-  onOpen,
-}: {
-  lean: Lean
-  article?: Article
-  onOpen: (id: string) => void
-}) {
-  const label = lean === 'prog' ? '진보 매체' : '보수 매체'
-  if (!article) {
-    return (
-      <div className={`vs-pane vs-pane--${lean} vs-pane--empty`}>
-        <div className={`vs-pane__tag vs-pane__tag--${lean}`}>{label}</div>
-        <p className="vs-pane__empty">이 사건을 다룬 {label} 기사가 없어요</p>
-      </div>
-    )
-  }
+// 시각 비교 한 칸 — 실제 보도한 매체(진보/중도/보수)의 헤드라인
+function ComparePane({ article, onOpen }: { article: Article; onOpen: (id: string) => void }) {
+  const lean = article.lean
   return (
     <button className={`vs-pane vs-pane--${lean}`} onClick={() => onOpen(article.id)}>
       <div className={`vs-pane__tag vs-pane__tag--${lean}`}>
-        {label} · {article.outlet}
+        {LEAN_KO[lean]} 매체 · {article.outlet}
       </div>
       <p className="vs-pane__quote">{article.title}</p>
       <span className={`vs-pane__more vs-pane__more--${lean}`}>이 기사 보기 ›</span>
@@ -41,11 +25,23 @@ function ComparePane({
   )
 }
 
+// 그 사건을 실제로 보도한 매체 중 '가장 양극단' 두 시각을 고른다.
+// (진보가 없으면 중도 vs 보수처럼, 있는 시각 중 가장 벌어진 둘)
+function pickContrast(event: NewsEvent): { left?: Article; right?: Article } {
+  const order: Lean[] = ['prog', 'center', 'cons']
+  const repByLean: Partial<Record<Lean, Article>> = {}
+  for (const a of event.articles) if (!repByLean[a.lean]) repByLean[a.lean] = a
+  const present = order.filter((l) => repByLean[l])
+  if (present.length === 0) return {}
+  if (present.length === 1) return { left: repByLean[present[0]] }
+  return { left: repByLean[present[0]], right: repByLean[present[present.length - 1]] }
+}
+
 // 사건 상세 화면
 export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
   const counts = leanCounts(event)
-  const prog = event.articles.find((a) => a.lean === 'prog')
-  const cons = event.articles.find((a) => a.lean === 'cons')
+  const { left, right } = pickContrast(event)
+  const noProg = counts.prog === 0 && event.articles.length > 0
 
   return (
     <div className="screen">
@@ -92,13 +88,15 @@ export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
         </div>
       </div>
 
-      {/* ★ 같은 사건, 진영별 시각 — 이 앱의 핵심 */}
-      <h2 className="compare__title">같은 사건, 진영별 시각</h2>
-      <p className="compare__sub">진보·보수 매체가 같은 사건을 어떻게 다르게 전하는지 비교해 보세요.</p>
+      {/* ★ 같은 사건, 시각 비교 — 이 앱의 핵심 */}
+      <h2 className="compare__title">같은 사건, 시각 비교</h2>
+      <p className="compare__sub">이 사건을 보도한 매체 중 시각이 가장 다른 둘을 골라 비교했어요.</p>
       <div className="compare__pair">
-        <ComparePane lean="prog" article={prog} onOpen={onOpenArticle} />
-        <ComparePane lean="cons" article={cons} onOpen={onOpenArticle} />
+        {left && <ComparePane article={left} onOpen={onOpenArticle} />}
+        {right && <ComparePane article={right} onOpen={onOpenArticle} />}
+        {!right && <p className="compare__note">아직 비교할 만큼 다양한 매체가 이 사건을 다루지 않았어요.</p>}
       </div>
+      {noProg && <p className="compare__blindspot">👁 이 사건은 진보 매체 보도가 없어요.</p>}
 
       {/* 사건 간단 요약 */}
       <SummaryBox url={event.imageSourceUrl} fallback={event.summary} />
