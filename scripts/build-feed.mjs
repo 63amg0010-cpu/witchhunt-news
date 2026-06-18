@@ -344,6 +344,11 @@ function enrichWithProg(events, progArticles) {
       timeAgo: timeAgo(a.pubDate), summary: a.summary || undefined,
     })
     best.outletCount = (best.outletCount || 0) + 1
+    // 붙인 진보 기사가 더 최근이면 사건 시각도 갱신
+    const pt = Date.parse(a.pubDate)
+    if (!Number.isNaN(pt) && (!best.publishedAt || pt > Date.parse(best.publishedAt))) {
+      best.publishedAt = new Date(pt).toISOString()
+    }
     added++
   }
   for (const { e } of evToks) recomputeEvent(e)
@@ -368,6 +373,9 @@ function buildEvents(topic, cands) {
       if (picked.length >= 8) break
     }
     if (picked.length < 2) continue
+    // 사건 시각 = 묶인 기사 중 '가장 최근' 보도 시각 (대표기사가 아니라 최신 기준)
+    const newestMs = Math.max(...picked.map((c) => Date.parse(c.pubDate)).filter((t) => !Number.isNaN(t)), 0)
+    const newestPub = newestMs > 0 ? new Date(newestMs).toISOString() : NOW
     const counts = { prog: 0, center: 0, cons: 0 }
     for (const c of picked) counts[c.lean]++
     const bias = toPercent(counts)
@@ -386,8 +394,8 @@ function buildEvents(topic, cands) {
       imageSourceUrl: rep.url,
       summary: rep.summary || picked.find((c) => c.summary)?.summary || '',
       outletCount: coverage,
-      timeAgo: timeAgo(rep.pubDate),
-      publishedAt: rep.pubDate && !Number.isNaN(Date.parse(rep.pubDate)) ? new Date(rep.pubDate).toISOString() : NOW,
+      timeAgo: timeAgo(newestPub),
+      publishedAt: newestPub,
       bias,
       biasWarning,
       dominantLean: biasWarning ? dominantLean : undefined,
