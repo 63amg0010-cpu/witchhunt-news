@@ -113,28 +113,17 @@ export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
         </div>
       )}
 
-      {/* 🗣 대중의 시각 — 진영별 커뮤니티 반응 (배경 설명 아래, 있을 때만) */}
-      {(event.publicTake?.prog || event.publicTake?.cons) && (
-        <>
-          <h2 className="compare__title">🗣 대중의 시각</h2>
-          <p className="compare__sub">
-            커뮤니티·SNS 반응을 AI가 진영별로 정리했어요. 일부 의견이라 전체 여론을 대표하지 않습니다.
-          </p>
-          <div className="compare__pair">
-            {event.publicTake.prog && (
-              <div className="vs-pane vs-pane--prog">
-                <div className="vs-pane__tag vs-pane__tag--prog">진보 성향 커뮤니티</div>
-                <p className="vs-pane__take">{event.publicTake.prog}</p>
-              </div>
-            )}
-            {event.publicTake.cons && (
-              <div className="vs-pane vs-pane--cons">
-                <div className="vs-pane__tag vs-pane__tag--cons">보수 성향 커뮤니티</div>
-                <p className="vs-pane__take">{event.publicTake.cons}</p>
-              </div>
-            )}
+      {/* 🗣 네티즌 반응 — 네이버 뉴스 댓글 요약 (배경 설명 아래, 있을 때만) */}
+      {typeof event.publicTake === 'string' && event.publicTake && (
+        <div className="article-summary netizen">
+          <div className="article-summary__label">🗣 네티즌 반응</div>
+          <div className="article-summary__body">
+            {splitSentences(event.publicTake).map((s, i) => (
+              <p key={i} className="article-summary__line">{s}</p>
+            ))}
           </div>
-        </>
+          <div className="netizen__src">네이버 뉴스 댓글에서 많이 공감받은 반응 · 보수 성향이 강한 편 · 참고용</div>
+        </div>
       )}
 
       {/* 전체 기사 목록 */}
