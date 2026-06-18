@@ -34,6 +34,11 @@ for (const ev of feed.events) {
   n++
 }
 
+// 기사 번호(id)를 사건 안에서 고유하게 — 합치기로 같은 번호가 겹쳐 React key 충돌나는 것 방지(안전망)
+for (const ev of feed.events) {
+  if (Array.isArray(ev.articles)) ev.articles.forEach((a, i) => { a.id = `${ev.id}-a${i}` })
+}
+
 feed.events.sort((a, b) => {
   const ai = typeof a.importance === 'number' ? a.importance : 0
   const bi = typeof b.importance === 'number' ? b.importance : 0

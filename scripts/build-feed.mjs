@@ -485,6 +485,10 @@ async function main() {
     ev.id = `${ev.id}-${suffix}`
     usedIds.add(ev.id)
   }
+  // 기사 번호(id)도 사건 안에서 고유하게 다시 매김 — 합칠 때 같은 번호가 겹쳐 React key 충돌나는 것 방지
+  for (const ev of events) {
+    ev.articles.forEach((a, i) => { a.id = `${ev.id}-a${i}` })
+  }
   console.log(`새 ${all.length} + 기존 ${oldEvents.length} → 합쳐서 ${merged.length}개 → ${events.length}개 유지. 새 사건 사진/설명 가져오는 중...`)
   // 사진/설명은 아직 없는(새) 사건만 — 기존 사건은 그대로 둠
   for (const ev of events) {

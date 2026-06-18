@@ -9,6 +9,7 @@ dist
 # 파이프라인 중간 파일 (계속 바뀜, 웹엔 불필요)
 _articles.json
 _summaries.json
+_reactions.json
 
 # 큰 실행파일 / 로컬 도구
 cloudflared.exe
