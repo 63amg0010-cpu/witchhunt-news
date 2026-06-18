@@ -98,7 +98,22 @@ export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
       </div>
       {noProg && <p className="compare__blindspot">👁 이 사건은 진보 매체 보도가 없어요.</p>}
 
-      {/* 🗣 대중의 시각 — 진영별 커뮤니티 반응 (있을 때만) */}
+      {/* 사건 간단 요약 */}
+      <SummaryBox url={event.imageSourceUrl} fallback={event.summary} />
+
+      {/* 사건 배경 설명 (있을 때만) */}
+      {event.background && (
+        <div className="article-summary article-summary--bg">
+          <div className="article-summary__label">📌 배경 설명</div>
+          <div className="article-summary__body">
+            {splitSentences(event.background).map((s, i) => (
+              <p key={i} className="article-summary__line">{s}</p>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* 🗣 대중의 시각 — 진영별 커뮤니티 반응 (배경 설명 아래, 있을 때만) */}
       {(event.publicTake?.prog || event.publicTake?.cons) && (
         <>
           <h2 className="compare__title">🗣 대중의 시각</h2>
@@ -120,21 +135,6 @@ export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
             )}
           </div>
         </>
-      )}
-
-      {/* 사건 간단 요약 */}
-      <SummaryBox url={event.imageSourceUrl} fallback={event.summary} />
-
-      {/* 사건 배경 설명 (있을 때만) */}
-      {event.background && (
-        <div className="article-summary article-summary--bg">
-          <div className="article-summary__label">📌 배경 설명</div>
-          <div className="article-summary__body">
-            {splitSentences(event.background).map((s, i) => (
-              <p key={i} className="article-summary__line">{s}</p>
-            ))}
-          </div>
-        </div>
       )}
 
       {/* 전체 기사 목록 */}
