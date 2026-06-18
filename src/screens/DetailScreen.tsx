@@ -37,10 +37,30 @@ function pickContrast(event: NewsEvent): { left?: Article; right?: Article } {
   return { left: repByLean[present[0]], right: repByLean[present[present.length - 1]] }
 }
 
+const T_STOP = new Set(['있다', '없다', '대한', '위해', '관련', '이번', '오늘', '지난', '종합', '속보', '단독', '기자', '뉴스', '대통령', '정부', '오전', '오후'])
+function titleToks(s: string): string[] {
+  return [...new Set(String(s).replace(/[^가-힣a-zA-Z0-9]+/g, ' ').split(' ').filter((w) => w.length >= 2 && !T_STOP.has(w) && !/^\d+$/.test(w)))]
+}
+// 두 제목이 '시각 차이'라 부를 만큼 다른가. 거의 같은 헤드라인(통신사·보수가 같은 사실 보도)이면 false → 비교 숨김.
+function titlesDiffer(a: string, b: string): boolean {
+  const ta = titleToks(a)
+  const tb = titleToks(b)
+  if (!ta.length || !tb.length) return true
+  let shared = 0
+  for (const x of ta) {
+    for (const y of tb) {
+      if (x === y || (x.length >= 3 && y.includes(x)) || (y.length >= 3 && x.includes(y))) { shared++; break }
+    }
+  }
+  return shared / Math.min(ta.length, tb.length) < 0.6
+}
+
 // 사건 상세 화면
 export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
   const counts = leanCounts(event)
   const { left, right } = pickContrast(event)
+  // 좌·우 제목이 충분히 다를 때만 '시각 비교'를 보여준다 (거의 같은 제목 두 개는 비교가 아님)
+  const showContrast = !!(left && right && titlesDiffer(left.title, right.title))
   const noProg = counts.prog === 0 && event.articles.length > 0
 
   return (
@@ -88,15 +108,18 @@ export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
         </div>
       </div>
 
-      {/* ★ 같은 사건, 시각 비교 — 이 앱의 핵심 */}
-      <h2 className="compare__title">같은 사건, 시각 비교</h2>
-      <p className="compare__sub">이 사건을 보도한 매체 중 시각이 가장 다른 둘을 골라 비교했어요.</p>
-      <div className="compare__pair">
-        {left && <ComparePane article={left} onOpen={onOpenArticle} />}
-        {right && <ComparePane article={right} onOpen={onOpenArticle} />}
-        {!right && <p className="compare__note">아직 비교할 만큼 다양한 매체가 이 사건을 다루지 않았어요.</p>}
-      </div>
-      {noProg && <p className="compare__blindspot">👁 이 사건은 진보 매체 보도가 없어요.</p>}
+      {/* ★ 같은 사건, 시각 비교 — 좌·우 제목이 실제로 다를 때만 표시 */}
+      {showContrast && (
+        <>
+          <h2 className="compare__title">같은 사건, 시각 비교</h2>
+          <p className="compare__sub">이 사건을 보도한 매체 중 시각이 가장 다른 둘을 골라 비교했어요.</p>
+          <div className="compare__pair">
+            <ComparePane article={left!} onOpen={onOpenArticle} />
+            <ComparePane article={right!} onOpen={onOpenArticle} />
+          </div>
+          {noProg && <p className="compare__blindspot">👁 이 사건은 진보 매체 보도가 없어요.</p>}
+        </>
+      )}
 
       {/* 사건 간단 요약 */}
       <SummaryBox url={event.imageSourceUrl} fallback={event.summary} />
