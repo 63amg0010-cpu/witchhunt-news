@@ -98,6 +98,30 @@ export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
       </div>
       {noProg && <p className="compare__blindspot">👁 이 사건은 진보 매체 보도가 없어요.</p>}
 
+      {/* 🗣 대중의 시각 — 진영별 커뮤니티 반응 (있을 때만) */}
+      {(event.publicTake?.prog || event.publicTake?.cons) && (
+        <>
+          <h2 className="compare__title">🗣 대중의 시각</h2>
+          <p className="compare__sub">
+            커뮤니티·SNS 반응을 AI가 진영별로 정리했어요. 일부 의견이라 전체 여론을 대표하지 않습니다.
+          </p>
+          <div className="compare__pair">
+            {event.publicTake.prog && (
+              <div className="vs-pane vs-pane--prog">
+                <div className="vs-pane__tag vs-pane__tag--prog">진보 성향 커뮤니티</div>
+                <p className="vs-pane__take">{event.publicTake.prog}</p>
+              </div>
+            )}
+            {event.publicTake.cons && (
+              <div className="vs-pane vs-pane--cons">
+                <div className="vs-pane__tag vs-pane__tag--cons">보수 성향 커뮤니티</div>
+                <p className="vs-pane__take">{event.publicTake.cons}</p>
+              </div>
+            )}
+          </div>
+        </>
+      )}
+
       {/* 사건 간단 요약 */}
       <SummaryBox url={event.imageSourceUrl} fallback={event.summary} />
 

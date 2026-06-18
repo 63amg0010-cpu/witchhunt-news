@@ -27,6 +27,13 @@ for (const ev of feed.events) {
     if (v.summary && v.summary.trim()) ev.summary = v.summary.trim()
     if (v.background && v.background.trim()) ev.background = v.background.trim()
     if (typeof v.importance === 'number') ev.importance = v.importance
+    // 대중의 시각 (진영별 커뮤니티 반응) — 있을 때만
+    if (v.publicTake && typeof v.publicTake === 'object') {
+      const pt = {}
+      if (v.publicTake.prog && v.publicTake.prog.trim()) pt.prog = v.publicTake.prog.trim()
+      if (v.publicTake.cons && v.publicTake.cons.trim()) pt.cons = v.publicTake.cons.trim()
+      if (pt.prog || pt.cons) ev.publicTake = pt
+    }
   }
   if (ev.summary && ev.articles && ev.articles[0]) ev.articles[0].summary = ev.summary
   n++

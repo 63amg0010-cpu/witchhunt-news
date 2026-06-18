@@ -78,6 +78,7 @@ function mergeInto(target, ev) {
   // 요약·배경은 가진 쪽 것을 살린다 (누적 시 옛 사건의 요약 보존)
   if (!target.summary && ev.summary) target.summary = ev.summary
   if (!target.background && ev.background) target.background = ev.background
+  if (!target.publicTake && ev.publicTake) target.publicTake = ev.publicTake
   // 처음 등장 시각은 더 이른 쪽으로 (오래된 사건 추적용)
   if (ev.firstSeen && (!target.firstSeen || ev.firstSeen < target.firstSeen)) {
     target.firstSeen = ev.firstSeen

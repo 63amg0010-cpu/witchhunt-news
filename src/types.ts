@@ -31,6 +31,7 @@ export interface NewsEvent {
   summary?: string // 사건 간단 요약 (대표 기사 요약) — 있을 때만
   background?: string // 사건 배경 설명 (맥락) — 있을 때만
   importance?: number // 코덱스가 매긴 중요도 1~10 (정렬용) — 있을 때만
+  publicTake?: { prog?: string; cons?: string } // 대중의 시각 (진영별 커뮤니티 반응 요약) — 있을 때만
   outletCount: number // 보도 언론사 수 (보도량 = 정렬 보조)
   timeAgo: string // "3시간 전" 같은 표시
   publishedAt?: string // 대표기사 보도 시각(ISO) — 최신순 정렬·시간 재계산용
