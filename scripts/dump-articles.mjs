@@ -26,9 +26,13 @@ async function getText(url) {
   }
 }
 
-// 배경 설명이 아직 없는 '새' 사건만 골라 본문을 뽑는다.
-// (이미 AI 요약·배경이 있는 기존 사건은 그대로 두고 다시 요약하지 않음 → 누적)
-const targets = feed.events.filter((ev) => !ev.background)
+// 코덱스에 넘길 사건 고르기:
+//  ① 배경이 아직 없는 '새' 사건 (요약 필요)
+//  ② 중요한 사건(중요도 7+)인데 '대중의 시각'이 아직 없는 것 (publicTake 채울 기회 부여)
+// → 반응 많은 큰 사건(특검 등)은 이미 요약이 있어도 publicTake를 받을 수 있게 됨.
+const targets = feed.events.filter(
+  (ev) => !ev.background || (!ev.publicTake && (ev.importance ?? 0) >= 7),
+)
 
 const out = []
 for (const ev of targets) {
