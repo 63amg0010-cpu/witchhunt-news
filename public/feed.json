@@ -97,7 +97,8 @@
    "_repUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8590992&ref=A",
    "importance": 9,
    "background": "이번 양해각서는 중동 전쟁 완화와 핵협상 재개를 동시에 염두에 둔 합의였다. 하지만 이스라엘과 헤즈볼라 충돌, 해상 통로 통제 문제가 다시 불거지면서 합의 유지 자체가 시험대에 올랐다.",
-   "publicTake": "댓글마다 의견이 다양하게 엇갈리는 분위기입니다."
+   "publicTake": "댓글마다 의견이 다양하게 엇갈리는 분위기입니다.",
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "e1-c0",
@@ -195,7 +196,8 @@
    ],
    "_repUrl": "https://biz.sbs.co.kr/article_hub/20000317835?division=NAVER",
    "importance": 9,
-   "background": "원화 약세는 대외 불확실성과 자금 이동, 원자재 가격 부담이 겹칠 때 심해지는 경향이 있습니다. 외환위기 이후 최고 수준이라는 점은 시장 경계심을 키우는 상징적 지표로 받아들여집니다."
+   "background": "원화 약세는 대외 불확실성과 자금 이동, 원자재 가격 부담이 겹칠 때 심해지는 경향이 있습니다. 외환위기 이후 최고 수준이라는 점은 시장 경계심을 키우는 상징적 지표로 받아들여집니다.",
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "e7-c0",
@@ -293,7 +295,8 @@
    "_repUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008619568&plink=ORI&cooper=NAVER",
    "importance": 8,
    "publicTake": "댓글마다 의견이 다양하게 엇갈리는 분위기입니다.",
-   "background": "광고시장 침체와 미디어 수익구조 악화는 국내 언론사 전반의 재무 부담을 키워 왔다. 최근 일부 대형 미디어 계열사들까지 자금조달 여건이 악화되며 구조조정 가능성이 거론돼 왔다."
+   "background": "광고시장 침체와 미디어 수익구조 악화는 국내 언론사 전반의 재무 부담을 키워 왔다. 최근 일부 대형 미디어 계열사들까지 자금조달 여건이 악화되며 구조조정 가능성이 거론돼 왔다.",
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "i2-c0",
@@ -409,7 +412,8 @@
    "_repUrl": "https://www.kmib.co.kr/article/view.asp?arcid=0029940386&code=61131511&cp=nv",
    "publicTake": "비판적인 반응이 우세한 분위기입니다.",
    "background": "헤즈볼라는 이란의 지원을 받아온 레바논 무장정파로, 이스라엘과의 충돌 때마다 이란 책임론이 함께 제기돼 왔다. 중동 전선이 이란 본토와 대리세력 문제로 연결되면서 미국과 이스라엘의 대이란 압박도 반복되고 있다.",
-   "importance": 8
+   "importance": 8,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "p5-c0-c",
@@ -516,7 +520,8 @@
    "_repUrl": "https://www.newsis.com/view/NISX20260619_0003676397",
    "importance": 8,
    "background": "이 사건은 12·3 비상계엄 준비 과정과 군사기밀 유출 의혹을 둘러싼 수사의 한 갈래다. 정보사 요원 신상 유출은 국가안보와 군 지휘질서 훼손 문제로 연결돼 파장이 컸다.",
-   "publicTake": "댓글마다 의견이 다양하게 엇갈리는 분위기입니다."
+   "publicTake": "댓글마다 의견이 다양하게 엇갈리는 분위기입니다.",
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "i2-c0-b",
@@ -623,7 +628,8 @@
    "_repUrl": "https://www.ytn.co.kr/_ln/0104_202606210555133070",
    "importance": 8,
    "background": "미국과 이란의 충돌은 중동 안보와 국제 유가, 글로벌 외교 질서에 직접 영향을 주는 사안이다. 트럼프 행정부는 강경 압박과 협상을 병행해 왔고, 합의가 나올 때마다 양보 수준을 둘러싼 논쟁이 반복돼 왔다.",
-   "publicTake": "비판적인 반응이 우세한 분위기입니다."
+   "publicTake": "비판적인 반응이 우세한 분위기입니다.",
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "i2-c0-b-c",
@@ -739,7 +745,8 @@
    "_repUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008619512&plink=ORI&cooper=NAVER",
    "publicTake": "댓글마다 의견이 다양하게 엇갈리는 분위기입니다.",
    "importance": 8,
-   "background": "미국과 이란은 중동 확전 차단을 위해 레바논 전선의 적대행위 중단을 포함한 종전 협상을 진행해 왔다. 그러나 이스라엘과 헤즈볼라의 충돌은 가자전쟁 이후 지역 안보를 흔드는 핵심 변수로 남아 있다."
+   "background": "미국과 이란은 중동 확전 차단을 위해 레바논 전선의 적대행위 중단을 포함한 종전 협상을 진행해 왔다. 그러나 이스라엘과 헤즈볼라의 충돌은 가자전쟁 이후 지역 안보를 흔드는 핵심 변수로 남아 있다.",
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "i2-c0-b-b",
@@ -846,7 +853,8 @@
    "_repUrl": "https://www.newsis.com/view/NISX20260620_0003676910",
    "publicTake": "비판적인 반응이 우세한 분위기입니다.",
    "background": "미국과 이란은 최근 종전 양해각서를 바탕으로 군사 충돌을 줄이면서 후속 협상에 들어간 상태다. 다만 레바논 전선과 호르무즈 해협을 둘러싼 긴장이 남아 있어 합의 이행 여부가 협상의 핵심 쟁점으로 떠올랐다.",
-   "importance": 8
+   "importance": 8,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "p6-c0-b-b",
@@ -962,7 +970,8 @@
    "_repUrl": "https://www.edaily.co.kr/news/newspath.asp?newsid=02259926645483688",
    "publicTake": "비판적인 반응이 우세한 분위기입니다.",
    "background": "이번 사안은 지방선거 과정에서 발생한 투표용지 부족과 현장 혼선의 원인을 따지는 후속 조사다. 선거 관리의 기본인 투표용지 수급과 보고 체계가 동시에 흔들렸다는 점에서 선관위 책임론이 커져 왔다.",
-   "importance": 8
+   "importance": 8,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "s5-c1",
@@ -1061,7 +1070,8 @@
    "_repUrl": "https://www.newsis.com/view/NISX20260621_0003677257",
    "background": "고령 운전자 사고와 면허 적성검사 강화 문제는 반복적으로 제기돼 온 사회적 쟁점입니다. 보행자 밀집 지역의 안전시설과 차량 급발진·조작 실수 대응책도 함께 논의돼 왔습니다.",
    "importance": 8,
-   "publicTake": "비판적인 반응이 우세한 분위기입니다."
+   "publicTake": "비판적인 반응이 우세한 분위기입니다.",
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "p5-c0-d",
@@ -1158,7 +1168,8 @@
    ],
    "_repUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008620708&plink=ORI&cooper=NAVER",
    "background": "이 사건은 비상계엄·내란 의혹 수사와 김건희 여사 관련 수사 외압 논란이 맞물리며 커졌습니다. 전직 법무부 장관이 직접 재판에 넘겨졌다는 점에서 정치적 파장도 큰 사안입니다.",
-   "importance": 8
+   "importance": 8,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "s6-c0",
@@ -1255,7 +1266,8 @@
    ],
    "_repUrl": "https://www.joongang.co.kr/article/25438465",
    "background": "응급실 수용 거부와 전원 지연으로 환자가 여러 병원을 떠도는 문제는 의료 공백기마다 반복적으로 지적돼 왔습니다. 병상과 전문의 정보를 실시간으로 공유하는 체계가 대안으로 추진돼 왔습니다.",
-   "importance": 8
+   "importance": 8,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "i2-c0-b-b-b",
@@ -1362,7 +1374,8 @@
    "_repUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008619463&plink=ORI&cooper=NAVER",
    "importance": 8,
    "background": "미국과 이란은 종전 양해각서에 레바논을 포함한 모든 전선의 군사작전 종료를 담았지만, 현지 충돌이 이어지며 이행 단계부터 흔들리고 있다. 중동 휴전의 안정 여부는 미국·이란 관계뿐 아니라 지역 안보와 에너지 시장에도 직접 영향을 준다.",
-   "publicTake": "레바논 휴전이 곧바로 흔들린 데 대해 이스라엘 공습과 중재 실패를 비판하는 반응이 많다."
+   "publicTake": "레바논 휴전이 곧바로 흔들린 데 대해 이스라엘 공습과 중재 실패를 비판하는 반응이 많다.",
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "e3-c0-b",
@@ -1460,7 +1473,8 @@
    "_repUrl": "https://www.mt.co.kr/society/2026/06/19/2026061914551646686",
    "publicTake": "비판적인 반응이 우세한 분위기입니다.",
    "background": "유가와 석유제품 가격은 물가와 산업 전반에 직접 영향을 준다. 정유업계 가격 담합 의혹은 국제유가 급등기마다 반복적으로 제기돼 왔다.",
-   "importance": 8
+   "importance": 8,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "e3-c0-b-b",
@@ -1558,7 +1572,8 @@
    "_repUrl": "https://www.joongang.co.kr/article/25438275",
    "publicTake": "댓글마다 의견이 다양하게 엇갈리는 분위기입니다.",
    "background": "최근 식품과 생활물가 부담이 이어지면서 민생 안정은 정부의 핵심 과제로 부상했다. 물가 대응은 경기 회복 체감도와 정부 신뢰에 직접 영향을 주는 대표 지표로 여겨진다.",
-   "importance": 8
+   "importance": 8,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "i1-c1",
@@ -1655,7 +1670,8 @@
    ],
    "_repUrl": "https://www.edaily.co.kr/news/newspath.asp?newsid=03362006645484344",
    "background": "북한은 최근 '적대적 두 국가' 기조 아래 군사분계선 일대를 사실상 국경선처럼 굳히는 작업을 진행해 왔습니다. 비무장지대 시설물 설치는 남북 군사 긴장을 직접 높일 수 있는 사안입니다.",
-   "importance": 8
+   "importance": 8,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "i6-c0-b",
@@ -1752,7 +1768,8 @@
    ],
    "_repUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8591091&ref=A",
    "background": "북한은 러시아와의 군사 협력 속에서 탄약과 미사일을 제공해 온 것으로 지목돼 왔습니다. 실전 사용 데이터가 북한 무기 성능 향상으로 이어질 경우 한반도 안보 우려도 더 커질 수 있습니다.",
-   "importance": 8
+   "importance": 8,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "i2-c0-c",
@@ -1849,7 +1866,8 @@
    ],
    "_repUrl": "https://www.edaily.co.kr/news/newspath.asp?newsid=02214006645483688",
    "background": "이스라엘과 헤즈볼라의 충돌은 가자 전쟁 이후 레바논 접경지대로 확산하며 반복돼 왔습니다. 휴전 직후 재공습이 이어지면 중동 전선이 다시 확대될 가능성이 있습니다.",
-   "importance": 8
+   "importance": 8,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "i2-c0-b-b-b-b",
@@ -1938,7 +1956,8 @@
    "_repUrl": "https://biz.heraldcorp.com/article/10781960?ref=naver",
    "publicTake": "긍정적인 반응이 많은 편입니다.",
    "background": "이번 발언은 G7 참석 이후 한미 조선·안보 협력과 대북 외교 구상을 함께 부각한 것이다. 한국의 조선 역량과 한반도 평화 구상은 새 정부 외교 메시지의 핵심 소재로 떠오르고 있다.",
-   "importance": 8
+   "importance": 8,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "p5-c0",
@@ -2054,7 +2073,8 @@
    "_repUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8590899&ref=A",
    "importance": 7,
    "background": "이 사건은 쌍방울 대북송금 수사 과정에서 검사실 회유성 술자리가 있었다는 이 전 부지사의 국회 증언이 사실인지가 핵심 쟁점이다. 관련 주장은 대북송금 사건과 이재명 대표 수사를 둘러싼 정치적 공방으로도 이어져 왔다.",
-   "publicTake": "비판적인 반응이 우세한 분위기입니다."
+   "publicTake": "비판적인 반응이 우세한 분위기입니다.",
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "s5-c0",
@@ -2152,7 +2172,8 @@
    "_repUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8591196&ref=A",
    "importance": 7,
    "background": "고령 운전자 교통사고는 면허 관리와 페달 오조작 문제를 둘러싼 사회적 논란이 반복돼 온 사안이다. 도심 보행 공간에서 인명 피해가 커질 경우 재발 방지 대책 요구가 빠르게 커지는 유형의 사고다.",
-   "publicTake": "댓글마다 의견이 다양하게 엇갈리는 분위기입니다."
+   "publicTake": "댓글마다 의견이 다양하게 엇갈리는 분위기입니다.",
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "e2-c0",
@@ -2241,7 +2262,8 @@
    "_repUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8590895&ref=A",
    "importance": 7,
    "background": "최근 반도체 중심 수출 개선과 증시 상승으로 거시지표가 회복세를 보이지만, 체감경기와의 괴리가 계속 지적돼 왔다. 정부 안팎에서는 경기 회복 자금이 부동산으로 재유입되는 것을 막기 위한 세제 논의가 반복돼 왔다.",
-   "publicTake": "비판적인 반응이 우세한 분위기입니다."
+   "publicTake": "비판적인 반응이 우세한 분위기입니다.",
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "p4-c0",
@@ -2357,7 +2379,8 @@
    "_repUrl": "https://view.asiae.co.kr/article/2026062111195930123",
    "publicTake": "비판적인 반응이 우세한 분위기입니다.",
    "background": "집권 2년차를 앞두고 청와대는 성과 체감과 정책 집행 속도 제고를 위해 참모진 재정비에 나선 것으로 해석된다. 수석 인선은 대통령의 국정 기조와 권력 운영 방향을 보여주는 신호로 받아들여진다.",
-   "importance": 7
+   "importance": 7,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "p5-c0-b",
@@ -2464,7 +2487,8 @@
    "_repUrl": "https://www.ytn.co.kr/_ln/0101_202606192234306106",
    "importance": 7,
    "background": "선거관리위원회의 운영과 선거관리 과정 전반을 둘러싼 불신이 커지면서 제도 개편 요구가 정치권 쟁점으로 떠올랐다. 여야는 특검을 통한 진상 규명과 헌법 개정 중 어느 해법을 우선할지를 두고 입장 차를 보여 왔다.",
-   "publicTake": "긍정적인 반응이 많은 편입니다."
+   "publicTake": "긍정적인 반응이 많은 편입니다.",
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "i1-c0-b",
@@ -2562,7 +2586,8 @@
    "_repUrl": "https://www.news1.kr/politics/president/6202659",
    "publicTake": "댓글마다 의견이 다양하게 엇갈리는 분위기입니다.",
    "background": "교황의 한반도 방문은 남북 화해와 인권, 평화 메시지와 맞물려 상징성이 크다. 역대 정부도 교황 방북 가능성을 남북 대화의 계기로 활용하려 한 바 있다.",
-   "importance": 7
+   "importance": 7,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "e6-c0",
@@ -2660,7 +2685,8 @@
    "_repUrl": "https://www.kmib.co.kr/article/view.asp?arcid=0029998891&code=61141611&cp=nv",
    "importance": 7,
    "background": "최저임금 심의 때마다 영세 자영업자의 인건비 부담과 업종별 차등 적용 여부가 반복 쟁점이 돼 왔다. 경기 둔화와 소비 부진이 겹치면서 소상공인의 부담 호소가 더 커진 상황이다.",
-   "publicTake": "최저임금 수준이 소상공인 고용난과 물가 부담을 키우는지를 두고 불만과 반론이 함께 나오고 있습니다."
+   "publicTake": "최저임금 수준이 소상공인 고용난과 물가 부담을 키우는지를 두고 불만과 반론이 함께 나오고 있습니다.",
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "e3-c0",
@@ -2758,7 +2784,8 @@
    "_repUrl": "https://www.ytn.co.kr/_ln/0104_202606201921090125",
    "importance": 7,
    "background": "볼리비아에서는 최근 정권과 에보 모랄레스 전 대통령 지지 세력 사이의 정치 갈등이 이어져 왔다. 도로 봉쇄는 중남미 여러 나라에서 정치적 압박 수단으로 자주 쓰이지만, 장기화되면 생필품 공급과 경제 활동 전반에 큰 타격을 준다.",
-   "publicTake": "비판적인 반응이 우세한 분위기입니다."
+   "publicTake": "비판적인 반응이 우세한 분위기입니다.",
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "p5-c0-e",
@@ -2864,7 +2891,8 @@
    ],
    "_repUrl": "https://www.mt.co.kr/politics/2026/06/22/2026062211515936429",
    "background": "이화영 전 부지사 사건은 대북송금 의혹과 수사 공방이 정치권으로 번지며 논란이 커졌습니다. 이 과정에서 '연어 술 파티' 주장의 사실 여부가 핵심 쟁점 중 하나로 부각돼 왔습니다.",
-   "importance": 7
+   "importance": 7,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "e5-c1",
@@ -2970,7 +2998,8 @@
    ],
    "_repUrl": "https://news.jtbc.co.kr/article/NB12304214?influxDiv=NAVER",
    "background": "한국에서는 경기 회복기마다 유동성이 주택시장으로 쏠리며 집값과 가계부채 문제가 반복돼 왔습니다. 이 때문에 부동산 세제 조정은 주요 정책 수단으로 꾸준히 논의돼 왔습니다.",
-   "importance": 7
+   "importance": 7,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "e6-c0-b",
@@ -3076,7 +3105,8 @@
    ],
    "_repUrl": "https://www.ytn.co.kr/_ln/0102_202606211738575306",
    "importance": 7,
-   "background": "저출생과 고령화로 노동시장 연령 구조가 빠르게 바뀌고 있습니다. 제조업 부진과 산업 재편, AI 확산이 청년층 일자리 감소를 더 빠르게 만들고 있다는 분석이 나옵니다."
+   "background": "저출생과 고령화로 노동시장 연령 구조가 빠르게 바뀌고 있습니다. 제조업 부진과 산업 재편, AI 확산이 청년층 일자리 감소를 더 빠르게 만들고 있다는 분석이 나옵니다.",
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "p6-c1",
@@ -3183,7 +3213,8 @@
    "_repUrl": "https://www.hankookilbo.com/news/article/A2026062011000005339?did=NA",
    "importance": 7,
    "publicTake": "비판적인 반응이 우세한 분위기입니다.",
-   "background": "보수 진영은 최근 선거 패배와 지도부 책임론으로 재편 압박을 받고 있다. 한동훈 의원은 당내 갈등 이후 복당 여부와 차기 리더십 역할을 둘러싸고 계속 주목받아 왔다."
+   "background": "보수 진영은 최근 선거 패배와 지도부 책임론으로 재편 압박을 받고 있다. 한동훈 의원은 당내 갈등 이후 복당 여부와 차기 리더십 역할을 둘러싸고 계속 주목받아 왔다.",
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "s2-c0-c-b",
@@ -3254,7 +3285,8 @@
    "_repUrl": "https://biz.heraldcorp.com/article/10782112?ref=naver",
    "publicTake": "비판적인 의견이 다소 많은 편입니다.",
    "background": "검찰개혁은 수사권과 기소권 분리, 보완수사권 존폐를 중심으로 오랜 정치 쟁점이 돼 왔다. 보완수사권 폐지 여부는 경찰 수사 역량과 공소 유지 체계에도 영향을 줄 수 있다.",
-   "importance": 7
+   "importance": 7,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "e1-c0-b",
@@ -3351,7 +3383,8 @@
    ],
    "_repUrl": "https://view.asiae.co.kr/article/2026062212475943525",
    "background": "중국은 내수 부진과 부동산 침체에 대응해 2024년 10월 LPR을 내린 뒤 장기간 금리를 유지해 왔습니다. LPR은 중국의 대출금리와 주택담보대출 비용에 직접 영향을 주는 핵심 지표입니다.",
-   "importance": 7
+   "importance": 7,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "p4-c0-b",
@@ -3439,7 +3472,8 @@
    ],
    "_repUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8591534&ref=A",
    "background": "이란 내부에서는 미국과의 협상 노선을 두고 온건파와 강경파의 갈등이 반복돼 왔습니다. 핵 문제와 제재 해제, 호르무즈 해협 통제 문제는 항상 핵심 협상 의제로 다뤄졌습니다.",
-   "importance": 7
+   "importance": 7,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "i1-c0",
@@ -3537,7 +3571,8 @@
    "_repUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8591745&ref=A",
    "publicTake": "정동영 장관의 북미 대화 재개 기대와 통일부 역할을 두고 현실성이 낮다는 비판과 평화 접근이 필요하다는 의견이 엇갈립니다.",
    "background": "트럼프 대통령과 김정은 위원장은 2018년 싱가포르에서 첫 정상회담을 했지만 2019년 하노이 회담은 합의 없이 끝났습니다. 이후 북미 대화는 장기간 교착 상태가 이어져 왔습니다.",
-   "importance": 6
+   "importance": 6,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "s1-c0",
@@ -3643,7 +3678,8 @@
    ],
    "_repUrl": "https://www.ytn.co.kr/_ln/0103_202606212217581882",
    "background": "반도체 산업 호황과 대기업 취업 안정성이 맞물리며 계약학과 선호가 빠르게 높아졌습니다. 의대 쏠림이 이어지던 입시 지형에서 첨단산업 인재 양성 정책이 새로운 변수로 떠오른 상황입니다.",
-   "importance": 6
+   "importance": 6,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "i6-c0",
@@ -3740,7 +3776,8 @@
    ],
    "_repUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8591260&ref=A",
    "importance": 6,
-   "background": "폴란드와 우크라이나는 러시아 침공 이후 안보 협력을 강화했지만, 볼히니아 학살 등 2차대전 과거사 문제는 오랜 갈등 요인으로 남아 있다. 전시 동맹 관계 속에서도 역사 문제를 둘러싼 외교적 마찰이 반복돼 왔다."
+   "background": "폴란드와 우크라이나는 러시아 침공 이후 안보 협력을 강화했지만, 볼히니아 학살 등 2차대전 과거사 문제는 오랜 갈등 요인으로 남아 있다. 전시 동맹 관계 속에서도 역사 문제를 둘러싼 외교적 마찰이 반복돼 왔다.",
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "i5-c0",
@@ -3837,7 +3874,8 @@
    ],
    "_repUrl": "https://www.edaily.co.kr/news/newspath.asp?newsid=03220966645484344",
    "background": "최근 중동 정세 불안으로 국내 에너지 가격과 공급망 안정성에 대한 우려가 커졌습니다. 정유업계와 정부는 가격 투명성 확대와 원유 수입선 다변화를 주요 대응책으로 논의해 왔습니다.",
-   "importance": 6
+   "importance": 6,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "p6-c0",
@@ -3934,7 +3972,8 @@
    ],
    "_repUrl": "https://www.edaily.co.kr/news/newspath.asp?newsid=02712566645483688",
    "background": "이번 시위는 6·3 지방선거 당시 투표용지 부족 사태 이후 선거 관리 부실 책임을 묻는 과정에서 이어지고 있다. 개표소 봉쇄와 무단침입 정황까지 겹치며 현장 안전과 공권력 대응 문제가 함께 불거졌다.",
-   "importance": 6
+   "importance": 6,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   },
   {
    "id": "i4-c0",
@@ -4031,8 +4070,9 @@
    ],
    "_repUrl": "https://www.hankookilbo.com/news/article/A2026062115150001493?did=NA",
    "background": "일본은 최근 아시아 축구에서 가장 꾸준한 성적을 내며 FIFA 랭킹 상위권을 유지해 왔다. 북중미 월드컵은 아시아 팀들의 경쟁력과 본선 성과를 가늠하는 무대로도 주목받고 있다.",
-   "importance": 4
+   "importance": 4,
+   "summarizedAt": "2026-06-22T04:57:50.509Z"
   }
  ],
- "summarizedAt": "2026-06-22T04:56:36.819Z"
+ "summarizedAt": "2026-06-22T04:57:50.509Z"
 }
