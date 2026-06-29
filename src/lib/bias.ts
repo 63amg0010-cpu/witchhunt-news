@@ -3,11 +3,39 @@ import type { Lean, NewsEvent } from '../types'
 
 export const LEAN_KO: Record<Lean, string> = { prog: '진보', center: '중도', cons: '보수' }
 
-// 사건을 보도한 언론사를 진영별로 센다 (기사 목록 기준)
+// 사건을 보도한 언론사를 진영별로 센다 (기사 목록 기준, 최대 8건 표본)
 export function leanCounts(ev: NewsEvent): { prog: number; center: number; cons: number } {
   const c = { prog: 0, center: 0, cons: 0 }
   for (const a of ev.articles) c[a.lean]++
   return c
+}
+
+// 화면에 보여줄 '진영별 언론사 수' — 표본(최대 8건)을 전체 보도량(outletCount)에 비례해 환산해서
+// 카드의 'N개 언론사 보도'와 합이 맞도록 한다. (정확 분류가 아니라 비율 추정 = 참고용)
+// 표본에서 0인 진영은 0을 유지해(없는 진영을 만들어내지 않음) 정직하게.
+export function displayLeanCounts(ev: NewsEvent): { prog: number; center: number; cons: number } {
+  const c = leanCounts(ev)
+  const sample = c.prog + c.center + c.cons
+  const total = ev.outletCount || sample
+  if (sample === 0 || total <= sample) return c // 표본이 전부면 그대로
+  const keys = ['prog', 'center', 'cons'] as const
+  const raw = { prog: 0, center: 0, cons: 0 }
+  const out = { prog: 0, center: 0, cons: 0 }
+  for (const k of keys) {
+    raw[k] = (c[k] / sample) * total
+    out[k] = c[k] === 0 ? 0 : Math.floor(raw[k]) // 0인 진영은 0 유지
+  }
+  // 최대잔여법: 합이 total이 되도록 소수부 큰 진영부터 +1 (단, 표본에 있는 진영만)
+  let rem = total - (out.prog + out.center + out.cons)
+  const order = keys.filter((k) => c[k] > 0).sort((a, b) => raw[b] - Math.floor(raw[b]) - (raw[a] - Math.floor(raw[a])))
+  while (rem > 0 && order.length) {
+    for (const k of order) {
+      if (rem <= 0) break
+      out[k]++
+      rem--
+    }
+  }
+  return out
 }
 
 // 사건에 붙일 편향 뱃지.
@@ -19,25 +47,31 @@ export interface BiasBadge {
   text: string
   lean: Lean // 강조 색에 쓸 진영
 }
-export function biasBadge(ev: NewsEvent): BiasBadge | null {
+// 진영 쏠림 판정 — 앱에서 직접 계산(빌드 없이 기준 조정 가능).
+// 한국 언론은 중도(통신사)가 많아 '전체의 60%' 기준으론 거의 안 잡힌다.
+// 그래서 진보↔보수 사이의 불균형을 본다.
+//  - kind 'blindspot' : 한쪽 진영이 3곳+ 보도했는데 반대편은 0곳 → 'lean'은 빠진(반대) 진영
+//  - kind 'tilt'      : 양쪽 다 있지만 한쪽이 진영 보도의 75% 이상 → 'lean'은 쏠린 진영
+export function partisanTilt(ev: NewsEvent): { lean: 'prog' | 'cons'; kind: 'tilt' | 'blindspot' } | null {
   const c = leanCounts(ev)
-  const total = c.prog + c.center + c.cons
-  if (total < 2) return null
-  // 1) 한쪽 진영에 강하게 쏠림
-  if (ev.biasWarning && ev.dominantLean && ev.dominantLean !== 'center') {
-    return { kind: 'tilt', text: `${LEAN_KO[ev.dominantLean]} 쏠림`, lean: ev.dominantLean }
-  }
-  // 2) 블라인드스팟 — '오직 한 진영만' 보도(중도·반대편 전혀 없음)인 드문 경우만.
-  //    (진보 기사가 원래 적어서 "진보 없음"은 너무 흔함 → 그건 표시 안 함)
-  if (total >= 3) {
-    const sides = [c.prog > 0, c.center > 0, c.cons > 0].filter(Boolean).length
-    if (sides === 1) {
-      if (c.prog > 0) return { kind: 'blindspot', text: '진보 매체만 보도', lean: 'prog' }
-      if (c.cons > 0) return { kind: 'blindspot', text: '보수 매체만 보도', lean: 'cons' }
-      // 중도(통신사)만 보도한 경우는 '편향'이 아니므로 표시하지 않음
-    }
+  const partisan = c.prog + c.cons
+  if (partisan < 3) return null
+  // 1) 한쪽이 3곳+ 보도, 반대편 0곳 → 반대편 시각이 빠짐. lean = '빠진' 진영
+  if (c.cons === 0 && c.prog >= 3) return { lean: 'cons', kind: 'blindspot' }
+  if (c.prog === 0 && c.cons >= 3) return { lean: 'prog', kind: 'blindspot' }
+  // 2) 양쪽 다 있어도 한쪽이 진영 보도의 75% 이상 → 쏠림. lean = '쏠린' 진영
+  if (partisan >= 4) {
+    if (c.prog / partisan >= 0.75) return { lean: 'prog', kind: 'tilt' }
+    if (c.cons / partisan >= 0.75) return { lean: 'cons', kind: 'tilt' }
   }
   return null
+}
+
+export function biasBadge(ev: NewsEvent): BiasBadge | null {
+  const t = partisanTilt(ev)
+  if (!t) return null
+  const text = t.kind === 'blindspot' ? `${LEAN_KO[t.lean]} 시각 빠짐` : `${LEAN_KO[t.lean]} 쏠림`
+  return { kind: t.kind, text, lean: t.lean }
 }
 
 // 홈 상단 "오늘의 편향 브리핑"용 집계
@@ -46,9 +80,9 @@ export function feedBiasSummary(events: NewsEvent[]) {
   let tilted = 0
   let blindspot = 0
   for (const ev of events) {
-    const b = biasBadge(ev)
-    if (b?.kind === 'tilt') tilted++
-    if (b?.kind === 'blindspot') blindspot++
+    const t = partisanTilt(ev)
+    if (t?.kind === 'tilt') tilted++
+    if (t?.kind === 'blindspot') blindspot++
     const c = leanCounts(ev)
     totals.prog += c.prog
     totals.center += c.center

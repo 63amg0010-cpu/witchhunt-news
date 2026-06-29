@@ -28,6 +28,7 @@ export const TOPICS: Topic[] = [
   { id: 'e4', query: '환율 증시', category: '경제' },
   { id: 'e5', query: '수출', category: '경제' },
   { id: 'e6', query: '고용 일자리', category: '경제' },
+  { id: 'e7', query: '부도', category: '경제' }, // 기업 부도·워크아웃·회생 등 위기 뉴스 포착(키워드 사각지대 보완)
 
   // --- 사회 ---
   { id: 's1', query: '의대 정원', category: '사회' },

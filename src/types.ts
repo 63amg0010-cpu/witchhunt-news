@@ -24,14 +24,14 @@ export interface Article {
 // 사건(이슈) 하나
 export interface NewsEvent {
   id: string
-  category: '정치' | '경제' | '사회' | '국제'
+  category: '정치' | '경제' | '사회' | '국제' | '주식' | '크립토' | '예측시장'
   title: string
   imageUrl: string // 기본/대체 썸네일 (샘플 데이터용 사진)
   imageSourceUrl?: string // 대표기사 주소 — 여기서 실제 사진(og:image)을 가져옴
   summary?: string // 사건 간단 요약 (대표 기사 요약) — 있을 때만
   background?: string // 사건 배경 설명 (맥락) — 있을 때만
   importance?: number // 코덱스가 매긴 중요도 1~10 (정렬용) — 있을 때만
-  publicTake?: string // 네티즌 반응 (네이버 뉴스 댓글 요약) — 있을 때만
+  publicTake?: string // 네티즌 반응 — 공감 많은 댓글들의 '전체 분위기' 한 줄 — 있을 때만
   outletCount: number // 보도 언론사 수 (보도량 = 정렬 보조)
   timeAgo: string // "3시간 전" 같은 표시
   publishedAt?: string // 대표기사 보도 시각(ISO) — 최신순 정렬·시간 재계산용

@@ -16,7 +16,7 @@ export default function BiasBriefing({ events, onOpenBiasFeed }: { events: NewsE
         한쪽 진영에 쏠려 보도된 사건 <b className="briefing__big">{s.tilted}</b>건
         {s.blindspot > 0 && (
           <>
-            {' '}· 한쪽만 다룬 사건 <b className="briefing__big">{s.blindspot}</b>건
+            {' '}· 한쪽 시각이 빠진 사건 <b className="briefing__big">{s.blindspot}</b>건
           </>
         )}
       </p>
@@ -31,7 +31,7 @@ export default function BiasBriefing({ events, onOpenBiasFeed }: { events: NewsE
         <span className="lean-prog">진보 {s.pct.prog}%</span>
         <span className="lean-center">중도 {s.pct.center}%</span>
         <span className="lean-cons">보수 {s.pct.cons}%</span>
-        <span className="briefing__hint">전체 보도량 기준</span>
+        <span className="briefing__hint">전체 보도량 기준 · 성향 분류는 참고용</span>
       </div>
 
       <button className="briefing__cta" onClick={onOpenBiasFeed}>

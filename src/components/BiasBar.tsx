@@ -5,12 +5,14 @@ import type { BiasRatio } from '../types'
 export default function BiasBar({
   bias,
   counts,
+  prominent,
 }: {
   bias: BiasRatio
   counts?: { prog: number; center: number; cons: number }
+  prominent?: boolean // 큰 카드(대표 사건)에서 막대를 더 두껍고 크게
 }) {
   return (
-    <div className="biasbar">
+    <div className={`biasbar ${prominent ? 'biasbar--lg' : ''}`}>
       <div className="biasbar__track">
         <div className="biasbar__seg biasbar__seg--prog" style={{ width: `${bias.prog}%` }} />
         <div className="biasbar__seg biasbar__seg--center" style={{ width: `${bias.center}%` }} />
@@ -31,7 +33,6 @@ export default function BiasBar({
             <span className="lean-cons">보수 {bias.cons}%</span>
           </>
         )}
-        <span className="ref">참고용</span>
       </div>
     </div>
   )

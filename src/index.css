@@ -77,6 +77,8 @@ ul { list-style: none; margin: 0; padding: 0; }
   padding: 0 16px 96px;   /* 아래는 하단 네비 높이만큼 비움 */
   overflow-y: auto;
 }
+/* 하단 탭바가 없는 화면(상세·기사·언론사 분류)은 아래 빈 공간을 줄인다 */
+.app-shell--flush .screen { padding-bottom: 28px; }
 
 /* ===========================================================
    공통 텍스트
@@ -161,6 +163,28 @@ ul { list-style: none; margin: 0; padding: 0; }
 .tab--active {
   background: var(--ink);
   color: #fff;
+}
+.subtabs {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 6px 2px 2px;
+  scrollbar-width: none;
+}
+.subtabs::-webkit-scrollbar { display: none; }
+.subtab {
+  flex: 0 0 auto;
+  padding: 7px 12px;
+  border-radius: var(--radius-pill);
+  background: #f0f1f4;
+  color: var(--ink-soft);
+  font-size: 12.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.subtab--active {
+  background: #d9dce2;
+  color: var(--ink);
 }
 
 /* ===========================================================
@@ -334,6 +358,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   word-break: keep-all;
 }
 .vs-pane__take { margin: 0; font-size: 14px; font-weight: 500; line-height: 1.55; color: var(--ink-soft); word-break: keep-all; }
+.netizen__mood { margin: 4px 0 0; font-size: 15px; font-weight: 600; line-height: 1.5; color: var(--ink); word-break: keep-all; }
 .netizen__src { margin-top: 10px; font-size: 11px; font-weight: 600; color: var(--ink-faint); }
 .vs-pane__more { display: inline-block; margin-top: 10px; font-size: 12px; font-weight: 700; }
 .vs-pane__more--prog { color: var(--lean-prog); }
@@ -360,6 +385,11 @@ ul { list-style: none; margin: 0; padding: 0; }
 .biasbar__seg--prog { background: var(--lean-prog); }
 .biasbar__seg--center { background: var(--lean-center); }
 .biasbar__seg--cons { background: var(--lean-cons); }
+
+/* 큰 카드(대표 사건)용 — 막대를 더 두껍게, 글씨도 키워서 '분포'가 주인공이 되게 */
+.biasbar--lg { margin-top: 14px; }
+.biasbar--lg .biasbar__track { height: 14px; border-radius: var(--radius-pill); }
+.biasbar--lg .biasbar__legend { margin-top: 10px; font-size: 13.5px; gap: 14px; }
 
 .biasbar__legend {
   display: flex;
@@ -867,6 +897,18 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .menu-item:last-child { border-bottom: none; }
 .menu-item__arrow { margin-left: auto; color: var(--ink-faint); }
+/* 아직 동작하지 않는 메뉴 — 흐리게 + '준비 중' 표시 */
+.menu-item--soon { color: var(--ink-faint); cursor: default; }
+.menu-item__soon {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink-faint);
+  background: #f0f1f4;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+}
+.login-btn--soon { background: #e7e9ee; color: var(--ink-faint); cursor: default; }
 
 /* ===========================================================
    "준비 중" 자리 표시 (토론 탭 등)

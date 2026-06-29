@@ -9,6 +9,8 @@ const STOP = new Set([
   '있다','없다','대한','위해','관련','이번','오늘','내일','우리','지난','다시','최근','대해','통해',
   '종합','속보','단독','영상','사진','기자','뉴스','오전','오후','그는','했다','한다','된다','밝혀',
   '전했다','예정','전망','계획','입장','상황','대상','경우','문제','추진','발표','2보','3보',
+  // 너무 일반적이라 서로 다른 사건을 잘못 묶는 경제·시황 단어들
+  '금리','인상','인하','종전','물가','환율','증시','시장','경제','달러','주가','코스피','지수','여부','변수',
 ])
 
 function tokenize(s) {
@@ -60,10 +62,10 @@ function recompute(ev) {
 
 function mergeInto(target, ev) {
   const targetOutlets = new Set(target.articles.map((a) => a.outlet))
-  // 보도량(언론사 수) 합치기: ev의 언론사 중 target에 없는 만큼 더해줌
-  let overlap = 0
-  for (const a of ev.articles) if (targetOutlets.has(a.outlet)) overlap++
-  target.outletCount = (target.outletCount || 0) + (ev.outletCount || 0) - overlap
+  // 보도량(언론사 수): 같은 사건의 갈라진 묶음은 대체로 같은 언론사들이라
+  // 합집합 ≈ 더 큰 쪽. 통째로 더하면(예전 방식) 갱신할 때마다 숫자가 끝없이 부풀어서,
+  // 더 큰 쪽 값만 쓴다(여러 번 갱신해도 그대로 — idempotent).
+  target.outletCount = Math.max(target.outletCount || 0, ev.outletCount || 0)
   // 기사 합치기 (언론사 중복 없이, 최대 8개)
   for (const a of ev.articles) {
     if (target.articles.length >= 8) break

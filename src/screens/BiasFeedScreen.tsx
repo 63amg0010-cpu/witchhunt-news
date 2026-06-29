@@ -1,14 +1,17 @@
 import type { NewsEvent } from '../types'
 import { LEAN_LABEL } from '../types'
+import { partisanTilt } from '../lib/bias'
 
 interface Props {
   events: NewsEvent[]
   onOpenEvent: (id: string) => void
 }
 
-// 편향 경고 피드 — 한쪽 진영만 집중 보도 중인 사건 목록
+// 편향 경고 피드 — 한쪽 진영에 쏠리거나 반대편 시각이 빠진 사건 목록
 export default function BiasFeedScreen({ events, onOpenEvent }: Props) {
-  const warned = events.filter((e) => e.biasWarning)
+  const warned = events
+    .map((e) => ({ e, t: partisanTilt(e) }))
+    .filter((x) => x.t)
 
   return (
     <div className="screen">
@@ -27,14 +30,17 @@ export default function BiasFeedScreen({ events, onOpenEvent }: Props) {
         </div>
       ) : (
         <ul>
-          {warned.map((e) => {
-            const lean = e.dominantLean ?? 'center'
-            const pct = e.bias[lean]
+          {warned.map(({ e, t }) => {
+            const lean = t!.lean
+            const label =
+              t!.kind === 'blindspot'
+                ? `${LEAN_LABEL[lean]} 매체는 이 사건을 다루지 않음`
+                : `${LEAN_LABEL[lean]} 진영에 쏠려 보도`
             return (
               <li key={e.id}>
                 <button className="bias-warn-card" onClick={() => onOpenEvent(e.id)}>
                   <span className={`bias-warn-card__lean lean-${lean}`}>
-                    {LEAN_LABEL[lean]} 진영 집중 · {pct}%
+                    {label}
                   </span>
                   <div className="bias-warn-card__title">{e.title}</div>
                   <div className="card-small__meta" style={{ marginTop: 8 }}>

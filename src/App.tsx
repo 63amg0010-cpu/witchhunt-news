@@ -162,10 +162,13 @@ export default function App() {
     )
   }
 
+  // 상세(사건/기사)·언론사 분류 화면에서는 하단 탭바를 숨긴다 — 읽는 데 방해되지 않게
+  const showNav = !selectedEvent && nav.page !== 'outletBias'
+
   return (
-    <div className="app-shell">
+    <div className={`app-shell ${showNav ? '' : 'app-shell--flush'}`}>
       {content}
-      <BottomNav active={nav.tab} onChange={changeTab} />
+      {showNav && <BottomNav active={nav.tab} onChange={changeTab} />}
     </div>
   )
 }

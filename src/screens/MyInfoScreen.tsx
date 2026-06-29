@@ -18,12 +18,12 @@ export default function MyInfoScreen({ onOpenOutletBias }: Props) {
         <div className="profile-card__avatar">👤</div>
         <div>
           <div className="profile-card__name">게스트</div>
-          <div className="profile-card__login">로그인하고 관심 뉴스를 저장해 보세요</div>
+          <div className="profile-card__login">로그인 기능은 준비 중이에요</div>
         </div>
-        <button className="login-btn">로그인</button>
+        <button className="login-btn login-btn--soon" disabled>준비 중</button>
       </div>
 
-      {/* 설정 메뉴 */}
+      {/* 설정 메뉴 — '언론사 성향 분류'만 실제 동작, 나머지는 준비 중 */}
       <ul className="menu-list">
         <li>
           <button className="menu-item" onClick={onOpenOutletBias}>
@@ -33,9 +33,9 @@ export default function MyInfoScreen({ onOpenOutletBias }: Props) {
         </li>
         {PLACEHOLDER_MENU.map((m) => (
           <li key={m}>
-            <button className="menu-item">
+            <button className="menu-item menu-item--soon" disabled>
               {m}
-              <span className="menu-item__arrow">›</span>
+              <span className="menu-item__soon">준비 중</span>
             </button>
           </li>
         ))}

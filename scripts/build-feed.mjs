@@ -50,6 +50,8 @@ const TOPICS = [
   { id: 'e4', query: '환율 증시', category: '경제' },
   { id: 'e5', query: '수출', category: '경제' },
   { id: 'e6', query: '고용 일자리', category: '경제' },
+  { id: 'e7', query: '부도', category: '경제' }, // 기업 부도·워크아웃·회생 등 위기 뉴스 포착(키워드 사각지대 보완)
+  { id: 'e8', query: '세금 예산', category: '경제' },
   // 사회
   { id: 's1', query: '의대 정원', category: '사회' },
   { id: 's2', query: '검찰 수사', category: '사회' },
@@ -57,6 +59,8 @@ const TOPICS = [
   { id: 's4', query: '교육 정책', category: '사회' },
   { id: 's5', query: '재난 사고', category: '사회' },
   { id: 's6', query: '복지', category: '사회' },
+  { id: 's7', query: '전세 사기', category: '사회' },
+  { id: 's8', query: '폭염 날씨', category: '사회' },
   // 국제
   { id: 'i1', query: '북한', category: '국제' },
   { id: 'i2', query: '트럼프 미국', category: '국제' },
@@ -64,24 +68,69 @@ const TOPICS = [
   { id: 'i4', query: '일본', category: '국제' },
   { id: 'i5', query: '중동 정세', category: '국제' },
   { id: 'i6', query: '우크라이나', category: '국제' },
+  // 주식
+  { id: 'st1', query: '코스피 코스닥', category: '주식' },
+  { id: 'st2', query: '증시 종목', category: '주식' },
+  { id: 'st3', query: '나스닥 다우', category: '주식' },
+  { id: 'st4', query: 'IPO 공모주', category: '주식' },
+  // 크립토
+  { id: 'cr1', query: '비트코인', category: '크립토' },
+  { id: 'cr2', query: '가상자산 코인', category: '크립토' },
+  { id: 'cr3', query: '이더리움', category: '크립토' },
+  { id: 'cr4', query: '스테이블코인', category: '크립토' },
+  // 예측시장
+  { id: 'pm1', query: '폴리마켓', category: '예측시장' },
+  { id: 'pm2', query: '예측시장 칼시', category: '예측시장' },
+  { id: 'pm3', query: 'Kalshi 예측', category: '예측시장' },
 ]
 
-// --- 진보 매체 RSS (네이버 검색엔 진보 기사가 적게 잡혀, 직접 가져와 사건에 붙임) ---
-const PROG_FEEDS = [
-  // 한겨레·경향은 분야별 RSS로 더 깊게 (정치·경제·사회·국제)
-  { outlet: '한겨레', url: 'https://www.hani.co.kr/rss/politics/' },
-  { outlet: '한겨레', url: 'https://www.hani.co.kr/rss/economy/' },
-  { outlet: '한겨레', url: 'https://www.hani.co.kr/rss/society/' },
-  { outlet: '한겨레', url: 'https://www.hani.co.kr/rss/international/' },
-  { outlet: '경향신문', url: 'https://www.khan.co.kr/rss/rssdata/politic_news.xml' },
-  { outlet: '경향신문', url: 'https://www.khan.co.kr/rss/rssdata/economy_news.xml' },
-  { outlet: '경향신문', url: 'https://www.khan.co.kr/rss/rssdata/society_news.xml' },
-  { outlet: '경향신문', url: 'https://www.khan.co.kr/rss/rssdata/kh_world.xml' },
-  { outlet: '오마이뉴스', url: 'http://rss.ohmynews.com/rss/ohmynews.xml' },
-  { outlet: '오마이뉴스', url: 'http://rss.ohmynews.com/rss/politics.xml' }, // 정치 보강
-  { outlet: '프레시안', url: 'https://www.pressian.com/api/v3/site/rss/news' },
-  { outlet: '프레시안', url: 'https://www.pressian.com/api/v3/site/rss/section/65' }, // 정치 보강
-  { outlet: '미디어오늘', url: 'http://www.mediatoday.co.kr/rss/allArticle.xml' },
+// --- 전 진영·분야별 RSS (검색 키워드 사각지대 보강용 1차 후보) ---
+const FEEDS = [
+  { outlet: '한겨레', lean: 'prog', category: '정치', url: 'https://www.hani.co.kr/rss/politics/' },
+  { outlet: '한겨레', lean: 'prog', category: '경제', url: 'https://www.hani.co.kr/rss/economy/' },
+  { outlet: '한겨레', lean: 'prog', category: '사회', url: 'https://www.hani.co.kr/rss/society/' },
+  { outlet: '한겨레', lean: 'prog', category: '국제', url: 'https://www.hani.co.kr/rss/international/' },
+  { outlet: '경향신문', lean: 'prog', category: '정치', url: 'https://www.khan.co.kr/rss/rssdata/politic_news.xml' },
+  { outlet: '경향신문', lean: 'prog', category: '경제', url: 'https://www.khan.co.kr/rss/rssdata/economy_news.xml' },
+  { outlet: '경향신문', lean: 'prog', category: '사회', url: 'https://www.khan.co.kr/rss/rssdata/society_news.xml' },
+  { outlet: '경향신문', lean: 'prog', category: '국제', url: 'https://www.khan.co.kr/rss/rssdata/kh_world.xml' },
+  { outlet: '오마이뉴스', lean: 'prog', category: '사회', url: 'http://rss.ohmynews.com/rss/ohmynews.xml' },
+  { outlet: '오마이뉴스', lean: 'prog', category: '정치', url: 'http://rss.ohmynews.com/rss/politics.xml' },
+  { outlet: '프레시안', lean: 'prog', category: '사회', url: 'https://www.pressian.com/api/v3/site/rss/news' },
+  { outlet: '프레시안', lean: 'prog', category: '정치', url: 'https://www.pressian.com/api/v3/site/rss/section/65' },
+  { outlet: '미디어오늘', lean: 'prog', category: '사회', url: 'http://www.mediatoday.co.kr/rss/allArticle.xml' },
+  { outlet: '연합뉴스', lean: 'center', category: '정치', url: 'https://www.yna.co.kr/rss/politics.xml' },
+  { outlet: '연합뉴스', lean: 'center', category: '경제', url: 'https://www.yna.co.kr/rss/economy.xml' },
+  { outlet: '연합뉴스', lean: 'center', category: '사회', url: 'https://www.yna.co.kr/rss/society.xml' },
+  { outlet: '연합뉴스', lean: 'center', category: '국제', url: 'https://www.yna.co.kr/rss/international.xml' },
+  { outlet: 'SBS', lean: 'center', category: '정치', url: 'https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=01' },
+  { outlet: 'SBS', lean: 'center', category: '경제', url: 'https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=02' },
+  { outlet: 'SBS', lean: 'center', category: '사회', url: 'https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=03' },
+  { outlet: 'SBS', lean: 'center', category: '국제', url: 'https://news.sbs.co.kr/news/SectionRssFeed.do?sectionId=07' },
+  { outlet: '서울신문', lean: 'center', category: '정치', url: 'https://www.seoul.co.kr/xml/rss/rss_politics.xml' },
+  { outlet: '서울신문', lean: 'center', category: '경제', url: 'https://www.seoul.co.kr/xml/rss/rss_economy.xml' },
+  { outlet: '서울신문', lean: 'center', category: '사회', url: 'https://www.seoul.co.kr/xml/rss/rss_society.xml' },
+  { outlet: '서울신문', lean: 'center', category: '국제', url: 'https://www.seoul.co.kr/xml/rss/rss_international.xml' },
+  { outlet: '조선일보', lean: 'cons', category: '정치', url: 'https://www.chosun.com/arc/outboundfeeds/rss/category/politics/?outputType=xml' },
+  { outlet: '조선일보', lean: 'cons', category: '경제', url: 'https://www.chosun.com/arc/outboundfeeds/rss/category/economy/?outputType=xml' },
+  { outlet: '조선일보', lean: 'cons', category: '사회', url: 'https://www.chosun.com/arc/outboundfeeds/rss/category/national/?outputType=xml' },
+  { outlet: '조선일보', lean: 'cons', category: '국제', url: 'https://www.chosun.com/arc/outboundfeeds/rss/category/international/?outputType=xml' },
+  { outlet: '동아일보', lean: 'cons', category: '정치', url: 'https://rss.donga.com/politics.xml' },
+  { outlet: '동아일보', lean: 'cons', category: '경제', url: 'https://rss.donga.com/economy.xml' },
+  { outlet: '동아일보', lean: 'cons', category: '사회', url: 'https://rss.donga.com/national.xml' },
+  { outlet: '동아일보', lean: 'cons', category: '국제', url: 'https://rss.donga.com/international.xml' },
+  { outlet: '한국경제', lean: 'cons', category: '정치', url: 'https://www.hankyung.com/feed/politics' },
+  { outlet: '한국경제', lean: 'cons', category: '경제', url: 'https://www.hankyung.com/feed/economy' },
+  { outlet: '한국경제', lean: 'cons', category: '사회', url: 'https://www.hankyung.com/feed/society' },
+  { outlet: '한국경제', lean: 'cons', category: '국제', url: 'https://www.hankyung.com/feed/international' },
+  { outlet: '세계일보', lean: 'cons', category: '정치', url: 'https://www.segye.com/Articles/RSSList/segye_politic.xml' },
+  { outlet: '세계일보', lean: 'cons', category: '경제', url: 'https://www.segye.com/Articles/RSSList/segye_economy.xml' },
+  { outlet: '세계일보', lean: 'cons', category: '사회', url: 'https://www.segye.com/Articles/RSSList/segye_society.xml' },
+  { outlet: '세계일보', lean: 'cons', category: '국제', url: 'https://www.segye.com/Articles/RSSList/segye_international.xml' },
+  { outlet: '뉴시스', lean: 'center', category: '정치', url: 'https://www.newsis.com/RSS/politics.xml' },
+  { outlet: '뉴시스', lean: 'center', category: '경제', url: 'https://www.newsis.com/RSS/economy.xml' },
+  { outlet: '뉴시스', lean: 'center', category: '사회', url: 'https://www.newsis.com/RSS/society.xml' },
+  { outlet: '뉴시스', lean: 'center', category: '국제', url: 'https://www.newsis.com/RSS/international.xml' },
 ]
 
 // --- 도메인 → 언론사명 + 성향 ---
@@ -111,6 +160,14 @@ const DOMAIN_OUTLET = {
   'heraldcorp.com': { name: '헤럴드경제', lean: 'center' },
   'edaily.co.kr': { name: '이데일리', lean: 'center' },
   'fnnews.com': { name: '파이낸셜뉴스', lean: 'center' },
+  'newspim.com': { name: '뉴스핌', lean: 'center' },
+  'ajunews.com': { name: '아주경제', lean: 'center' },
+  'etoday.co.kr': { name: '이투데이', lean: 'center' },
+  'bizwatch.co.kr': { name: '비즈워치', lean: 'center' },
+  'bloter.net': { name: '블로터', lean: 'center' },
+  'ddaily.co.kr': { name: '디지털데일리', lean: 'center' },
+  'zdnet.co.kr': { name: '지디넷코리아', lean: 'center' },
+  'sisain.co.kr': { name: '시사IN', lean: 'prog' },
   'joongang.co.kr': { name: '중앙일보', lean: 'center' },
   'joins.com': { name: '중앙일보', lean: 'center' },
   'chosun.com': { name: '조선일보', lean: 'cons' },
@@ -166,7 +223,9 @@ function toPercent(c) {
   return { prog, center: 100 - prog - cons, cons }
 }
 
-const STOP = new Set(['있다','없다','대한','위해','관련','이번','오늘','내일','우리','지난','다시','최근','대해','통해','종합','속보','단독','영상','사진','기자','뉴스','오전','오후','그는','했다','한다','된다','밝혀','전했다','예정','전망','계획','입장','상황','대상','경우','문제','추진','발표'])
+const STOP = new Set(['있다','없다','대한','위해','관련','이번','오늘','내일','우리','지난','다시','최근','대해','통해','종합','속보','단독','영상','사진','기자','뉴스','오전','오후','그는','했다','한다','된다','밝혀','전했다','예정','전망','계획','입장','상황','대상','경우','문제','추진','발표',
+  // 너무 일반적이라 서로 다른 사건을 잘못 묶는 경제·시황 단어들 (lib-merge와 동일하게 유지)
+  '금리','인상','인하','종전','물가','환율','증시','시장','경제','달러','주가','코스피','지수','여부','변수'])
 function tokenize(s) {
   const out = new Set()
   for (const r of s.replace(/[^가-힣a-zA-Z0-9]+/g, ' ').split(' ')) {
@@ -267,6 +326,45 @@ async function fetchRss(url, outlet) {
   } catch {
     return []
   }
+}
+
+function logFeedSummary(rows) {
+  console.log('RSS 피드 검증 요약')
+  for (const r of rows) {
+    const status = r.count > 0 ? 'OK' : 'SKIP'
+    console.log(`  [${status}] ${r.feed.outlet}/${r.feed.category} ${r.count}건 (${r.total}개 파싱) - ${r.feed.url}`)
+  }
+}
+
+async function collectFeedPool() {
+  const pool = []
+  const rows = await Promise.all(FEEDS.map(async (feed) => {
+    const articles = await fetchRss(feed.url, feed.outlet)
+    const fresh = articles
+      .map((a) => ({
+        ...a,
+        // 날짜 태그가 없는 RSS(한겨레 등)는 최신으로 취급 — 안 그러면 전부 걸러진다
+        pubDate: a.pubDate && !Number.isNaN(Date.parse(a.pubDate)) ? a.pubDate : NOW,
+        outlet: feed.outlet,
+        lean: feed.lean,
+        category: feed.category,
+      }))
+      .filter((a) => ageMs(a.pubDate) <= MAX_AGE)
+    return { feed, total: articles.length, count: fresh.length, articles: fresh }
+  }))
+  for (const r of rows) pool.push(...r.articles)
+  logFeedSummary(rows)
+  return pool
+}
+
+function modeCategory(members) {
+  const counts = new Map()
+  for (const m of members) counts.set(m.category, (counts.get(m.category) || 0) + 1)
+  const first = members.find((m) => m.category)?.category ?? '사회'
+  const max = Math.max(...counts.values(), 0)
+  if ((counts.get(first) || 0) === max) return first
+  for (const [category, count] of counts) if (count === max) return category
+  return first
 }
 
 // 사건의 성향 분포·프레임·경고를 기사 목록 기준으로 다시 계산
@@ -414,6 +512,63 @@ function buildEvents(topic, cands) {
   return events
 }
 
+function buildEventsFromFeeds(feedPool) {
+  const fresh = feedPool
+    .filter((c) => c.lean !== 'unknown')
+    .filter((c) => ageMs(c.pubDate) <= MAX_AGE)
+    .sort((a, b) => ageMs(a.pubDate) - ageMs(b.pubDate))
+  const clusters = cluster(fresh, new Set())
+  const events = []
+  for (const members of clusters) {
+    const coverage = new Set(members.map((c) => c.outlet)).size
+    if (coverage < 2) continue
+    const seen = new Set()
+    const picked = []
+    for (const c of members) {
+      if (seen.has(c.outlet)) continue
+      seen.add(c.outlet); picked.push(c)
+      if (picked.length >= 8) break
+    }
+    if (picked.length < 2) continue
+    const newestMs = Math.max(...picked.map((c) => Date.parse(c.pubDate)).filter((t) => !Number.isNaN(t)), 0)
+    const newestPub = newestMs > 0 ? new Date(newestMs).toISOString() : NOW
+    const counts = { prog: 0, center: 0, cons: 0 }
+    for (const c of picked) counts[c.lean]++
+    const bias = toPercent(counts)
+    const rep = picked.find((c) => c.lean === 'center') ?? picked[0]
+    const prog = picked.find((c) => c.lean === 'prog')
+    const cons = picked.find((c) => c.lean === 'cons')
+    const maxShare = Math.max(bias.prog, bias.center, bias.cons)
+    const dominantLean = bias.prog === maxShare ? 'prog' : bias.cons === maxShare ? 'cons' : 'center'
+    const biasWarning = maxShare >= 60 && picked.length >= 3 && dominantLean !== 'center'
+    const idx = events.length
+    events.push({
+      id: `rss-c${idx}`,
+      category: modeCategory(members),
+      title: rep.title,
+      imageUrl: `https://picsum.photos/seed/hannun-rss-${idx}/640/420`,
+      imageSourceUrl: rep.url,
+      summary: rep.summary || '',
+      outletCount: coverage,
+      timeAgo: timeAgo(newestPub),
+      publishedAt: newestPub,
+      bias,
+      biasWarning,
+      dominantLean: biasWarning ? dominantLean : undefined,
+      frameProg: prog ? prog.title : '진보 성향으로 분류된 기사가 없습니다.',
+      frameCons: cons ? cons.title : '보수 성향으로 분류된 기사가 없습니다.',
+      firstSeen: NOW,
+      articles: picked.map((c, i) => ({
+        id: `rss-c${idx}-a${i}`,
+        outlet: c.outlet, lean: c.lean, title: c.title, url: c.url,
+        timeAgo: timeAgo(c.pubDate), summary: c.summary || undefined,
+      })),
+      _repUrl: rep.url,
+    })
+  }
+  return events
+}
+
 async function main() {
   if (!NAVER_ID || !NAVER_SECRET) {
     console.error('❌ .env에 NAVER 키가 없습니다.')
@@ -429,11 +584,21 @@ async function main() {
       console.warn(`  ! ${topic.query}: ${e.message}`)
     }
   }
+  const feedPool = await collectFeedPool()
+  const rssEvents = buildEventsFromFeeds(feedPool)
+  all.push(...rssEvents)
+  console.log(`RSS 1차 후보 사건 ${rssEvents.length}건 생성`)
   // 기존 피드 불러오기 (누적: 어제·이전 사건을 안 지우고 함께 둠)
   let oldEvents = []
   try {
+    if (process.env.FRESH) throw new Error('FRESH 빌드: 누적 무시하고 새로 시작')
     const prev = JSON.parse(readFileSync(join(ROOT, 'public', 'feed.json'), 'utf8'))
-    oldEvents = (prev.events || []).map((e) => ({ ...e, firstSeen: e.firstSeen || NOW }))
+    oldEvents = (prev.events || []).map((e) => ({
+      ...e,
+      firstSeen: e.firstSeen || NOW,
+      // 예전 합치기 버그로 부풀어 있던 보도량을 정상 범위로 잘라줌(최대 60개 언론사)
+      outletCount: Math.min(e.outletCount || 0, 60),
+    }))
   } catch {
     /* 기존 피드 없으면 새로 시작 */
   }
@@ -444,12 +609,8 @@ async function main() {
     .filter((e) => !e.firstSeen || Date.parse(e.firstSeen) >= cutoff) // 3일 지난 건 정리
     .sort((a, b) => (b.outletCount || 0) - (a.outletCount || 0))
 
-  // 진보 매체 RSS 수집 (실제 붙이는 건 최종 40개를 추린 뒤에 — 보강이 탈락에 묻히지 않게)
-  const progArticles = []
-  for (const f of PROG_FEEDS) {
-    const arts = await fetchRss(f.url, f.outlet)
-    progArticles.push(...arts.filter((a) => ageMs(a.pubDate) <= MAX_AGE))
-  }
+  // 진보 매체 RSS는 위에서 수집한 feedPool을 재사용한다. 같은 피드를 다시 받지 않는다.
+  const progArticles = feedPool.filter((a) => a.lean === 'prog')
 
   // 내용(제목+요약) 기반으로 분야 재분류 — 검색어로만 정하면 엉뚱하게 분류되는 것 교정
   // (예: '중국'으로 찾은 장원영 공항 기사 → 사회). 분야별 균형 맞추기 '전에' 적용.
@@ -458,14 +619,17 @@ async function main() {
   }
 
   // 분야별 최소 보장(각 6개) 후 나머지는 보도량 순으로 채워 전체 40개까지
-  const PER_CAT_MIN = 6
-  const TOTAL = 40
+  const PER_CAT_MIN = 3
+  // 뉴스 양이 적은 분야는 최소 보장을 더 높게(있는 만큼 우선 노출)
+  const CAT_MIN = { 주식: 5, 크립토: 5, 예측시장: 5 }
+  const minFor = (c) => CAT_MIN[c] ?? PER_CAT_MIN
+  const TOTAL = 60
   const byCat = {}
   for (const e of merged) (byCat[e.category] ??= []).push(e)
   const picked = []
   const taken = new Set()
   for (const c of Object.keys(byCat)) {
-    for (const e of byCat[c].slice(0, PER_CAT_MIN)) { picked.push(e); taken.add(e) }
+    for (const e of byCat[c].slice(0, minFor(c))) { picked.push(e); taken.add(e) }
   }
   for (const e of merged) {
     if (picked.length >= TOTAL) break

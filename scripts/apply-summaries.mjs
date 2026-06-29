@@ -14,25 +14,54 @@ const s1 = rawSum.lastIndexOf('}')
 if (s0 >= 0 && s1 > s0) rawSum = rawSum.slice(s0, s1 + 1)
 const summaries = JSON.parse(rawSum)
 
+// ⚠️ 인코딩 깨짐 차단: 코덱스가 _summaries.json을 저장할 때 환경(윈도우 코드페이지) 문제로
+// 한글이 '?'로 바뀌어 들어오는 경우가 있다. 물음표가 많은(=깨진) 텍스트는 적용하지 않는다.
+const isCorrupt = (s) => {
+  if (typeof s !== 'string') return false
+  const q = (s.match(/\?/g) || []).length
+  return q >= 3 && q / s.length > 0.15
+}
+const ok = (s) => typeof s === 'string' && s.trim() && !isCorrupt(s)
+
+// 코덱스 요약에 남은 HTML 기호 엔티티(&#34; &#039; &quot; 등)를 진짜 문자로 바꾼다.
+function decodeEntities(s) {
+  if (typeof s !== 'string') return s
+  return s
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(parseInt(d, 10)))
+    .replace(/&amp;/g, '&')
+}
+
 // 값은 두 가지 형태를 모두 허용:
 //   "요약문"                                              (요약만)
 //   { "summary": "...", "background": "...", "importance": 8 }  (요약+배경+중요도)
 let n = 0
+let skipped = 0
 for (const ev of feed.events) {
   const v = summaries[ev.id]
   if (!v) continue
   if (typeof v === 'string') {
-    if (v.trim()) ev.summary = v.trim()
+    if (ok(v)) ev.summary = decodeEntities(v.trim())
+    else if (v.trim()) skipped++
   } else if (typeof v === 'object') {
-    if (v.summary && v.summary.trim()) ev.summary = v.summary.trim()
-    if (v.background && v.background.trim()) ev.background = v.background.trim()
+    if (ok(v.summary)) ev.summary = decodeEntities(v.summary.trim())
+    else if (v.summary && v.summary.trim()) skipped++
+    if (ok(v.background)) ev.background = decodeEntities(v.background.trim())
     if (typeof v.importance === 'number') ev.importance = v.importance
-    // 네티즌 반응 (네이버 뉴스 댓글 요약) — 문자열, 있을 때만
-    if (typeof v.publicTake === 'string' && v.publicTake.trim()) ev.publicTake = v.publicTake.trim()
+    if (typeof v.category === 'string' && ['정치', '경제', '사회', '국제', '주식', '크립토', '예측시장'].includes(v.category)) ev.category = v.category
+    // 네티즌 반응: 코덱스가 '구체적인 한 줄'을 주면 그것으로 덮어쓰고(무엇에 대한 어떤 반응),
+    // 없으면 fetch-reactions.mjs가 미리 넣어둔 '일반 분위기 한 줄'이 그대로 남는다(안전망).
+    if (ok(v.publicTake)) ev.publicTake = decodeEntities(v.publicTake.trim())
   }
   if (ev.summary && ev.articles && ev.articles[0]) ev.articles[0].summary = ev.summary
   n++
 }
+if (skipped) console.log(`⚠️ 인코딩 깨진 요약 ${skipped}건 건너뜀(원본 유지)`)
 
 // 기사 번호(id)를 사건 안에서 고유하게 — 합치기로 같은 번호가 겹쳐 React key 충돌나는 것 방지(안전망)
 for (const ev of feed.events) {
@@ -46,6 +75,8 @@ feed.events.sort((a, b) => {
   return (b.outletCount || 0) - (a.outletCount || 0)
 })
 
-feed.summarizedAt = new Date().toISOString()
+const summarizedAt = new Date().toISOString()
+feed.summarizedAt = summarizedAt
+for (const ev of feed.events) ev.summarizedAt = summarizedAt
 writeFileSync(feedPath, JSON.stringify(feed, null, 1), 'utf8')
 console.log(`✅ AI 요약 ${n}건 적용 완료 (전체 ${feed.events.length} 사건)`)

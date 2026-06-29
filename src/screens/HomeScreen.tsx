@@ -1,9 +1,11 @@
+import { useEffect, useState } from 'react'
 import type { NewsEvent } from '../types'
 import Header from '../components/Header'
 import EventCard from '../components/EventCard'
 import BiasBriefing from '../components/BiasBriefing'
+import { eventRegion, REGIONS } from '../lib/region'
 
-const CATEGORIES = ['주요 사건', '정치', '경제', '사회', '국제'] as const
+const CATEGORIES = ['주요 사건', '정치', '경제', '주식', '크립토', '예측시장', '사회', '국제'] as const
 
 interface Props {
   events: NewsEvent[]
@@ -18,7 +20,15 @@ interface Props {
 // 홈 화면 — 오늘의 주요 사건
 // 카테고리는 App(브라우저 기록)이 관리 → 기사 보고 뒤로 와도 보던 카테고리 유지
 export default function HomeScreen({ events, usingSample, category, onCategoryChange, onOpenEvent, onOpenBiasFeed, onOpenOutletBias }: Props) {
-  const list = category === '주요 사건' ? events : events.filter((e) => e.category === category)
+  const [region, setRegion] = useState<(typeof REGIONS)[number]>('전체')
+  const categoryList = category === '주요 사건' ? events : events.filter((e) => e.category === category)
+  const list = category === '국제' && region !== '전체'
+    ? categoryList.filter((e) => eventRegion(e) === region)
+    : categoryList
+
+  useEffect(() => {
+    if (category !== '국제') setRegion('전체')
+  }, [category])
 
   const [top, ...rest] = list
 
@@ -48,6 +58,20 @@ export default function HomeScreen({ events, usingSample, category, onCategoryCh
           </button>
         ))}
       </div>
+
+      {category === '국제' && (
+        <div className="subtabs" aria-label="국가/지역 필터">
+          {REGIONS.map((r) => (
+            <button
+              key={r}
+              className={`subtab ${region === r ? 'subtab--active' : ''}`}
+              onClick={() => setRegion(r)}
+            >
+              {r}
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* 언론사 성향 분류표 바로가기 */}
       <button className="outlet-link" onClick={onOpenOutletBias}>

@@ -1,7 +1,7 @@
 import type { NewsEvent } from '../types'
 import BiasBar from './BiasBar'
 import Thumbnail from './Thumbnail'
-import { biasBadge, leanCounts } from '../lib/bias'
+import { biasBadge, displayLeanCounts } from '../lib/bias'
 
 interface Props {
   event: NewsEvent
@@ -18,7 +18,7 @@ function BiasTag({ event }: { event: NewsEvent }) {
 
 // 사건 카드 — 대표 사건은 큰 카드(사진+굵은 제목), 나머지는 작은 카드(오른쪽 작은 사진)
 export default function EventCard({ event, variant, onClick }: Props) {
-  const counts = leanCounts(event)
+  const counts = displayLeanCounts(event)
 
   if (variant === 'large') {
     return (
