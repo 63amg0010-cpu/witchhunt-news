@@ -50,3 +50,31 @@ export const LEAN_LABEL: Record<Lean, string> = {
   center: '중도',
   cons: '보수',
 }
+
+export interface DebatePersona {
+  id: string
+  name: string
+  initial: string
+  role: string
+  bio: string
+}
+export interface DebateMessage {
+  id: string
+  personaId: string
+  replyTo: string | null
+  text: string
+}
+export interface DebateThread {
+  id: string
+  eventId?: string | null
+  category: string
+  title: string
+  issueSummary: string
+  messages: DebateMessage[]
+  pointSummary: string
+}
+export interface DebatesData {
+  generatedAt?: string
+  personas: DebatePersona[]
+  threads: DebateThread[]
+}

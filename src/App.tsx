@@ -9,6 +9,7 @@ import ArticleScreen from './screens/ArticleScreen'
 import BiasFeedScreen from './screens/BiasFeedScreen'
 import MyInfoScreen from './screens/MyInfoScreen'
 import OutletBiasScreen from './screens/OutletBiasScreen'
+import DebateScreen from './screens/DebateScreen'
 
 // 하단 네비 탭 종류 (다른 파일에서도 씀)
 export type Tab = 'home' | 'bias' | 'debate' | 'me'
@@ -151,6 +152,8 @@ export default function App() {
     content = <BiasFeedScreen events={events} onOpenEvent={openEvent} />
   } else if (nav.tab === 'me') {
     content = <MyInfoScreen onOpenOutletBias={openOutletBias} />
+  } else if (nav.tab === 'debate') {
+    content = <DebateScreen events={events} onOpenEvent={openEvent} />
   } else {
     content = (
       <div className="screen">
