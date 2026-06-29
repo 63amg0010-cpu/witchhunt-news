@@ -242,7 +242,7 @@ ul { list-style: none; margin: 0; padding: 0; }
    =========================================================== */
 .briefing {
   margin-top: 14px;
-  padding: 16px;
+  padding: 18px;
   border-radius: var(--radius-card);
   background: var(--card);
   box-shadow: var(--shadow-card);
@@ -251,48 +251,86 @@ ul { list-style: none; margin: 0; padding: 0; }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 14px;
 }
 .briefing__kicker {
-  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
   font-weight: 800;
   color: var(--ink);
-  background: #f0f1f4;
-  padding: 4px 10px;
-  border-radius: var(--radius-pill);
+}
+.briefing__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--ink);
 }
 .briefing__count { font-size: 12px; font-weight: 700; color: var(--ink-faint); }
-.briefing__headline {
-  margin: 12px 2px;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.5;
+.briefing__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.briefing__stat {
+  background: #f5f6f8;
+  border-radius: 14px;
+  padding: 13px 14px;
+}
+.briefing__statnum {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.1;
+}
+.briefing__statunit { font-size: 14px; font-weight: 700; }
+.briefing__statlabel {
+  font-size: 12px;
+  font-weight: 600;
   color: var(--ink-soft);
+  margin-top: 3px;
   word-break: keep-all;
 }
-.briefing__big { font-size: 22px; font-weight: 800; color: var(--ink); }
 .briefing__bar {
   display: flex;
-  height: 12px;
-  border-radius: var(--radius-pill);
-  overflow: hidden;
-  background: var(--line);
+  gap: 3px;
+  height: 10px;
+  margin-bottom: 8px;
 }
+.briefing__seg { border-radius: var(--radius-pill); }
 .briefing__seg--prog { background: var(--lean-prog); }
 .briefing__seg--center { background: var(--lean-center); }
 .briefing__seg--cons { background: var(--lean-cons); }
-.briefing__legend {
+.briefing__pcts {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 8px;
-  font-size: 12px;
+  gap: 3px;
+  margin-bottom: 4px;
+}
+.briefing__pcts > span {
+  text-align: center;
+  font-size: 11px;
   font-weight: 700;
 }
-.briefing__hint { margin-left: auto; font-size: 11px; font-weight: 600; color: var(--ink-faint); }
+.briefing__legend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-faint);
+}
+.briefing__hint { color: var(--ink-faint); }
+.briefing__divider {
+  height: 1px;
+  background: var(--line);
+  margin: 15px 0;
+}
 .briefing__cta {
   width: 100%;
-  margin-top: 14px;
-  padding: 12px;
+  padding: 13px;
+  border: 0;
   border-radius: var(--radius-pill);
   background: var(--ink);
   color: #fff;

@@ -8,32 +8,48 @@ export default function BiasBriefing({ events, onOpenBiasFeed }: { events: NewsE
   return (
     <div className="briefing">
       <div className="briefing__top">
-        <span className="briefing__kicker">오늘의 편향 브리핑</span>
+        <span className="briefing__kicker">
+          <span className="briefing__dot" />
+          오늘의 편향 브리핑
+        </span>
         <span className="briefing__count">사건 {s.total}건</span>
       </div>
 
-      <p className="briefing__headline">
-        한쪽 진영에 쏠려 보도된 사건 <b className="briefing__big">{s.tilted}</b>건
+      <div className="briefing__stats">
+        <div className="briefing__stat">
+          <div className="briefing__statnum">
+            {s.tilted}
+            <span className="briefing__statunit">건</span>
+          </div>
+          <div className="briefing__statlabel">한쪽으로 쏠려 보도</div>
+        </div>
         {s.blindspot > 0 && (
-          <>
-            {' '}· 한쪽 시각이 빠진 사건 <b className="briefing__big">{s.blindspot}</b>건
-          </>
+          <div className="briefing__stat">
+            <div className="briefing__statnum">
+              {s.blindspot}
+              <span className="briefing__statunit">건</span>
+            </div>
+            <div className="briefing__statlabel">한쪽 시각이 빠짐</div>
+          </div>
         )}
-      </p>
+      </div>
 
-      {/* 전체 보도가 어느 진영에 쏠려 있는지 한 줄 띠로 */}
       <div className="briefing__bar">
         <div className="briefing__seg briefing__seg--prog" style={{ width: `${s.pct.prog}%` }} />
         <div className="briefing__seg briefing__seg--center" style={{ width: `${s.pct.center}%` }} />
         <div className="briefing__seg briefing__seg--cons" style={{ width: `${s.pct.cons}%` }} />
       </div>
+      <div className="briefing__pcts">
+        <span className="lean-prog" style={{ width: `${s.pct.prog}%` }}>{s.pct.prog}%</span>
+        <span className="lean-center" style={{ width: `${s.pct.center}%` }}>{s.pct.center}%</span>
+        <span className="lean-cons" style={{ width: `${s.pct.cons}%` }}>{s.pct.cons}%</span>
+      </div>
       <div className="briefing__legend">
-        <span className="lean-prog">진보 {s.pct.prog}%</span>
-        <span className="lean-center">중도 {s.pct.center}%</span>
-        <span className="lean-cons">보수 {s.pct.cons}%</span>
-        <span className="briefing__hint">전체 보도량 기준 · 성향 분류는 참고용</span>
+        <span>진보 · 중도 · 보수 보도량 기준</span>
+        <span className="briefing__hint">성향 분류는 참고용</span>
       </div>
 
+      <div className="briefing__divider" />
       <button className="briefing__cta" onClick={onOpenBiasFeed}>
         쏠린 사건만 모아보기 <span className="briefing__cta-arrow">›</span>
       </button>
