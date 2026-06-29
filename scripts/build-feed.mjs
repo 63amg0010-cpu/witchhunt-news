@@ -349,13 +349,13 @@ async function collectFeedPool() {
     const fresh = articles
       .map((a) => ({
         ...a,
-        // 날짜 태그가 없는 RSS(한겨레 등)는 최신으로 취급 — 안 그러면 전부 걸러진다
-        pubDate: a.pubDate && !Number.isNaN(Date.parse(a.pubDate)) ? a.pubDate : NOW,
+        // 날짜 태그가 없는 RSS(한겨레 등)는 날짜를 NOW로 속이지 않고 비워둔다(옛 기사가 최신으로 둔갑 방지). 단, 거르지는 않는다.
+        pubDate: a.pubDate && !Number.isNaN(Date.parse(a.pubDate)) ? a.pubDate : undefined,
         outlet: feed.outlet,
         lean: feed.lean,
         category: feed.category,
       }))
-      .filter((a) => ageMs(a.pubDate) <= MAX_AGE)
+      .filter((a) => !a.pubDate || ageMs(a.pubDate) <= MAX_AGE)
     return { feed, total: articles.length, count: fresh.length, articles: fresh }
   }))
   for (const r of rows) pool.push(...r.articles)
@@ -479,7 +479,7 @@ function buildEvents(topic, cands) {
     if (picked.length < 2) continue
     // 사건 시각 = 묶인 기사 중 '가장 최근' 보도 시각 (대표기사가 아니라 최신 기준)
     const newestMs = Math.max(...picked.map((c) => Date.parse(c.pubDate)).filter((t) => !Number.isNaN(t)), 0)
-    const newestPub = newestMs > 0 ? new Date(newestMs).toISOString() : NOW
+    const newestPub = newestMs > 0 ? new Date(newestMs).toISOString() : undefined
     const counts = { prog: 0, center: 0, cons: 0 }
     for (const c of picked) counts[c.lean]++
     const bias = toPercent(counts)
@@ -498,7 +498,7 @@ function buildEvents(topic, cands) {
       imageSourceUrl: rep.url,
       summary: rep.summary || picked.find((c) => c.summary)?.summary || '',
       outletCount: coverage,
-      timeAgo: timeAgo(newestPub),
+      timeAgo: newestPub ? timeAgo(newestPub) : '최근',
       publishedAt: newestPub,
       bias,
       biasWarning,
@@ -537,7 +537,7 @@ function buildEventsFromFeeds(feedPool) {
     }
     if (picked.length < 2) continue
     const newestMs = Math.max(...picked.map((c) => Date.parse(c.pubDate)).filter((t) => !Number.isNaN(t)), 0)
-    const newestPub = newestMs > 0 ? new Date(newestMs).toISOString() : NOW
+    const newestPub = newestMs > 0 ? new Date(newestMs).toISOString() : undefined
     const counts = { prog: 0, center: 0, cons: 0 }
     for (const c of picked) counts[c.lean]++
     const bias = toPercent(counts)
@@ -556,7 +556,7 @@ function buildEventsFromFeeds(feedPool) {
       imageSourceUrl: rep.url,
       summary: rep.summary || '',
       outletCount: coverage,
-      timeAgo: timeAgo(newestPub),
+      timeAgo: newestPub ? timeAgo(newestPub) : '최근',
       publishedAt: newestPub,
       bias,
       biasWarning,
