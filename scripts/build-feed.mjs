@@ -43,6 +43,8 @@ const TOPICS = [
   { id: 'p4', query: '외교 안보', category: '정치' },
   { id: 'p5', query: '특검', category: '정치' },
   { id: 'p6', query: '선거', category: '정치' },
+  { id: 'p7', query: '검찰개혁', category: '정치' },
+  { id: 'p8', query: '국회 원구성', category: '정치' },
   // 경제
   { id: 'e1', query: '기준금리', category: '경제' },
   { id: 'e2', query: '부동산', category: '경제' },
@@ -52,6 +54,7 @@ const TOPICS = [
   { id: 'e6', query: '고용 일자리', category: '경제' },
   { id: 'e7', query: '부도', category: '경제' }, // 기업 부도·워크아웃·회생 등 위기 뉴스 포착(키워드 사각지대 보완)
   { id: 'e8', query: '세금 예산', category: '경제' },
+  { id: 'e9', query: '한국은행 기준금리', category: '경제' },
   // 사회
   { id: 's1', query: '의대 정원', category: '사회' },
   { id: 's2', query: '검찰 수사', category: '사회' },
@@ -623,20 +626,28 @@ async function main() {
 
   // 분야별 최소 보장(각 6개) 후 나머지는 보도량 순으로 채워 전체 40개까지
   const PER_CAT_MIN = 3
-  // 뉴스 양이 적은 분야는 최소 보장을 더 높게(있는 만큼 우선 노출)
-  const CAT_MIN = { 주식: 5, 크립토: 5, 예측시장: 5 }
+  // 뉴스 양이 적은 분야는 최소 보장을 더 높게 / 국내 큰 사건이 밀리지 않게 사회·경제도 상향
+  const CAT_MIN = { 주식: 5, 크립토: 5, 예측시장: 5, 사회: 5, 경제: 5 }
+  // 한 분야가 화면을 독점하지 않게 상한(국제는 전쟁 등으로 과다해지기 쉬움)
+  const CAT_MAX = { 국제: 12 }
   const minFor = (c) => CAT_MIN[c] ?? PER_CAT_MIN
+  const maxFor = (c) => CAT_MAX[c] ?? Infinity
   const TOTAL = 60
   const byCat = {}
   for (const e of merged) (byCat[e.category] ??= []).push(e)
   const picked = []
   const taken = new Set()
+  const catCount = {}
   for (const c of Object.keys(byCat)) {
-    for (const e of byCat[c].slice(0, minFor(c))) { picked.push(e); taken.add(e) }
+    for (const e of byCat[c].slice(0, minFor(c))) {
+      picked.push(e); taken.add(e); catCount[c] = (catCount[c] || 0) + 1
+    }
   }
   for (const e of merged) {
     if (picked.length >= TOTAL) break
-    if (!taken.has(e)) picked.push(e)
+    if (taken.has(e)) continue
+    if ((catCount[e.category] || 0) >= maxFor(e.category)) continue
+    picked.push(e); taken.add(e); catCount[e.category] = (catCount[e.category] || 0) + 1
   }
   const events = picked
   // 진보 RSS 기사를 최종 사건들에 붙임 (같은 사건의 진보 시각 보강)
