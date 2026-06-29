@@ -11,6 +11,10 @@ _articles.json
 _summaries.json
 _reactions.json
 
+# 작업 중 임시 미리보기/덤프 파일 (커밋 불필요)
+_*.txt
+_*_snapshot.json
+
 # 큰 실행파일 / 로컬 도구
 cloudflared.exe
 .vercel

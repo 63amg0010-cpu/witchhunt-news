@@ -82,6 +82,9 @@ const TOPICS = [
   { id: 'pm1', query: '폴리마켓', category: '예측시장' },
   { id: 'pm2', query: '예측시장 칼시', category: '예측시장' },
   { id: 'pm3', query: 'Kalshi 예측', category: '예측시장' },
+  { id: 'pm4', query: 'Polymarket', category: '예측시장' },
+  { id: 'pm5', query: 'Kalshi', category: '예측시장' },
+  { id: 'pm6', query: '예측시장', category: '예측시장' },
 ]
 
 // --- 전 진영·분야별 RSS (검색 키워드 사각지대 보강용 1차 후보) ---
