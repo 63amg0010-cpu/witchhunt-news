@@ -106,7 +106,6 @@ export default function DebateScreen({ events, onOpenEvent }: Props) {
                   <div className="debate-message__meta">
                     <b>{persona?.name ?? '알 수 없음'}</b>
                     <span className="debate-ai-badge">AI</span>
-                    <span>· {persona?.role ?? '페르소나 정보 없음'}</span>
                   </div>
                   {replyPersona && <div className="debate-reply">↳ {replyPersona.name}에게</div>}
                   <p className="debate-message__text">{message.text}</p>
