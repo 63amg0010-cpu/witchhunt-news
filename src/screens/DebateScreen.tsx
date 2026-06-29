@@ -21,6 +21,8 @@ export default function DebateScreen({ events, onOpenEvent }: Props) {
   const [data, setData] = useState<DebatesData | null>(null)
   const [loading, setLoading] = useState(true)
   const [selectedThreadId, setSelectedThreadId] = useState<string | null>(null)
+  const [selectedPersonaId, setSelectedPersonaId] = useState<string | null>(null)
+  const [showMembers, setShowMembers] = useState(false)
 
   useEffect(() => {
     let alive = true
@@ -40,6 +42,11 @@ export default function DebateScreen({ events, onOpenEvent }: Props) {
     [data],
   )
   const selectedThread = data?.threads.find((thread) => thread.id === selectedThreadId) ?? null
+  const selectedPersona = selectedPersonaId ? (personaById.get(selectedPersonaId) ?? null) : null
+  const selectedPersonaThreads =
+    data?.threads.filter((thread) =>
+      thread.messages.some((message) => message.personaId === selectedPersonaId),
+    ) ?? []
 
   if (loading) {
     return (
@@ -63,6 +70,87 @@ export default function DebateScreen({ events, onOpenEvent }: Props) {
           <div className="placeholder-empty__icon">AI</div>
           <div className="placeholder-empty__text">아직 토론이 없어요</div>
         </div>
+      </div>
+    )
+  }
+
+  if (selectedPersona) {
+    const conflictPersonas = (selectedPersona.conflicts ?? [])
+      .map((id) => personaById.get(id))
+      .filter((persona): persona is DebatePersona => Boolean(persona))
+
+    return (
+      <div className="screen">
+        <div className="detail-top">
+          <button className="back-btn" onClick={() => setSelectedPersonaId(null)}>
+            <span className="back-btn__chev">‹</span> 뒤로
+          </button>
+        </div>
+
+        <section className="debate-profile-head">
+          <div className="debate-profile-avatar">{selectedPersona.initial.slice(0, 1)}</div>
+          <div className="debate-profile-head__body">
+            <div className="debate-profile-name-row">
+              <h1 className="debate-profile-name">{selectedPersona.name}</h1>
+              <span className="debate-ai-badge">AI</span>
+            </div>
+            <div className="debate-profile-role">{selectedPersona.role}</div>
+            <p className="debate-profile-bio">{selectedPersona.bio}</p>
+          </div>
+        </section>
+
+        {(selectedPersona.topics?.length ?? 0) > 0 && (
+          <section className="debate-profile-section">
+            <div className="debate-profile-label">자주 다루는 분야</div>
+            <div className="debate-chip-row">
+              {selectedPersona.topics?.map((topic) => (
+                <span className="debate-member-chip" key={topic}>
+                  {topic}
+                </span>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {conflictPersonas.length > 0 && (
+          <section className="debate-profile-section">
+            <div className="debate-profile-label">자주 부딪히는 상대</div>
+            <div className="debate-chip-row">
+              {conflictPersonas.map((persona) => (
+                <button
+                  className="debate-member-chip debate-member-chip--button"
+                  key={persona.id}
+                  onClick={() => setSelectedPersonaId(persona.id)}
+                >
+                  {persona.name}
+                </button>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <section className="debate-profile-section">
+          <div className="debate-profile-label">참여한 토론</div>
+          {selectedPersonaThreads.length > 0 ? (
+            <div className="debate-profile-thread-list">
+              {selectedPersonaThreads.map((thread) => (
+                <button
+                  className="debate-profile-thread"
+                  key={thread.id}
+                  onClick={() => {
+                    setSelectedThreadId(thread.id)
+                    setSelectedPersonaId(null)
+                  }}
+                >
+                  <span className="debate-chip">{thread.category}</span>
+                  <span>{thread.title}</span>
+                </button>
+              ))}
+            </div>
+          ) : (
+            <p className="debate-profile-empty">아직 참여한 토론이 없어요</p>
+          )}
+        </section>
       </div>
     )
   }
@@ -101,12 +189,20 @@ export default function DebateScreen({ events, onOpenEvent }: Props) {
 
             return (
               <article className="debate-message" key={message.id}>
-                <div className="debate-avatar">{persona?.initial.slice(0, 1) ?? 'A'}</div>
+                <button
+                  className="debate-message__persona-button"
+                  onClick={() => setSelectedPersonaId(message.personaId)}
+                >
+                  <span className="debate-avatar">{persona?.initial.slice(0, 1) ?? 'A'}</span>
+                </button>
                 <div className="debate-message__body">
-                  <div className="debate-message__meta">
+                  <button
+                    className="debate-message__meta debate-message__meta--button"
+                    onClick={() => setSelectedPersonaId(message.personaId)}
+                  >
                     <b>{persona?.name ?? '알 수 없음'}</b>
                     <span className="debate-ai-badge">AI</span>
-                  </div>
+                  </button>
                   {replyPersona && <div className="debate-reply">↳ {replyPersona.name}에게</div>}
                   <p className="debate-message__text">{message.text}</p>
                 </div>
@@ -124,10 +220,58 @@ export default function DebateScreen({ events, onOpenEvent }: Props) {
     )
   }
 
+  if (showMembers) {
+    return (
+      <div className="screen">
+        <div className="detail-top">
+          <button className="back-btn" onClick={() => setShowMembers(false)}>
+            <span className="back-btn__chev">‹</span> AI 토론
+          </button>
+        </div>
+
+        <div className="page-head">
+          <div className="page-head__title">AI 멤버</div>
+          <p className="page-head__sub">토론에 참여하는 AI {data.personas.length}명</p>
+        </div>
+
+        <div className="debate-member-grid">
+          {data.personas.map((persona) => (
+            <button
+              className="debate-member-card"
+              key={persona.id}
+              onClick={() => setSelectedPersonaId(persona.id)}
+            >
+              <div className="debate-member-card__top">
+                <span className="debate-avatar">{persona.initial.slice(0, 1)}</span>
+                <span className="debate-ai-badge">AI</span>
+              </div>
+              <div className="debate-member-name">{persona.name}</div>
+              <p className="debate-member-bio">{persona.bio}</p>
+              {(persona.topics?.length ?? 0) > 0 && (
+                <div className="debate-member-topic-row">
+                  {persona.topics?.slice(0, 3).map((topic) => (
+                    <span className="debate-member-chip" key={topic}>
+                      {topic}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </button>
+          ))}
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="screen">
       <div className="page-head">
-        <div className="page-head__title">AI 토론</div>
+        <div className="debate-list-head">
+          <div className="page-head__title">AI 토론</div>
+          <button className="debate-member-entry" onClick={() => setShowMembers(true)}>
+            AI 멤버 {data.personas.length}명
+          </button>
+        </div>
         <p className="page-head__sub">AI 페르소나들이 오늘의 이슈를 두고 토론합니다</p>
       </div>
 

@@ -57,6 +57,8 @@ export interface DebatePersona {
   initial: string
   role: string
   bio: string
+  topics?: string[]
+  conflicts?: string[]
 }
 export interface DebateMessage {
   id: string
