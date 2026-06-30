@@ -92,7 +92,6 @@ export default function DebateScreen({ events, onOpenEvent }: Props) {
           <div className="debate-profile-head__body">
             <div className="debate-profile-name-row">
               <h1 className="debate-profile-name">{selectedPersona.name}</h1>
-              <span className="debate-ai-badge">AI</span>
             </div>
             <div className="debate-profile-role">{selectedPersona.role}</div>
             <p className="debate-profile-bio">{selectedPersona.bio}</p>
@@ -201,9 +200,13 @@ export default function DebateScreen({ events, onOpenEvent }: Props) {
                     onClick={() => setSelectedPersonaId(message.personaId)}
                   >
                     <b>{persona?.name ?? '알 수 없음'}</b>
-                    <span className="debate-ai-badge">AI</span>
                   </button>
-                  {replyPersona && <div className="debate-reply">↳ {replyPersona.name}에게</div>}
+                  {reply && replyPersona && (
+                    <div className="debate-reply-quote">
+                      <b className="debate-reply-quote__name">{replyPersona.name}</b>
+                      <span className="debate-reply-quote__text">{reply.text}</span>
+                    </div>
+                  )}
                   <p className="debate-message__text">{message.text}</p>
                 </div>
               </article>
@@ -243,7 +246,6 @@ export default function DebateScreen({ events, onOpenEvent }: Props) {
             >
               <div className="debate-member-card__top">
                 <span className="debate-avatar">{persona.initial.slice(0, 1)}</span>
-                <span className="debate-ai-badge">AI</span>
               </div>
               <div className="debate-member-name">{persona.name}</div>
               <p className="debate-member-bio">{persona.bio}</p>
