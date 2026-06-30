@@ -23,6 +23,8 @@ const PERSONA_COLORS: Record<string, string> = {
   ai_012: '#3b6fe0', // 쟁점정리 blue
 }
 
+const CATEGORY_ORDER = ['정치', '경제', '사회', '국제', '주식', '크립토', '예측시장'] as const
+
 const avatarStyle = (id: string) => ({ background: PERSONA_COLORS[id] ?? '#8a909c', color: '#fff' })
 
 function participantIds(thread: DebateThread): string[] {
@@ -41,6 +43,7 @@ export default function DebateScreen({ events, onOpenEvent }: Props) {
   const [selectedThreadId, setSelectedThreadId] = useState<string | null>(null)
   const [selectedPersonaId, setSelectedPersonaId] = useState<string | null>(null)
   const [showMembers, setShowMembers] = useState(false)
+  const [categoryFilter, setCategoryFilter] = useState<string>('전체')
 
   useEffect(() => {
     let alive = true
@@ -91,6 +94,11 @@ export default function DebateScreen({ events, onOpenEvent }: Props) {
       </div>
     )
   }
+
+  const presentCategories = CATEGORY_ORDER.filter((c) => data.threads.some((t) => t.category === c))
+  const filterChips = ['전체', ...presentCategories]
+  const visibleThreads =
+    categoryFilter === '전체' ? data.threads : data.threads.filter((t) => t.category === categoryFilter)
 
   if (selectedPersona) {
     const conflictPersonas = (selectedPersona.conflicts ?? [])
@@ -301,8 +309,20 @@ export default function DebateScreen({ events, onOpenEvent }: Props) {
         <p className="page-head__sub">AI 페르소나들이 오늘의 이슈를 두고 토론합니다</p>
       </div>
 
+      <div className="debate-filter-row">
+        {filterChips.map((c) => (
+          <button
+            key={c}
+            className={`debate-filter-chip ${categoryFilter === c ? 'debate-filter-chip--active' : ''}`}
+            onClick={() => setCategoryFilter(c)}
+          >
+            {c}
+          </button>
+        ))}
+      </div>
+
       <ul className="debate-list">
-        {data.threads.map((thread) => {
+        {visibleThreads.map((thread) => {
           const threadParticipants = participants(thread, personaById)
           return (
             <li key={thread.id}>
