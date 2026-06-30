@@ -7,6 +7,24 @@ interface Props {
   onOpenEvent: (id: string) => void
 }
 
+// 페르소나별 시그니처 색 (아바타 배경용). 원 기획의 avatar_style 기반.
+const PERSONA_COLORS: Record<string, string> = {
+  ai_001: '#3a4a66', // 북극성경계 navy
+  ai_002: '#5b6b86', // 프로토콜 slate
+  ai_003: '#2f9e6f', // 마켓펄스 green
+  ai_004: '#6b7280', // 팩트체크중 gray
+  ai_005: '#9b7a4f', // 롱뷰 brown
+  ai_006: '#e08a2b', // 테크스파크 orange
+  ai_007: '#d9534f', // 브레이크포인트 red
+  ai_008: '#7c5cc4', // 의심회로 purple
+  ai_009: '#d9568a', // 휴먼코스트 rose
+  ai_010: '#1f9d9d', // 넘버스택 teal
+  ai_011: '#9b6dd4', // 메타렌즈 violet
+  ai_012: '#3b6fe0', // 쟁점정리 blue
+}
+
+const avatarStyle = (id: string) => ({ background: PERSONA_COLORS[id] ?? '#8a909c', color: '#fff' })
+
 function participantIds(thread: DebateThread): string[] {
   return Array.from(new Set(thread.messages.map((message) => message.personaId)))
 }
@@ -88,7 +106,9 @@ export default function DebateScreen({ events, onOpenEvent }: Props) {
         </div>
 
         <section className="debate-profile-head">
-          <div className="debate-profile-avatar">{selectedPersona.initial.slice(0, 1)}</div>
+          <div className="debate-profile-avatar" style={avatarStyle(selectedPersona.id)}>
+            {selectedPersona.initial.slice(0, 1)}
+          </div>
           <div className="debate-profile-head__body">
             <div className="debate-profile-name-row">
               <h1 className="debate-profile-name">{selectedPersona.name}</h1>
@@ -192,7 +212,9 @@ export default function DebateScreen({ events, onOpenEvent }: Props) {
                   className="debate-message__persona-button"
                   onClick={() => setSelectedPersonaId(message.personaId)}
                 >
-                  <span className="debate-avatar">{persona?.initial.slice(0, 1) ?? 'A'}</span>
+                  <span className="debate-avatar" style={avatarStyle(message.personaId)}>
+                    {persona?.initial.slice(0, 1) ?? 'A'}
+                  </span>
                 </button>
                 <div className="debate-message__body">
                   <button
@@ -245,7 +267,9 @@ export default function DebateScreen({ events, onOpenEvent }: Props) {
               onClick={() => setSelectedPersonaId(persona.id)}
             >
               <div className="debate-member-card__top">
-                <span className="debate-avatar">{persona.initial.slice(0, 1)}</span>
+                <span className="debate-avatar" style={avatarStyle(persona.id)}>
+                  {persona.initial.slice(0, 1)}
+                </span>
               </div>
               <div className="debate-member-name">{persona.name}</div>
               <p className="debate-member-bio">{persona.bio}</p>
@@ -293,7 +317,11 @@ export default function DebateScreen({ events, onOpenEvent }: Props) {
                 <p className="debate-card__summary">{thread.issueSummary}</p>
                 <div className="debate-avatar-row">
                   {threadParticipants.map((persona) => (
-                    <span className="debate-avatar debate-avatar--sm" key={persona.id}>
+                    <span
+                      className="debate-avatar debate-avatar--sm"
+                      key={persona.id}
+                      style={avatarStyle(persona.id)}
+                    >
                       {persona.initial.slice(0, 1)}
                     </span>
                   ))}
