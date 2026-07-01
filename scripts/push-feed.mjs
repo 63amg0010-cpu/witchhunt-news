@@ -16,7 +16,7 @@ try {
     cwd,
     input: prompt,
     stdio: ['pipe', 'inherit', 'inherit'],
-    timeout: 8 * 60 * 1000,
+    timeout: 20 * 60 * 1000,
   })
   console.log('✅ AI 토론 생성 완료')
 } catch (e) {
