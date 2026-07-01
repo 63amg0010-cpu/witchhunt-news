@@ -1,23 +1,38 @@
-// 새 feed.json을 배포 사이트(Vercel)에 자동 반영한다.
+// 새 feed.json / debates.json을 배포 사이트(Vercel)에 자동 반영한다.
 // 코덱스 자동화의 '맨 마지막' 단계로 실행:  node scripts/push-feed.mjs
-//
-// 참고: Vercel 계정에 GitHub 로그인 연결이 없어 'push→자동배포'가 안 되므로,
-//       여기서 Vercel CLI로 직접 배포한다. (GitHub에는 백업용으로 함께 올림)
+//   실행 시 AI 페르소나 토론(public/debates.json)도 새로 생성해서 함께 배포한다.
 import { execSync } from 'node:child_process'
+import { readFileSync } from 'node:fs'
 
-const OPT = { cwd: process.cwd(), stdio: 'inherit' }
-const quiet = { cwd: process.cwd(), encoding: 'utf8' }
+const cwd = process.cwd()
+const OPT = { cwd, stdio: 'inherit' }
+const quiet = { cwd, encoding: 'utf8' }
 
-// 1) 변경이 없으면 아무것도 안 함
+// 0) AI 페르소나 토론 생성 (best-effort — 실패해도 뉴스 배포는 계속한다)
+try {
+  console.log('AI 토론 생성 중... (scripts/debate-gen.md)')
+  const prompt = readFileSync('scripts/debate-gen.md', 'utf8')
+  execSync(`codex exec -C "${cwd}"`, {
+    cwd,
+    input: prompt,
+    stdio: ['pipe', 'inherit', 'inherit'],
+    timeout: 8 * 60 * 1000,
+  })
+  console.log('✅ AI 토론 생성 완료')
+} catch (e) {
+  console.warn('⚠️ AI 토론 생성 건너뜀(뉴스 배포는 계속):', e.message)
+}
+
+// 1) 변경이 없으면 아무것도 안 함 (feed.json 또는 debates.json 중 하나라도 바뀌면 배포)
 let changed = ''
 try {
-  execSync('git add public/feed.json', quiet)
-  changed = execSync('git status --porcelain public/feed.json', quiet).trim()
+  execSync('git add public/feed.json public/debates.json', quiet)
+  changed = execSync('git status --porcelain public/feed.json public/debates.json', quiet).trim()
 } catch (e) {
   console.warn('git 상태 확인 경고:', e.message)
 }
 if (!changed) {
-  console.log('ℹ️ feed.json 변경 없음 — 배포 생략')
+  console.log('ℹ️ feed.json/debates.json 변경 없음 — 배포 생략')
   process.exit(0)
 }
 
