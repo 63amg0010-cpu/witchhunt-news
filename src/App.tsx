@@ -33,17 +33,19 @@ export default function App() {
   const [events, setEvents] = useState<NewsEvent[]>([])
   const [loading, setLoading] = useState(true)
   const [usingSample, setUsingSample] = useState(false)
+  const [updatedAt, setUpdatedAt] = useState<string | undefined>(undefined) // 피드 갱신 시각(헤더 표시용)
 
   // 처음 화면이 뜰 때 실제 뉴스를 불러온다
   useEffect(() => {
     let alive = true
     ;(async () => {
       try {
-        const { events: real } = await fetchEvents()
+        const { events: real, updatedAt: at } = await fetchEvents()
         if (!alive) return
         if (real.length > 0) {
           setEvents(real)
           setUsingSample(false)
+          setUpdatedAt(at)
         } else {
           setEvents(SAMPLE_EVENTS)
           setUsingSample(true)
@@ -141,6 +143,7 @@ export default function App() {
       <HomeScreen
         events={events}
         usingSample={usingSample}
+        updatedAt={updatedAt}
         category={nav.category ?? '주요 사건'}
         onCategoryChange={changeCategory}
         onOpenEvent={openEvent}

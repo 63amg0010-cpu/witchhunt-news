@@ -290,19 +290,20 @@ function titleKey(title: string): string {
 }
 
 // 모든 키워드를 가져와 → (클러스터링) → 사건 목록으로 변환
-export async function fetchEvents(): Promise<{ events: NewsEvent[]; source: 'feed' | 'naver' | 'google' }> {
+export async function fetchEvents(): Promise<{ events: NewsEvent[]; source: 'feed' | 'naver' | 'google'; updatedAt?: string }> {
   // 0) 미리 만들어둔 피드 파일이 있으면 그걸 사용 (AI 요약·사진 포함, 1시간마다 갱신)
   try {
     const r = await fetch('/feed.json', { cache: 'no-store' })
     if (r.ok) {
-      const data = (await r.json()) as { events?: NewsEvent[] }
+      const data = (await r.json()) as { events?: NewsEvent[]; generatedAt?: string; summarizedAt?: string }
       if (data.events && data.events.length > 0) {
         const now = Date.now()
         // "N분 전" 표시를 지금 기준으로 다시 계산(파일이 만들어진 시점 기준이라 오래되면 어긋남)
         const refreshed = data.events.map((e) =>
           e.publishedAt ? { ...e, timeAgo: timeAgo(e.publishedAt) } : e,
         )
-        return { events: sortForDisplay(refreshed, now), source: 'feed' }
+        // 헤더 "업데이트 시각"용: 요약 시각 우선(더 최신), 없으면 피드 생성 시각
+        return { events: sortForDisplay(refreshed, now), source: 'feed', updatedAt: data.summarizedAt || data.generatedAt }
       }
     }
   } catch {

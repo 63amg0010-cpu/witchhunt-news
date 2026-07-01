@@ -10,6 +10,7 @@ const CATEGORIES = ['주요 사건', '정치', '경제', '주식', '크립토', 
 interface Props {
   events: NewsEvent[]
   usingSample: boolean
+  updatedAt?: string
   category: string
   onCategoryChange: (c: string) => void
   onOpenEvent: (id: string) => void
@@ -19,7 +20,7 @@ interface Props {
 
 // 홈 화면 — 오늘의 주요 사건
 // 카테고리는 App(브라우저 기록)이 관리 → 기사 보고 뒤로 와도 보던 카테고리 유지
-export default function HomeScreen({ events, usingSample, category, onCategoryChange, onOpenEvent, onOpenBiasFeed, onOpenOutletBias }: Props) {
+export default function HomeScreen({ events, usingSample, updatedAt, category, onCategoryChange, onOpenEvent, onOpenBiasFeed, onOpenOutletBias }: Props) {
   const [region, setRegion] = useState<(typeof REGIONS)[number]>('전체')
   const categoryList = category === '주요 사건' ? events : events.filter((e) => e.category === category)
   const list = category === '국제' && region !== '전체'
@@ -34,7 +35,7 @@ export default function HomeScreen({ events, usingSample, category, onCategoryCh
 
   return (
     <div className="screen">
-      <Header />
+      <Header updatedAt={updatedAt} />
 
       {/* 실시간 뉴스를 못 불러왔을 때 안내 */}
       {usingSample && (

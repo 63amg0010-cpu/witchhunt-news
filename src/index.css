@@ -114,6 +114,24 @@ ul { list-style: none; margin: 0; padding: 0; }
   width: auto;
   display: block;
 }
+/* 헤더 오른쪽: 오늘 날짜 + 업데이트 시각 (무채색, 신선도 표시) */
+.header__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1.25;
+}
+.header__date {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: var(--ink);
+}
+.header__updated {
+  margin-top: 1px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-faint);
+}
 .header__profile {
   width: 38px;
   height: 38px;
@@ -364,7 +382,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .ev-badge--blindspot.ev-badge--cons { color: var(--lean-cons); }
 .ev-badge--blindspot.ev-badge--center { color: var(--lean-center); }
 
-.biasbar__unit { font-size: 11px; font-weight: 600; color: var(--ink-faint); }
+.biasbar__unit { margin-left: auto; font-size: 11px; font-weight: 600; color: var(--ink-faint); }
 
 /* ===========================================================
    같은 사건, 진영별 시각 (상세화면 핵심 — 진보 vs 보수 대비)
@@ -513,6 +531,10 @@ ul { list-style: none; margin: 0; padding: 0; }
   line-height: 1.35;
   margin: 6px 0 0;
   letter-spacing: -0.3px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;   /* 제목 최대 2줄, 넘치면 … */
+  overflow: hidden;
 }
 
 /* ===========================================================
@@ -545,6 +567,10 @@ ul { list-style: none; margin: 0; padding: 0; }
   line-height: 1.4;
   margin: 5px 0 0;
   letter-spacing: -0.3px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;   /* 제목 최대 2줄, 넘치면 … */
+  overflow: hidden;
 }
 
 /* ===========================================================
