@@ -15,6 +15,9 @@ _reactions.json
 _*.txt
 _*_snapshot.json
 
+# 세션 인수인계 노트 (내부용, 공개 저장소에 올리지 않음)
+HANDOFF.md
+
 # 큰 실행파일 / 로컬 도구
 cloudflared.exe
 .vercel
