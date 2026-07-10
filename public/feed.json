@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-07-09T21:53:50.912Z",
+ "generatedAt": "2026-07-10T00:54:49.344Z",
  "events": [
   {
    "id": "rss-c0",
@@ -8,16 +8,16 @@
    "imageUrl": "https://img1.newsis.com/2026/07/09/NISI20260709_0002182671_web.jpg",
    "imageSourceUrl": "https://www.newsis.com/view/NISX20260710_0003703469",
    "summary": "이란 외무부는 미국의 공습이 자국 영토와 철도 교량 등을 겨냥한 침략적 공격이라며 '중대한 전쟁 범죄'라고 규정했습니다. 이란은 해당 공격이 유엔 헌장과 기존 양해각서를 위반한 것이라면서 국가적 권리와 이익 침해를 허용하지 않겠다고 밝혔습니다.",
-   "outletCount": 12,
+   "outletCount": 9,
    "timeAgo": "46분 전",
    "publishedAt": "2026-07-09T21:07:06.000Z",
    "bias": {
-    "prog": 30,
-    "center": 30,
-    "cons": 40
+    "prog": 0,
+    "center": 43,
+    "cons": 57
    },
    "biasWarning": false,
-   "frameProg": "이란, 쿠웨이트·바레인 공습…‘철도 교량’ 포함 연이틀 미국 폭격에 보복",
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
    "frameCons": "\"이란 버티고 전쟁 부담\"…트럼프, 호르무즈 딜레마",
    "firstSeen": "2026-07-09T21:53:50.912Z",
    "articles": [
@@ -82,38 +82,12 @@
      "url": "https://www.segye.com/newsView/20260709520600",
      "timeAgo": "9시간 전",
      "summary": "도널드 트럼프 미국 행정부가 시리아에 대한 테러지원국(SST) 지정 철회하기로 했다. 이란과 국경을 맞댄 튀르키예와 관계 개선에 이어 ‘시아파 벨트’의 주요 길목인 시리아와 외교 정상화까지 나서며 중동 지역에서 이란에 대한 견제를 본격화한 모습이다. 미국은 우크라이나에 패트리엇 대공 방어 미사일의 현지 생산 허용을 시사하며 러시아에 대한 견제에도 나섰다."
-    },
-    {
-     "id": "rss-c0-a7",
-     "outlet": "한겨레",
-     "lean": "prog",
-     "title": "이란, 쿠웨이트·바레인 공습…‘철도 교량’ 포함 연이틀 미국 폭격에 보복",
-     "url": "https://www.hani.co.kr/arti/international/international_general/1267473.html",
-     "timeAgo": "최근"
-    },
-    {
-     "id": "rss-c0-a8",
-     "outlet": "경향신문",
-     "lean": "prog",
-     "title": "이란, 미국 향한 보복 공습···지도부 내홍은 심화",
-     "url": "https://www.khan.co.kr/article/202607091511011/?utm_source=khan_rss&utm_medium=rss&utm_campaign=kh_world",
-     "timeAgo": "15시간 전",
-     "summary": "시민들이 8일(현지시간) 레바논 베이루트 남부 교외에서 아야톨라 알리 하메네이 이란 최고지도자를 추모하기 위해 모여있다. 로이터연합뉴스이란이 미국을 향한 강력한 보복 공습을 이어가면서 긴장이 다시 고조되고 있다. 종전 양해각서(MOU)에 따른 60일간의 후속 협상 기간이 끝나가는 가운데 이란이 호르무즈 해협이라는 협상 카드를 위해 무력 충돌을 이어갈 가능성···"
-    },
-    {
-     "id": "rss-c0-a9",
-     "outlet": "프레시안",
-     "lean": "prog",
-     "title": "이란 외무부 quot;종전MOU 명백한 위반hellip;모든 조치 취할 것quot;",
-     "url": "https://www.pressian.com/pages/articles/2026070807204704985&amp;ref=rss",
-     "timeAgo": "1일 전",
-     "summary": "이란이 미국의 대이란 석유 제재 재개를 규탄하면서 지난달 양국 간 체결된 양해각서 에 대한 \"명백한 위반\"이라고 비난했다.\n\nCNN 보도에 따르면 7일(현지시간) 이란 외무부는 성명을 내고 호르무즈 해협의 상선에 대한 공격을 이란 측 소행으로 규정한 미국이 석유 제재 해제를 취소한 것에 대해 이같이 밝히며 \"미국 정부가 이번 약속 위반으로 인한 결과에 대해"
     }
    ],
    "_repUrl": "https://www.newsis.com/view/NISX20260710_0003703469",
    "background": "미국과 이란은 중동 해상 안전, 대리세력 충돌, 핵 문제를 둘러싸고 장기간 대립해 왔습니다. 군사 충돌이 발생할 때마다 국제유가와 지역 안보 불안이 함께 커지는 구조입니다.",
    "importance": 9,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "rss-c1",
@@ -122,16 +96,16 @@
    "imageUrl": "https://img.sbs.co.kr/newimg/news/20260710/202200862_1280.jpg",
    "imageSourceUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008650776",
    "summary": "윤석열 전 대통령의 체포방해 사건에 대해 대법원이 징역 7년을 확정했습니다. 보도는 이번 판결이 사건 발생 583일 만에 나온 첫 대법원 판단이라고 전했습니다.",
-   "outletCount": 11,
+   "outletCount": 8,
    "timeAgo": "35분 전",
    "publishedAt": "2026-07-09T21:19:00.000Z",
    "bias": {
-    "prog": 30,
-    "center": 40,
-    "cons": 30
+    "prog": 0,
+    "center": 57,
+    "cons": 43
    },
    "biasWarning": false,
-   "frameProg": "[뉴스 다이브] 윤 ‘체포 방해’ 징역 7년 확정",
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
    "frameCons": "계엄 583일만에… 대법, 尹 ‘내란 재판’ 첫 유죄 판결",
    "firstSeen": "2026-07-09T21:53:50.912Z",
    "articles": [
@@ -195,38 +169,12 @@
      "title": "'공수처 체포집행 방해' 윤석열, 징역 7년 확정",
      "url": "https://www.hankyung.com/article/2026070963141",
      "timeAgo": "13시간 전"
-    },
-    {
-     "id": "rss-c1-a7",
-     "outlet": "한겨레",
-     "lean": "prog",
-     "title": "[뉴스 다이브] 윤 ‘체포 방해’ 징역 7년 확정",
-     "url": "https://www.hani.co.kr/arti/politics/politics_general/1267499.html",
-     "timeAgo": "최근"
-    },
-    {
-     "id": "rss-c1-a8",
-     "outlet": "경향신문",
-     "lean": "prog",
-     "title": "‘통일교 금품 수수’ 전성배 징역 5년·윤영호 1년6개월형 확정",
-     "url": "https://www.khan.co.kr/article/202607092135005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=society_news",
-     "timeAgo": "9시간 전",
-     "summary": "대법, 유죄 원심 유지…윤석열 정권 ‘통일교 관련 사건’ 첫 판단교세 확장·청탁용 금품 로비 사실 인정…김건희 재판 영향줄 듯‘통일교 금품 수수 의혹’ 사건의 핵심 인물인 건진법사 전성배(사진)씨와 윤영호 전 통일교 세계본부장이 대법원에서 유죄를 확정받았다. 윤석열 정권에서 벌어진 통일교와 관련한 각종 사건에 대법원이 처음 내놓은 판단이다.대법원 3부(주심···"
-    },
-    {
-     "id": "rss-c1-a9",
-     "outlet": "미디어오늘",
-     "lean": "prog",
-     "title": "[속보] 대법, 윤석열 ‘외신 허위 공보’ ‘체포방해’ 등 징역 7년형 확정",
-     "url": "https://www.mediatoday.co.kr/news/articleView.html?idxno=335664",
-     "timeAgo": "16시간 전",
-     "summary": "전직 대통령 윤석열씨가 12·3 비상계엄을 저지른지 583일 만에 첫 최종 판단이 내려졌다. 대법원 3부(주심 이숙연 대법관)는 9일 고위공직자범죄수사처(공수처) 체포 방해, 국무위원들의 심의권 침해, 허위의 사후 비상계엄 선포문 작성·폐기, 외신 허위 공보 등 10개 중 8개 혐의에 대해 상고를 기각하면서 징역 7년 실형을 최종 확정했다.이날 대법원 선고는 소부 선고로 최초로 전국에 생중계됐다. 윤씨는 서울고등법원에서 진행되는 내란 우두머리 재판 항소심 재판에 출석하느라 대법원 선고가 이뤄지는 1호 법정에는 나오지 않았다. 법률심"
     }
    ],
    "_repUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008650776",
    "background": "전직 대통령 관련 형사 사건은 사법 판단 자체뿐 아니라 정치권과 사회 전반에 미치는 파장이 큽니다. 특히 강제수사 방해나 사법 절차 불복 문제는 법치주의 논란으로 이어지기 쉽습니다.",
    "importance": 9,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "p5-c0",
@@ -325,7 +273,7 @@
    "importance": 8,
    "background": "12·3 비상계엄 의혹 수사는 국내 의사결정뿐 아니라 대외 메시지 전달 경위까지 확인하는 단계로 넓어졌습니다. 특히 미국 등 우방국을 상대로 한 설명이 조직적으로 이뤄졌는지가 주요 쟁점입니다.",
    "publicTake": "비판적인 반응이 우세한 분위기입니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "s7-c0",
@@ -413,7 +361,7 @@
    ],
    "_repUrl": "https://www.seoul.co.kr/news/economy/finance/2026/07/08/20260708500273?wlog_tag3=naver",
    "publicTake": "긍정적인 반응이 많은 편입니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z",
+   "summarizedAt": "2026-07-10T00:59:17.161Z",
    "importance": 8,
    "background": "가계대출 총량 관리와 수도권 부동산 과열 우려로 은행권이 주택담보대출 문턱을 급격히 높이고 있습니다. 대출 규제가 계약 중인 실수요자에게 바로 적용되며 혼선이 반복돼 왔습니다."
   },
@@ -514,132 +462,7 @@
    "publicTake": "긍정적인 의견이 다소 많은 편입니다.",
    "background": "IMF는 세계 경기와 교역, 원자재 가격 변화를 반영해 각국 성장률을 주기적으로 조정한다. 최근 한국은 반도체 업황 회복이 수출과 설비투자를 떠받치며 성장 전망을 끌어올리는 핵심 변수로 작용해 왔다.",
    "importance": 8,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
-  },
-  {
-   "id": "s2-c0",
-   "category": "사회",
-   "title": "'장윤기 사건' 경찰청장 대행 귀국 \"매우 송구, 엄중함 인식\"",
-   "imageUrl": "https://photo.jtbc.co.kr/news/jam_photo/202607/10/f96e63b0-ecaa-40af-ba56-da90ae77fee9.jpg",
-   "imageSourceUrl": "https://news.jtbc.co.kr/article/NB12307538?influxDiv=NAVER",
-   "summary": "이번 사건을 계기로 검찰 보완수사권을 두고 여러 이야기가 나오는 데 대해서는 \"국회에서 충분한 논의를 거쳐 입법 정책적으로 결정되리라 생각한다\"고 했습니다. 그러면서 \"논의 과정에서 경찰에서도 필요한 의견을...",
-   "outletCount": 19,
-   "timeAgo": "7분 전",
-   "publishedAt": "2026-07-09T21:46:14.000Z",
-   "bias": {
-    "prog": 36,
-    "center": 37,
-    "cons": 27
-   },
-   "biasWarning": false,
-   "frameProg": "장동혁, ‘장윤기 사건’ 광주경찰청장 면담 불발…“이게 국민 대하는 태도”",
-   "frameCons": "장윤기 사건에 조기 귀국한 경찰청장 대행…“매우 송구”",
-   "firstSeen": "2026-07-08T12:45:54.988Z",
-   "articles": [
-    {
-     "id": "s2-c0-a0",
-     "outlet": "JTBC",
-     "lean": "center",
-     "title": "'장윤기 사건' 경찰청장 대행 귀국 \"매우 송구, 엄중함 인식\"",
-     "url": "https://news.jtbc.co.kr/article/NB12307538?influxDiv=NAVER",
-     "timeAgo": "7분 전",
-     "summary": "이번 사건을 계기로 검찰 보완수사권을 두고 여러 이야기가 나오는 데 대해서는 \"국회에서 충분한 논의를 거쳐 입법 정책적으로 결정되리라 생각한다\"고 했습니다. 그러면서 \"논의 과정에서 경찰에서도 필요한 의견을..."
-    },
-    {
-     "id": "s2-c0-a1",
-     "outlet": "매일경제",
-     "lean": "cons",
-     "title": "장윤기 사건에 조기 귀국한 경찰청장 대행…“매우 송구”",
-     "url": "https://www.mk.co.kr/article/12095011",
-     "timeAgo": "18분 전",
-     "summary": "이번 사건을 계기로 검찰의 보완수사권 우호 여론이 높아진 데 대해서는 “보완수사권은 국회에서 충분한 논의를 거쳐 입법 정책적으로 결정되리라 생각한다”며 “논의 과정에서 경찰도 필요한 의견을 제시하도록..."
-    },
-    {
-     "id": "s2-c0-a2",
-     "outlet": "머니투데이",
-     "lean": "center",
-     "title": "'장윤기 사태'에 조기 귀국한 경찰청장 직무대행…\"국민께 송구\"",
-     "url": "https://www.mt.co.kr/society/2026/07/10/2026071006192991131",
-     "timeAgo": "25분 전",
-     "summary": "검찰 보완수사권 폐지 관련해서는 \"국회에서 충분한 논의를 거쳐 입법·정책적으로 결정되리라 생각하고 있다\"며 \"논의 과정에서 경찰에서도 필요한 의견을 제시하겠다\"고 말했다. 유 대행은 유엔(UN) 경찰청장 회의 참석을..."
-    },
-    {
-     "id": "s2-c0-a3",
-     "outlet": "연합뉴스",
-     "lean": "center",
-     "title": "장윤기 사건에 조기 귀국한 경찰청장 대행, \"매우 송구\"",
-     "url": "https://www.yna.co.kr/view/AKR20260710010600004?input=1195m",
-     "timeAgo": "29분 전",
-     "summary": "이번 사건을 계기로 검찰의 보완수사권 우호 여론이 높아진 데 대해서는 \"보완수사권은 국회에서 충분한 논의를 거쳐 입법 정책적으로 결정되리라 생각한다\"며 \"논의 과정에서 경찰도 필요한 의견을 제시하도록 하겠다\"고..."
-    },
-    {
-     "id": "s2-c0-a4",
-     "outlet": "동아일보",
-     "lean": "cons",
-     "title": "경찰청장 직무대행 “‘장윤기 사건’ 송구…보완수사권, 국회서 결정”",
-     "url": "https://www.donga.com/news/Society/article/all/20260710/134271619/1",
-     "timeAgo": "30분 전",
-     "summary": "장윤기 사건을 둘러싼 각종 논란이 검찰 보완수사권 폐지 논의 국면에 미칠 파장 등을 감안해 사태 수습에 나선 것으로 풀이된다. 한편 유 대행은 이날 오전 9시 20분 경찰 지휘부 화상회의를 주재하고 경찰 수사 신뢰..."
-    },
-    {
-     "id": "s2-c0-a5",
-     "outlet": "TV조선",
-     "lean": "cons",
-     "title": "유재성 경찰청장 직무대행 조기 귀국…\"'장윤기 사건' 엄중함 인식\"",
-     "url": "https://news.tvchosun.com/site/data/html_dir/2026/07/10/2026071090006.html",
-     "timeAgo": "36분 전",
-     "summary": "또, 검찰의 보완수사권 폐지와 관련해 경찰 수사권 확대를 우려하는 목소리에 대해서는 국회에서 충분한 논의를 거쳐서 결정되리라 생각하고 있고 논의 과정에서 경찰에서도 필요한 의견을 제시하겠다고 설명했다. 유..."
-    },
-    {
-     "id": "s2-c0-a6",
-     "outlet": "YTN",
-     "lean": "center",
-     "title": "경찰청장 대행 \"장윤기 사건 매우 송구\"...보완수사권엔 \"국회 논의\"",
-     "url": "https://www.ytn.co.kr/_ln/0103_202607100610301677",
-     "timeAgo": "43분 전",
-     "summary": "그만큼 이번 사안의 엄중함을 인식하고 있습니다.] 검찰 보완수사 과정에서 증거인멸 정황이 드러난 만큼 경찰 수사권 확대를 신뢰할 수 있겠느냐는 일각의 지적에 대해서는 원론적 입장을 보였습니다. 유 대행은 국회에서..."
-    },
-    {
-     "id": "s2-c0-a7",
-     "outlet": "한겨레",
-     "lean": "prog",
-     "title": "장동혁, ‘장윤기 사건’ 광주경찰청장 면담 불발…“이게 국민 대하는 태도”",
-     "url": "https://www.hani.co.kr/arti/politics/politics_general/1267493.html",
-     "timeAgo": "최근"
-    },
-    {
-     "id": "s2-c0-a8",
-     "outlet": "경향신문",
-     "lean": "prog",
-     "title": "재선거→장윤기 사건…국힘, 공세 타깃 전환",
-     "url": "https://www.khan.co.kr/article/202607092142005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=politic_news",
-     "timeAgo": "9시간 전",
-     "summary": "여 ‘보완수사권 폐지’ 공격 소재장동혁, 한 총리 접견 취소하고관할지 광주경찰청장 면담 시도대치 끝 만남 불발 9일 ‘장윤기 사건’과 관련해 광주경찰청을 찾은 장동혁 대표 등 국민의힘 지도부가 김영근 청장과의 면담이 이뤄지지 않자 항의하고 있다. 연합뉴스국민의힘 지도부가 광주 여고생 살해범 ‘장윤기 사건’에 당력을 집중하고 있다. 검찰 보완수사권 폐지를 추···"
-    },
-    {
-     "id": "s2-c0-a9",
-     "outlet": "프레시안",
-     "lean": "prog",
-     "title": "검경, '장윤기 사건' 경찰 유착middot;증거인멸 수사 확대",
-     "url": "https://www.pressian.com/pages/articles/2026070920070629603&amp;ref=rss",
-     "timeAgo": "9시간 전",
-     "summary": "전남광주통합특별시 광산구 여고생 살인사건 피의자 장윤기가 경찰 수사 기간 현직 경찰관인 아버지와 세 차례 접견한 사실이 확인되면서 검경이 유착·증거인멸 의혹 수사를 확대하고 있다.\n\n9일 수사당국 등에 따르면 경찰청 국가수사본부 특별수사팀은 장윤기와 아버지 장모 경감의 접견 녹음파일과 수사팀 통화 내역을 분석하고 있으며 검찰은 당시 수사팀 경찰관들을 불러"
-    },
-    {
-     "id": "s2-c0-a10",
-     "outlet": "미디어오늘",
-     "lean": "prog",
-     "title": "한국일보 “‘검수완박’ 집착, 장윤기 사건 계기로 돌아봐야”",
-     "url": "https://www.mediatoday.co.kr/news/articleView.html?idxno=335636",
-     "timeAgo": "1일 전",
-     "summary": "‘광주 여고생 살인사건’ 관련 경찰의 수사 은폐 축소 정황이 검찰의 보완수사로 드러나게 되자 여당이 추진하는 ‘검수완박’(검찰 수사관 완전 박탈)에도 이견이 제기되고 있다. 조선일보는 “민주당은 살인범 장윤기 편에 서고 있다”는 사설을 냈고 한국일보는 “장윤기 사건에도 ‘검수완박’ 도그마에 헤매는 민주당”이라는 사설을 냈다.광주지검은 ‘광주 여고생 살인사건’ 피의자 장윤기의 아버지 장아무개 경감과 경찰 수사팀의 유착 의혹과 관련해 7일 광주 광산경찰서를 압수수색했다. 압수수색 대상에는 사건의 수사팀장이었던 박아무개 경감 등이 포함됐"
-    }
-   ],
-   "_repUrl": "https://news.jtbc.co.kr/article/NB12307538?influxDiv=NAVER",
-   "importance": 8,
-   "background": "검수완박 이후 수사권 조정의 후속 정비를 둘러싼 논쟁은 계속돼 왔다. 최근 장윤기 사건에서 경찰 수사 부실 논란이 커지면서 보완수사권 존폐가 다시 핵심 쟁점으로 떠올랐다.",
-   "publicTake": "비판적인 반응이 우세한 분위기입니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "p5-c0-b-b",
@@ -648,16 +471,16 @@
    "imageUrl": "https://img.sbs.co.kr/newimg/news/20260702/202198353_1280.jpg",
    "imageSourceUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008648946&plink=ORI&cooper=NAVER",
    "summary": "12&middot;3 비상계엄 선포 1년 7개월여 만으로, 윤 전 대통령의 여러 재판 가운데 첫 대법원 판단입니다. 대법원 3부는 이날 오후 2시 대법원 1호 법정에서 윤 전 대통령의 특수공무집행방해, 직권남용 권리행사방해 등 혐의 사건 상고심 선고 기일을 엽니다.",
-   "outletCount": 19,
+   "outletCount": 17,
    "timeAgo": "8분 전",
    "publishedAt": "2026-07-09T21:08:00.000Z",
    "bias": {
-    "prog": 20,
-    "center": 40,
-    "cons": 40
+    "prog": 0,
+    "center": 50,
+    "cons": 50
    },
    "biasWarning": false,
-   "frameProg": "‘체포 방해’ 윤석열 징역 7년…“‘인간 방패’ 국힘 의원들 죗값 치러야”",
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
    "frameCons": "계엄 583일만…오늘 尹 ‘체포방해’ 첫 대법 판단 나온다",
    "firstSeen": "2026-07-09T00:49:46.841Z",
    "articles": [
@@ -732,155 +555,103 @@
      "url": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8606364&ref=A",
      "timeAgo": "31분 전",
      "summary": "특검팀의 중계 신청을 법원이 허가함에 따라, 대법원 소부 선고로서는 처음으로 생중계도 실행됩니다. 선고 전 과정은 KBS 1TV를 통해 확인할 수 있습니다. [앵커] 오전에는 '건진법사' 전성배 씨와 윤영호 전 통일교..."
-    },
-    {
-     "id": "p5-c0-b-b-a8",
-     "outlet": "한겨레",
-     "lean": "prog",
-     "title": "‘체포 방해’ 윤석열 징역 7년…“‘인간 방패’ 국힘 의원들 죗값 치러야”",
-     "url": "https://www.hani.co.kr/arti/politics/politics_general/1267554.html",
-     "timeAgo": "최근"
-    },
-    {
-     "id": "p5-c0-b-b-a9",
-     "outlet": "경향신문",
-     "lean": "prog",
-     "title": "윤석열 ‘체포 방해’ 7년형 확정",
-     "url": "https://www.khan.co.kr/article/202607092149005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=society_news",
-     "timeAgo": "9시간 전",
-     "summary": "대법, 공수처 내란 수사권 인정…윤 측 “재판소원 할 것”윤석열 전 대통령이 경호처를 동원해 고위공직자범죄수사처(공수처)의 체포영장 집행을 방해한 혐의에 대해 대법원이 9일 징역 7년을 선고했다. 2024년 12월3일 불법계엄 선포 이후 583일 만에 윤 전 대통령이 받고 있는 8건의 형사재판 중 첫 번째 확정판결이 나왔다. 이날 대법원 3부(주심 이숙연 ···"
     }
    ],
    "_repUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008648946&plink=ORI&cooper=NAVER",
    "publicTake": "비판적인 반응이 우세한 분위기입니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z",
+   "summarizedAt": "2026-07-10T00:59:17.161Z",
    "importance": 8,
    "background": "12·3 비상계엄 이후 윤석열 전 대통령을 둘러싼 형사 재판이 여러 갈래로 진행되고 있습니다. 공수처 체포영장 집행 과정의 적법성 판단은 이후 관련 사건들에도 영향을 줄 수 있습니다."
   },
   {
-   "id": "i6-c0",
-   "category": "국제",
-   "title": "트럼프 \"오늘 밤 다시 이란 공격할 수 있다\"…해상봉쇄 재개도 시사",
-   "imageUrl": "https://file2.nocutnews.co.kr/newsroom/image/2026/07/08/202607082350558901_0.jpg",
-   "imageSourceUrl": "https://www.nocutnews.co.kr/news/6545362?utm_source=naver&utm_medium=article&utm_campaign=20260708115215",
-   "summary": "트럼프 대통령은 8일(현지시간) 튀르키예 앙카라에서 열린 북대서양조약기구(NATO·나토) 정상회의를 계기로 볼로디미르 젤렌스키 우크라이나 대통령과의 양자회담 자리에서 \"어젯밤에 그들에게 강력한 공격을 가했고...",
-   "outletCount": 18,
-   "timeAgo": "53분 전",
-   "publishedAt": "2026-07-09T15:44:00.000Z",
+   "id": "s2-c0",
+   "category": "사회",
+   "title": "'장윤기 사건' 경찰청장 대행 귀국 \"매우 송구, 엄중함 인식\"",
+   "imageUrl": "https://photo.jtbc.co.kr/news/jam_photo/202607/10/f96e63b0-ecaa-40af-ba56-da90ae77fee9.jpg",
+   "imageSourceUrl": "https://news.jtbc.co.kr/article/NB12307538?influxDiv=NAVER",
+   "summary": "이번 사건을 계기로 검찰 보완수사권을 두고 여러 이야기가 나오는 데 대해서는 \"국회에서 충분한 논의를 거쳐 입법 정책적으로 결정되리라 생각한다\"고 했습니다. 그러면서 \"논의 과정에서 경찰에서도 필요한 의견을...",
+   "outletCount": 15,
+   "timeAgo": "7분 전",
+   "publishedAt": "2026-07-09T21:46:14.000Z",
    "bias": {
-    "prog": 27,
-    "center": 55,
-    "cons": 18
+    "prog": 0,
+    "center": 57,
+    "cons": 43
    },
    "biasWarning": false,
-   "frameProg": "트럼프, 나토 귀국길 ‘구형 전용기’ 탑승…신형, 이란 암살 공격 무방비?",
-   "frameCons": "뉴욕증시, 트럼프 ‘이란 공격 암시’ 발언에 하락 출발",
-   "firstSeen": "2026-07-08T00:39:57.016Z",
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
+   "frameCons": "장윤기 사건에 조기 귀국한 경찰청장 대행…“매우 송구”",
+   "firstSeen": "2026-07-08T12:45:54.988Z",
    "articles": [
     {
-     "id": "i6-c0-a0",
-     "outlet": "노컷뉴스",
+     "id": "s2-c0-a0",
+     "outlet": "JTBC",
      "lean": "center",
-     "title": "트럼프 \"오늘 밤 다시 이란 공격할 수 있다\"…해상봉쇄 재개도 시사",
-     "url": "https://www.nocutnews.co.kr/news/6545362?utm_source=naver&utm_medium=article&utm_campaign=20260708115215",
-     "timeAgo": "53분 전",
-     "summary": "트럼프 대통령은 8일(현지시간) 튀르키예 앙카라에서 열린 북대서양조약기구(NATO·나토) 정상회의를 계기로 볼로디미르 젤렌스키 우크라이나 대통령과의 양자회담 자리에서 \"어젯밤에 그들에게 강력한 공격을 가했고..."
+     "title": "'장윤기 사건' 경찰청장 대행 귀국 \"매우 송구, 엄중함 인식\"",
+     "url": "https://news.jtbc.co.kr/article/NB12307538?influxDiv=NAVER",
+     "timeAgo": "7분 전",
+     "summary": "이번 사건을 계기로 검찰 보완수사권을 두고 여러 이야기가 나오는 데 대해서는 \"국회에서 충분한 논의를 거쳐 입법 정책적으로 결정되리라 생각한다\"고 했습니다. 그러면서 \"논의 과정에서 경찰에서도 필요한 의견을..."
     },
     {
-     "id": "i6-c0-a1",
-     "outlet": "연합뉴스TV",
-     "lean": "center",
-     "title": "트럼프 \"아마 오늘밤 다시 이란 공격…해상봉쇄 재개도\"",
-     "url": "http://www.yonhapnewstv.co.kr/news/AKR20260708232846vGJ",
-     "timeAgo": "1시간 전",
-     "summary": "튀르키예 앙카라에서 열린 북대서양조약기구(NATO·나토) 정상회의에 참석 중인 트럼프 대통령은 이날 볼로디미르 젤렌스키 우크라이나 대통령과의 양자회담 자리에서 \"어젯밤에 그들에게 강력한 공격을 가했고, 아마도..."
+     "id": "s2-c0-a1",
+     "outlet": "매일경제",
+     "lean": "cons",
+     "title": "장윤기 사건에 조기 귀국한 경찰청장 대행…“매우 송구”",
+     "url": "https://www.mk.co.kr/article/12095011",
+     "timeAgo": "18분 전",
+     "summary": "이번 사건을 계기로 검찰의 보완수사권 우호 여론이 높아진 데 대해서는 “보완수사권은 국회에서 충분한 논의를 거쳐 입법 정책적으로 결정되리라 생각한다”며 “논의 과정에서 경찰도 필요한 의견을 제시하도록..."
     },
     {
-     "id": "i6-c0-a2",
+     "id": "s2-c0-a2",
+     "outlet": "머니투데이",
+     "lean": "center",
+     "title": "'장윤기 사태'에 조기 귀국한 경찰청장 직무대행…\"국민께 송구\"",
+     "url": "https://www.mt.co.kr/society/2026/07/10/2026071006192991131",
+     "timeAgo": "25분 전",
+     "summary": "검찰 보완수사권 폐지 관련해서는 \"국회에서 충분한 논의를 거쳐 입법·정책적으로 결정되리라 생각하고 있다\"며 \"논의 과정에서 경찰에서도 필요한 의견을 제시하겠다\"고 말했다. 유 대행은 유엔(UN) 경찰청장 회의 참석을..."
+    },
+    {
+     "id": "s2-c0-a3",
      "outlet": "연합뉴스",
      "lean": "center",
-     "title": "트럼프 \"아마 오늘밤 다시 이란 공격…해상봉쇄 재개할 수도\"(종합)",
-     "url": "https://www.yna.co.kr/view/AKR20260708184451071?input=1195m",
-     "timeAgo": "1시간 전",
-     "summary": "튀르키예 앙카라에서 열린 북대서양조약기구(NATO·나토) 정상회의에 참석 중인 트럼프 대통령은 이날 볼로디미르 젤렌스키 우크라이나 대통령과의 양자회담 자리에서 \"어젯밤에 그들에게 강력한 공격을 가했고, 아마도..."
+     "title": "장윤기 사건에 조기 귀국한 경찰청장 대행, \"매우 송구\"",
+     "url": "https://www.yna.co.kr/view/AKR20260710010600004?input=1195m",
+     "timeAgo": "29분 전",
+     "summary": "이번 사건을 계기로 검찰의 보완수사권 우호 여론이 높아진 데 대해서는 \"보완수사권은 국회에서 충분한 논의를 거쳐 입법 정책적으로 결정되리라 생각한다\"며 \"논의 과정에서 경찰도 필요한 의견을 제시하도록 하겠다\"고..."
     },
     {
-     "id": "i6-c0-a3",
-     "outlet": "조선일보",
+     "id": "s2-c0-a4",
+     "outlet": "동아일보",
      "lean": "cons",
-     "title": "뉴욕증시, 트럼프 ‘이란 공격 암시’ 발언에 하락 출발",
-     "url": "https://biz.chosun.com/international/international_economy/2026/07/08/NDRMQHOHERGVZFETVF6VZ5UB4U/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-     "timeAgo": "1시간 전",
-     "summary": "트럼프 대통령은 볼로디미르 젤렌스키 우크라이나 대통령과 만난 자리에서는 “아마도 오늘 밤 이란을 공격할 것”이라고도 말했다. 그는 “필요시 전력 시설과 수도 시설을 제거할 것이지만 그러고 싶지는..."
+     "title": "경찰청장 직무대행 “‘장윤기 사건’ 송구…보완수사권, 국회서 결정”",
+     "url": "https://www.donga.com/news/Society/article/all/20260710/134271619/1",
+     "timeAgo": "30분 전",
+     "summary": "장윤기 사건을 둘러싼 각종 논란이 검찰 보완수사권 폐지 논의 국면에 미칠 파장 등을 감안해 사태 수습에 나선 것으로 풀이된다. 한편 유 대행은 이날 오전 9시 20분 경찰 지휘부 화상회의를 주재하고 경찰 수사 신뢰..."
     },
     {
-     "id": "i6-c0-a4",
-     "outlet": "서울신문",
-     "lean": "center",
-     "title": "트럼프 “대이란 해상봉쇄 재개할 수 있다”",
-     "url": "https://www.seoul.co.kr/news/international/USA-amrica/2026/07/08/20260708500275?wlog_tag3=naver",
-     "timeAgo": "1시간 전",
-     "summary": "이어 열린 볼로디미르 젤렌스키 우크라이나 대통령과의 양자 회담에서는 “어젯밤에 우리는 그들에게 강한 공격을 가했다”면서 “아마도 오늘 이란을 강하게 타격할 것”이라고 말했다."
-    },
-    {
-     "id": "i6-c0-a5",
-     "outlet": "뉴시스",
-     "lean": "center",
-     "title": "트럼프 \"아마 오늘밤 다시 이란 공격…해상봉쇄 재개할수도\"",
-     "url": "https://www.newsis.com/view/NISX20260708_0003701613",
-     "timeAgo": "1시간 전",
-     "summary": "트럼프 대통령은 이날 튀르키예 앙카라에서 북대서양조약기구(NATO·나토) 정상회의를 계기로 열린 볼로디미르 젤렌스키 우크라이나 대통령과 회담에서 \"저들은 호르무즈 해협에 있었다는 이유로 선박들을 향해 드론..."
-    },
-    {
-     "id": "i6-c0-a6",
-     "outlet": "세계일보",
+     "id": "s2-c0-a5",
+     "outlet": "TV조선",
      "lean": "cons",
-     "title": "트럼프 심기 건들라…'월드컵' 나토 정상회의 금기어였다",
-     "url": "https://www.segye.com/newsView/20260709506595",
-     "timeAgo": "26분 전",
-     "summary": "'트럼프 앞에서 '월드컵' 얘기는 꺼내지 않는 걸로 합시다'\n \n 이달 7∼8일(현지시간) 튀르키예에 모이는 북대서양조약기구(NATO·나토) 정상들 사이에 뜻밖의 '금기어'가 등장했다고 영국 일간 가디언이 8일 보도했다.\n \n 이번 정상회의에서 사실상 '주인공'인 도널드 트럼프 미 대통령 앞에서 '월드컵'과 관련한 얘기는 꺼내지 않기로 비공식 합의가 이뤄졌"
+     "title": "유재성 경찰청장 직무대행 조기 귀국…\"'장윤기 사건' 엄중함 인식\"",
+     "url": "https://news.tvchosun.com/site/data/html_dir/2026/07/10/2026071090006.html",
+     "timeAgo": "36분 전",
+     "summary": "또, 검찰의 보완수사권 폐지와 관련해 경찰 수사권 확대를 우려하는 목소리에 대해서는 국회에서 충분한 논의를 거쳐서 결정되리라 생각하고 있고 논의 과정에서 경찰에서도 필요한 의견을 제시하겠다고 설명했다. 유..."
     },
     {
-     "id": "i6-c0-a7",
-     "outlet": "SBS",
+     "id": "s2-c0-a6",
+     "outlet": "YTN",
      "lean": "center",
-     "title": "나토 마친 트럼프, 귀국길 전용기 갈아타…이란 암살 시도 우려?",
-     "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008649117",
-     "timeAgo": "2시간 전",
-     "summary": "&#9650; 나토 정상회의를 마치고 귀국길에 오른 도널드 트럼프 미국 대통령이 8일 영국 밀든홀 공군기지에서 신형 에어포스원으로 갈아타고 있다…"
-    },
-    {
-     "id": "i6-c0-a8",
-     "outlet": "한겨레",
-     "lean": "prog",
-     "title": "트럼프, 나토 귀국길 ‘구형 전용기’ 탑승…신형, 이란 암살 공격 무방비?",
-     "url": "https://www.hani.co.kr/arti/international/america/1267497.html",
-     "timeAgo": "최근"
-    },
-    {
-     "id": "i6-c0-a9",
-     "outlet": "경향신문",
-     "lean": "prog",
-     "title": "‘이란’ 말하려다 “일본 이슬람 공화국”, 젤렌스키 가리키며 “푸틴에 질문 있나”···트럼프 잇단 말실수",
-     "url": "https://www.khan.co.kr/article/202607091418001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=kh_world",
-     "timeAgo": "16시간 전",
-     "summary": "볼로디미르 젤렌스키 우크라이나 대통령과 도널드 트럼프 미국 대통령이 8일(현지시간) 튀르키예 앙카라에서 열린 북대서양조약기구(나토) 정상회의에서 만나 대화하고 있다. EPA연합뉴스도널드 트럼프 미국 대통령이 북대서양조약기구(나토) 정상회의 기자회견에서 이란을 언급하려다 ‘일본 이슬람공화국(the Islamic Republic of Japan)’이라고 잘못 ···"
-    },
-    {
-     "id": "i6-c0-a10",
-     "outlet": "프레시안",
-     "lean": "prog",
-     "title": "미국-이란 왜 또 이러나hellip;WSJ quot;트럼프, 장례식이라 휴전하자던 이란이 미사일 발사하자 격노quot;",
-     "url": "https://www.pressian.com/pages/articles/2026070911414894404&amp;ref=rss",
-     "timeAgo": "13시간 전",
-     "summary": "미국이 이틀 연속으로 이란에 대한 공습을 이어가고 이란이 여기에 반격하면서 양국이 체결한 종전을 위한 양해각서(MOU)가 위기에 처했다는 진단이 나오는 가운데, 이러한 배경으로 호르무즈 해협 통제권을 명확히하지 않았기 때문이라는 분석이\n제기된다. 도널드 트럼프 대통령이 이란의 상선 공격에 격분해 강력한 공습이 시작됐다는 보도도 나왔다.\n\n8일(이하 현지시간"
+     "title": "경찰청장 대행 \"장윤기 사건 매우 송구\"...보완수사권엔 \"국회 논의\"",
+     "url": "https://www.ytn.co.kr/_ln/0103_202607100610301677",
+     "timeAgo": "43분 전",
+     "summary": "그만큼 이번 사안의 엄중함을 인식하고 있습니다.] 검찰 보완수사 과정에서 증거인멸 정황이 드러난 만큼 경찰 수사권 확대를 신뢰할 수 있겠느냐는 일각의 지적에 대해서는 원론적 입장을 보였습니다. 유 대행은 국회에서..."
     }
    ],
-   "_repUrl": "https://www.nocutnews.co.kr/news/6545362?utm_source=naver&utm_medium=article&utm_campaign=20260708115215",
+   "_repUrl": "https://news.jtbc.co.kr/article/NB12307538?influxDiv=NAVER",
    "importance": 8,
-   "background": "트럼프는 동맹국의 방위비 부담 확대를 지속적으로 압박해 왔습니다. 유럽 주둔 미군 감축 논의는 나토 억지력과 대유럽 안보 공약의 신뢰 문제와 직결되는 사안입니다.",
+   "background": "검수완박 이후 수사권 조정의 후속 정비를 둘러싼 논쟁은 계속돼 왔다. 최근 장윤기 사건에서 경찰 수사 부실 논란이 커지면서 보완수사권 존폐가 다시 핵심 쟁점으로 떠올랐다.",
    "publicTake": "비판적인 반응이 우세한 분위기입니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "i1-c0",
@@ -979,8 +750,107 @@
    "importance": 8,
    "background": "우크라이나 전쟁 장기화로 재건 지원과 북한군 파병 문제는 한국 외교의 주요 현안이 됐다. 한국은 인도적 지원을 이어오면서 전후 복구 사업 참여 가능성도 함께 검토해 왔다.",
    "publicTake": "댓글마다 의견이 다양하게 엇갈리는 분위기입니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z",
+   "summarizedAt": "2026-07-10T00:59:17.161Z",
    "dominantLean": "cons"
+  },
+  {
+   "id": "i6-c0",
+   "category": "국제",
+   "title": "트럼프 \"오늘 밤 다시 이란 공격할 수 있다\"…해상봉쇄 재개도 시사",
+   "imageUrl": "https://file2.nocutnews.co.kr/newsroom/image/2026/07/08/202607082350558901_0.jpg",
+   "imageSourceUrl": "https://www.nocutnews.co.kr/news/6545362?utm_source=naver&utm_medium=article&utm_campaign=20260708115215",
+   "summary": "트럼프 대통령은 8일(현지시간) 튀르키예 앙카라에서 열린 북대서양조약기구(NATO·나토) 정상회의를 계기로 볼로디미르 젤렌스키 우크라이나 대통령과의 양자회담 자리에서 \"어젯밤에 그들에게 강력한 공격을 가했고...",
+   "outletCount": 15,
+   "timeAgo": "53분 전",
+   "publishedAt": "2026-07-09T15:44:00.000Z",
+   "bias": {
+    "prog": 0,
+    "center": 75,
+    "cons": 25
+   },
+   "biasWarning": false,
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
+   "frameCons": "뉴욕증시, 트럼프 ‘이란 공격 암시’ 발언에 하락 출발",
+   "firstSeen": "2026-07-08T00:39:57.016Z",
+   "articles": [
+    {
+     "id": "i6-c0-a0",
+     "outlet": "노컷뉴스",
+     "lean": "center",
+     "title": "트럼프 \"오늘 밤 다시 이란 공격할 수 있다\"…해상봉쇄 재개도 시사",
+     "url": "https://www.nocutnews.co.kr/news/6545362?utm_source=naver&utm_medium=article&utm_campaign=20260708115215",
+     "timeAgo": "53분 전",
+     "summary": "트럼프 대통령은 8일(현지시간) 튀르키예 앙카라에서 열린 북대서양조약기구(NATO·나토) 정상회의를 계기로 볼로디미르 젤렌스키 우크라이나 대통령과의 양자회담 자리에서 \"어젯밤에 그들에게 강력한 공격을 가했고..."
+    },
+    {
+     "id": "i6-c0-a1",
+     "outlet": "연합뉴스TV",
+     "lean": "center",
+     "title": "트럼프 \"아마 오늘밤 다시 이란 공격…해상봉쇄 재개도\"",
+     "url": "http://www.yonhapnewstv.co.kr/news/AKR20260708232846vGJ",
+     "timeAgo": "1시간 전",
+     "summary": "튀르키예 앙카라에서 열린 북대서양조약기구(NATO·나토) 정상회의에 참석 중인 트럼프 대통령은 이날 볼로디미르 젤렌스키 우크라이나 대통령과의 양자회담 자리에서 \"어젯밤에 그들에게 강력한 공격을 가했고, 아마도..."
+    },
+    {
+     "id": "i6-c0-a2",
+     "outlet": "연합뉴스",
+     "lean": "center",
+     "title": "트럼프 \"아마 오늘밤 다시 이란 공격…해상봉쇄 재개할 수도\"(종합)",
+     "url": "https://www.yna.co.kr/view/AKR20260708184451071?input=1195m",
+     "timeAgo": "1시간 전",
+     "summary": "튀르키예 앙카라에서 열린 북대서양조약기구(NATO·나토) 정상회의에 참석 중인 트럼프 대통령은 이날 볼로디미르 젤렌스키 우크라이나 대통령과의 양자회담 자리에서 \"어젯밤에 그들에게 강력한 공격을 가했고, 아마도..."
+    },
+    {
+     "id": "i6-c0-a3",
+     "outlet": "조선일보",
+     "lean": "cons",
+     "title": "뉴욕증시, 트럼프 ‘이란 공격 암시’ 발언에 하락 출발",
+     "url": "https://biz.chosun.com/international/international_economy/2026/07/08/NDRMQHOHERGVZFETVF6VZ5UB4U/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+     "timeAgo": "1시간 전",
+     "summary": "트럼프 대통령은 볼로디미르 젤렌스키 우크라이나 대통령과 만난 자리에서는 “아마도 오늘 밤 이란을 공격할 것”이라고도 말했다. 그는 “필요시 전력 시설과 수도 시설을 제거할 것이지만 그러고 싶지는..."
+    },
+    {
+     "id": "i6-c0-a4",
+     "outlet": "서울신문",
+     "lean": "center",
+     "title": "트럼프 “대이란 해상봉쇄 재개할 수 있다”",
+     "url": "https://www.seoul.co.kr/news/international/USA-amrica/2026/07/08/20260708500275?wlog_tag3=naver",
+     "timeAgo": "1시간 전",
+     "summary": "이어 열린 볼로디미르 젤렌스키 우크라이나 대통령과의 양자 회담에서는 “어젯밤에 우리는 그들에게 강한 공격을 가했다”면서 “아마도 오늘 이란을 강하게 타격할 것”이라고 말했다."
+    },
+    {
+     "id": "i6-c0-a5",
+     "outlet": "뉴시스",
+     "lean": "center",
+     "title": "트럼프 \"아마 오늘밤 다시 이란 공격…해상봉쇄 재개할수도\"",
+     "url": "https://www.newsis.com/view/NISX20260708_0003701613",
+     "timeAgo": "1시간 전",
+     "summary": "트럼프 대통령은 이날 튀르키예 앙카라에서 북대서양조약기구(NATO·나토) 정상회의를 계기로 열린 볼로디미르 젤렌스키 우크라이나 대통령과 회담에서 \"저들은 호르무즈 해협에 있었다는 이유로 선박들을 향해 드론..."
+    },
+    {
+     "id": "i6-c0-a6",
+     "outlet": "세계일보",
+     "lean": "cons",
+     "title": "트럼프 심기 건들라…'월드컵' 나토 정상회의 금기어였다",
+     "url": "https://www.segye.com/newsView/20260709506595",
+     "timeAgo": "26분 전",
+     "summary": "'트럼프 앞에서 '월드컵' 얘기는 꺼내지 않는 걸로 합시다'\n \n 이달 7∼8일(현지시간) 튀르키예에 모이는 북대서양조약기구(NATO·나토) 정상들 사이에 뜻밖의 '금기어'가 등장했다고 영국 일간 가디언이 8일 보도했다.\n \n 이번 정상회의에서 사실상 '주인공'인 도널드 트럼프 미 대통령 앞에서 '월드컵'과 관련한 얘기는 꺼내지 않기로 비공식 합의가 이뤄졌"
+    },
+    {
+     "id": "i6-c0-a7",
+     "outlet": "SBS",
+     "lean": "center",
+     "title": "나토 마친 트럼프, 귀국길 전용기 갈아타…이란 암살 시도 우려?",
+     "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008649117",
+     "timeAgo": "2시간 전",
+     "summary": "&#9650; 나토 정상회의를 마치고 귀국길에 오른 도널드 트럼프 미국 대통령이 8일 영국 밀든홀 공군기지에서 신형 에어포스원으로 갈아타고 있다…"
+    }
+   ],
+   "_repUrl": "https://www.nocutnews.co.kr/news/6545362?utm_source=naver&utm_medium=article&utm_campaign=20260708115215",
+   "importance": 8,
+   "background": "트럼프는 동맹국의 방위비 부담 확대를 지속적으로 압박해 왔습니다. 유럽 주둔 미군 감축 논의는 나토 억지력과 대유럽 안보 공약의 신뢰 문제와 직결되는 사안입니다.",
+   "publicTake": "비판적인 반응이 우세한 분위기입니다.",
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "s7-c0-b",
@@ -989,16 +859,16 @@
    "imageUrl": "https://photo.jtbc.co.kr/news/jam_photo/202607/09/e5ed0864-08b0-44a2-9111-3bc0775b932a.jpg",
    "imageSourceUrl": "https://news.jtbc.co.kr/article/NB12307387?influxDiv=NAVER",
    "summary": "다만, 이주비와 중도금 그리고 잔금 등 집단대출을 비롯해 기금 대출, 보금자리론, 전세 사기 피해자 구매·경락 자금 대출은 이번 한도 제한 대상에서 제외됩니다. KB국민은행 측은 \"가계대출의 안정적인 관리와...",
-   "outletCount": 14,
+   "outletCount": 13,
    "timeAgo": "59분 전",
    "publishedAt": "2026-07-09T21:19:00.000Z",
    "bias": {
-    "prog": 11,
-    "center": 56,
-    "cons": 33
+    "prog": 0,
+    "center": 62,
+    "cons": 38
    },
    "biasWarning": false,
-   "frameProg": "은행들, KB ‘주담대 3억으로 축소’ 따라할 듯…부동산 들썩여 ‘고삐’",
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
    "frameCons": "\"당장 3억을 어디서 구하나\"…KB국민은행, 주담대 한도 6억→3억",
    "firstSeen": "2026-07-08T12:45:54.988Z",
    "articles": [
@@ -1073,21 +943,13 @@
      "url": "https://www.hankookilbo.com/news/article/A2026070911110004309?did=NA",
      "timeAgo": "12시간 전",
      "summary": "다만 이주비·중도금·잔금 등 집단대출과 기금대출, 보금자리론, 전세사기 피해자의 구입·경락자금 대출 등은 제한 대상에서 제외됐다. 대출 한도는 부동산 계약일이 아닌 은행 대출 서류 접수일을 기준으로 적용돼..."
-    },
-    {
-     "id": "s7-c0-b-a8",
-     "outlet": "한겨레",
-     "lean": "prog",
-     "title": "은행들, KB ‘주담대 3억으로 축소’ 따라할 듯…부동산 들썩여 ‘고삐’",
-     "url": "https://www.hani.co.kr/arti/economy/finance/1267504.html",
-     "timeAgo": "최근"
     }
    ],
    "_repUrl": "https://news.jtbc.co.kr/article/NB12307387?influxDiv=NAVER",
    "importance": 8,
    "background": "정부와 금융권은 가계부채 증가세를 억제하기 위해 대출 총량과 심사 기준을 반복적으로 강화해 왔다. 금리와 집값 변동성이 큰 시기에는 은행권 대출 규제가 실수요자의 거래에도 큰 영향을 준다.",
    "publicTake": "찬반이 팽팽하게 엇갈리는 분위기입니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "i2-c0",
@@ -1096,16 +958,16 @@
    "imageUrl": "https://image.kmib.co.kr/online_image/2026/0710/2026070819095154212_1783505391_0030089515.jpg",
    "imageSourceUrl": "https://www.kmib.co.kr/article/view.asp?arcid=0030089515&code=61111111&cp=nv",
    "summary": "���ε� Ʈ���� �̱� ������� �ѱ��� ���� ���� ���� ���� ��û�� �� �Ͱ� ������ û�ʹ밡 ��(Ʈ���� �������) �ѱ����� �����ϴ� �͵� �������� �ʴ� �� ��",
-   "outletCount": 13,
+   "outletCount": 11,
    "timeAgo": "54분 전",
    "publishedAt": "2026-07-09T21:00:00.000Z",
    "bias": {
-    "prog": 20,
-    "center": 70,
-    "cons": 10
+    "prog": 0,
+    "center": 87,
+    "cons": 13
    },
    "biasWarning": false,
-   "frameProg": "트럼프, 군함 한국서 건조 요청? 청와대 “배제하지 않는 인상 받아”",
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
    "frameCons": "靑 “트럼프, 군용 선박 ‘韓서 건조’ 배제하지 않는 인상 받아”",
    "firstSeen": "2026-07-08T12:45:54.988Z",
    "articles": [
@@ -1180,30 +1042,13 @@
      "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=06832246645512880",
      "timeAgo": "5시간 전",
      "summary": "도널드 트럼프 미국 대통령이 한국에 군함 건조 협력을 요청한 것과 관련해 대통령실 고위 관계자가 미국 군함을 한국 조선소에서 직접 건조하는 방안도 배제하지 않고 있다고 밝혔다. 미국 내 건조 원칙을 우회할 수 있는..."
-    },
-    {
-     "id": "i2-c0-a8",
-     "outlet": "한겨레",
-     "lean": "prog",
-     "title": "트럼프, 군함 한국서 건조 요청? 청와대 “배제하지 않는 인상 받아”",
-     "url": "https://www.hani.co.kr/arti/politics/bluehouse/1267597.html",
-     "timeAgo": "최근"
-    },
-    {
-     "id": "i2-c0-a9",
-     "outlet": "경향신문",
-     "lean": "prog",
-     "title": "[속보] 이 대통령, 나토 만찬서 트럼프와 ‘군용선박 건조’ 관련 후속협의",
-     "url": "https://www.khan.co.kr/article/202607081911001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=politic_news",
-     "timeAgo": "1일 전",
-     "summary": "이재명 대통령과 도널드 트럼프 미국 대통령이 7일(현지시간) 튀르키예 앙카라 대통령궁에서 열린 레제프 타이이프 에르도안 튀르키예 대통령 부부 주최 공식 환영 만찬에서 대화하고 있다. 사진공동취재단 제공.이재명 대통령은 7일(현지시간) 튀르키예 앙카라에서 열린 북대서양조약기구(나토) 정상회의에서 도널드 트럼프 미국 대통령과 만나 미국이 요청했던 군용 선박 건···"
     }
    ],
    "_repUrl": "https://www.kmib.co.kr/article/view.asp?arcid=0030089515&code=61111111&cp=nv",
    "importance": 8,
    "background": "한미는 조선·방산 협력과 정상 간 소통 복원을 주요 외교 과제로 다뤄 왔다. 나토 회의는 이런 현안을 다자무대에서 연쇄 정상 접촉으로 조율할 기회를 제공하고 있다.",
    "publicTake": "비판적인 반응이 우세한 분위기입니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "e9-c0",
@@ -1301,7 +1146,7 @@
    "_repUrl": "http://www.yonhapnewstv.co.kr/news/MYH20260709212617ipl",
    "importance": 8,
    "background": "한국은행은 인플레이션 억제와 경기, 금융시장 안정을 함께 고려해 통화정책을 운용합니다. 기준금리 인상 신호는 대출금리, 환율, 자산시장에 즉시 영향을 줄 수 있습니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "rss-c26",
@@ -1310,16 +1155,16 @@
    "imageUrl": "https://img.seoul.co.kr//img/upload/2026/07/09/SSC_20260709092350_O2.png",
    "imageSourceUrl": "https://www.seoul.co.kr/news/newsView.php?id=20260709500028",
    "summary": "서울 은평구 갈현동의 한 빌라 3층에서 불이 나 집 안에 있던 초등학생 남매가 숨졌습니다. 소방당국은 차량 23대와 인력 95명을 투입해 진화와 구조 작업을 벌였고, 인근 주민은 폭발음 뒤 연기와 불꽃을 봤다고 전했습니다.",
-   "outletCount": 10,
+   "outletCount": 8,
    "timeAgo": "31분 전",
    "publishedAt": "2026-07-09T21:00:00.000Z",
    "bias": {
-    "prog": 20,
-    "center": 40,
-    "cons": 40
+    "prog": 0,
+    "center": 50,
+    "cons": 50
    },
    "biasWarning": false,
-   "frameProg": "“휴대폰에 이렇게 웃고 있는데…” 빌라 화재 초등생 남매 빈소 눈물만",
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
    "frameCons": "[속보] 서울 은평구 빌라 화재…홀로 있던 초등생 남매 2명 숨져",
    "firstSeen": "2026-07-09T00:49:46.841Z",
    "articles": [
@@ -1392,27 +1237,10 @@
      "title": "의정부 주택서 화재… 거주자 90대 여성 숨져",
      "url": "https://www.chosun.com/national/national_general/2026/07/08/H4ZBZFRO5FE4TEBMWJEUW6KKZQ/",
      "timeAgo": "20시간 전"
-    },
-    {
-     "id": "rss-c26-a8",
-     "outlet": "한겨레",
-     "lean": "prog",
-     "title": "“휴대폰에 이렇게 웃고 있는데…” 빌라 화재 초등생 남매 빈소 눈물만",
-     "url": "https://www.hani.co.kr/arti/society/society_general/1267594.html",
-     "timeAgo": "최근"
-    },
-    {
-     "id": "rss-c26-a9",
-     "outlet": "경향신문",
-     "lean": "prog",
-     "title": "아빠 외출한 사이…빌라 화재로 초등생 남매 참변",
-     "url": "https://www.khan.co.kr/article/202607092130015/?utm_source=khan_rss&utm_medium=rss&utm_campaign=society_news",
-     "timeAgo": "9시간 전",
-     "summary": "이웃 “순하고 착한 아이들” 눈시울전기 합선 등 가능성 두고 원인 조사서울 은평구의 한 빌라에서 화재가 발생해 보호자 없이 집에 머물던 초등학생 남매가 사망했다.9일 소방당국에 따르면 전날 오후 10시57분쯤 은평구 갈현동 지상 3층·지하 1층짜리 빌라(연립주택) 3층에 있는 A씨 집 거실에서 불이 났다. 집에 있던 7세·8세 남매는 출동한 소방에 구조돼 ···"
     }
    ],
    "_repUrl": "https://www.seoul.co.kr/news/newsView.php?id=20260709500028",
-   "summarizedAt": "2026-07-09T22:01:02.748Z",
+   "summarizedAt": "2026-07-10T00:59:17.161Z",
    "importance": 8,
    "background": "주거시설 화재는 야간이나 새벽 시간대에 대피가 늦어질 경우 인명 피해로 이어질 위험이 큽니다. 경찰과 소방은 통상 발화 지점과 전기·가스 설비 이상 여부를 중심으로 원인을 조사합니다."
   },
@@ -1423,16 +1251,16 @@
    "imageUrl": "https://i3n.news1.kr/system/photos/2026/6/12/7956222/high.jpg",
    "imageSourceUrl": "https://www.news1.kr/world/middleeast-africa/6223703",
    "summary": "도널드 트럼프 미국 대통령과 베냐민 네타냐후 이스라엘 총리가 통화하며 중동 정세를 논의했습니다. 보도에 따르면 트럼프는 걸프 지역에서의 미국 움직임을 설명했고, 네타냐후는 국경 안전지대의 필요성을 강조하며 에르도안 튀르키예 대통령의 반이스라엘 발언을 문제 삼았습니다.",
-   "outletCount": 9,
+   "outletCount": 8,
    "timeAgo": "19분 전",
    "publishedAt": "2026-07-09T21:51:35.000Z",
    "bias": {
-    "prog": 11,
-    "center": 78,
-    "cons": 11
+    "prog": 0,
+    "center": 87,
+    "cons": 13
    },
    "biasWarning": false,
-   "frameProg": "트럼프 quot;이르면 담주 회담 열릴수 있어hellip;네타냐후는 누가 보스인지 잘 알아quot;",
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
    "frameCons": "이스라엘 총리, 트럼프와 통화…\"튀르키예에 F-35 판매 안돼\"",
    "firstSeen": "2026-07-09T21:53:50.912Z",
    "articles": [
@@ -1507,234 +1335,12 @@
      "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008650799&plink=ORI&cooper=NAVER",
      "timeAgo": "1시간 전",
      "summary": "▲ 베냐민 네타냐후 이스라엘 총리와 도널드 트럼프 미국 대통령 미국과 이란 간의 무력 충돌이 이어지는 가운데 베냐민 네타냐후 이스라엘 총리와 도널드 트럼프 미국 대통령이 9일(현지시간) 전화 통화를 하고 중동 지역..."
-    },
-    {
-     "id": "i2-c0-c-a8",
-     "outlet": "프레시안",
-     "lean": "prog",
-     "title": "트럼프 quot;이르면 담주 회담 열릴수 있어hellip;네타냐후는 누가 보스인지 잘 알아quot;",
-     "url": "https://www.pressian.com/pages/articles/2026070505360206864&amp;ref=rss",
-     "timeAgo": "5일 전",
-     "summary": "도널드 트럼프 미국 대통령이 베냐민 네타냐후 이스라엘 총리로부터 백악관 회동을 제안받았다고 밝혔다.\n\n트럼프 대통령은 4일(현지시간) 악시오스와의 전화 인터뷰에서 \"우리는 매우 잘 지내고 있다. (네타냐후 총리는) 누가 보스인지 안다\"며 이 같이 밝혔다.\n\n그는 자신이 북대서양조약기구(NATO·나토) 정상회의에서 돌아온 후인 이르면 다음 주 회담이 열릴 수"
     }
    ],
    "_repUrl": "https://www.news1.kr/world/middleeast-africa/6223703",
    "background": "가자 전쟁과 이란 관련 긴장이 이어지면서 미국, 이스라엘, 튀르키예의 발언과 군사 행보가 중동 정세에 직접 영향을 주고 있습니다. 이스라엘과 튀르키예는 최근 안보 현안과 대이스라엘 인식을 두고 갈등을 드러내 왔습니다.",
    "importance": 8,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
-  },
-  {
-   "id": "i3-c0",
-   "category": "국제",
-   "title": "중국 신발공장 화재로 28명 사망…시진핑 “원인규명·책임추궁”",
-   "imageUrl": "http://news.kbs.co.kr/data/news/2026/07/10/20260710_symRek.jpg",
-   "imageSourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8607135&ref=A",
-   "summary": "중국 푸젠성 진장시의 한 신발공장에서 불이 나 28명이 숨졌습니다. 화재 당시 239명 중 213명이 대피했고, 시진핑 중국 국가주석은 원인 규명과 책임자 문책을 지시했습니다.",
-   "outletCount": 9,
-   "timeAgo": "1시간 전",
-   "publishedAt": "2026-07-09T17:49:00.000Z",
-   "bias": {
-    "prog": 22,
-    "center": 56,
-    "cons": 22
-   },
-   "biasWarning": false,
-   "frameProg": "중국 폭우, 최소 38명 사망…양식장 뱀 900마리 탈출해 물리기도",
-   "frameCons": "중국 푸젠성 신발공장 화재로 28명 사망…시진핑 “책임자 문책”",
-   "firstSeen": "2026-07-09T18:55:23.587Z",
-   "articles": [
-    {
-     "id": "i3-c0-a0",
-     "outlet": "세계일보",
-     "lean": "cons",
-     "title": "중국 푸젠성 신발공장 화재로 28명 사망…시진핑 “책임자 문책”",
-     "url": "https://www.segye.com/newsView/20260710500535?OutUrl=naver",
-     "timeAgo": "2시간 전",
-     "summary": "중국 푸젠성 진장시의 한 신발공장에서 불이 나 28명이 숨졌습니다. 화재 당시 239명 중 213명이 대피했고, 시진핑 중국 국가주석은 원인 규명과 책임자 문책을 지시했습니다."
-    },
-    {
-     "id": "i3-c0-a1",
-     "outlet": "KBS",
-     "lean": "center",
-     "title": "중국 신발공장 화재로 28명 사망…시진핑 “원인규명·책임추궁”",
-     "url": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8607135&ref=A",
-     "timeAgo": "2시간 전",
-     "summary": "중국 동남부 푸젠성 한 신발공장에서 불이나 28명이 숨졌다고 중국 관영 매체들이 보도했습니다. 10일 중국 중앙TV(CCTV)와 관영 신화통신 등에 따르면 전날 낮 12시 4분께(현지시간) 푸젠성 진장시 한 신발공장에서 불이 나..."
-    },
-    {
-     "id": "i3-c0-a2",
-     "outlet": "데일리안",
-     "lean": "cons",
-     "title": "中 신발공장 대형 화재…최소 28명 사망, 구조작업 계속",
-     "url": "https://www.dailian.co.kr/news/view/1665526/?sc=Naver",
-     "timeAgo": "2시간 전",
-     "summary": "중국 동부 푸젠성의 한 신발공장에서 대형 화재가 발생해 다수의 사상자가 발생했다. 중국 당국은 이번 사고로 시망자가 최소 28명 발생했다고 밝혔으며, 구조대는 화재 진압과 함께 실종자 수색 작업을 이어가고 있다. 9일..."
-    },
-    {
-     "id": "i3-c0-a3",
-     "outlet": "SBS",
-     "lean": "center",
-     "title": "중국 신발공장 화재로 28명 사망…시진핑 \"책임자 엄중 문책\"",
-     "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008650704&plink=ORI&cooper=NAVER",
-     "timeAgo": "2시간 전",
-     "summary": "▲ 중국 푸젠성 신발공장 화재 중국 동남부 푸젠성 한 신발공장에서 불이 나 28명이 숨졌다고 중국 관영 매체들이 보도했습니다. 오늘(10일) 중국 중앙TV(CCTV)와 관영 신화통신 등에 따르면, 전날 낮 12시 4분쯤(현지시간)..."
-    },
-    {
-     "id": "i3-c0-a4",
-     "outlet": "연합뉴스",
-     "lean": "center",
-     "title": "中 신발공장 화재로 28명 사망…시진핑 \"원인규명·책임추궁\"",
-     "url": "https://www.yna.co.kr/view/AKR20260710000500083?input=1195m",
-     "timeAgo": "3시간 전",
-     "summary": "한종구 특파원 = 중국 동남부 푸젠성 한 신발공장에서 불이나 28명이 숨졌다고 중국 관영 매체들이 보도했다. 10일 중국 중앙TV(CCTV)와 관영 신화통신 등에 따르면 전날 낮 12시 4분께(현지시간) 푸젠성 진장시 한..."
-    },
-    {
-     "id": "i3-c0-a5",
-     "outlet": "연합뉴스TV",
-     "lean": "center",
-     "title": "中푸젠 신발공장 화재로 28명 사망…시진핑 \" 책임자 엄중 문책\"",
-     "url": "http://www.yonhapnewstv.co.kr/news/AKR20260710002410RUL",
-     "timeAgo": "3시간 전",
-     "summary": "중국 푸젠성의 한 신발공장에서 불이 나 28명이 숨졌습니다. 중국 관영 신화통신은 오늘(9일) 낮 12시쯤 푸젠성 취안저우 진장시 천다이진의 후이텅 신발회사 공장에서 화재가 발생했다고 보도했습니다. 시진핑 중국..."
-    },
-    {
-     "id": "i3-c0-a6",
-     "outlet": "YTN",
-     "lean": "center",
-     "title": "중국 푸젠 성 신발 공장 화재...28명 사망",
-     "url": "https://www.ytn.co.kr/_ln/0104_202607100009170771",
-     "timeAgo": "3시간 전",
-     "summary": "중국 남동부 푸젠 성 진장 시의 한 신발 공장에서 어제(9일) 정오쯤 불이 나 28명이 숨졌다고 현지 당국이 밝혔습니다. 중국 CCTV와 신화통신 등에 따르면, 현장에는 소방대원 180여 명과 소방차 30여 대가 투입돼 오후 5시..."
-    },
-    {
-     "id": "i3-c0-a7",
-     "outlet": "한겨레",
-     "lean": "prog",
-     "title": "중국 폭우, 최소 38명 사망…양식장 뱀 900마리 탈출해 물리기도",
-     "url": "https://www.hani.co.kr/arti/international/china/1267293.html",
-     "timeAgo": "최근"
-    },
-    {
-     "id": "i3-c0-a8",
-     "outlet": "경향신문",
-     "lean": "prog",
-     "title": "중국 잇단 자연재해···산사태에 21명 사망, 홍수에 뱀 900마리 탈출",
-     "url": "https://www.khan.co.kr/article/202607081537001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=kh_world",
-     "timeAgo": "1일 전",
-     "summary": "7일(현지시간) 중국 간쑤성 룽난시 탄창현 난허진의 한 마을에서 발생한 산사태 현장에서 구조대원들이 구조 작업을 벌이고 있다. 신화통신중국에서 산사태와 홍수 등 자연재해가 잇따르면서 피해가 이어지고 있다. 북서부 간쑤성에서는 산사태로 20명 넘게 숨졌고, 남부 광시좡족자치구에서는 홍수로 뱀 양식장이 파손돼 코브라 등을 포함한 뱀 수백 마리가 탈출했다.8일 ···"
-    }
-   ],
-   "_repUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8607135&ref=A",
-   "background": "중국에서는 대형 공장과 작업장 화재가 발생할 때마다 산업안전 관리 부실 문제가 반복적으로 제기돼 왔습니다. 대형 인명 피해가 나면 중앙정부 차원의 안전 점검과 책임 추궁이 뒤따르는 경우가 많습니다.",
-   "importance": 8,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
-  },
-  {
-   "id": "s5-c0",
-   "category": "사회",
-   "title": "집중호우에 1명 실종·7백여 명 일시 대피",
-   "imageUrl": "https://image.ytn.co.kr/general/jpg/2026/0710/202607100556322220_t.jpg",
-   "imageSourceUrl": "https://www.ytn.co.kr/_ln/0103_202607100556322220",
-   "summary": "집중호우로 전국에서 505세대 753명이 일시 대피했고, 이 가운데 일부 주민은 아직 대피소에 머물고 있습니다. 경북 영주시에서는 70대 남성이 급류에 휩쓸려 실종돼 수색이 이어졌고, 농경지와 도로 침수 등 시설 피해도 잇따랐습니다.",
-   "outletCount": 8,
-   "timeAgo": "57분 전",
-   "publishedAt": "2026-07-09T20:56:00.000Z",
-   "bias": {
-    "prog": 11,
-    "center": 67,
-    "cons": 22
-   },
-   "biasWarning": false,
-   "frameProg": "영주서 70대 하천에 휩쓸려 실종···200&#13212; 넘는 폭우에 침수·대피 잇따라",
-   "frameCons": "“대전 야산서 폭포처럼 토사 쏟아져”… 영주선 급류에 1명 실종",
-   "firstSeen": "2026-07-09T21:53:50.912Z",
-   "articles": [
-    {
-     "id": "s5-c0-a0",
-     "outlet": "YTN",
-     "lean": "center",
-     "title": "집중호우에 1명 실종·7백여 명 일시 대피",
-     "url": "https://www.ytn.co.kr/_ln/0103_202607100556322220",
-     "timeAgo": "57분 전",
-     "summary": "집중호우로 전국에서 505세대 753명이 일시 대피했고, 이 가운데 일부 주민은 아직 대피소에 머물고 있습니다. 경북 영주시에서는 70대 남성이 급류에 휩쓸려 실종돼 수색이 이어졌고, 농경지와 도로 침수 등 시설 피해도 잇따랐습니다."
-    },
-    {
-     "id": "s5-c0-a1",
-     "outlet": "동아일보",
-     "lean": "cons",
-     "title": "“대전 야산서 폭포처럼 토사 쏟아져”… 영주선 급류에 1명 실종",
-     "url": "https://www.donga.com/news/Society/article/all/20260710/134271277/2",
-     "timeAgo": "2시간 전",
-     "summary": "이에 따라 유성구는 오전 7시 49분 재난문자로 우회를 당부하고 늦은 오후까지 중장비와 인력을 투입해... ●영주서 실종 사고, 평택선 옹벽 무너져 150mm 이상의 비가 내린 경북 문경시에서는 하천이 범람할 위기에..."
-    },
-    {
-     "id": "s5-c0-a2",
-     "outlet": "세계일보",
-     "lean": "cons",
-     "title": "집중호우에 피해 확산…1명 실종·753명 대피",
-     "url": "https://www.segye.com/newsView/20260710500253?OutUrl=naver",
-     "timeAgo": "5시간 전",
-     "summary": "실종 사고도 발생했다. 전날 오전 10시쯤 경북 영주시 풍기읍 남원천에서 70대 남성이 급류에 휩쓸렸다는 신고가 접수돼 당국이 수색 작업에 나섰다. 윤호중 중앙재난안전대책본부장(행안부 장관)은 전날 오후 11개..."
-    },
-    {
-     "id": "s5-c0-a3",
-     "outlet": "머니투데이",
-     "lean": "center",
-     "title": "\"급류 휩쓸려\" 70대 남성 실종...집중호우에 662명 대피, 시설 피해 256건",
-     "url": "https://www.mt.co.kr/society/2026/07/09/2026070920534595410",
-     "timeAgo": "9시간 전",
-     "summary": "9일 행정안전부 중앙재난안전대책본부(중대본)에 따르면 이날 오후 6시 기준 호우로 인한 인명피해는... 주택 21채가 침수됐으며 파손 사고는 4건이 발생했다. 주거지 외에도 비닐하우스·공장 침수, 하수도 막힘..."
-    },
-    {
-     "id": "s5-c0-a4",
-     "outlet": "노컷뉴스",
-     "lean": "center",
-     "title": "집중호우에 시설피해 256건·주민 662명 대피…\"내일까지 강우\"",
-     "url": "https://www.nocutnews.co.kr/news/6546037?utm_source=naver&utm_medium=article&utm_campaign=20260709100526",
-     "timeAgo": "10시간 전",
-     "summary": "9일 중앙재난안전대책본부에 따르면, 전날 0시부터 이날 오후 5시까지 충남 천안에는 266.6㎜의 비가... 실종 사고도 있었다. 경북도와 경북도경찰청에 따르면, 이날 오전 10시 1분쯤 경북 영주시 풍기읍 성내리..."
-    },
-    {
-     "id": "s5-c0-a5",
-     "outlet": "연합뉴스TV",
-     "lean": "center",
-     "title": "중대본 \"집중호우에 시설피해 256건·662명 일시 대피\"",
-     "url": "http://www.yonhapnewstv.co.kr/news/AKR20260709195509LCu",
-     "timeAgo": "10시간 전",
-     "summary": "중앙재난안전대책본부에 따르면, 오늘(9일) 오후 5시까지 충남 천안에 266.6㎜의 비가 내린 것을 비롯해... 실종 사고도 발생했습니다. 경북도와 경북경찰청에 따르면 이날 오전 10시쯤 경북 영주시 풍기읍 성내리..."
-    },
-    {
-     "id": "s5-c0-a6",
-     "outlet": "연합뉴스",
-     "lean": "center",
-     "title": "집중호우에 시설피해 256건·662명 일시 대피…내일까지 강한 비(종합)",
-     "url": "https://www.yna.co.kr/view/AKR20260709163851530?input=1195m",
-     "timeAgo": "11시간 전",
-     "summary": "9일 중앙재난안전대책본부에 따르면 전날 0시부터 이날 오후 5시까지 충남 천안에 266.6㎜의 비가 내린 것을... 실종 사고도 발생했다. 경북도와 경북경찰청에 따르면 이날 오전 10시 1분께 경북 영주시 풍기읍 성내리..."
-    },
-    {
-     "id": "s5-c0-a7",
-     "outlet": "뉴시스",
-     "lean": "center",
-     "title": "물폭탄에 1명 급류 휩쓸려 실종…대피자 662명(종합2보)",
-     "url": "https://www.newsis.com/view/NISX20260709_0003703375",
-     "timeAgo": "11시간 전",
-     "summary": "[세종=뉴시스] 강진아 성소의 기자 = 충청과 전북을 중심으로 전국에 강한 비가 내리면서 경북에서 70대 남성이 하천 급류에 휩쓸려 실종됐다. 호우로 대피한 주민은 662명으로 늘었고, 시설 피해도 250건을 넘어섰다.9일 행정안전부 중앙재난안전대책본부(중대본)에 따르면 이날 오후 6시 기준 호우로 인한 인명피해는 1명으로 잠정 집계됐다.소방당국에 따르면 이날 오전 10시1분께 경북 영주시 풍기읍 남원천에서 70대 남성이 급류에 휩쓸려 실종됐다. 이에 소방당국과 경북 영주 경찰서 등은 하천 급류 조난자 구조를 위해 수색 작업을 벌이고 있다. 호우로 대피한 주민은 423명에서 239명이 추가돼 662명으로 늘었다. 시설 피해는 총 256건으로, 종전(215건)보다 41건 늘었다. 공공시설 피해는 수목 전도(80건), 도로 침수(48건), 토사 유출(24건), 싱크홀(16건), 배수 불량(12건), 맨홀 피해(11건) 등 225건으로 확인됐다.주택은 21채가 침수되고 4건이 파손되는 등 사유시설 피해도 잇따랐다. 이 외에 비닐하우스 및 공장 침수, 하수도 막힘, 기계실 배수불량 등이 발생했다.호우로 축구장 약 19개 규모인 13.4㏊(헥타르)의 농작물이 피해를 입었다. 충남 부여의 멜론·오이와 경북 성주의 참외, 충남 금산의 고추·인삼 등이 논밭 침수로 피해를 본 것으로 집계됐다.비가 계속되면서 도로, 지하차도 등 주요 시설에 대한 출입 통제도 이어지고 있다.현재 국립공원 261개 구간, 도로 45곳, 하상도로 33곳, 지하차도 8곳, 둔치주차장 70곳, 세월교 86곳 등이 통제되고 있다.경부선 서정리역~전동역 구간과 충북선 오송역~도안역 구간의 운행도 중단되고, 여객선은 5개 항로 5척의 운항이 멈췄다.현재 전국에 호우특보가 이날 오후 3시 기준으로 해제돼 비는 소강상태다. 기상청은 10일 새벽까지 경기북부와 강원중북부, 내륙에 시간당 30~50㎜의 강한 비가 이어질 것으로 전망하고 있다.이날 행안부는 중대본부장 명의로 위험지역 주민을 즉시 대피시키고 현장 예찰을 강화할 것을 긴급 지시했다. 또 호우 대처를 위해 오후에 중대본 회의도 개최했다.각 부처 및 유관기관도 호우 상황을 주시하며 시설 및 현장 점검에 나섰다. 교육부는 학교별 피해 및 휴업·단축수업 등 학사조정 현황을 실시간 모니터링으로 대응했다.\n◎공감언론 뉴시스 akang@newsis.com, soy@newsis.com"
-    },
-    {
-     "id": "s5-c0-a8",
-     "outlet": "경향신문",
-     "lean": "prog",
-     "title": "영주서 70대 하천에 휩쓸려 실종···200&#13212; 넘는 폭우에 침수·대피 잇따라",
-     "url": "https://www.khan.co.kr/article/202607091726001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=society_news",
-     "timeAgo": "13시간 전",
-     "summary": "밤사이 내린 폭우로 9일 충북 청주시 흥덕구 강내면 수석천이 범람해 일대가 침수돼 있다. 문재원 기자전국 곳곳에 많은 비가 내리면서 9일 주민 대피와 고립, 도로 침수 등 피해가 속출했다. 경북 영주에서는 70대 남성이 하천에 휩쓸려 실종돼 경찰과 소방당국이 수색 작업을 벌이고 있다. 집중호우로 KTX와 일반 열차 수십대가 지연 운행됐으며, 한강 버스 운항···"
-    }
-   ],
-   "_repUrl": "https://www.ytn.co.kr/_ln/0103_202607100556322220",
-   "background": "장마철 집중호우는 하천 범람과 산사태, 도로 침수로 이어지며 주민 대피와 실종 사고를 동반할 수 있습니다. 중대본은 강수량과 피해 규모에 따라 대응 단계를 높이며 복구와 수색을 병행합니다.",
-   "importance": 8,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "st1-c0",
@@ -1832,7 +1438,194 @@
    "_repUrl": "https://www.ytn.co.kr/_ln/0102_202607081430156502",
    "background": "사이드카는 선물·현물시장의 급격한 가격 변동을 완화하기 위한 시장 안정 장치입니다. 대외 변수 충격이 큰 날에는 국내 증시가 하루 안에서도 극단적 변동성을 보일 수 있습니다.",
    "importance": 8,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
+  },
+  {
+   "id": "s5-c0",
+   "category": "사회",
+   "title": "집중호우에 1명 실종·7백여 명 일시 대피",
+   "imageUrl": "https://image.ytn.co.kr/general/jpg/2026/0710/202607100556322220_t.jpg",
+   "imageSourceUrl": "https://www.ytn.co.kr/_ln/0103_202607100556322220",
+   "summary": "집중호우로 전국에서 505세대 753명이 일시 대피했고, 이 가운데 일부 주민은 아직 대피소에 머물고 있습니다. 경북 영주시에서는 70대 남성이 급류에 휩쓸려 실종돼 수색이 이어졌고, 농경지와 도로 침수 등 시설 피해도 잇따랐습니다.",
+   "outletCount": 7,
+   "timeAgo": "57분 전",
+   "publishedAt": "2026-07-09T20:56:00.000Z",
+   "bias": {
+    "prog": 0,
+    "center": 75,
+    "cons": 25
+   },
+   "biasWarning": false,
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
+   "frameCons": "“대전 야산서 폭포처럼 토사 쏟아져”… 영주선 급류에 1명 실종",
+   "firstSeen": "2026-07-09T21:53:50.912Z",
+   "articles": [
+    {
+     "id": "s5-c0-a0",
+     "outlet": "YTN",
+     "lean": "center",
+     "title": "집중호우에 1명 실종·7백여 명 일시 대피",
+     "url": "https://www.ytn.co.kr/_ln/0103_202607100556322220",
+     "timeAgo": "57분 전",
+     "summary": "집중호우로 전국에서 505세대 753명이 일시 대피했고, 이 가운데 일부 주민은 아직 대피소에 머물고 있습니다. 경북 영주시에서는 70대 남성이 급류에 휩쓸려 실종돼 수색이 이어졌고, 농경지와 도로 침수 등 시설 피해도 잇따랐습니다."
+    },
+    {
+     "id": "s5-c0-a1",
+     "outlet": "동아일보",
+     "lean": "cons",
+     "title": "“대전 야산서 폭포처럼 토사 쏟아져”… 영주선 급류에 1명 실종",
+     "url": "https://www.donga.com/news/Society/article/all/20260710/134271277/2",
+     "timeAgo": "2시간 전",
+     "summary": "이에 따라 유성구는 오전 7시 49분 재난문자로 우회를 당부하고 늦은 오후까지 중장비와 인력을 투입해... ●영주서 실종 사고, 평택선 옹벽 무너져 150mm 이상의 비가 내린 경북 문경시에서는 하천이 범람할 위기에..."
+    },
+    {
+     "id": "s5-c0-a2",
+     "outlet": "세계일보",
+     "lean": "cons",
+     "title": "집중호우에 피해 확산…1명 실종·753명 대피",
+     "url": "https://www.segye.com/newsView/20260710500253?OutUrl=naver",
+     "timeAgo": "5시간 전",
+     "summary": "실종 사고도 발생했다. 전날 오전 10시쯤 경북 영주시 풍기읍 남원천에서 70대 남성이 급류에 휩쓸렸다는 신고가 접수돼 당국이 수색 작업에 나섰다. 윤호중 중앙재난안전대책본부장(행안부 장관)은 전날 오후 11개..."
+    },
+    {
+     "id": "s5-c0-a3",
+     "outlet": "머니투데이",
+     "lean": "center",
+     "title": "\"급류 휩쓸려\" 70대 남성 실종...집중호우에 662명 대피, 시설 피해 256건",
+     "url": "https://www.mt.co.kr/society/2026/07/09/2026070920534595410",
+     "timeAgo": "9시간 전",
+     "summary": "9일 행정안전부 중앙재난안전대책본부(중대본)에 따르면 이날 오후 6시 기준 호우로 인한 인명피해는... 주택 21채가 침수됐으며 파손 사고는 4건이 발생했다. 주거지 외에도 비닐하우스·공장 침수, 하수도 막힘..."
+    },
+    {
+     "id": "s5-c0-a4",
+     "outlet": "노컷뉴스",
+     "lean": "center",
+     "title": "집중호우에 시설피해 256건·주민 662명 대피…\"내일까지 강우\"",
+     "url": "https://www.nocutnews.co.kr/news/6546037?utm_source=naver&utm_medium=article&utm_campaign=20260709100526",
+     "timeAgo": "10시간 전",
+     "summary": "9일 중앙재난안전대책본부에 따르면, 전날 0시부터 이날 오후 5시까지 충남 천안에는 266.6㎜의 비가... 실종 사고도 있었다. 경북도와 경북도경찰청에 따르면, 이날 오전 10시 1분쯤 경북 영주시 풍기읍 성내리..."
+    },
+    {
+     "id": "s5-c0-a5",
+     "outlet": "연합뉴스TV",
+     "lean": "center",
+     "title": "중대본 \"집중호우에 시설피해 256건·662명 일시 대피\"",
+     "url": "http://www.yonhapnewstv.co.kr/news/AKR20260709195509LCu",
+     "timeAgo": "10시간 전",
+     "summary": "중앙재난안전대책본부에 따르면, 오늘(9일) 오후 5시까지 충남 천안에 266.6㎜의 비가 내린 것을 비롯해... 실종 사고도 발생했습니다. 경북도와 경북경찰청에 따르면 이날 오전 10시쯤 경북 영주시 풍기읍 성내리..."
+    },
+    {
+     "id": "s5-c0-a6",
+     "outlet": "연합뉴스",
+     "lean": "center",
+     "title": "집중호우에 시설피해 256건·662명 일시 대피…내일까지 강한 비(종합)",
+     "url": "https://www.yna.co.kr/view/AKR20260709163851530?input=1195m",
+     "timeAgo": "11시간 전",
+     "summary": "9일 중앙재난안전대책본부에 따르면 전날 0시부터 이날 오후 5시까지 충남 천안에 266.6㎜의 비가 내린 것을... 실종 사고도 발생했다. 경북도와 경북경찰청에 따르면 이날 오전 10시 1분께 경북 영주시 풍기읍 성내리..."
+    },
+    {
+     "id": "s5-c0-a7",
+     "outlet": "뉴시스",
+     "lean": "center",
+     "title": "물폭탄에 1명 급류 휩쓸려 실종…대피자 662명(종합2보)",
+     "url": "https://www.newsis.com/view/NISX20260709_0003703375",
+     "timeAgo": "11시간 전",
+     "summary": "[세종=뉴시스] 강진아 성소의 기자 = 충청과 전북을 중심으로 전국에 강한 비가 내리면서 경북에서 70대 남성이 하천 급류에 휩쓸려 실종됐다. 호우로 대피한 주민은 662명으로 늘었고, 시설 피해도 250건을 넘어섰다.9일 행정안전부 중앙재난안전대책본부(중대본)에 따르면 이날 오후 6시 기준 호우로 인한 인명피해는 1명으로 잠정 집계됐다.소방당국에 따르면 이날 오전 10시1분께 경북 영주시 풍기읍 남원천에서 70대 남성이 급류에 휩쓸려 실종됐다. 이에 소방당국과 경북 영주 경찰서 등은 하천 급류 조난자 구조를 위해 수색 작업을 벌이고 있다. 호우로 대피한 주민은 423명에서 239명이 추가돼 662명으로 늘었다. 시설 피해는 총 256건으로, 종전(215건)보다 41건 늘었다. 공공시설 피해는 수목 전도(80건), 도로 침수(48건), 토사 유출(24건), 싱크홀(16건), 배수 불량(12건), 맨홀 피해(11건) 등 225건으로 확인됐다.주택은 21채가 침수되고 4건이 파손되는 등 사유시설 피해도 잇따랐다. 이 외에 비닐하우스 및 공장 침수, 하수도 막힘, 기계실 배수불량 등이 발생했다.호우로 축구장 약 19개 규모인 13.4㏊(헥타르)의 농작물이 피해를 입었다. 충남 부여의 멜론·오이와 경북 성주의 참외, 충남 금산의 고추·인삼 등이 논밭 침수로 피해를 본 것으로 집계됐다.비가 계속되면서 도로, 지하차도 등 주요 시설에 대한 출입 통제도 이어지고 있다.현재 국립공원 261개 구간, 도로 45곳, 하상도로 33곳, 지하차도 8곳, 둔치주차장 70곳, 세월교 86곳 등이 통제되고 있다.경부선 서정리역~전동역 구간과 충북선 오송역~도안역 구간의 운행도 중단되고, 여객선은 5개 항로 5척의 운항이 멈췄다.현재 전국에 호우특보가 이날 오후 3시 기준으로 해제돼 비는 소강상태다. 기상청은 10일 새벽까지 경기북부와 강원중북부, 내륙에 시간당 30~50㎜의 강한 비가 이어질 것으로 전망하고 있다.이날 행안부는 중대본부장 명의로 위험지역 주민을 즉시 대피시키고 현장 예찰을 강화할 것을 긴급 지시했다. 또 호우 대처를 위해 오후에 중대본 회의도 개최했다.각 부처 및 유관기관도 호우 상황을 주시하며 시설 및 현장 점검에 나섰다. 교육부는 학교별 피해 및 휴업·단축수업 등 학사조정 현황을 실시간 모니터링으로 대응했다.\n◎공감언론 뉴시스 akang@newsis.com, soy@newsis.com"
+    }
+   ],
+   "_repUrl": "https://www.ytn.co.kr/_ln/0103_202607100556322220",
+   "background": "장마철 집중호우는 하천 범람과 산사태, 도로 침수로 이어지며 주민 대피와 실종 사고를 동반할 수 있습니다. 중대본은 강수량과 피해 규모에 따라 대응 단계를 높이며 복구와 수색을 병행합니다.",
+   "importance": 8,
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
+  },
+  {
+   "id": "i3-c0",
+   "category": "국제",
+   "title": "중국 신발공장 화재로 28명 사망…시진핑 “원인규명·책임추궁”",
+   "imageUrl": "http://news.kbs.co.kr/data/news/2026/07/10/20260710_symRek.jpg",
+   "imageSourceUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8607135&ref=A",
+   "summary": "중국 푸젠성 진장시의 한 신발공장에서 불이 나 28명이 숨졌습니다. 화재 당시 239명 중 213명이 대피했고, 시진핑 중국 국가주석은 원인 규명과 책임자 문책을 지시했습니다.",
+   "outletCount": 7,
+   "timeAgo": "1시간 전",
+   "publishedAt": "2026-07-09T17:49:00.000Z",
+   "bias": {
+    "prog": 0,
+    "center": 71,
+    "cons": 29
+   },
+   "biasWarning": false,
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
+   "frameCons": "중국 푸젠성 신발공장 화재로 28명 사망…시진핑 “책임자 문책”",
+   "firstSeen": "2026-07-09T18:55:23.587Z",
+   "articles": [
+    {
+     "id": "i3-c0-a0",
+     "outlet": "세계일보",
+     "lean": "cons",
+     "title": "중국 푸젠성 신발공장 화재로 28명 사망…시진핑 “책임자 문책”",
+     "url": "https://www.segye.com/newsView/20260710500535?OutUrl=naver",
+     "timeAgo": "2시간 전",
+     "summary": "중국 푸젠성 진장시의 한 신발공장에서 불이 나 28명이 숨졌습니다. 화재 당시 239명 중 213명이 대피했고, 시진핑 중국 국가주석은 원인 규명과 책임자 문책을 지시했습니다."
+    },
+    {
+     "id": "i3-c0-a1",
+     "outlet": "KBS",
+     "lean": "center",
+     "title": "중국 신발공장 화재로 28명 사망…시진핑 “원인규명·책임추궁”",
+     "url": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8607135&ref=A",
+     "timeAgo": "2시간 전",
+     "summary": "중국 동남부 푸젠성 한 신발공장에서 불이나 28명이 숨졌다고 중국 관영 매체들이 보도했습니다. 10일 중국 중앙TV(CCTV)와 관영 신화통신 등에 따르면 전날 낮 12시 4분께(현지시간) 푸젠성 진장시 한 신발공장에서 불이 나..."
+    },
+    {
+     "id": "i3-c0-a2",
+     "outlet": "데일리안",
+     "lean": "cons",
+     "title": "中 신발공장 대형 화재…최소 28명 사망, 구조작업 계속",
+     "url": "https://www.dailian.co.kr/news/view/1665526/?sc=Naver",
+     "timeAgo": "2시간 전",
+     "summary": "중국 동부 푸젠성의 한 신발공장에서 대형 화재가 발생해 다수의 사상자가 발생했다. 중국 당국은 이번 사고로 시망자가 최소 28명 발생했다고 밝혔으며, 구조대는 화재 진압과 함께 실종자 수색 작업을 이어가고 있다. 9일..."
+    },
+    {
+     "id": "i3-c0-a3",
+     "outlet": "SBS",
+     "lean": "center",
+     "title": "중국 신발공장 화재로 28명 사망…시진핑 \"책임자 엄중 문책\"",
+     "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008650704&plink=ORI&cooper=NAVER",
+     "timeAgo": "2시간 전",
+     "summary": "▲ 중국 푸젠성 신발공장 화재 중국 동남부 푸젠성 한 신발공장에서 불이 나 28명이 숨졌다고 중국 관영 매체들이 보도했습니다. 오늘(10일) 중국 중앙TV(CCTV)와 관영 신화통신 등에 따르면, 전날 낮 12시 4분쯤(현지시간)..."
+    },
+    {
+     "id": "i3-c0-a4",
+     "outlet": "연합뉴스",
+     "lean": "center",
+     "title": "中 신발공장 화재로 28명 사망…시진핑 \"원인규명·책임추궁\"",
+     "url": "https://www.yna.co.kr/view/AKR20260710000500083?input=1195m",
+     "timeAgo": "3시간 전",
+     "summary": "한종구 특파원 = 중국 동남부 푸젠성 한 신발공장에서 불이나 28명이 숨졌다고 중국 관영 매체들이 보도했다. 10일 중국 중앙TV(CCTV)와 관영 신화통신 등에 따르면 전날 낮 12시 4분께(현지시간) 푸젠성 진장시 한..."
+    },
+    {
+     "id": "i3-c0-a5",
+     "outlet": "연합뉴스TV",
+     "lean": "center",
+     "title": "中푸젠 신발공장 화재로 28명 사망…시진핑 \" 책임자 엄중 문책\"",
+     "url": "http://www.yonhapnewstv.co.kr/news/AKR20260710002410RUL",
+     "timeAgo": "3시간 전",
+     "summary": "중국 푸젠성의 한 신발공장에서 불이 나 28명이 숨졌습니다. 중국 관영 신화통신은 오늘(9일) 낮 12시쯤 푸젠성 취안저우 진장시 천다이진의 후이텅 신발회사 공장에서 화재가 발생했다고 보도했습니다. 시진핑 중국..."
+    },
+    {
+     "id": "i3-c0-a6",
+     "outlet": "YTN",
+     "lean": "center",
+     "title": "중국 푸젠 성 신발 공장 화재...28명 사망",
+     "url": "https://www.ytn.co.kr/_ln/0104_202607100009170771",
+     "timeAgo": "3시간 전",
+     "summary": "중국 남동부 푸젠 성 진장 시의 한 신발 공장에서 어제(9일) 정오쯤 불이 나 28명이 숨졌다고 현지 당국이 밝혔습니다. 중국 CCTV와 신화통신 등에 따르면, 현장에는 소방대원 180여 명과 소방차 30여 대가 투입돼 오후 5시..."
+    }
+   ],
+   "_repUrl": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8607135&ref=A",
+   "background": "중국에서는 대형 공장과 작업장 화재가 발생할 때마다 산업안전 관리 부실 문제가 반복적으로 제기돼 왔습니다. 대형 인명 피해가 나면 중앙정부 차원의 안전 점검과 책임 추궁이 뒤따르는 경우가 많습니다.",
+   "importance": 8,
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "s3-c0",
@@ -1931,7 +1724,7 @@
    "importance": 7,
    "background": "현대차 노사 교섭은 임금 인상과 성과급, 정년·고용 문제를 둘러싸고 해마다 진통을 겪어 왔다. 완성차 업계의 파업은 협력업체와 수출 일정까지 영향을 줄 수 있어 파급력이 크다.",
    "publicTake": "긍정적인 반응이 많은 편입니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "s3-c0-b",
@@ -1940,16 +1733,16 @@
    "imageUrl": "https://cdn.bloter.net/news/thumbnail/202607/667673_280468_530_v150.jpg",
    "imageSourceUrl": "https://www.bloter.net/news/articleView.html?idxno=667673",
    "summary": "현대차 노조는 올해 임금협상에서 제시된 성과급 350% 수준에도 합의하지 못했고 AI 도입에 따른 고용보장 문제를 핵심 쟁점으로 내세웠다. 노사는 입장 차를 좁히지 못한 채 부분파업 가능성을 남겨두고 추가 협상을 이어가고 있다.",
-   "outletCount": 18,
+   "outletCount": 17,
    "timeAgo": "1시간 전",
    "publishedAt": "2026-07-09T08:50:02.000Z",
    "bias": {
-    "prog": 11,
-    "center": 45,
-    "cons": 44
+    "prog": 0,
+    "center": 50,
+    "cons": 50
    },
    "biasWarning": false,
-   "frameProg": "반도체 성과급 ‘나비효과’…대기업 IT 계열사에도 노조 바람 분다",
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
    "frameCons": "인사평가 불공정·재택 폐지에 “첫 노조”…현대차는 성과급 30% 요구에...",
    "firstSeen": "2026-07-09T03:47:43.172Z",
    "articles": [
@@ -2024,21 +1817,13 @@
      "url": "https://biz.sbs.co.kr/article_hub/20000321407?division=NAVER",
      "timeAgo": "18시간 전",
      "summary": "결과에 따라 노조는 향후 투쟁 방향을 결정한다는 방침입니다. 이미 지난 6일 중앙노동위원회로부터 조정 중지 결정을 받으면서 현대차 노조와 마찬가지로 합법적인 파업권을 확보한 상태입니다. SBS Biz 류정현입니다."
-    },
-    {
-     "id": "s3-c0-b-a8",
-     "outlet": "한겨레",
-     "lean": "prog",
-     "title": "반도체 성과급 ‘나비효과’…대기업 IT 계열사에도 노조 바람 분다",
-     "url": "https://www.hani.co.kr/arti/economy/it/1267521.html",
-     "timeAgo": "최근"
     }
    ],
    "_repUrl": "https://www.bloter.net/news/articleView.html?idxno=667673",
    "publicTake": "댓글마다 의견이 다양하게 엇갈리는 분위기입니다.",
    "background": "완성차 업계 임단협은 임금과 성과급뿐 아니라 생산물량과 고용 안정 문제가 함께 얽혀 매년 큰 갈등으로 번진다. 최근에는 전동화와 AI·자동화 전환이 노사 협상의 새 쟁점으로 떠올랐다.",
    "importance": 7,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "s7-c0-b-b",
@@ -2137,113 +1922,7 @@
    "importance": 7,
    "background": "전세사기 문제는 보증금 미반환과 조직적 사기가 겹치며 전국적인 사회 문제로 번졌습니다. 정부는 피해자 인정 절차와 공공 매입, 금융·주거 지원을 단계적으로 보완해 왔습니다.",
    "publicTake": "비판적인 반응이 우세한 분위기입니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
-  },
-  {
-   "id": "e1-c0",
-   "category": "경제",
-   "title": "한은 총재, '빅스텝 하나' 질문에 \"일반적인 말씀 드린 것\"",
-   "imageUrl": "https://img4.yna.co.kr/photo/yna/YH/2026/07/09/PYH2026070908740001300_P4.jpg",
-   "imageSourceUrl": "https://www.yna.co.kr/view/AKR20260709108000002?input=1195m",
-   "summary": "신현송 한국은행 총재는 국회 업무보고에서 기준금리 인상 필요성을 언급한 것이 특정한 큰 폭 인상을 예고한 것은 아니라고 설명했습니다. 그는 같은 표현이 지난 5월 통화정책방향 회의와 한은 창립기념사에도 있었다며 일반적인 판단을 말한 것이라고 밝혔습니다.",
-   "outletCount": 13,
-   "timeAgo": "37분 전",
-   "publishedAt": "2026-07-09T20:19:00.000Z",
-   "bias": {
-    "prog": 11,
-    "center": 89,
-    "cons": 0
-   },
-   "biasWarning": false,
-   "frameProg": "환율 하루 만에 다시 1500원 위로…한은 총재 “원화 강세 여지 있어”",
-   "frameCons": "보수 성향으로 분류된 기사가 적습니다.",
-   "firstSeen": "2026-07-09T03:47:43.172Z",
-   "articles": [
-    {
-     "id": "e1-c0-a0",
-     "outlet": "연합뉴스",
-     "lean": "center",
-     "title": "한은 총재, '빅스텝 하나' 질문에 \"일반적인 말씀 드린 것\"",
-     "url": "https://www.yna.co.kr/view/AKR20260709108000002?input=1195m",
-     "timeAgo": "37분 전",
-     "summary": "신현송 한국은행 총재는 국회 업무보고에서 기준금리 인상 필요성을 언급한 것이 특정한 큰 폭 인상을 예고한 것은 아니라고 설명했습니다. 그는 같은 표현이 지난 5월 통화정책방향 회의와 한은 창립기념사에도 있었다며 일반적인 판단을 말한 것이라고 밝혔습니다."
-    },
-    {
-     "id": "e1-c0-a1",
-     "outlet": "노컷뉴스",
-     "lean": "center",
-     "title": "신현송 한은 총재 \"적절 시기 금리 인상 필요\"",
-     "url": "https://www.nocutnews.co.kr/news/6545608?utm_source=naver&utm_medium=article&utm_campaign=20260709113221",
-     "timeAgo": "1시간 전",
-     "summary": "신현송 한국은행 총재는 9일 통화정책방향과 관련해 \"앞으로 적절한 시기에 기준금리를 인상할 필요가 있다고 판단한다\"고 금리 인상 방침을 거듭 확인했다. 신 총재는 이날 국회 재정경제위원회 업무보고에서 \"성장이..."
-    },
-    {
-     "id": "e1-c0-a2",
-     "outlet": "뉴스핌",
-     "lean": "center",
-     "title": "신현송 한은 총재 \"외환시장 안정 도모할 것\"",
-     "url": "https://www.newspim.com/news/view/20260709000465",
-     "timeAgo": "1시간 전",
-     "summary": "통화정책과 관련해서는 기준금리 인상 필요성을 시사했다. 신 총재는 \"한국은행은 지난해 7월 이후 기준금리를 2.5% 수준에서 유지해왔으나 향후 통화정책 운용과 관련해서는 목표 수준을 상회하는 물가 오름세, 성장세..."
-    },
-    {
-     "id": "e1-c0-a3",
-     "outlet": "아시아경제",
-     "lean": "center",
-     "title": "[포토] 신현송 한은 총재 \"적절한 시기에 기준금리 인상할 필요\"",
-     "url": "https://view.asiae.co.kr/article/2026070911025317683",
-     "timeAgo": "1시간 전",
-     "summary": "신현송 한국은행 총재가 9일 국회에서 열린 재정경제기획위원회 제2차 전체회의에서 인사말하고 있다."
-    },
-    {
-     "id": "e1-c0-a4",
-     "outlet": "SBS",
-     "lean": "center",
-     "title": "신현송 한은 총재 \"적절한 시기에 기준금리 인상할 필요\"",
-     "url": "https://biz.sbs.co.kr/article_hub/20000321517?division=NAVER",
-     "timeAgo": "1시간 전",
-     "summary": "신 총재는 오늘(9일) '7월 임시국회 업무보고' 인사말에서 \"한국은행은 지난해 7월 이후 기준금리를 2.5% 수준에서 유지해 왔으나, 향후 통화정책 운용과 관련해서는 목표 수준을 상회하는 물가 오름세, 성장세 개선..."
-    },
-    {
-     "id": "e1-c0-a5",
-     "outlet": "YTN",
-     "lean": "center",
-     "title": "한은 총재 \"기준금리 인상 필요...물가 오름세 등 고려\"",
-     "url": "https://www.ytn.co.kr/_ln/0101_202607091057209158",
-     "timeAgo": "1시간 전",
-     "summary": "신현송 한국은행 총재가 또다시 기준금리 인상 필요성을 강조하고 나섰습니다. 신 총재는 오늘(9일) 국회 재정경제기획위원회 업무보고에서, 목표 수준을 상회하는 물가 오름세와 성장세 개선, 금융안정 리스크 증대 등을..."
-    },
-    {
-     "id": "e1-c0-a6",
-     "outlet": "아주경제",
-     "lean": "center",
-     "title": "7월 금통위 앞두고…한은 총재 \"적절한 시기 금리인상 필요\"",
-     "url": "https://www.ajunews.com/view/20260709103819335",
-     "timeAgo": "1시간 전",
-     "summary": "아주경제=장수영 기자 swimming@ajunews.com 신현송 한국은행 총재 [사진=연합뉴스] 신현송 한국은행 총재가 9일 기준금리 인상을 재차 언급했다. 한은은 지난해 7월 이후 기준금리를 연 2.5%로 유지해왔으나 향후 긴축 전환..."
-    },
-    {
-     "id": "e1-c0-a7",
-     "outlet": "이투데이",
-     "lean": "center",
-     "title": "'첫 국회 업무보고' 신현송 한은 총재 \"적절한 시기에 금리 인상할 것\"",
-     "url": "https://www.etoday.co.kr/news/view/2601983",
-     "timeAgo": "2시간 전",
-     "summary": "이투데이=배근미 기자 | 9일 \"성장률 및 물가상승세 등 감안해 곧 기준금리 인상\" 언급 신현송 한국은행 총재가 취임 후 첫 국회 업무보고에서 \"성장세 개선과 목표 수준을 상회하는 물가 오름세, 금융안정 리스크 등을..."
-    },
-    {
-     "id": "e1-c0-a8",
-     "outlet": "한겨레",
-     "lean": "prog",
-     "title": "환율 하루 만에 다시 1500원 위로…한은 총재 “원화 강세 여지 있어”",
-     "url": "https://www.hani.co.kr/arti/economy/economy_general/1267511.html",
-     "timeAgo": "최근"
-    }
-   ],
-   "_repUrl": "https://www.yna.co.kr/view/AKR20260709108000002?input=1195m",
-   "background": "한국은행은 물가, 성장, 환율, 금융안정 상황을 함께 고려해 기준금리를 결정합니다. 금융통화위원회 회의를 앞둔 총재 발언은 시장의 금리 전망에 큰 영향을 줍니다.",
-   "importance": 7,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "pm6-c0",
@@ -2341,7 +2020,105 @@
    "_repUrl": "https://www.ajunews.com/view/20260709220008609",
    "background": "한국과 몽골은 자원, 에너지, 소비재, 인적 교류 분야에서 협력을 넓혀 왔습니다. 몽골의 핵심 광물과 한국의 산업·소비재 경쟁력을 연결하려는 협력 구상이 계속 추진되고 있습니다.",
    "importance": 7,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
+  },
+  {
+   "id": "e1-c0",
+   "category": "경제",
+   "title": "한은 총재, '빅스텝 하나' 질문에 \"일반적인 말씀 드린 것\"",
+   "imageUrl": "https://img4.yna.co.kr/photo/yna/YH/2026/07/09/PYH2026070908740001300_P4.jpg",
+   "imageSourceUrl": "https://www.yna.co.kr/view/AKR20260709108000002?input=1195m",
+   "summary": "신현송 한국은행 총재는 국회 업무보고에서 기준금리 인상 필요성을 언급한 것이 특정한 큰 폭 인상을 예고한 것은 아니라고 설명했습니다. 그는 같은 표현이 지난 5월 통화정책방향 회의와 한은 창립기념사에도 있었다며 일반적인 판단을 말한 것이라고 밝혔습니다.",
+   "outletCount": 12,
+   "timeAgo": "37분 전",
+   "publishedAt": "2026-07-09T20:19:00.000Z",
+   "bias": {
+    "prog": 0,
+    "center": 100,
+    "cons": 0
+   },
+   "biasWarning": false,
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
+   "frameCons": "보수 성향으로 분류된 기사가 적습니다.",
+   "firstSeen": "2026-07-09T03:47:43.172Z",
+   "articles": [
+    {
+     "id": "e1-c0-a0",
+     "outlet": "연합뉴스",
+     "lean": "center",
+     "title": "한은 총재, '빅스텝 하나' 질문에 \"일반적인 말씀 드린 것\"",
+     "url": "https://www.yna.co.kr/view/AKR20260709108000002?input=1195m",
+     "timeAgo": "37분 전",
+     "summary": "신현송 한국은행 총재는 국회 업무보고에서 기준금리 인상 필요성을 언급한 것이 특정한 큰 폭 인상을 예고한 것은 아니라고 설명했습니다. 그는 같은 표현이 지난 5월 통화정책방향 회의와 한은 창립기념사에도 있었다며 일반적인 판단을 말한 것이라고 밝혔습니다."
+    },
+    {
+     "id": "e1-c0-a1",
+     "outlet": "노컷뉴스",
+     "lean": "center",
+     "title": "신현송 한은 총재 \"적절 시기 금리 인상 필요\"",
+     "url": "https://www.nocutnews.co.kr/news/6545608?utm_source=naver&utm_medium=article&utm_campaign=20260709113221",
+     "timeAgo": "1시간 전",
+     "summary": "신현송 한국은행 총재는 9일 통화정책방향과 관련해 \"앞으로 적절한 시기에 기준금리를 인상할 필요가 있다고 판단한다\"고 금리 인상 방침을 거듭 확인했다. 신 총재는 이날 국회 재정경제위원회 업무보고에서 \"성장이..."
+    },
+    {
+     "id": "e1-c0-a2",
+     "outlet": "뉴스핌",
+     "lean": "center",
+     "title": "신현송 한은 총재 \"외환시장 안정 도모할 것\"",
+     "url": "https://www.newspim.com/news/view/20260709000465",
+     "timeAgo": "1시간 전",
+     "summary": "통화정책과 관련해서는 기준금리 인상 필요성을 시사했다. 신 총재는 \"한국은행은 지난해 7월 이후 기준금리를 2.5% 수준에서 유지해왔으나 향후 통화정책 운용과 관련해서는 목표 수준을 상회하는 물가 오름세, 성장세..."
+    },
+    {
+     "id": "e1-c0-a3",
+     "outlet": "아시아경제",
+     "lean": "center",
+     "title": "[포토] 신현송 한은 총재 \"적절한 시기에 기준금리 인상할 필요\"",
+     "url": "https://view.asiae.co.kr/article/2026070911025317683",
+     "timeAgo": "1시간 전",
+     "summary": "신현송 한국은행 총재가 9일 국회에서 열린 재정경제기획위원회 제2차 전체회의에서 인사말하고 있다."
+    },
+    {
+     "id": "e1-c0-a4",
+     "outlet": "SBS",
+     "lean": "center",
+     "title": "신현송 한은 총재 \"적절한 시기에 기준금리 인상할 필요\"",
+     "url": "https://biz.sbs.co.kr/article_hub/20000321517?division=NAVER",
+     "timeAgo": "1시간 전",
+     "summary": "신 총재는 오늘(9일) '7월 임시국회 업무보고' 인사말에서 \"한국은행은 지난해 7월 이후 기준금리를 2.5% 수준에서 유지해 왔으나, 향후 통화정책 운용과 관련해서는 목표 수준을 상회하는 물가 오름세, 성장세 개선..."
+    },
+    {
+     "id": "e1-c0-a5",
+     "outlet": "YTN",
+     "lean": "center",
+     "title": "한은 총재 \"기준금리 인상 필요...물가 오름세 등 고려\"",
+     "url": "https://www.ytn.co.kr/_ln/0101_202607091057209158",
+     "timeAgo": "1시간 전",
+     "summary": "신현송 한국은행 총재가 또다시 기준금리 인상 필요성을 강조하고 나섰습니다. 신 총재는 오늘(9일) 국회 재정경제기획위원회 업무보고에서, 목표 수준을 상회하는 물가 오름세와 성장세 개선, 금융안정 리스크 증대 등을..."
+    },
+    {
+     "id": "e1-c0-a6",
+     "outlet": "아주경제",
+     "lean": "center",
+     "title": "7월 금통위 앞두고…한은 총재 \"적절한 시기 금리인상 필요\"",
+     "url": "https://www.ajunews.com/view/20260709103819335",
+     "timeAgo": "1시간 전",
+     "summary": "아주경제=장수영 기자 swimming@ajunews.com 신현송 한국은행 총재 [사진=연합뉴스] 신현송 한국은행 총재가 9일 기준금리 인상을 재차 언급했다. 한은은 지난해 7월 이후 기준금리를 연 2.5%로 유지해왔으나 향후 긴축 전환..."
+    },
+    {
+     "id": "e1-c0-a7",
+     "outlet": "이투데이",
+     "lean": "center",
+     "title": "'첫 국회 업무보고' 신현송 한은 총재 \"적절한 시기에 금리 인상할 것\"",
+     "url": "https://www.etoday.co.kr/news/view/2601983",
+     "timeAgo": "2시간 전",
+     "summary": "이투데이=배근미 기자 | 9일 \"성장률 및 물가상승세 등 감안해 곧 기준금리 인상\" 언급 신현송 한국은행 총재가 취임 후 첫 국회 업무보고에서 \"성장세 개선과 목표 수준을 상회하는 물가 오름세, 금융안정 리스크 등을..."
+    }
+   ],
+   "_repUrl": "https://www.yna.co.kr/view/AKR20260709108000002?input=1195m",
+   "background": "한국은행은 물가, 성장, 환율, 금융안정 상황을 함께 고려해 기준금리를 결정합니다. 금융통화위원회 회의를 앞둔 총재 발언은 시장의 금리 전망에 큰 영향을 줍니다.",
+   "importance": 7,
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "e4-c0",
@@ -2350,16 +2127,16 @@
    "imageUrl": "https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202607/09/91b4a5dd-37c8-4774-9e50-e91ab824aa38.jpg",
    "imageSourceUrl": "https://www.joongang.co.kr/article/25443714",
    "summary": "한국은행은 최근 국내 증시 변동성이 커졌지만 이를 추세적 하락으로 볼 가능성은 제한적이라고 진단했습니다. 동시에 물가와 금융안정 상황을 고려하면 적절한 시점의 기준금리 인상이 필요하다는 입장을 유지했습니다.",
-   "outletCount": 12,
+   "outletCount": 10,
    "timeAgo": "58분 전",
    "publishedAt": "2026-07-09T08:38:30.000Z",
    "bias": {
-    "prog": 20,
-    "center": 60,
-    "cons": 20
+    "prog": 0,
+    "center": 75,
+    "cons": 25
    },
    "biasWarning": false,
-   "frameProg": "한은 “반도체 호황 상당 기간 지속 …주가 추세적 하락 가능성은 적어”",
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
    "frameCons": "외국인 팔자에 흔들린 코스피…한은 “추세 하락은 제한적”",
    "firstSeen": "2026-07-09T03:47:43.172Z",
    "articles": [
@@ -2434,154 +2211,12 @@
      "url": "https://www.newsis.com/view/NISX20260709_0003702125",
      "timeAgo": "2시간 전",
      "summary": "원·달러 환율은 중동 사태 불확실성이 지속되고, 미국 달러화 강세, 외국인 주식 순매도 등으로 상당폭 상승해 1500원대 초중반 수준에서 등락하고 있다. 5월 이후에는 미국 연방준비제도(Fed·연준)의 금리 인상 기대와..."
-    },
-    {
-     "id": "e4-c0-a8",
-     "outlet": "한겨레",
-     "lean": "prog",
-     "title": "한은 “반도체 호황 상당 기간 지속 …주가 추세적 하락 가능성은 적어”",
-     "url": "https://www.hani.co.kr/arti/economy/economy_general/1267420.html",
-     "timeAgo": "최근"
-    },
-    {
-     "id": "e4-c0-a9",
-     "outlet": "경향신문",
-     "lean": "prog",
-     "title": "신현송 한은 총재 “적절한 시기 기준금리 인상, 주식 추세적 하락 가능성은 제한적”",
-     "url": "https://www.khan.co.kr/article/202607091725011/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-     "timeAgo": "13시간 전",
-     "summary": "신현송 한국은행 총재가 9일 국회에서 열린 재정경제기획위원회 전체회의에서 의원 질의에 답하고 있다. 연합뉴스신현송 한국은행 총재가 기준금리를 결정하는 회의를 일주일 앞두고 재차 기준금리 인상 가능성을 시사했다. 국내 주가가 하락 전환할 가능성은 “제한적”이라고 말했다.신 총재는 9일 국회 재정경제기획위원회 전체회의에 출석해 “기준금리는 지난해 하반기 이후 ···"
     }
    ],
    "_repUrl": "https://www.joongang.co.kr/article/25443714",
    "background": "중앙은행은 자산시장 불안이 실물경제와 금융안정으로 번질 가능성을 함께 점검합니다. 금리 인상 신호는 증시와 채권시장, 대출 비용에 동시에 영향을 줄 수 있습니다.",
    "importance": 7,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
-  },
-  {
-   "id": "i2-c0-b",
-   "category": "국제",
-   "title": "\"트럼프, 올해 봄 유럽 주둔 미군 3분의 1 수준으로 감축 검토\"",
-   "imageUrl": "https://img1.newsis.com/2026/07/07/NISI20260707_0001413889_web.jpg",
-   "imageSourceUrl": "https://www.newsis.com/view/NISX20260708_0003699879",
-   "summary": "이재명 대통령이 나토 정상회의 참석과 몽골 국빈방문 일정을 위해 튀르키예로 출국했습니다. 대통령은 나토 무대에서 한국의 역할을 넓히고 방산 포럼 기조연설과 IP4 회담 등을 통해 방산 협력과 외교 지평 확대에 나서겠다고 밝혔습니다. 현지에서 트럼프 미국 대통령과의 조우 가능성에도 관심이 쏠렸습니다.",
-   "outletCount": 12,
-   "timeAgo": "27분 전",
-   "publishedAt": "2026-07-09T12:12:00.000Z",
-   "bias": {
-    "prog": 27,
-    "center": 55,
-    "cons": 18
-   },
-   "biasWarning": false,
-   "frameProg": "나토 간 트럼프, ‘미군 철수’ 압박…유럽 “요구대로 국방비 늘렸다” 달래기",
-   "frameCons": "“美, 지난 봄 유럽 미군 대폭 감축 검토…백악관 제동에 보류”",
-   "firstSeen": "2026-07-07T18:39:50.904Z",
-   "articles": [
-    {
-     "id": "i2-c0-b-a0",
-     "outlet": "뉴시스",
-     "lean": "center",
-     "title": "\"트럼프, 올해 봄 유럽 주둔 미군 3분의 1 수준으로 감축 검토\"",
-     "url": "https://www.newsis.com/view/NISX20260708_0003699879",
-     "timeAgo": "27분 전",
-     "summary": "이재명 대통령이 나토 정상회의 참석과 몽골 국빈방문 일정을 위해 튀르키예로 출국했습니다. 대통령은 나토 무대에서 한국의 역할을 넓히고 방산 포럼 기조연설과 IP4 회담 등을 통해 방산 협력과 외교 지평 확대에 나서겠다고 밝혔습니다. 현지에서 트럼프 미국 대통령과의 조우 가능성에도 관심이 쏠렸습니다."
-    },
-    {
-     "id": "i2-c0-b-a1",
-     "outlet": "데일리안",
-     "lean": "cons",
-     "title": "“美, 지난 봄 유럽 미군 대폭 감축 검토…백악관 제동에 보류”",
-     "url": "https://www.dailian.co.kr/news/view/1664523/?sc=Naver",
-     "timeAgo": "2시간 전",
-     "summary": "도널드 트럼프 미국 대통령 행정부가 지난 봄 유럽 주둔 미군을 대폭 감축하는 방안을 검토했지만 백악관 내부 반대로 실제 발표는 보류됐던 것으로 뒤늦게 드러났다. 월스트리트저널(WSJ)은 3일(현지시간) 피트 헤그세스..."
-    },
-    {
-     "id": "i2-c0-b-a2",
-     "outlet": "YTN",
-     "lean": "center",
-     "title": "\"트럼프, 지난봄 유럽 주둔 미군 3분의 1 감축 검토\"",
-     "url": "https://www.ytn.co.kr/_ln/0104_202607080055575196",
-     "timeAgo": "2시간 전",
-     "summary": "도널드 트럼프 미국 대통령이 유럽의 이란 전쟁 불참에 대한 불만 속에 지난봄 유럽 주둔 미군 규모를 3분의 1 감축하는 방안을 검토한 것으로 전해졌습니다. 미국 CNN은 사안을 잘 아는 복수의 소식통을 인용해 트럼프..."
-    },
-    {
-     "id": "i2-c0-b-a3",
-     "outlet": "중앙일보",
-     "lean": "center",
-     "title": "나토 압박한 트럼프…“유럽 미군 3분의 1 감축 검토”",
-     "url": "https://www.joongang.co.kr/article/25443274",
-     "timeAgo": "2시간 전",
-     "summary": "도널드 트럼프 미국 대통령이 지난 봄 유럽 주둔 미군 병력을 3분의 1가량 줄이는 방안을 검토했다고 미국 CNN이 7일(현지시간) 복수의 소식통을 인용해 보도했다. 보도에 따르면 트럼프 대통령은 백악관 회의에서 “유럽..."
-    },
-    {
-     "id": "i2-c0-b-a4",
-     "outlet": "세계일보",
-     "lean": "cons",
-     "title": "“트럼프, 지난 봄 유럽 주둔 미군 3분의 1 대폭 감축 검토”",
-     "url": "https://www.segye.com/newsView/20260707525701?OutUrl=naver",
-     "timeAgo": "3시간 전",
-     "summary": "나토 정상회의 참석차 앙카라 도착 직후 나토 압박 쏟아내 도널드 트럼프 미국 대통령이 지난 봄 유럽이 대이란 군사작전에 협조하지 않는다는 불만 속에 유럽 주둔 미군 규모를 3분의 1 감축하는 방안을 검토한 것으로..."
-    },
-    {
-     "id": "i2-c0-b-a5",
-     "outlet": "뉴스1",
-     "lean": "center",
-     "title": "\"트럼프, 지난 봄 유럽 주둔 미군 병력 3분의 1로 감축 검토\"",
-     "url": "https://www.news1.kr/world/usa-canada/6220869",
-     "timeAgo": "3시간 전",
-     "summary": "도널드 트럼프 미국 대통령이 지난 봄 유럽 주둔 미군을 3분의 1가량 줄이는 방안을 진지하게 검토했다고 CNN 방송이 7일(현지시간) 보도했다. 이는 미국의 대이란 군사 작전에 북대서양조약기구(NATO·나토) 동맹국들이..."
-    },
-    {
-     "id": "i2-c0-b-a6",
-     "outlet": "연합뉴스TV",
-     "lean": "center",
-     "title": "\"트럼프, 지난봄 유럽 주둔 미군 3분의 1 감축 검토\"",
-     "url": "http://www.yonhapnewstv.co.kr/news/AKR20260707235348F12",
-     "timeAgo": "3시간 전",
-     "summary": "도널드 트럼프 미국 대통령이 지난봄 유럽이 대이란 군사작전에 협조하지 않는다는 불만 속에 유럽 주둔 미군 규모를 3분의 1 감축하는 방안을 검토한 것으로 전해졌습니다. 미 CNN방송은 현지 시간 7일 복수의 소식통을..."
-    },
-    {
-     "id": "i2-c0-b-a7",
-     "outlet": "연합뉴스",
-     "lean": "center",
-     "title": "트럼프 \"튀르키예에 F-35 전투기 판매 검토…제재 해제할 것\"(종합2보)",
-     "url": "https://www.yna.co.kr/view/AKR20260707174652108",
-     "timeAgo": "2시간 전",
-     "summary": "(워싱턴·이스탄불=연합뉴스) 홍정규 김동호 특파원 = 도널드 트럼프 미국 대통령은 7일(현지시간) 미 5세대 전투기 F-35 라이트닝Ⅱ 프로그램..."
-    },
-    {
-     "id": "i2-c0-b-a8",
-     "outlet": "한겨레",
-     "lean": "prog",
-     "title": "나토 간 트럼프, ‘미군 철수’ 압박…유럽 “요구대로 국방비 늘렸다” 달래기",
-     "url": "https://www.hani.co.kr/arti/international/international_general/1267379.html",
-     "timeAgo": "최근"
-    },
-    {
-     "id": "i2-c0-b-a9",
-     "outlet": "경향신문",
-     "lean": "prog",
-     "title": "‘그린란드 병합’ 다시 꺼내든 트럼프…유럽 동맹엔 “미군 전면 철수” 협박",
-     "url": "https://www.khan.co.kr/article/202607082049015/?utm_source=khan_rss&utm_medium=rss&utm_campaign=kh_world",
-     "timeAgo": "1일 전",
-     "summary": "그린란드 협상 진척 없자 ‘엄포’ 나토서 이란전 불참 등 불만 토로 스페인 향해 ‘무역 중단’ 위협도 비공개 회담선 “나토 잔류 원해”튀르키예 앙카라에서 7~8일(현지시간) 열린 북대서양조약기구(나토) 정상회의는 미국과 유럽 동맹 간 균열을 다시 드러냈다. 도널드 트럼프 미국 대통령은 그린란드 매입 문제와 이란과의 전쟁 문제를 재차 꺼내 들며 나토를 압박했···"
-    },
-    {
-     "id": "i2-c0-b-a10",
-     "outlet": "프레시안",
-     "lean": "prog",
-     "title": "quot;미군 철수, 형식적 검토 아냐quot; 엄포에 '각자도생'? 캐나다, 韓 포함 '안보 기금' 추진",
-     "url": "https://www.pressian.com/pages/articles/2026070311471160476&amp;ref=rss",
-     "timeAgo": "6일 전",
-     "summary": "피트 헤그세스 미 전쟁부 장관이 유럽에서의 미군 주둔을 추가적으로 줄이려 했다는 보도가 나왔다. 여기에 캐나다는 미국을 제외한 유럽 및 한국 등 중견국들과 방위를 위한 별도의 기금을 마련하려는 계획을 주도하겠다고 밝혀 오는 7~8일(이하 현지시간)로 예정된 북대서양조약기구(NATO, 나토) 정상회의에서 어떤 변화가 있을지 주목된다.\n\n2일 미국 일간지 l"
-    }
-   ],
-   "_repUrl": "https://www.newsis.com/view/NISX20260708_0003699879",
-   "background": "한국은 G7에 이어 나토 정상회의까지 참여 폭을 넓히며 다자 외교를 강화하고 있습니다. 특히 나토는 세계 국방비의 큰 비중을 차지하는 시장이어서 방산 외교의 상징성이 큽니다.",
-   "importance": 7,
-   "summarizedAt": "2026-07-09T22:01:02.748Z",
-   "publicTake": "비판적인 반응이 우세한 분위기입니다."
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "p5-c0-b",
@@ -2590,16 +2225,16 @@
    "imageUrl": "https://media.yonhapnewstv.co.kr/article/MYH/20260709/MYH202607092121465vk.jpg",
    "imageSourceUrl": "http://www.yonhapnewstv.co.kr/news/MYH202607092121465vk",
    "summary": "더불어민주당이 선관위 구조를 손보는 '개혁 3법'과 특검 관련 법안을 잇달아 발의했습니다. 선관위원장 상임화, 상임위원 증원, 외부 인사 중심 감사기구 신설에는 여야가 일정 부분 공감하지만 특검 추천권과 개혁 방식에서는 힘겨루기가 이어지고 있습니다.",
-   "outletCount": 11,
+   "outletCount": 9,
    "timeAgo": "6시간 전",
    "publishedAt": "2026-07-09T20:02:00.000Z",
    "bias": {
-    "prog": 20,
-    "center": 70,
-    "cons": 10
+    "prog": 0,
+    "center": 87,
+    "cons": 13
    },
    "biasWarning": false,
-   "frameProg": "민주 ‘선관위 개혁법’ 발의…위원장 상근화·사무총장 인사청문",
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
    "frameCons": "與, 선관위 특검법안 당론 발의… 변협 등 제3자 추천",
    "firstSeen": "2026-07-09T18:55:23.587Z",
    "articles": [
@@ -2674,128 +2309,111 @@
      "url": "https://www.seoul.co.kr/news/newsView.php?id=20260710003002",
      "timeAgo": "7시간 전",
      "summary": "더불어민주당이 9일 국민 참정권을 침해한 ‘6·3 지방선거 투표용지 부족 사태’와 관련해 당론으로 선거관리위원회 특별검사 법안을 제출했다. 중앙선관위원장 상임화와 선관위 사무총장의 인사청문제도 도입 등을 핵심으로 한 이른바 ‘선관위 개혁 3법’도 발의했다.민주당 김성회·이주희 원내대변인은 이날 국회 의안과에 한병도 대표 직무대행 겸 원내대표가 대표 발의한 선관위 특검 법안을 제출한 뒤 “국정조사를 추진하는 흐름에 맞춰 선관위 관련 수사에 속도를 내기 위해 특검 법안을 발의했다”고 밝혔다.핵심 쟁점이었던 특검 추천 권한은 여야가 아닌 제3자에게 주기로 했다. 한국법학교수회, 법학전문대학원협의회, 대한변호사협회가 각 한 명씩 추천하고 대통령이 이 중 한 명을 특검으로 임명하는 구조다. 수사 인력은 파견검사 30명, 파견 공무원 70명, 특검보 5명, 특검 수사관 50명 등으로 구성됐다. 수사 기간은 20일의 준비 기간 외에 90일이다.천준호 원내운영수석부대표는 이날 정책조정회의에서 “선관위 특검의 핵심은 공정성”이라며 “첫 단계인 특검 추천 방식부터 각별히 더 공정해야 한다. 제3자 추천이 가장 합리적”이라고 했다. 그러면서 “국민의힘은 즉시 국회로 돌아와 특검법 처리에 협조하라”고 촉구했다.이런 가운데 민주당 국민참정권 수호를 위한 선관위 개혁 태스크포스(TF)는 이날 기자회견을 열고 “헌법 개정 전 법률 개정을 통해 실현할 수 있는 몇 가지 과제에 대한 입법안을 준비했다”고 밝혔다.TF가 마련한 선관위 개혁 3법은 선거관리위원회법·국회법·인사청문회법 개정안 등으로 구성됐다. 중앙선관위원장을 비상임에서 상임으로 전환하고, 선관위의 주요 사무를 보고에서 의결 위주로 처리해 사무처를 실질적으로 관리·감독하도록 하는 내용 등이다. 또한 현행 1명인 상임위원을 3명으로 확대해 선거·투표관리, 조사·단속, 조직운영 업무를 각각 전담하도록 명시했다.중앙선관위 사무총장은 외부 인사로 뽑고, 국회 인사청문 제도를 거치도록 하는 내용도 담겼다. 또한 독립 감사위원회를 설치하고 위원 전원을 외부 인사로 구성하며 감사위원회 내부에 선거관리·평가위원회를 둬 선거가 끝난 뒤 선거 운영 전반을 분석하고 평가하도록 했다.아울러 TF는 “오는 20일 예정된 선관위 신뢰 회복을 위한 헌법 개정 방향 토론회와 국민참정권 수호 제도개혁 TF 8차 회의를 거쳐 개헌안을 성안하겠다”고 했다."
-    },
-    {
-     "id": "p5-c0-b-a8",
-     "outlet": "한겨레",
-     "lean": "prog",
-     "title": "민주 ‘선관위 개혁법’ 발의…위원장 상근화·사무총장 인사청문",
-     "url": "https://www.hani.co.kr/arti/politics/politics_general/1267519.html",
-     "timeAgo": "최근"
-    },
-    {
-     "id": "p5-c0-b-a9",
-     "outlet": "경향신문",
-     "lean": "prog",
-     "title": "민주당 ‘제3자 추천’ 선관위 특검법 발의",
-     "url": "https://www.khan.co.kr/article/202607092142015/?utm_source=khan_rss&utm_medium=rss&utm_campaign=politic_news",
-     "timeAgo": "9시간 전",
-     "summary": "법학교수회·법전협·변협에 추천권 부여…상임제 확대 등 개혁 3법도더불어민주당은 9일 6·3 지방선거 투표용지 부족 사태와 관련해 여야가 아닌 제3자 추천 방식의 선거관리위원회 특검법을 발의했다. 여당은 중앙선거관리위원장 상임화, 선관위 사무총장의 인사청문제도 도입 등을 담은 이른바 ‘선관위 개혁 3법’도 발의했다.김성회·이주희 민주당 원내대변인은 이날 국회···"
     }
    ],
    "_repUrl": "http://www.yonhapnewstv.co.kr/news/MYH202607092121465vk",
    "background": "선거관리위원회는 최근 선거 운영과 조직 관리 문제로 제도 개편 요구를 받아 왔습니다. 다만 개혁 입법은 통상 권한 배분과 수사 주체 문제까지 연결돼 정쟁으로 번지기 쉽습니다.",
    "importance": 7,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
-   "id": "e2-c0-b",
-   "category": "경제",
-   "title": "구윤철 \"부동산 세제 개편안 이달 말 발표…보유세·거래세 균형 이뤄야...",
-   "imageUrl": "https://cphoto.asiae.co.kr/listimglink/1/2026070610071635059_1783300036.jpg",
-   "imageSourceUrl": "https://view.asiae.co.kr/article/2026070709292141146",
-   "summary": "구윤철 경제부총리는 부동산 세제 개편안을 이달 말 발표하는 것을 목표로 준비 중이라고 밝혔습니다. 그는 보유세와 거래세의 균형이 필요하며, 실거주자 중심의 주택시장을 만들기 위해 국민 의견과 현장 목소리를 듣고 최종 방침을 정하겠다고 말했습니다.",
-   "outletCount": 10,
-   "timeAgo": "2분 전",
-   "publishedAt": "2026-07-07T15:04:00.000Z",
+   "id": "i2-c0-b",
+   "category": "국제",
+   "title": "\"트럼프, 올해 봄 유럽 주둔 미군 3분의 1 수준으로 감축 검토\"",
+   "imageUrl": "https://img1.newsis.com/2026/07/07/NISI20260707_0001413889_web.jpg",
+   "imageSourceUrl": "https://www.newsis.com/view/NISX20260708_0003699879",
+   "summary": "이재명 대통령이 나토 정상회의 참석과 몽골 국빈방문 일정을 위해 튀르키예로 출국했습니다. 대통령은 나토 무대에서 한국의 역할을 넓히고 방산 포럼 기조연설과 IP4 회담 등을 통해 방산 협력과 외교 지평 확대에 나서겠다고 밝혔습니다. 현지에서 트럼프 미국 대통령과의 조우 가능성에도 관심이 쏠렸습니다.",
+   "outletCount": 9,
+   "timeAgo": "27분 전",
+   "publishedAt": "2026-07-09T12:12:00.000Z",
    "bias": {
     "prog": 0,
-    "center": 37,
-    "cons": 63
+    "center": 75,
+    "cons": 25
    },
-   "biasWarning": true,
-   "dominantLean": "cons",
+   "biasWarning": false,
    "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
-   "frameCons": "구윤철 “부동산 세제, 7월 말 발표…보유세·거래세 균형 맞춰야”",
-   "firstSeen": "2026-07-07T00:39:39.967Z",
+   "frameCons": "“美, 지난 봄 유럽 미군 대폭 감축 검토…백악관 제동에 보류”",
+   "firstSeen": "2026-07-07T18:39:50.904Z",
    "articles": [
     {
-     "id": "e2-c0-b-a0",
-     "outlet": "매일경제",
-     "lean": "cons",
-     "title": "구윤철 “부동산 세제, 7월 말 발표…보유세·거래세 균형 맞춰야”",
-     "url": "https://www.mk.co.kr/article/12092006",
-     "timeAgo": "2분 전",
-     "summary": "구윤철 경제부총리는 부동산 세제 개편안을 이달 말 발표하는 것을 목표로 준비 중이라고 밝혔습니다. 그는 보유세와 거래세의 균형이 필요하며, 실거주자 중심의 주택시장을 만들기 위해 국민 의견과 현장 목소리를 듣고 최종 방침을 정하겠다고 말했습니다."
-    },
-    {
-     "id": "e2-c0-b-a1",
-     "outlet": "아시아경제",
+     "id": "i2-c0-b-a0",
+     "outlet": "뉴시스",
      "lean": "center",
-     "title": "구윤철 \"부동산 세제 개편안 이달 말 발표…보유세·거래세 균형 이뤄야...",
-     "url": "https://view.asiae.co.kr/article/2026070709292141146",
-     "timeAgo": "10분 전",
-     "summary": "구윤철 경제부총리 겸 재정경제부 장관은 보유세와 거래세를 손질하는 부동산 세제 개편과 관련 \"이달 말... 공정시장가액비율 조정, 비거주 장기보유특별공제 혜택 축소 등 부동산세 개편 방향에 관한 여러 보도에 관한..."
+     "title": "\"트럼프, 올해 봄 유럽 주둔 미군 3분의 1 수준으로 감축 검토\"",
+     "url": "https://www.newsis.com/view/NISX20260708_0003699879",
+     "timeAgo": "27분 전",
+     "summary": "이재명 대통령이 나토 정상회의 참석과 몽골 국빈방문 일정을 위해 튀르키예로 출국했습니다. 대통령은 나토 무대에서 한국의 역할을 넓히고 방산 포럼 기조연설과 IP4 회담 등을 통해 방산 협력과 외교 지평 확대에 나서겠다고 밝혔습니다. 현지에서 트럼프 미국 대통령과의 조우 가능성에도 관심이 쏠렸습니다."
     },
     {
-     "id": "e2-c0-b-a2",
+     "id": "i2-c0-b-a1",
+     "outlet": "데일리안",
+     "lean": "cons",
+     "title": "“美, 지난 봄 유럽 미군 대폭 감축 검토…백악관 제동에 보류”",
+     "url": "https://www.dailian.co.kr/news/view/1664523/?sc=Naver",
+     "timeAgo": "2시간 전",
+     "summary": "도널드 트럼프 미국 대통령 행정부가 지난 봄 유럽 주둔 미군을 대폭 감축하는 방안을 검토했지만 백악관 내부 반대로 실제 발표는 보류됐던 것으로 뒤늦게 드러났다. 월스트리트저널(WSJ)은 3일(현지시간) 피트 헤그세스..."
+    },
+    {
+     "id": "i2-c0-b-a2",
+     "outlet": "YTN",
+     "lean": "center",
+     "title": "\"트럼프, 지난봄 유럽 주둔 미군 3분의 1 감축 검토\"",
+     "url": "https://www.ytn.co.kr/_ln/0104_202607080055575196",
+     "timeAgo": "2시간 전",
+     "summary": "도널드 트럼프 미국 대통령이 유럽의 이란 전쟁 불참에 대한 불만 속에 지난봄 유럽 주둔 미군 규모를 3분의 1 감축하는 방안을 검토한 것으로 전해졌습니다. 미국 CNN은 사안을 잘 아는 복수의 소식통을 인용해 트럼프..."
+    },
+    {
+     "id": "i2-c0-b-a3",
+     "outlet": "중앙일보",
+     "lean": "center",
+     "title": "나토 압박한 트럼프…“유럽 미군 3분의 1 감축 검토”",
+     "url": "https://www.joongang.co.kr/article/25443274",
+     "timeAgo": "2시간 전",
+     "summary": "도널드 트럼프 미국 대통령이 지난 봄 유럽 주둔 미군 병력을 3분의 1가량 줄이는 방안을 검토했다고 미국 CNN이 7일(현지시간) 복수의 소식통을 인용해 보도했다. 보도에 따르면 트럼프 대통령은 백악관 회의에서 “유럽..."
+    },
+    {
+     "id": "i2-c0-b-a4",
      "outlet": "세계일보",
      "lean": "cons",
-     "title": "구윤철 “보유세·거래세 균형 이뤄야…지방 근무자, 서울보다 소득세 ...",
-     "url": "https://www.segye.com/newsView/20260707506611?OutUrl=naver",
-     "timeAgo": "12분 전",
-     "summary": "구윤철 부총리 겸 재정경제부 장관은 7일 부동산 세제 개편에서 보유세와 거래세에 대해 “두 가지가 밸런스... 재정경제부 제공 구 부총리는 이날 MBC 라디오 ‘김종배의 시선집중’에서 부동산 세제 개편과 관련해 “7월..."
+     "title": "“트럼프, 지난 봄 유럽 주둔 미군 3분의 1 대폭 감축 검토”",
+     "url": "https://www.segye.com/newsView/20260707525701?OutUrl=naver",
+     "timeAgo": "3시간 전",
+     "summary": "나토 정상회의 참석차 앙카라 도착 직후 나토 압박 쏟아내 도널드 트럼프 미국 대통령이 지난 봄 유럽이 대이란 군사작전에 협조하지 않는다는 불만 속에 유럽 주둔 미군 규모를 3분의 1 감축하는 방안을 검토한 것으로..."
     },
     {
-     "id": "e2-c0-b-a3",
-     "outlet": "한국경제",
-     "lean": "cons",
-     "title": "구윤철 \"부동산 세제개편안 7월 말 발표\"",
-     "url": "https://www.hankyung.com/article/2026070794507",
-     "timeAgo": "16분 전",
-     "summary": "구윤철 부총리 겸 재정경제부 장관이 부동산 세제 개편안을 이달 말 발표를 목표로 준비 중이라고 밝혔다. 구 부총리는 7일 MBC 라디오 '김종배의 시선집중'과의 전화 인터뷰에서 \"기본적으로 집은 '바잉(buying·매수)이..."
-    },
-    {
-     "id": "e2-c0-b-a4",
-     "outlet": "JTBC",
+     "id": "i2-c0-b-a5",
+     "outlet": "뉴스1",
      "lean": "center",
-     "title": "[속보] 구윤철 \"7월말 부동산세제 발표…보유세·거래세 균형 이뤄야\"",
-     "url": "https://news.jtbc.co.kr/article/NB12306945?influxDiv=NAVER",
-     "timeAgo": "16분 전",
-     "summary": "구윤철 \"7월말 부동산세제 발표…보유세·거래세 균형 이뤄야\""
+     "title": "\"트럼프, 지난 봄 유럽 주둔 미군 병력 3분의 1로 감축 검토\"",
+     "url": "https://www.news1.kr/world/usa-canada/6220869",
+     "timeAgo": "3시간 전",
+     "summary": "도널드 트럼프 미국 대통령이 지난 봄 유럽 주둔 미군을 3분의 1가량 줄이는 방안을 진지하게 검토했다고 CNN 방송이 7일(현지시간) 보도했다. 이는 미국의 대이란 군사 작전에 북대서양조약기구(NATO·나토) 동맹국들이..."
     },
     {
-     "id": "e2-c0-b-a5",
-     "outlet": "TV조선",
-     "lean": "cons",
-     "title": "구윤철 \"이달말 부동산 세제 발표…보유세·거래세 균형 이뤄야\"",
-     "url": "https://news.tvchosun.com/site/data/html_dir/2026/07/07/2026070790085.html",
-     "timeAgo": "19분 전",
-     "summary": "구윤철 부총리 겸 재정경제부 장관은 7일 부동산 세제 개편을 하면서 보유세와 거래세를 함께 손질할지에... 구 부총리는 공정시장가액비율 조정, 비거주 장기보유특별공제 혜택 축소 등 부동산세 개편 방향에 관한 여러..."
-    },
-    {
-     "id": "e2-c0-b-a6",
-     "outlet": "SBS",
+     "id": "i2-c0-b-a6",
+     "outlet": "연합뉴스TV",
      "lean": "center",
-     "title": "구윤철 \"7월 말 부동산 세제 발표…보유세·거래세 균형 이뤄야\"",
-     "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008644786&plink=ORI&cooper=NAVER",
-     "timeAgo": "20분 전",
-     "summary": "구윤철 부총리 겸 재정경제부 장관은 오늘(7일) 부동산 세제 개편을 하면서 보유세와 거래세를 함께... 구 부총리는 공정시장가액비율 조정, 비거주 장기보유특별공제 혜택 축소 등 부동산세 개편 방향에 관한 여러..."
+     "title": "\"트럼프, 지난봄 유럽 주둔 미군 3분의 1 감축 검토\"",
+     "url": "http://www.yonhapnewstv.co.kr/news/AKR20260707235348F12",
+     "timeAgo": "3시간 전",
+     "summary": "도널드 트럼프 미국 대통령이 지난봄 유럽이 대이란 군사작전에 협조하지 않는다는 불만 속에 유럽 주둔 미군 규모를 3분의 1 감축하는 방안을 검토한 것으로 전해졌습니다. 미 CNN방송은 현지 시간 7일 복수의 소식통을..."
     },
     {
-     "id": "e2-c0-b-a7",
-     "outlet": "디지털타임스",
-     "lean": "cons",
-     "title": "구윤철 “집은 매수 아닌 ‘거주’ 원칙…보유·거래세 균형 이뤄야”",
-     "url": "https://www.dt.co.kr/article/12071490?ref=naver",
-     "timeAgo": "21분 전",
-     "summary": "구윤철 부총리 겸 재정경제부 장관은 7일 부동산 세제 개편을 하면서 보유세와 거래세를 함께 손질할지에... 구 부총리는 공정시장가액비율 조정, 비거주 장기보유특별공제 혜택 축소 등 부동산세 개편 방향에 관한 여러..."
+     "id": "i2-c0-b-a7",
+     "outlet": "연합뉴스",
+     "lean": "center",
+     "title": "트럼프 \"튀르키예에 F-35 전투기 판매 검토…제재 해제할 것\"(종합2보)",
+     "url": "https://www.yna.co.kr/view/AKR20260707174652108",
+     "timeAgo": "2시간 전",
+     "summary": "(워싱턴·이스탄불=연합뉴스) 홍정규 김동호 특파원 = 도널드 트럼프 미국 대통령은 7일(현지시간) 미 5세대 전투기 F-35 라이트닝Ⅱ 프로그램..."
     }
    ],
-   "_repUrl": "https://view.asiae.co.kr/article/2026070709292141146",
-   "background": "부동산 세제는 집값 안정, 조세 형평, 거래 활성화 사이의 균형을 맞추기 어려운 대표 정책 분야입니다. 보유세와 거래세 조정은 시장 심리와 주택 수요 구조에 직접 영향을 줍니다.",
+   "_repUrl": "https://www.newsis.com/view/NISX20260708_0003699879",
+   "background": "한국은 G7에 이어 나토 정상회의까지 참여 폭을 넓히며 다자 외교를 강화하고 있습니다. 특히 나토는 세계 국방비의 큰 비중을 차지하는 시장이어서 방산 외교의 상징성이 큽니다.",
    "importance": 7,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z",
+   "publicTake": "비판적인 반응이 우세한 분위기입니다."
   },
   {
    "id": "st3-c1",
@@ -2891,7 +2509,7 @@
     }
    ],
    "_repUrl": "https://www.yna.co.kr/view/AKR20260709044751008?input=1195m",
-   "summarizedAt": "2026-07-09T22:01:02.748Z",
+   "summarizedAt": "2026-07-10T00:59:17.161Z",
    "importance": 7,
    "background": "최근 국내 증시는 중동 긴장과 미국 반도체주 변동성의 영향을 크게 받아 급락과 반등을 반복하고 있습니다. 반도체 비중이 큰 코스피는 삼성전자와 SK하이닉스 흐름에 특히 민감합니다."
   },
@@ -2902,16 +2520,16 @@
    "imageUrl": "https://img.sbs.co.kr/newimg/news/20260709/202200707_1280.jpg",
    "imageSourceUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008650516",
    "summary": "내년도 최저임금을 놓고 노동계는 시간당 1만 1천220원, 경영계는 1만 530원의 9차 수정안을 제시했습니다. 양측 격차는 690원까지 줄었지만 아직 합의에는 이르지 못해 다음 전원회의에서 추가 심의가 이어질 예정입니다.",
-   "outletCount": 8,
+   "outletCount": 7,
    "timeAgo": "2시간 전",
    "publishedAt": "2026-07-09T19:30:00.000Z",
    "bias": {
-    "prog": 13,
-    "center": 37,
-    "cons": 50
+    "prog": 0,
+    "center": 43,
+    "cons": 57
    },
    "biasWarning": false,
-   "frameProg": "1만1220원 vs 1만530원…노사 내년 최저임금 격차 690원으로",
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
    "frameCons": "勞 1만1220원 vs 使 1만530원… 최저임금 격차 690원으로 좁혀",
    "firstSeen": "2026-07-09T18:55:23.587Z",
    "articles": [
@@ -2976,21 +2594,12 @@
      "url": "https://www.chosun.com/economy/economy_general/2026/07/09/GU4DAMZWGIZDSYRTHE4WCZTGMI/",
      "timeAgo": "12시간 전",
      "summary": "내년 최저임금 수준을 협상 중인 노동계와 경영계가 ‘9차 최저임금 요구액 수정안’으로 각각 시급 1만1220원, 1만530원을 제시했다. 직전 요구안보다 노동계는 30원 낮추고, 경영계는 10원 올렸다. 최저임금위원회(최임위)는 9일 정부세종청사에서 제13차 전원회의를 열고 이 같은 9차 수정안을 발표했다. 정부는 매년 최임위를 열고 내년도 최저임금을 결정"
-    },
-    {
-     "id": "rss-c3-a7",
-     "outlet": "경향신문",
-     "lean": "prog",
-     "title": "1만1220원 vs 1만530원…노사 내년 최저임금 격차 690원으로",
-     "url": "https://www.khan.co.kr/article/202607091845001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=society_news",
-     "timeAgo": "12시간 전",
-     "summary": "권순원 최저임금위원장이 9일 정부세종청사 최저임금위원회에서 열린 제13차 전원회의를 마친 뒤 나오며 근로자위원인 류기섭 한국노총 사무총장과 대화하고 있다. 연합뉴스내년도 최저임금을 논의하고 있는 노동계와 경영계의 시간당 최저임금 요구안 격차가 690원으로 좁혀졌다.9일 정부세종청사에서 열린 최저임금위원회 제13차 전원회의에서 노동계는 1만1220원을, 경영···"
     }
    ],
    "_repUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008650516",
    "importance": 7,
    "background": "최저임금 협상은 물가와 생계비, 영세사업자 부담을 함께 반영해야 해 매년 막판까지 진통을 겪는 경우가 많습니다. 노사 간 간격이 좁혀지지 않으면 공익위원 제시안이나 표결로 넘어가는 일이 자주 발생합니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "p3-c1",
@@ -3079,7 +2688,7 @@
    "_repUrl": "https://www.hankookilbo.com/news/article/A2026070916040005326?did=NA",
    "importance": 7,
    "background": "원구성 협상은 상임위원장 배분과 법안 처리 주도권이 걸려 있어 매 국회 초반 핵심 정치 쟁점이 됩니다. 협상이 길어지면 상임위 운영과 입법 일정 전반이 지연됩니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "cr2-c0",
@@ -3088,16 +2697,16 @@
    "imageUrl": "https://cphoto.asiae.co.kr/listimglink/1/2025111916242424254_1763537065.jpg",
    "imageSourceUrl": "https://view.asiae.co.kr/article/2026070912392549288",
    "summary": "미래에셋그룹이 국내 가상자산거래소 코빗 인수에 대한 공정거래위원회 기업결합심사를 마쳤다. 미래에셋은 이번 인수를 전통자산과 디지털자산을 연결하는 글로벌 투자 플랫폼 구축의 핵심 기반으로 활용하겠다고 밝혔다.",
-   "outletCount": 15,
+   "outletCount": 13,
    "timeAgo": "8분 전",
    "publishedAt": "2026-07-09T21:30:00.000Z",
    "bias": {
-    "prog": 20,
-    "center": 70,
-    "cons": 10
+    "prog": 0,
+    "center": 87,
+    "cons": 13
    },
    "biasWarning": false,
-   "frameProg": "공정위, 미래에셋의 ‘코빗’ 인수 승인…“경쟁 제한 가능성 낮아”",
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
    "frameCons": "미래에셋 가상자산 시장 진출… 공정위, 코빗 인수 승인",
    "firstSeen": "2026-07-09T03:47:43.172Z",
    "articles": [
@@ -3172,164 +2781,13 @@
      "url": "https://www.yna.co.kr/view/AKR20260709091200008?input=1195m",
      "timeAgo": "1시간 전",
      "summary": "공정위, 미래에셋컨설팅의 가상자산거래소 코빗 인수 승인 \"금융 그룹 계열사 가상 자산 거래소를 인수 최초... 미래에셋은 향후 디지털자산기본법과 토큰증권발행(STO) 등 관련 제도 정비에 발맞춰 스테이블코인..."
-    },
-    {
-     "id": "cr2-c0-a8",
-     "outlet": "한겨레",
-     "lean": "prog",
-     "title": "공정위, 미래에셋의 ‘코빗’ 인수 승인…“경쟁 제한 가능성 낮아”",
-     "url": "https://www.hani.co.kr/arti/economy/economy_general/1267424.html",
-     "timeAgo": "최근"
-    },
-    {
-     "id": "cr2-c0-a9",
-     "outlet": "경향신문",
-     "lean": "prog",
-     "title": "미래에셋 ‘코빗’ 인수 승인…‘금가분리’ 깬 공정위",
-     "url": "https://www.khan.co.kr/article/202607092054005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-     "timeAgo": "10시간 전",
-     "summary": "“경쟁 제한 우려 적어”…금융그룹 계열사에 가상자산 거래소 경영권공정거래위원회가 미래에셋컨설팅의 가상자산 거래소 코빗 인수를 승인했다. 금융그룹 계열사가 가상자산 거래소를 인수한 것은 이번이 처음이다.공정위는 9일 미래에셋 계열사인 미래에셋컨설팅이 코빗 지분 92.06%를 약 1334억원에 취득하는 건을 승인했다고 밝혔다.미래에셋컨설팅은 매출 대부분이 호텔···"
     }
    ],
    "_repUrl": "https://view.asiae.co.kr/article/2026070912392549288",
    "background": "국내 금융권은 제도권 자산운용 역량과 가상자산 인프라를 결합해 디지털자산 시장에 본격 진입하려는 움직임을 이어 왔다. 거래소 인수는 라이선스와 고객 기반을 한 번에 확보할 수 있는 확장 방식으로 여겨진다.",
    "importance": 6,
-   "summarizedAt": "2026-07-09T22:01:02.748Z",
+   "summarizedAt": "2026-07-10T00:59:17.161Z",
    "publicTake": "비판적인 반응이 우세한 분위기입니다."
-  },
-  {
-   "id": "p8-c0",
-   "category": "정치",
-   "title": "문체위, 22일 '축협 청문회'..홍명보·정몽규 증인 채택",
-   "imageUrl": "https://image.fnnews.com/resource/media/image/2026/07/09/202607091135563518_l.jpg",
-   "imageSourceUrl": "http://www.fnnews.com/news/202607091207310470",
-   "summary": "국회 문화체육관광위원회는 대한축구협회 현안을 다루는 청문회를 7월 22일 열기로 하고 홍명보 전 감독, 정몽규 전 회장 등을 증인으로 채택했다. 박지성 위원과 손흥민, 황희찬 등은 참고인 명단에 포함됐다.",
-   "outletCount": 14,
-   "timeAgo": "34분 전",
-   "publishedAt": "2026-07-09T21:50:00.000Z",
-   "bias": {
-    "prog": 33,
-    "center": 59,
-    "cons": 8
-   },
-   "biasWarning": false,
-   "frameProg": "홍명보·정몽규, 국회 ‘축협 청문회’ 증인으로…국힘 참여할까",
-   "frameCons": "22일 축구협회 청문회… 정몽규·홍명보 부른다",
-   "firstSeen": "2026-07-09T03:47:43.172Z",
-   "articles": [
-    {
-     "id": "p8-c0-a0",
-     "outlet": "파이낸셜뉴스",
-     "lean": "center",
-     "title": "문체위, 22일 '축협 청문회'..홍명보·정몽규 증인 채택",
-     "url": "http://www.fnnews.com/news/202607091207310470",
-     "timeAgo": "34분 전",
-     "summary": "국회 문화체육관광위원회는 대한축구협회 현안을 다루는 청문회를 7월 22일 열기로 하고 홍명보 전 감독, 정몽규 전 회장 등을 증인으로 채택했다. 박지성 위원과 손흥민, 황희찬 등은 참고인 명단에 포함됐다."
-    },
-    {
-     "id": "p8-c0-a1",
-     "outlet": "아주경제",
-     "lean": "center",
-     "title": "국회 문체위, 축구협회 청문회 22일 개최…\"오만함 극에 달해\"",
-     "url": "https://www.ajunews.com/view/20260709110226427",
-     "timeAgo": "1시간 전",
-     "summary": "국민의힘이 원 구성에 반발하며 불참한 가운데 더불어민주당 주도로 처리됐다. 이재정 문체위원장은 이날 국회에서 \"축구국가대표팀 감독 선임 절차와 대한축구협회의 운영 실태 전반에 나타난 여러 문제점에 대해..."
-    },
-    {
-     "id": "p8-c0-a2",
-     "outlet": "이데일리",
-     "lean": "center",
-     "title": "국회 문체위, 22일 축협 청문회…정몽규·홍명보 등 정조준(상보)",
-     "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03801526645512880",
-     "timeAgo": "1시간 전",
-     "summary": "국회 문화체육관광위, 축구협회 청문회 실시의 건 처리(사진 = 연합뉴스) 이날 국회 문체위는 원구성 협상 지연으로 반쪽 국회가 이어지는 가운데 민주당 주도로 대한축구협회 현안 관련 청문회 실시계획서 채택의 건을..."
-    },
-    {
-     "id": "p8-c0-a3",
-     "outlet": "연합뉴스",
-     "lean": "center",
-     "title": "국회 문화체육관광위, 오는 22일 축구협회 청문회 실시",
-     "url": "https://www.yna.co.kr/view/PYH20260709082700013?input=1196m",
-     "timeAgo": "1시간 전",
-     "summary": "9일 22대 하반기 국회 원 구성 뒤 처음으로 열린 문화체육관광위원회 전체 회의에 대한축구협회 현안 관련 청문회 실시계획서와 증인 명단이 놓여 있다. 국민의힘 불참 속 열린 이날 문체위에서 의원들이 오는 22일..."
-    },
-    {
-     "id": "p8-c0-a4",
-     "outlet": "아시아경제",
-     "lean": "center",
-     "title": "문체위, 22일 축구협회 청문회…정몽규·홍명보 증인 채택",
-     "url": "https://view.asiae.co.kr/article/2026070911275051892",
-     "timeAgo": "1시간 전",
-     "summary": "외국으로 도피하는 등의 행보를 보여 출석 요구에 회피할 가능성이 크다\"고 말했다. 국민의힘은 후반기 원구성 협상에서 민주당 단독으로 11개 상임위·특위 위원장을 선출한 데 반발해 국회 의사일정을 보이콧하고 있다."
-    },
-    {
-     "id": "p8-c0-a5",
-     "outlet": "머니투데이",
-     "lean": "center",
-     "title": "국회, 축협 청문회 박지성·손흥민 호출…정몽규·홍명보 소환",
-     "url": "https://www.mt.co.kr/politics/2026/07/09/2026070911064499479",
-     "timeAgo": "1시간 전",
-     "summary": "대한축구협회를 대상으로 한 국회 청문회가 오는 22일 개최된다. 정몽규 전 대한축구협회 회장과 홍명보 전... 한편 이날 전체회의에는 여당 주도의 원 구성에 항의하며 상임위원회 활동을 전면 보이콧하고 있는 국민의힘..."
-    },
-    {
-     "id": "p8-c0-a6",
-     "outlet": "연합뉴스TV",
-     "lean": "center",
-     "title": "문체위, 22일 축구협회 청문회…손흥민·황희찬 참고인 채택",
-     "url": "http://www.yonhapnewstv.co.kr/news/AKR20260709111648EAn",
-     "timeAgo": "1시간 전",
-     "summary": "신문 요지는 \"월드컵 경기 성과 및 대표팀 관련\"으로 전해졌습니다. 국회 원구성에 반발해 국회 일정을 보이콧하고 있는 국민의힘은 이날 회의에 불참했습니다. #민주당 #문체위 #축구협회 #손흥민 #황희찬"
-    },
-    {
-     "id": "p8-c0-a7",
-     "outlet": "세계일보",
-     "lean": "cons",
-     "title": "22일 축구협회 청문회… 정몽규·홍명보 부른다",
-     "url": "https://www.segye.com/newsView/20260709520821",
-     "timeAgo": "9시간 전",
-     "summary": "국회 문화체육관광위원회는 9일 전체회의를 열어 대한축구협회 청문회를 22일에 개최하기로 했다. 문체위는 이날 ‘대한축구협회 현안 관련 청문회 실시계획서 채택의 건’ 등을 의결하고 이같이 결정했다.\n \n 더불어민주당 소속 이재정 위원장은 “축구 국가대표팀 감독 선임 절차와 대한축구협회의 운영 실태 전반에 나타난 여러 문제점에 대해 국회 차원에서 현안을 점검하"
-    },
-    {
-     "id": "p8-c0-a8",
-     "outlet": "한겨레",
-     "lean": "prog",
-     "title": "홍명보·정몽규, 국회 ‘축협 청문회’ 증인으로…국힘 참여할까",
-     "url": "https://www.hani.co.kr/arti/politics/politics_general/1267566.html",
-     "timeAgo": "최근"
-    },
-    {
-     "id": "p8-c0-a9",
-     "outlet": "경향신문",
-     "lean": "prog",
-     "title": "“정몽규·홍명보 부른다”…국회 문체위, 22일 축구협회 청문회 개최하기로",
-     "url": "https://www.khan.co.kr/article/202607091130001/?utm_source=khan_rss&utm_medium=rss&utm_campaign=politic_news",
-     "timeAgo": "19시간 전",
-     "summary": "2026 북중미 월드컵 32강 진출에 실패한 대한민국 축구대표팀 홍명보 전 감독이 지난달 30일 인천국제공항 제2터미널로 귀국하고 있다. 이준헌 기자국회 문화체육관광위원회는 9일 전체회의를 열어 대한축구협회 청문회를 22일에 열기로 했다. 증인으로는 정몽규 축구협회장과 홍명보 전 대표팀 감독, 이임생 전 협회 기술총괄이사 등이 채택됐다. 국민의힘이 원 구성···"
-    },
-    {
-     "id": "p8-c0-a10",
-     "outlet": "오마이뉴스",
-     "lean": "prog",
-     "title": "홍명보 전 감독 \"월드컵 결과 사과드린다…청문회 출석할 것\"",
-     "url": "https://star.ohmynews.com/NWS_Web/OhmyStar/at_pg.aspx?CNTN_CD=A0003250168",
-     "timeAgo": "13시간 전",
-     "summary": "홍명보 전 대한민국 축구대표팀 감독이 2026 북중미 월드컵 조별리그 탈락에 대해 사과 입장을 밝히며, 국회 청문회에 출석하겠다고 입장을 표명했다.\n\n홍 전 감독은 9일 '국민 여러분께 드리는 말씀'이라는 제목의 공식 입장문을 발표하며 \"먼저 대한민국 축구를 사랑해 주시고 응원해 주신 모든 국민 여러분께 진심으로 사과드립니다. 국가대표팀 감독이라는 막중한 책임을 맡았음에도 월드컵에서 국민 여러분께서 기대하셨던 결과를 만들어드리지 못했습니다. 그 결과에 대한 모든 책임은 감독인 저에게 있습니다. 기대와 응원에 보답하지 못했고, 많은 분들께 실망과 상처를 드렸습니다. 감독으로서 그 책임을 무겁게 받아들이며 다시 한번 깊이 사과드립니다\"고 밝혔다.\n\n홍명보 전 감독, 오는 22일 청문회 참석 입장 밝혀\n\n홍 전 감독은 \"월드컵이 끝난 뒤 제게 가장 먼저 주어진 일은 결과를 받아들이는 것이었습니다. 대표팀의 결과는 감독인 제가 감당해야 할 몫이라고 생각했기 때문입니다. 그래서 그동안은 제 입장을 국민 여러분께 말씀드리지 못했습니다\"라며 \"하지만 시간이 흐르면서 사실과 다른 내용들이 사실인 양 알려지고, 대표팀을 위해 헌신했던 선수들과 스태프들까지 오해와 추측 속에 놓이는 모습을 보며, 침묵만 하는 것이 과연 옳은 일인지 다시 돌아보게 되었습니다\"라고 전했다.\n\n전체 내용보기"
-    },
-    {
-     "id": "p8-c0-a11",
-     "outlet": "프레시안",
-     "lean": "prog",
-     "title": "국회, 정몽규middot;홍명보 불러 '축구협회 청문회' 연다",
-     "url": "https://www.pressian.com/pages/articles/2026070914552772231&amp;ref=rss",
-     "timeAgo": "7분 전",
-     "summary": "국회가 오는 22일 대한축구협회 청문회를 열기로 했다. 정몽규 축구협회장과 홍명보 전 국가대표팀 감독 등이 증인으로 소환됐다.\n\n국회 문화체육관광위원회는 9일 전체회의에서 '대한축구협회 현안 관련 청문회 실시계획서 채택' 안건을 의결했다.\n\n더불어민주당 소속 이재정 문체위원장은 \"국가대표팀 감독 선임 절차와 축구협회 운영실태 전반의 여러 문제점에 대해 국회"
-    }
-   ],
-   "_repUrl": "http://www.fnnews.com/news/202607091207310470",
-   "background": "축구대표팀 감독 선임 과정의 절차 논란과 축구협회 운영 문제는 지난해부터 체육계의 대표 현안으로 이어져 왔다. 국회는 청문회를 통해 협회 운영의 공정성과 책임 소재를 점검하겠다는 입장이다.",
-   "importance": 6,
-   "summarizedAt": "2026-07-09T22:01:02.748Z",
-   "publicTake": "찬반이 팽팽하게 엇갈리는 분위기입니다."
   },
   {
    "id": "e1-c1",
@@ -3427,7 +2885,7 @@
    "_repUrl": "https://www.ajunews.com/view/20260709091334111",
    "background": "외평채 발행은 국가의 대외 신인도와 해외 자금 조달 여건을 보여주는 대표 지표다. 금리가 낮고 수요가 많을수록 한국 경제에 대한 글로벌 투자자 신뢰가 높다는 해석이 가능하다.",
    "importance": 6,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "e3-c0-b",
@@ -3525,7 +2983,7 @@
    "_repUrl": "https://view.asiae.co.kr/article/2026070812044279183",
    "background": "최근 한국 경제는 반도체 수출 회복과 내수 서비스업 버팀목에 기대는 흐름을 보여 왔습니다. 반면 일부 제조업은 대외 수요 둔화와 재고 조정 영향으로 회복 속도가 상대적으로 더딘 상황입니다.",
    "importance": 6,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "s3-c0-b-b-b",
@@ -3624,7 +3082,7 @@
    "importance": 6,
    "background": "하청·간접고용 구조가 많은 산업에서는 원청의 사용자 책임과 교섭 참여 범위를 둘러싼 갈등이 반복돼 왔습니다. 민주노총은 원청이 실질적 결정권을 가진 만큼 직접 교섭에 나서야 한다는 입장을 유지해 왔습니다.",
    "publicTake": "민주노총 총파업 예고와 노란봉투법을 두고 노조 편향 정책이 갈등을 키운다는 비판이 많습니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "st3-c0-b",
@@ -3723,7 +3181,7 @@
    "importance": 6,
    "background": "글로벌 반도체 대형주의 급락은 한국과 미국 증시에 동시에 영향을 주는 경우가 많습니다. 기술주 비중이 높은 나스닥은 반도체 업종 조정에 특히 민감하게 반응합니다.",
    "publicTake": "비판적인 의견이 다소 많은 편입니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "i5-c1-b",
@@ -3821,212 +3279,106 @@
    "_repUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008647156&plink=ORI&cooper=NAVER",
    "background": "한국은 중동산 원유 의존도가 높아 주요 산유국과의 에너지 협력이 경제 안정과 직결됩니다. UAE는 한국의 주요 에너지·투자 협력국으로, 공급망 다변화 논의에서도 비중이 큰 상대입니다.",
    "importance": 6,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
-   "id": "e3-c0-b-b",
-   "category": "국제",
-   "title": "트럼프 \"월마트, 정부 요청에 가격 인하…다른 업체도 따라야\"",
-   "imageUrl": "https://img.sbs.co.kr/newimg/news/20260703/202198655_1280.jpg",
-   "imageSourceUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008644817&plink=ORI&cooper=NAVER",
-   "summary": "도널드 트럼프 미국 대통령이 월마트가 미 행정부 요청에 따라 건국 250주년에 맞춰 일부 상품 가격을 크게 낮추기로 했다고 밝혔다. 트럼프는 다진 소고기 가격 인하 사례를 언급하며 다른 유통업체들도 동참해야 한다고 압박했다.",
+   "id": "p8-c0",
+   "category": "정치",
+   "title": "문체위, 22일 '축협 청문회'..홍명보·정몽규 증인 채택",
+   "imageUrl": "https://image.fnnews.com/resource/media/image/2026/07/09/202607091135563518_l.jpg",
+   "imageSourceUrl": "http://www.fnnews.com/news/202607091207310470",
+   "summary": "국회 문화체육관광위원회는 대한축구협회 현안을 다루는 청문회를 7월 22일 열기로 하고 홍명보 전 감독, 정몽규 전 회장 등을 증인으로 채택했다. 박지성 위원과 손흥민, 황희찬 등은 참고인 명단에 포함됐다.",
    "outletCount": 10,
-   "timeAgo": "4분 전",
-   "publishedAt": "2026-07-09T21:48:43.000Z",
+   "timeAgo": "34분 전",
+   "publishedAt": "2026-07-09T21:50:00.000Z",
    "bias": {
     "prog": 0,
-    "center": 75,
-    "cons": 25
+    "center": 87,
+    "cons": 13
    },
    "biasWarning": false,
    "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
-   "frameCons": "트럼프 \"월마트, 정부 요청에 가격 인하…다른 업체도 따라야\"",
-   "firstSeen": "2026-07-07T00:39:39.967Z",
+   "frameCons": "22일 축구협회 청문회… 정몽규·홍명보 부른다",
+   "firstSeen": "2026-07-09T03:47:43.172Z",
    "articles": [
     {
-     "id": "e3-c0-b-b-a0",
-     "outlet": "SBS",
+     "id": "p8-c0-a0",
+     "outlet": "파이낸셜뉴스",
      "lean": "center",
-     "title": "트럼프 \"월마트, 정부 요청에 가격 인하…다른 업체도 따라야\"",
-     "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008644817&plink=ORI&cooper=NAVER",
-     "timeAgo": "4분 전",
-     "summary": "도널드 트럼프 미국 대통령이 월마트가 미 행정부 요청에 따라 건국 250주년에 맞춰 일부 상품 가격을 크게 낮추기로 했다고 밝혔다. 트럼프는 다진 소고기 가격 인하 사례를 언급하며 다른 유통업체들도 동참해야 한다고 압박했다."
+     "title": "문체위, 22일 '축협 청문회'..홍명보·정몽규 증인 채택",
+     "url": "http://www.fnnews.com/news/202607091207310470",
+     "timeAgo": "34분 전",
+     "summary": "국회 문화체육관광위원회는 대한축구협회 현안을 다루는 청문회를 7월 22일 열기로 하고 홍명보 전 감독, 정몽규 전 회장 등을 증인으로 채택했다. 박지성 위원과 손흥민, 황희찬 등은 참고인 명단에 포함됐다."
     },
     {
-     "id": "e3-c0-b-b-a1",
-     "outlet": "국민일보",
-     "lean": "center",
-     "title": "휘발유 이어 소고기 가격까지…트럼프 “행정부 요청에 월마트 가격 인...",
-     "url": "https://www.kmib.co.kr/article/view.asp?arcid=0030074036&code=61131111&cp=nv",
-     "timeAgo": "5분 전",
-     "summary": "기업들에 물가 인하를 압박하고 있다. 그는 지난달에도 휘발유 소매업체들에 “갤런당 2.5 달러 선을 목표로 가격을 낮추기 시작하라”고 지시한 바 있다. 미국 노동통계국에 따르면 지난 12개월 동안 소비자 물가..."
-    },
-    {
-     "id": "e3-c0-b-b-a2",
-     "outlet": "뉴스핌",
-     "lean": "center",
-     "title": "[미국 특징주] 트럼프 \"월마트, 정부 요청에 가격 인하...다른 업체도 따...",
-     "url": "https://www.newspim.com/news/view/20260707000096",
-     "timeAgo": "1시간 전",
-     "summary": "이번 행보는 11월 중간선거를 앞두고 고물가 잡기 성과를 부각시키려는 의도로 해석된다. 트럼프 대통령은 같은 트루스소셜 글에서 \"우리 행정부는 조 바이든 전 대통령이 무능하게 끌어올린 물가를 바로잡고 있다\"고..."
-    },
-    {
-     "id": "e3-c0-b-b-a3",
-     "outlet": "뉴시스",
-     "lean": "center",
-     "title": "트럼프 \"월마트, 행정부 요청에 가격 내린 애국기업…다른 업체들도 따...",
-     "url": "https://www.newsis.com/view/NISX20260707_0003698146",
-     "timeAgo": "1시간 전",
-     "summary": "트럼프 대통령은 전임인 조 바이든 전 대통령이 초래한 인플레이션으로 치솟은 물가를 낮추고 있다며... 이번 트럼프 대통령의 발언은 11월 중간선거를 앞두고 '물가 잡기' 성과를 부각하려는 의도로 풀이된다. 트럼프..."
-    },
-    {
-     "id": "e3-c0-b-b-a4",
+     "id": "p8-c0-a1",
      "outlet": "아주경제",
      "lean": "center",
-     "title": "트럼프 \"월마트, 가격 인하\"…중간선거 앞두고 물가 압박",
-     "url": "https://www.ajunews.com/view/20260707073939559",
+     "title": "국회 문체위, 축구협회 청문회 22일 개최…\"오만함 극에 달해\"",
+     "url": "https://www.ajunews.com/view/20260709110226427",
      "timeAgo": "1시간 전",
-     "summary": "com 도널드 트럼프 미국 대통령 [사진=EPA·연합뉴스] 도널드 트럼프 미국 대통령이 세계 최대 유통업체 월마트의 가격 인하 방침을 자신의 물가 대응 성과로 부각했다. 11월 중간선거를 앞두고 장바구니 물가에 대한..."
+     "summary": "국민의힘이 원 구성에 반발하며 불참한 가운데 더불어민주당 주도로 처리됐다. 이재정 문체위원장은 이날 국회에서 \"축구국가대표팀 감독 선임 절차와 대한축구협회의 운영 실태 전반에 나타난 여러 문제점에 대해..."
     },
     {
-     "id": "e3-c0-b-b-a5",
-     "outlet": "TV조선",
-     "lean": "cons",
-     "title": "트럼프 \"월마트, 정부 요청에 가격 인하…다른 업체도 따라야\"",
-     "url": "https://news.tvchosun.com/site/data/html_dir/2026/07/07/2026070790059.html",
-     "timeAgo": "2시간 전",
-     "summary": "트럼프 대통령은 고물가가 조 바이든 행정부의 실정 탓이었다면서 석유와 달걀, 처방약 등의 가격이... 지난달 미국이 이란과 종전 양해각서(MOU)에 합의한 이후 유가는 진정세를 보이고 있지만 여전히 물가는 높은..."
-    },
-    {
-     "id": "e3-c0-b-b-a6",
-     "outlet": "디지털타임스",
-     "lean": "cons",
-     "title": "트럼프 “월마트, 정부 요청에 가격 인하”…유통업계 전반에 ‘물가 인...",
-     "url": "https://www.dt.co.kr/article/12071472?ref=naver",
-     "timeAgo": "2시간 전",
-     "summary": "오는 11월 중간선거를 앞두고 고물가 부담이 유권자들의 최대 관심사로 떠오른 가운데 유통업계를 향한 물가 안정 압박 수위를 한층 높인 것으로 풀이된다. 트럼프 대통령은 6일(현지시간) 자신의 소셜미디어인..."
-    },
-    {
-     "id": "e3-c0-b-b-a7",
-     "outlet": "헤럴드경제",
-     "lean": "center",
-     "title": "트럼프 “월마트, 정부 요청에 가격 인하”…유통업계 전방위 압박[1일...",
-     "url": "https://biz.heraldcorp.com/article/10800051?ref=naver",
-     "timeAgo": "2시간 전",
-     "summary": "오는 11월 중간선거를 앞두고 고물가 부담을 완화해 민심을 달래려는 행보로 풀이된다. 트럼프 대통령은 6일... 트럼프 대통령은 현재의 고물가가 조 바이든 전 행정부의 정책 실패 때문이라고 주장하면서도 최근 석유와..."
-    }
-   ],
-   "_repUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008644817&plink=ORI&cooper=NAVER",
-   "background": "미국에서는 고물가가 중간선거를 앞둔 핵심 민심 변수로 꼽혀 왔다. 트럼프 행정부는 물가 부담 완화를 위해 대형 유통업체의 가격 정책까지 직접 압박하는 모습을 보이고 있다.",
-   "importance": 6,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
-  },
-  {
-   "id": "st3-c0",
-   "category": "주식",
-   "title": "[마켓무버]트럼프 '휴전 종료' 발언에도 AI 반등... 뉴욕증시 혼조 마감",
-   "imageUrl": "https://image.edaily.co.kr/images/content/defaultimg.jpg",
-   "imageSourceUrl": "https://www.edaily.co.kr/news/newspath.asp?newsid=03007766645512880",
-   "summary": "뉴욕증시는 트럼프 대통령의 휴전 종료 발언과 중동 긴장 고조 속에서 혼조세로 마감했습니다. 국제유가와 국채금리가 오르며 다우지수는 약세를 보였지만, AI 반도체주 강세로 나스닥은 상대적으로 선방했습니다.",
-   "outletCount": 10,
-   "timeAgo": "38분 전",
-   "publishedAt": "2026-07-09T12:19:03.000Z",
-   "bias": {
-    "prog": 11,
-    "center": 78,
-    "cons": 11
-   },
-   "biasWarning": false,
-   "frameProg": "“중동 평화” 발언  2주 만에 공습…또 오락가락 트럼프",
-   "frameCons": "종전 합의 무산되나…미·이란 긴장 고조에 혼조 마감 [뉴욕증시]",
-   "firstSeen": "2026-07-09T00:49:46.841Z",
-   "articles": [
-    {
-     "id": "st3-c0-a0",
-     "outlet": "매일경제",
-     "lean": "cons",
-     "title": "종전 합의 무산되나…미·이란 긴장 고조에 혼조 마감 [뉴욕증시]",
-     "url": "https://www.mk.co.kr/article/12094045",
-     "timeAgo": "38분 전",
-     "summary": "뉴욕증시는 트럼프 대통령의 휴전 종료 발언과 중동 긴장 고조 속에서 혼조세로 마감했습니다. 국제유가와 국채금리가 오르며 다우지수는 약세를 보였지만, AI 반도체주 강세로 나스닥은 상대적으로 선방했습니다."
-    },
-    {
-     "id": "st3-c0-a1",
+     "id": "p8-c0-a2",
      "outlet": "이데일리",
      "lean": "center",
-     "title": "[마켓무버]트럼프 '휴전 종료' 발언에도 AI 반등... 뉴욕증시 혼조 마감",
-     "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03007766645512880",
-     "timeAgo": "42분 전",
-     "summary": "상승했고, 다우지수는 1% 넘게 하락했다. 반면 AI 투자 기대가 이어지며 반도체주가 강세를 보인 덕분에 나스닥은 장 막판 상승 전환에 성공했다. 국제유가는 중동 공급 차질 우려에 WTI가 5% 넘게 급등하며 배럴당..."
-    },
-    {
-     "id": "st3-c0-a2",
-     "outlet": "아주경제",
-     "lean": "center",
-     "title": "[마켓 프리뷰] 미·이란 긴장에 뉴욕증시 혼조…반도체 반등에 코스피 ...",
-     "url": "https://www.ajunews.com/view/20260709085451067",
-     "timeAgo": "51분 전",
-     "summary": "(NYSE)에서 다우존스30산업평균지수는 전 거래일보다 576.76포인트(1.09%) 내린 5만2348.39에 마감했다. 스탠더드앤드푸어스(S&P)500지수는 21.14포인트(0.28%) 하락한 7482.71을 기록했고 기술주 중심의 나스닥지수는 51...."
-    },
-    {
-     "id": "st3-c0-a3",
-     "outlet": "SBS",
-     "lean": "center",
-     "title": "뉴욕증시, 중동 긴장 재점화에 혼조…나스닥만 상승",
-     "url": "https://biz.sbs.co.kr/article_hub/20000321474?division=NAVER",
-     "timeAgo": "54분 전",
-     "summary": "(NYSE)에서 다우존스30산업평균지수는 전장보다 576.76포인트(1.09%) 내린 5만2348.39에 거래를 마쳤습니다. 스탠더드앤드푸어스(S&P)500지수는 21.14포인트(0.28%) 하락한 7482.71에, 기술주 중심의 나스닥종합지수는 51...."
-    },
-    {
-     "id": "st3-c0-a4",
-     "outlet": "이투데이",
-     "lean": "center",
-     "title": "뉴욕증시, 이란전 휴전 종료 위기에 혼조…유가, 4% 이상 급등 [글로벌마...",
-     "url": "https://www.etoday.co.kr/news/view/2601833",
+     "title": "국회 문체위, 22일 축협 청문회…정몽규·홍명보 등 정조준(상보)",
+     "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03801526645512880",
      "timeAgo": "1시간 전",
-     "summary": "8일(현지시간) 다우지수는 전 거래일 대비 576.76포인트(1.09%) 하락한 5만2348.39에 마감했다. S&P500지수는 21.14포인트(0.28%) 내린 7482.71에, 기술주 중심의 나스닥지수는 51.96포인트(0.20%) 상승한 2만5870.65에 거래를 마쳤다...."
+     "summary": "국회 문화체육관광위, 축구협회 청문회 실시의 건 처리(사진 = 연합뉴스) 이날 국회 문체위는 원구성 협상 지연으로 반쪽 국회가 이어지는 가운데 민주당 주도로 대한축구협회 현안 관련 청문회 실시계획서 채택의 건을..."
     },
     {
-     "id": "st3-c0-a5",
+     "id": "p8-c0-a3",
+     "outlet": "연합뉴스",
+     "lean": "center",
+     "title": "국회 문화체육관광위, 오는 22일 축구협회 청문회 실시",
+     "url": "https://www.yna.co.kr/view/PYH20260709082700013?input=1196m",
+     "timeAgo": "1시간 전",
+     "summary": "9일 22대 하반기 국회 원 구성 뒤 처음으로 열린 문화체육관광위원회 전체 회의에 대한축구협회 현안 관련 청문회 실시계획서와 증인 명단이 놓여 있다. 국민의힘 불참 속 열린 이날 문체위에서 의원들이 오는 22일..."
+    },
+    {
+     "id": "p8-c0-a4",
+     "outlet": "아시아경제",
+     "lean": "center",
+     "title": "문체위, 22일 축구협회 청문회…정몽규·홍명보 증인 채택",
+     "url": "https://view.asiae.co.kr/article/2026070911275051892",
+     "timeAgo": "1시간 전",
+     "summary": "외국으로 도피하는 등의 행보를 보여 출석 요구에 회피할 가능성이 크다\"고 말했다. 국민의힘은 후반기 원구성 협상에서 민주당 단독으로 11개 상임위·특위 위원장을 선출한 데 반발해 국회 의사일정을 보이콧하고 있다."
+    },
+    {
+     "id": "p8-c0-a5",
+     "outlet": "머니투데이",
+     "lean": "center",
+     "title": "국회, 축협 청문회 박지성·손흥민 호출…정몽규·홍명보 소환",
+     "url": "https://www.mt.co.kr/politics/2026/07/09/2026070911064499479",
+     "timeAgo": "1시간 전",
+     "summary": "대한축구협회를 대상으로 한 국회 청문회가 오는 22일 개최된다. 정몽규 전 대한축구협회 회장과 홍명보 전... 한편 이날 전체회의에는 여당 주도의 원 구성에 항의하며 상임위원회 활동을 전면 보이콧하고 있는 국민의힘..."
+    },
+    {
+     "id": "p8-c0-a6",
      "outlet": "연합뉴스TV",
      "lean": "center",
-     "title": "[3분증시] 뉴욕증시, 미·이란 긴장 재고조 속 혼조 마감",
-     "url": "http://www.yonhapnewstv.co.kr/news/MYH20260709075744Iat",
+     "title": "문체위, 22일 축구협회 청문회…손흥민·황희찬 참고인 채택",
+     "url": "http://www.yonhapnewstv.co.kr/news/AKR20260709111648EAn",
      "timeAgo": "1시간 전",
-     "summary": "마감가를 살펴보면, 다우지수는 전장보다 1.09%, S&P500 지수는 0.28% 각각 하락했고요. 나스닥지수는 0.2% 올랐습니다. 트럼프 대통령은 튀르키예에서 열린 나토 정상 회의를 앞두고 이란을 겨냥해 \"종전 MOU는 끝난 것 같다\"며..."
+     "summary": "신문 요지는 \"월드컵 경기 성과 및 대표팀 관련\"으로 전해졌습니다. 국회 원구성에 반발해 국회 일정을 보이콧하고 있는 국민의힘은 이날 회의에 불참했습니다. #민주당 #문체위 #축구협회 #손흥민 #황희찬"
     },
     {
-     "id": "st3-c0-a6",
-     "outlet": "헤럴드경제",
-     "lean": "center",
-     "title": "뉴욕증시, 美-이란 갈등 재고조에 혼조 마감…반도체 지수는 반등, 삼전...",
-     "url": "https://biz.heraldcorp.com/article/10802981?ref=naver",
-     "timeAgo": "1시간 전",
-     "summary": "이날 다우존스30 산업평균지수는 전장보다 576.76포인트(1.09%) 내린 5만2348.39에 거래를 마쳤다. 스탠더드앤드푸어스(S&P) 500 지수는 전장보다 21.14포인트(0.28%) 내린 7482.71에, 기술주 중심의 나스닥 종합지수는..."
-    },
-    {
-     "id": "st3-c0-a7",
-     "outlet": "노컷뉴스",
-     "lean": "center",
-     "title": "트럼프 \"이란과 전쟁 재개는 아닐 것\"…뉴욕증시, 혼조 마감[오늘아침]",
-     "url": "https://www.nocutnews.co.kr/news/6545378?utm_source=naver&utm_medium=article&utm_campaign=20260709074419",
-     "timeAgo": "2시간 전",
-     "summary": "다우와 S&P500은 하락했지만, 트럼프 대통령의 발언으로 투자 심리가 일부 회복되면서 나스닥은 장 막판 상승 전환했습니다. 뉴욕증시, 미·이란 긴장 속 혼조 마감 미국과 이란 간 긴장이 다시 고조되는데 가운데, 미국..."
-    },
-    {
-     "id": "st3-c0-a8",
-     "outlet": "경향신문",
-     "lean": "prog",
-     "title": "“중동 평화” 발언  2주 만에 공습…또 오락가락 트럼프",
-     "url": "https://www.khan.co.kr/article/202607092119035/?utm_source=khan_rss&utm_medium=rss&utm_campaign=kh_world",
+     "id": "p8-c0-a7",
+     "outlet": "세계일보",
+     "lean": "cons",
+     "title": "22일 축구협회 청문회… 정몽규·홍명보 부른다",
+     "url": "https://www.segye.com/newsView/20260709520821",
      "timeAgo": "9시간 전",
-     "summary": "모즈타바 칭찬했다가 비난하는 등반복되는 모순에 협상 회의론 커져도널드 트럼프 미국 대통령이 이란과의 휴전이 “끝났다”고 선언하더니 공습 재개를 지시했다. 그는 전쟁 초기부터 이어진 오락가락 발언을 이번에도 반복했다. 뉴욕타임스(NYT)는 8일(현지시간) 트럼프 대통령이 튀르키예에서 열린 북대서양조약기구(나토) 정상회의에서 이란과 체결한 양해각서(MOU)에 ···"
+     "summary": "국회 문화체육관광위원회는 9일 전체회의를 열어 대한축구협회 청문회를 22일에 개최하기로 했다. 문체위는 이날 ‘대한축구협회 현안 관련 청문회 실시계획서 채택의 건’ 등을 의결하고 이같이 결정했다.\n \n 더불어민주당 소속 이재정 위원장은 “축구 국가대표팀 감독 선임 절차와 대한축구협회의 운영 실태 전반에 나타난 여러 문제점에 대해 국회 차원에서 현안을 점검하"
     }
    ],
-   "_repUrl": "https://www.edaily.co.kr/news/newspath.asp?newsid=03007766645512880",
-   "summarizedAt": "2026-07-09T22:01:02.748Z",
+   "_repUrl": "http://www.fnnews.com/news/202607091207310470",
+   "background": "축구대표팀 감독 선임 과정의 절차 논란과 축구협회 운영 문제는 지난해부터 체육계의 대표 현안으로 이어져 왔다. 국회는 청문회를 통해 협회 운영의 공정성과 책임 소재를 점검하겠다는 입장이다.",
    "importance": 6,
-   "background": "미국 증시는 지정학적 리스크와 금리 전망, 기술주 실적 기대가 동시에 작용하며 종목별 차별화가 커진 상태입니다. 특히 AI 관련 대형 반도체주는 시장 전체 심리를 좌우하는 핵심 축이 됐습니다."
+   "summarizedAt": "2026-07-10T00:59:17.161Z",
+   "publicTake": "찬반이 팽팽하게 엇갈리는 분위기입니다."
   },
   {
    "id": "e7-c0",
@@ -4122,107 +3474,9 @@
     }
    ],
    "_repUrl": "https://www.ajunews.com/view/20260709090647101",
-   "summarizedAt": "2026-07-09T22:01:02.748Z",
+   "summarizedAt": "2026-07-10T00:59:17.161Z",
    "importance": 6,
    "background": "대형 유통사의 경영 위기는 납품업체와 하도급 업체의 유동성 위기로 빠르게 번질 수 있다. 금융권의 긴급 지원은 연쇄 부실을 막고 협력업체 운영자금을 이어주기 위한 대응이다."
-  },
-  {
-   "id": "st3-c0-b-b",
-   "category": "경제",
-   "title": "[마켓 프리뷰] 뉴욕증시 AI주 반등에 상승…삼성전자 실적·차익실현 공...",
-   "imageUrl": "https://image.ajunews.com/content/image/2026/07/07/20260707085642290718.jpg",
-   "imageSourceUrl": "https://www.ajunews.com/view/20260707085400697",
-   "summary": "미국 뉴욕증시는 AI 반도체주 반등에 힘입어 일제히 상승 마감했다. 다만 국내 증시는 삼성전자 잠정실적 발표와 최근 급등에 따른 차익실현 심리가 겹치며 장 초반 변동성이 커질 수 있다는 전망이 나왔다.",
-   "outletCount": 10,
-   "timeAgo": "19분 전",
-   "publishedAt": "2026-07-08T23:15:00.000Z",
-   "bias": {
-    "prog": 0,
-    "center": 87,
-    "cons": 13
-   },
-   "biasWarning": false,
-   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
-   "frameCons": "반도체 매수세에 상승…다우, 사상 첫 5만3000선 돌파 [뉴욕증시]",
-   "firstSeen": "2026-07-07T00:39:39.967Z",
-   "articles": [
-    {
-     "id": "st3-c0-b-b-a0",
-     "outlet": "매일경제",
-     "lean": "cons",
-     "title": "반도체 매수세에 상승…다우, 사상 첫 5만3000선 돌파 [뉴욕증시]",
-     "url": "https://www.mk.co.kr/article/12091983",
-     "timeAgo": "19분 전",
-     "summary": "미국 뉴욕증시는 AI 반도체주 반등에 힘입어 일제히 상승 마감했다. 다만 국내 증시는 삼성전자 잠정실적 발표와 최근 급등에 따른 차익실현 심리가 겹치며 장 초반 변동성이 커질 수 있다는 전망이 나왔다."
-    },
-    {
-     "id": "st3-c0-b-b-a1",
-     "outlet": "아주경제",
-     "lean": "center",
-     "title": "[마켓 프리뷰] 뉴욕증시 AI주 반등에 상승…삼성전자 실적·차익실현 공...",
-     "url": "https://www.ajunews.com/view/20260707085400697",
-     "timeAgo": "35분 전",
-     "summary": "다우지수가 종가 기준 5만3000선을 넘어선 것은 이번이 처음이다. 스탠더드앤드푸어스(S&P)500지수는 54.19포인트(0.72%) 오른 7537.43, 기술주 중심의 나스닥지수는 288.49포인트(1.12%) 상승한 2만6121.16에 거래를 마쳤다...."
-    },
-    {
-     "id": "st3-c0-b-b-a2",
-     "outlet": "SBS",
-     "lean": "center",
-     "title": "뉴욕증시, 반도체주 반등에 일제히 상승…다우 5만3천선 첫 돌파",
-     "url": "https://biz.sbs.co.kr/article_hub/20000321026?division=NAVER",
-     "timeAgo": "56분 전",
-     "summary": "다우지수는 이날 처음으로 5만 3000을 넘어섰습니다. 스탠더드앤드푸어스(S&P) 500 지수는 전장보다 54.19포인트(0.72%) 오른 7537.43에, 기술주 중심의 나스닥 종합지수는 전장보다 288.49포인트(1.12%) 오른 2만 6121.16에..."
-    },
-    {
-     "id": "st3-c0-b-b-a3",
-     "outlet": "이데일리",
-     "lean": "center",
-     "title": "[마켓무버]AI 반도체 랠리 재개…나스닥 1%대 상승",
-     "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=02830646645512224",
-     "timeAgo": "1시간 전",
-     "summary": "지난주 숨 고르기에 들어갔던 기술주가 반등에 나서면서 다우지수는 53,000선을 돌파했고, 나스닥은 1.12%, S&P500은 0.72% 상승했다. 필라델피아 반도체지수도 2.17% 오르며 12,900선에서 거래를 마쳤다. 시장을 이끈 것은..."
-    },
-    {
-     "id": "st3-c0-b-b-a4",
-     "outlet": "이투데이",
-     "lean": "center",
-     "title": "뉴욕증시, AI주 반등에 상승…다우, 첫 5만3000선 돌파 [글로벌마켓 모닝...",
-     "url": "https://www.etoday.co.kr/news/view/2600862",
-     "timeAgo": "1시간 전",
-     "summary": "S&P500지수는 54.19포인트(0.72%) 오른 7537.43에, 기술주 중심의 나스닥지수는 288.49포인트(1.12%) 상승한 2만6121.16에 거래를 마쳤다. 다우지수는 사상 처음으로 5만3000을 돌파했다. 주요 지수는 지난주 약세를 보였던 AI..."
-    },
-    {
-     "id": "st3-c0-b-b-a5",
-     "outlet": "헤럴드경제",
-     "lean": "center",
-     "title": "다우 5만3000선 첫 돌파…브로드컴·AMD 급등에 美증시 ‘활짝’ [투자3...",
-     "url": "https://biz.heraldcorp.com/article/10800110?ref=naver",
-     "timeAgo": "1시간 전",
-     "summary": "다우존스30 산업평균지수는 사상 처음으로 5만3000선을 넘어섰고, 나스닥지수는 반도체주 강세를 앞세워 1% 넘게 올랐다. 6일(현지시간) 뉴욕증권거래소에서 다우존스30 산업평균지수는 전장보다 155.84포인트(0.29..."
-    },
-    {
-     "id": "st3-c0-b-b-a6",
-     "outlet": "연합뉴스TV",
-     "lean": "center",
-     "title": "[3분증시] AI주 반등에 뉴욕증시 상승 마감",
-     "url": "http://www.yonhapnewstv.co.kr/news/MYH20260707073902Vbe",
-     "timeAgo": "2시간 전",
-     "summary": "S&P500 지수는 전장 대비 0.72%, 나스닥지수는 1.12% 각각 뛰었습니다. 다우지수는 사상 처음으로 53,000선을 상향 돌파했습니다. 미국 증시를 움직일 만한 뚜렷한 재료는 없었는데요. 주요 지수는 저가 매수세에 힘입어..."
-    },
-    {
-     "id": "st3-c0-b-b-a7",
-     "outlet": "파이낸셜뉴스",
-     "lean": "center",
-     "title": "'89조 깜짝 실적'에도…삼성전자 30만원 붕괴에 코스피 급락 [fn오전시황...",
-     "url": "http://www.fnnews.com/news/202607071024495451",
-     "timeAgo": "11시간 전",
-     "summary": "간밤 뉴욕증시는 AI·반도체 업종에 저가 매수세가 유입되며 3대 지수가 동반 상승 마감했다. 다우존스30 산업평균지수는 0.29% 오르며 사상 처음 5만3000선을 돌파했고, S&P500과 나스닥지수는 각각 0.72%, 1.12% 올랐다."
-    }
-   ],
-   "_repUrl": "https://www.ajunews.com/view/20260707085400697",
-   "background": "국내 증시는 최근 미국 기술주 흐름과 반도체 업황 기대에 크게 연동돼 왔다. 동시에 급등 뒤에는 실적 발표와 수급 변화가 단기 조정을 촉발하는 패턴도 자주 반복된다.",
-   "importance": 6,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
   },
   {
    "id": "p7-c1-b",
@@ -4320,112 +3574,105 @@
    "_repUrl": "https://www.ajunews.com/view/20260708215443820",
    "importance": 6,
    "background": "정 전 후보는 지방선거 유세 중 음료 투척을 피하다 다쳤다고 알렸지만, 이후 수사 과정에서 자작극 가능성이 제기됐습니다. 선거 과정에서 발생한 사건의 진위와 책임을 둘러싼 논란이 이어져 왔습니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
-   "id": "rss-c2",
-   "category": "경제",
-   "title": "'반도체 클러스터' 광주 군공항 인근, 토허구역 지정한다",
-   "imageUrl": "https://img.sbs.co.kr/newimg/news/20260709/202200660_1280.jpg",
-   "imageSourceUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008650204",
-   "summary": "정부가 호남 반도체 첨단국가산단 예정지 일대 364.19㎢를 2년간 토지거래허가구역으로 지정하기로 했다. 개발 기대를 노린 투기 수요를 막고 산업단지 조성을 안정적으로 추진하겠다는 취지다.",
+   "id": "st3-c0",
+   "category": "국제",
+   "title": "[마켓무버]트럼프 '휴전 종료' 발언에도 AI 반등... 뉴욕증시 혼조 마감",
+   "imageUrl": "https://image.edaily.co.kr/images/content/defaultimg.jpg",
+   "imageSourceUrl": "https://www.edaily.co.kr/news/newspath.asp?newsid=03007766645512880",
+   "summary": "뉴욕증시는 트럼프 대통령의 휴전 종료 발언과 중동 긴장 고조 속에서 혼조세로 마감했습니다. 국제유가와 국채금리가 오르며 다우지수는 약세를 보였지만, AI 반도체주 강세로 나스닥은 상대적으로 선방했습니다.",
    "outletCount": 9,
-   "timeAgo": "3시간 전",
-   "publishedAt": "2026-07-09T21:19:00.000Z",
+   "timeAgo": "38분 전",
+   "publishedAt": "2026-07-09T12:19:03.000Z",
    "bias": {
-    "prog": 33,
-    "center": 34,
-    "cons": 33
+    "prog": 0,
+    "center": 87,
+    "cons": 13
    },
    "biasWarning": false,
-   "frameProg": "호남 반도체 예정지 토허구역 지정…14일부터 효력",
-   "frameCons": "‘반도체 클러스터’ 발표 열흘 만에 호남 일대 토지거래허가구역 지정",
-   "firstSeen": "2026-07-09T18:55:23.587Z",
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
+   "frameCons": "종전 합의 무산되나…미·이란 긴장 고조에 혼조 마감 [뉴욕증시]",
+   "firstSeen": "2026-07-09T00:49:46.841Z",
    "articles": [
     {
-     "id": "rss-c2-a0",
-     "outlet": "조선일보",
+     "id": "st3-c0-a0",
+     "outlet": "매일경제",
      "lean": "cons",
-     "title": "‘반도체 클러스터’ 발표 열흘 만에 호남 일대 토지거래허가구역 지정",
-     "url": "https://www.chosun.com/economy/real_estate/2026/07/10/YHQDGSMRLZCQJE5ZGGWD7ZDL5A/",
-     "timeAgo": "3시간 전",
-     "summary": "정부가 호남 반도체 첨단국가산단 예정지 일대 364.19㎢를 2년간 토지거래허가구역으로 지정하기로 했다. 개발 기대를 노린 투기 수요를 막고 산업단지 조성을 안정적으로 추진하겠다는 취지다."
+     "title": "종전 합의 무산되나…미·이란 긴장 고조에 혼조 마감 [뉴욕증시]",
+     "url": "https://www.mk.co.kr/article/12094045",
+     "timeAgo": "38분 전",
+     "summary": "뉴욕증시는 트럼프 대통령의 휴전 종료 발언과 중동 긴장 고조 속에서 혼조세로 마감했습니다. 국제유가와 국채금리가 오르며 다우지수는 약세를 보였지만, AI 반도체주 강세로 나스닥은 상대적으로 선방했습니다."
     },
     {
-     "id": "rss-c2-a1",
-     "outlet": "한국경제",
-     "lean": "cons",
-     "title": "국힘 \"호남 반도체, 제때 전력 공급 어려워…대통령 정치적 이익 위한 결정\"",
-     "url": "https://www.hankyung.com/article/202607095908i",
-     "timeAgo": "9시간 전"
+     "id": "st3-c0-a1",
+     "outlet": "이데일리",
+     "lean": "center",
+     "title": "[마켓무버]트럼프 '휴전 종료' 발언에도 AI 반등... 뉴욕증시 혼조 마감",
+     "url": "https://www.edaily.co.kr/news/newspath.asp?newsid=03007766645512880",
+     "timeAgo": "42분 전",
+     "summary": "상승했고, 다우지수는 1% 넘게 하락했다. 반면 AI 투자 기대가 이어지며 반도체주가 강세를 보인 덕분에 나스닥은 장 막판 상승 전환에 성공했다. 국제유가는 중동 공급 차질 우려에 WTI가 5% 넘게 급등하며 배럴당..."
     },
     {
-     "id": "rss-c2-a2",
+     "id": "st3-c0-a2",
+     "outlet": "아주경제",
+     "lean": "center",
+     "title": "[마켓 프리뷰] 미·이란 긴장에 뉴욕증시 혼조…반도체 반등에 코스피 ...",
+     "url": "https://www.ajunews.com/view/20260709085451067",
+     "timeAgo": "51분 전",
+     "summary": "(NYSE)에서 다우존스30산업평균지수는 전 거래일보다 576.76포인트(1.09%) 내린 5만2348.39에 마감했다. 스탠더드앤드푸어스(S&P)500지수는 21.14포인트(0.28%) 하락한 7482.71을 기록했고 기술주 중심의 나스닥지수는 51...."
+    },
+    {
+     "id": "st3-c0-a3",
      "outlet": "SBS",
      "lean": "center",
-     "title": "'반도체 클러스터' 광주 군공항 인근, 토허구역 지정한다",
-     "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008650204",
-     "timeAgo": "10시간 전",
-     "summary": "&#9650; 반도체 클러스터 부지로 선정된 광주 군공항호남권 반도체 클러스터 조성 예정지인 광주 군공항 부지와 인근 지역이 토지거래허가구역으로…"
+     "title": "뉴욕증시, 중동 긴장 재점화에 혼조…나스닥만 상승",
+     "url": "https://biz.sbs.co.kr/article_hub/20000321474?division=NAVER",
+     "timeAgo": "54분 전",
+     "summary": "(NYSE)에서 다우존스30산업평균지수는 전장보다 576.76포인트(1.09%) 내린 5만2348.39에 거래를 마쳤습니다. 스탠더드앤드푸어스(S&P)500지수는 21.14포인트(0.28%) 하락한 7482.71에, 기술주 중심의 나스닥종합지수는 51...."
     },
     {
-     "id": "rss-c2-a3",
-     "outlet": "연합뉴스",
+     "id": "st3-c0-a4",
+     "outlet": "이투데이",
      "lean": "center",
-     "title": "'반도체 부지' 인근 토지거래허가구역 지정에 기대반 우려반",
-     "url": "https://www.yna.co.kr/view/AKR20260709175600054",
-     "timeAgo": "10시간 전",
-     "summary": "(전남광주=연합뉴스) 장덕종 기자 = 정부가 반도체 투자로 부동산 수요가 요동칠 조짐을 보이는 광주 군공항 인근 지역을 토지거래허가구역으로 지정..."
+     "title": "뉴욕증시, 이란전 휴전 종료 위기에 혼조…유가, 4% 이상 급등 [글로벌마...",
+     "url": "https://www.etoday.co.kr/news/view/2601833",
+     "timeAgo": "1시간 전",
+     "summary": "8일(현지시간) 다우지수는 전 거래일 대비 576.76포인트(1.09%) 하락한 5만2348.39에 마감했다. S&P500지수는 21.14포인트(0.28%) 내린 7482.71에, 기술주 중심의 나스닥지수는 51.96포인트(0.20%) 상승한 2만5870.65에 거래를 마쳤다...."
     },
     {
-     "id": "rss-c2-a4",
-     "outlet": "동아일보",
-     "lean": "cons",
-     "title": "‘반도체 클러스터’ 광주 군공항 인근, 14일부터 토허구역 지정",
-     "url": "https://www.donga.com/news/Economy/article/all/20260709/134268302/1",
-     "timeAgo": "10시간 전",
-     "summary": "국토교통부는 호남권 반도체 클러스터 조성 사업 대상지로 선정된 광주 군공항을 포함한 인근 지역을 토지거래허가구역으로 지정했다고 9일 밝혔다. 사업 추진 과정에서 발생할 수 있는 투기성 거래를 차단하기 위한 조치다. 국토부와 전남광주통합특별시는 이날 중앙도시계획위원회 심의를 거쳐 광주 광산구·동구·서구·남구·북구, 전남 나주시·장성군·화순군 등 총 364.19㎢를 토허구역으로 지정했다. 기간은 14일부터 2028년 7월 13일까지다. 토허구역으로 지정되면 일정 규모 이상의 토지를 매매할 때 지자체장의 허가를 받아야 한다. 국토부는 토허구역을 집중 모니터링하고, 이상 거래 및 투기 행위 등 위법의심행위가 확인되면 엄정 대응에 나선다는 계획이다. 정부는 용인 반도체 국가산업단지 개발과 서울 용산국제업무지구 사업 등 대규모 개발 사업을 진행할 때도 사업 예정 지역과 주변 지역을 토허구역으로 지정해왔다."
-    },
-    {
-     "id": "rss-c2-a5",
-     "outlet": "뉴시스",
+     "id": "st3-c0-a5",
+     "outlet": "연합뉴스TV",
      "lean": "center",
-     "title": "반도체 개발 투기 막는다…광주 군공항 일대 364㎢ '토허제' 지정",
-     "url": "https://www.newsis.com/view/NISX20260709_0003703222",
-     "timeAgo": "10시간 전",
-     "summary": "[서울=뉴시스] 홍찬선 기자 = 정부가 최대 800조원이 투입되는 호남권 반도체 클러스터 조성 계획에 따른 부동산 투기를 차단하기 위해 광주 군 공항 부지와 인근 지역을 토지거래허가구역으로 지정했다. 대규모 개발 계획 발표 직후 토지 투기 수요가 유입될 가능성이 있다고 보고 선제적인 시장 관리에 나선 것이다.국토교통부와 전남광주통합특별시는 9일 중앙도시계획위원회 심의를 거쳐 광주 군 공항 부지와 인근 지역을 토지거래허가구역으로 지정했다고 밝혔다.이번 토지거래허가구역 지정은 정부가 지난 6일 3대 메가프로젝트 중 하나인 호남권 반도체 클러스터의 조성 부지가 광주 군공항 지역으로 결정된 데 따른 후속 조치다.삼성전자와 SK하이닉스가 총 800조원을 투자하는 반도체 생산단지 입지로 광주 군 공항 부지가 확정되면서 주변 토지시장 과열과 투기 가능성이 커졌다는 판단이 반영됐다.토지거래허가구역 지정 대상은 총 364.19㎢ 규모다. 광산구(124.98㎢), 동구(22.66㎢), 서구(26.94㎢), 남구(44.76㎢), 북구(28.72㎢), 나주시(97.93㎢), 장성군(5.43㎢), 화순군(12.77㎢) 등이 포함됐다.지정 기간은 오는 14일부터 2028년 7월13일까지 2년이다. 토지거래허가구역에서는 일정 규모 이상의 토지를 거래할 경우 관할 시장·군수·구청장의 허가를 받아야 한다. 주거용 토지는 실거주, 상업·공업용 토지는 실제 사업 목적이 인정돼야 거래가 가능해 투기성 거래가 제한된다. 허가를 받은 뒤에도 일정 기간 허가받은 목적대로 토지를 이용해야 한다.국토부와 전남광주통합특별시는 \"지정된 토지거래허가구역을 집중 모니터링하고, 이상 거래 및 투기 행위 등 위법의심행위가 확인될 경우 관계기관과 협조하여 엄정 대응할 계획\"이라고 밝혔다.\n◎공감언론 뉴시스 mania@newsis.com"
+     "title": "[3분증시] 뉴욕증시, 미·이란 긴장 재고조 속 혼조 마감",
+     "url": "http://www.yonhapnewstv.co.kr/news/MYH20260709075744Iat",
+     "timeAgo": "1시간 전",
+     "summary": "마감가를 살펴보면, 다우지수는 전장보다 1.09%, S&P500 지수는 0.28% 각각 하락했고요. 나스닥지수는 0.2% 올랐습니다. 트럼프 대통령은 튀르키예에서 열린 나토 정상 회의를 앞두고 이란을 겨냥해 \"종전 MOU는 끝난 것 같다\"며..."
     },
     {
-     "id": "rss-c2-a6",
-     "outlet": "한겨레",
-     "lean": "prog",
-     "title": "호남 반도체 예정지 토허구역 지정…14일부터 효력",
-     "url": "https://www.hani.co.kr/arti/economy/economy_general/1267542.html",
-     "timeAgo": "최근"
+     "id": "st3-c0-a6",
+     "outlet": "헤럴드경제",
+     "lean": "center",
+     "title": "뉴욕증시, 美-이란 갈등 재고조에 혼조 마감…반도체 지수는 반등, 삼전...",
+     "url": "https://biz.heraldcorp.com/article/10802981?ref=naver",
+     "timeAgo": "1시간 전",
+     "summary": "이날 다우존스30 산업평균지수는 전장보다 576.76포인트(1.09%) 내린 5만2348.39에 거래를 마쳤다. 스탠더드앤드푸어스(S&P) 500 지수는 전장보다 21.14포인트(0.28%) 내린 7482.71에, 기술주 중심의 나스닥 종합지수는..."
     },
     {
-     "id": "rss-c2-a7",
-     "outlet": "경향신문",
-     "lean": "prog",
-     "title": "‘반도체 클러스터’ 광주 군공항 부지 인근도 포함 2년간 ‘토허구역’ 지정",
-     "url": "https://www.khan.co.kr/article/202607092123025/?utm_source=khan_rss&utm_medium=rss&utm_campaign=economy_news",
-     "timeAgo": "9시간 전",
-     "summary": "국토교통부가 광주 군공항 부지와 인근 지역을 향후 2년간 토지거래허가구역(토허구역)으로 지정했다. 광주 군공항 부지는 정부의 3대 메가프로젝트 중 하나인 호남권 반도체 클러스터가 들어설 곳이다.국토부와 전남광주통합특별시는 9일 중앙도시계획위원회 심의를 거쳐 호남 반도체 첨단국가산단 사업 예정지 총 364.19㎢를 토허구역으로 지정한다고 밝혔다.토허구역으로 ···"
-    },
-    {
-     "id": "rss-c2-a8",
-     "outlet": "오마이뉴스",
-     "lean": "prog",
-     "title": "반도체산단 부지 '광주군공항' 주변 토지거래허가구역 지정",
-     "url": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003250155",
-     "timeAgo": "12시간 전",
-     "summary": "광주 군공항 일대가 정부와 삼성전자·SK하이닉스가 추진하는 호남권 반도체산단 부지로 결정되면서 주변 지역이 토지거래허가구역으로 지정됐다.\n\n전남광주통합특별시는 국토교통부가 9일 광주 군공항 인근 8개 시·구·군, 224개 동·리(총 364.19㎢)를 '부동산 거래신고 등에 관한 법률' 제10조에 따라 토지거래허가구역으로 지정·공고했다고 밝혔다.\n\n이번 지정은 광주 군공항 부지에 호남권 반도체 클러스터를 조성한다는 정부 결정에 따라 개발 기대심리로 인한 투기성 토지거래를 차단하기 위해 이뤄졌다.\n\n지정 기간은 2026년 7월 14일부터 2028년 7월 13일까지 2년간이다. 지정 대상은 광주 군공항을 중심으로 반경 10㎞에 접한 동·리이다. 국·공유지와 기존 토지거래허가구역, 기개발지역 등은 제외됐다.\n\n전체 내용보기"
+     "id": "st3-c0-a7",
+     "outlet": "노컷뉴스",
+     "lean": "center",
+     "title": "트럼프 \"이란과 전쟁 재개는 아닐 것\"…뉴욕증시, 혼조 마감[오늘아침]",
+     "url": "https://www.nocutnews.co.kr/news/6545378?utm_source=naver&utm_medium=article&utm_campaign=20260709074419",
+     "timeAgo": "2시간 전",
+     "summary": "다우와 S&P500은 하락했지만, 트럼프 대통령의 발언으로 투자 심리가 일부 회복되면서 나스닥은 장 막판 상승 전환했습니다. 뉴욕증시, 미·이란 긴장 속 혼조 마감 미국과 이란 간 긴장이 다시 고조되는데 가운데, 미국..."
     }
    ],
-   "_repUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008650204",
-   "background": "대규모 국가산단이나 교통 개발 계획이 발표되면 주변 부동산 가격이 급등해 투기 우려가 커지는 경우가 많다. 토지거래허가구역 지정은 이런 가격 불안을 선제적으로 억제할 때 자주 쓰는 수단이다.",
+   "_repUrl": "https://www.edaily.co.kr/news/newspath.asp?newsid=03007766645512880",
+   "summarizedAt": "2026-07-10T00:59:17.161Z",
    "importance": 6,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "background": "미국 증시는 지정학적 리스크와 금리 전망, 기술주 실적 기대가 동시에 작용하며 종목별 차별화가 커진 상태입니다. 특히 AI 관련 대형 반도체주는 시장 전체 심리를 좌우하는 핵심 축이 됐습니다."
   },
   {
    "id": "p2-c0",
@@ -4523,7 +3770,7 @@
    "_repUrl": "https://biz.heraldcorp.com/article/10801744?ref=naver",
    "background": "ESG 공시는 투자자 보호와 기업의 지속가능성 정보를 강화하려는 흐름 속에서 확대돼 왔습니다. 다만 공시 기준과 준비 기간이 충분한지 여부를 두고 기업과 당국의 입장이 계속 부딪혀 왔습니다.",
    "importance": 6,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "cr3-c0",
@@ -4621,7 +3868,7 @@
    "_repUrl": "http://www.fnnews.com/news/202607080956228646",
    "importance": 6,
    "background": "국내에서는 원화 스테이블코인을 제도권 금융과 연결할 수 있을지에 대한 논의가 이어지고 있습니다. 스테이블코인은 결제 효율성과 규제 준수 체계를 동시에 갖춰야 해 기술 검증과 제도 정비가 함께 요구됩니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "s3-c0-c",
@@ -4719,7 +3966,7 @@
    "_repUrl": "https://zdnet.co.kr/view/?no=20260709162936",
    "importance": 6,
    "background": "철강업계 임단협은 임금뿐 아니라 성과급과 고용안정, 근무체계 문제까지 얽혀 장기화되는 경우가 많다. 대형 제조업 노사 갈등은 생산 차질과 협력업체 부담으로 이어질 수 있다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "cr2-c0-c",
@@ -4816,95 +4063,86 @@
    "_repUrl": "https://biz.heraldcorp.com/article/10802739?ref=naver",
    "importance": 6,
    "background": "가상자산 압수 규모가 커지면서 수사기관의 보관·관리 체계 정비 필요성도 함께 커졌다. 국내에서는 신고된 가상자산사업자와 수탁 인프라 사업자들이 공공 보관 시장을 두고 경쟁하고 있다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
-   "id": "s2-c1",
-   "category": "정치",
-   "title": "[사설] 보완수사권 폐지 가속… 정부는 與 처분만 기다리면 되나",
-   "imageUrl": "https://img.seoul.co.kr//img/upload/2026/07/09/SSC_20260709234413_O2.jpg",
-   "imageSourceUrl": "https://www.seoul.co.kr/news/editOpinion/editorial/2026/07/10/20260710027006?wlog_tag3=naver",
-   "summary": "서울신문 사설은 보완수사권 폐지 논의가 빠르게 진행되는 상황에서 정부가 여당 설득에 소극적이라고 비판했습니다. 사설은 법무부가 야당에만 형사소송법 보완을 요청할 것이 아니라 당정 협의를 통해 여당을 상대로도 책임 있게 조정에 나서야 한다고 주장했습니다.",
+   "id": "rss-c2",
+   "category": "경제",
+   "title": "'반도체 클러스터' 광주 군공항 인근, 토허구역 지정한다",
+   "imageUrl": "https://img.sbs.co.kr/newimg/news/20260709/202200660_1280.jpg",
+   "imageSourceUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008650204",
+   "summary": "정부가 호남 반도체 첨단국가산단 예정지 일대 364.19㎢를 2년간 토지거래허가구역으로 지정하기로 했다. 개발 기대를 노린 투기 수요를 막고 산업단지 조성을 안정적으로 추진하겠다는 취지다.",
    "outletCount": 6,
-   "timeAgo": "21분 전",
-   "publishedAt": "2026-07-09T21:32:00.000Z",
+   "timeAgo": "3시간 전",
+   "publishedAt": "2026-07-09T21:19:00.000Z",
    "bias": {
-    "prog": 29,
-    "center": 57,
-    "cons": 14
+    "prog": 0,
+    "center": 50,
+    "cons": 50
    },
    "biasWarning": false,
-   "frameProg": "경찰 부당수사 때 수사기관 변경…여, ‘보완수사권 폐지’ 형소법 발의",
-   "frameCons": "[사설] 보완수사권 폐지 문제점을 야당이 제기해달라는 법무장관",
-   "firstSeen": "2026-07-09T21:53:50.912Z",
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
+   "frameCons": "‘반도체 클러스터’ 발표 열흘 만에 호남 일대 토지거래허가구역 지정",
+   "firstSeen": "2026-07-09T18:55:23.587Z",
    "articles": [
     {
-     "id": "s2-c1-a0",
-     "outlet": "서울신문",
-     "lean": "center",
-     "title": "[사설] 보완수사권 폐지 가속… 정부는 與 처분만 기다리면 되나",
-     "url": "https://www.seoul.co.kr/news/editOpinion/editorial/2026/07/10/20260710027006?wlog_tag3=naver",
-     "timeAgo": "1시간 전",
-     "summary": "서울신문 사설은 보완수사권 폐지 논의가 빠르게 진행되는 상황에서 정부가 여당 설득에 소극적이라고 비판했습니다. 사설은 법무부가 야당에만 형사소송법 보완을 요청할 것이 아니라 당정 협의를 통해 여당을 상대로도 책임 있게 조정에 나서야 한다고 주장했습니다."
-    },
-    {
-     "id": "s2-c1-a1",
-     "outlet": "연합뉴스TV",
-     "lean": "center",
-     "title": "민주, '보완수사권 폐지' 발의…보완수사요구권은 강화",
-     "url": "http://www.yonhapnewstv.co.kr/news/MYH20260710003126Yny",
-     "timeAgo": "6시간 전",
-     "summary": "더불어민주당이 검찰의 직접 보완수사권을 완전히 없애는 것을 골자로 하는 형사소송법 개정안을 발의했습니다. 여권 내에서도 우려가 제기되는 가운데 국민의힘은 '범죄자 천국'을 만들겠다는 것이냐며 강력..."
-    },
-    {
-     "id": "s2-c1-a2",
+     "id": "rss-c2-a0",
      "outlet": "조선일보",
      "lean": "cons",
-     "title": "[사설] 보완수사권 폐지 문제점을 야당이 제기해달라는 법무장관",
-     "url": "https://www.chosun.com/opinion/editorial/2026/07/10/ISJC2T2ZHJBFPCERIYFQ36AIHE/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
-     "timeAgo": "6시간 전",
-     "summary": "정 원내대표가 최근 검찰 보완수사로 경찰 수사 과정의 증거 인멸이 드러난 ‘광주 여고생 피살’ 사건을 언급하며 보완수사 존치를 요구하자 이같이 말한 것이다. 보완수사 폐지로 생길 수 있는 여러 문제를 야당에게 대신..."
+     "title": "‘반도체 클러스터’ 발표 열흘 만에 호남 일대 토지거래허가구역 지정",
+     "url": "https://www.chosun.com/economy/real_estate/2026/07/10/YHQDGSMRLZCQJE5ZGGWD7ZDL5A/",
+     "timeAgo": "3시간 전",
+     "summary": "정부가 호남 반도체 첨단국가산단 예정지 일대 364.19㎢를 2년간 토지거래허가구역으로 지정하기로 했다. 개발 기대를 노린 투기 수요를 막고 산업단지 조성을 안정적으로 추진하겠다는 취지다."
     },
     {
-     "id": "s2-c1-a3",
-     "outlet": "YTN",
+     "id": "rss-c2-a1",
+     "outlet": "한국경제",
+     "lean": "cons",
+     "title": "국힘 \"호남 반도체, 제때 전력 공급 어려워…대통령 정치적 이익 위한 결정\"",
+     "url": "https://www.hankyung.com/article/202607095908i",
+     "timeAgo": "9시간 전"
+    },
+    {
+     "id": "rss-c2-a2",
+     "outlet": "SBS",
      "lean": "center",
-     "title": "'보완수사권 폐지' 또 발의...국힘은 저지 파상공세",
-     "url": "https://www.ytn.co.kr/_ln/0101_202607092342235040",
-     "timeAgo": "7시간 전",
-     "summary": "사실상 당의 '공식 개정안'으로, 핵심 내용은 검찰 보완수사권의 완전폐지입니다. [김 한 규 / 더불어민주당 원내정책수석부대표 : 수사권 조정에 관해서는, 형사소송법 전체에 걸쳐서 검사가 수사의 주체자로 되어 있는..."
+     "title": "'반도체 클러스터' 광주 군공항 인근, 토허구역 지정한다",
+     "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008650204",
+     "timeAgo": "10시간 전",
+     "summary": "&#9650; 반도체 클러스터 부지로 선정된 광주 군공항호남권 반도체 클러스터 조성 예정지인 광주 군공항 부지와 인근 지역이 토지거래허가구역으로…"
     },
     {
-     "id": "s2-c1-a4",
-     "outlet": "국민일보",
+     "id": "rss-c2-a3",
+     "outlet": "연합뉴스",
      "lean": "center",
-     "title": "‘이달 내 보완수사권 폐지’ 가시화 속 “숙고 필요” 신중론도",
-     "url": "https://www.kmib.co.kr/article/view.asp?arcid=1783588168&code=11121100&cp=nv",
-     "timeAgo": "11시간 전",
-     "summary": "조정식 국회의장은 여야 원내 지도부를 만나 제헌절인 오는 17일까지 22대 국회 후반기 원 구성을 마칠 것을 촉구했다. 더 큰 변수는 여론 동향에 따른 당내 우려다. 행정안전위원장인 김영진 의원은 라디오 인터뷰에서..."
+     "title": "'반도체 부지' 인근 토지거래허가구역 지정에 기대반 우려반",
+     "url": "https://www.yna.co.kr/view/AKR20260709175600054",
+     "timeAgo": "10시간 전",
+     "summary": "(전남광주=연합뉴스) 장덕종 기자 = 정부가 반도체 투자로 부동산 수요가 요동칠 조짐을 보이는 광주 군공항 인근 지역을 토지거래허가구역으로 지정..."
     },
     {
-     "id": "s2-c1-a5",
-     "outlet": "한겨레",
-     "lean": "prog",
-     "title": "경찰 부당수사 때 수사기관 변경…여, ‘보완수사권 폐지’ 형소법 발의",
-     "url": "https://www.hani.co.kr/arti/politics/politics_general/1267589.html",
-     "timeAgo": "최근"
+     "id": "rss-c2-a4",
+     "outlet": "동아일보",
+     "lean": "cons",
+     "title": "‘반도체 클러스터’ 광주 군공항 인근, 14일부터 토허구역 지정",
+     "url": "https://www.donga.com/news/Economy/article/all/20260709/134268302/1",
+     "timeAgo": "10시간 전",
+     "summary": "국토교통부는 호남권 반도체 클러스터 조성 사업 대상지로 선정된 광주 군공항을 포함한 인근 지역을 토지거래허가구역으로 지정했다고 9일 밝혔다. 사업 추진 과정에서 발생할 수 있는 투기성 거래를 차단하기 위한 조치다. 국토부와 전남광주통합특별시는 이날 중앙도시계획위원회 심의를 거쳐 광주 광산구·동구·서구·남구·북구, 전남 나주시·장성군·화순군 등 총 364.19㎢를 토허구역으로 지정했다. 기간은 14일부터 2028년 7월 13일까지다. 토허구역으로 지정되면 일정 규모 이상의 토지를 매매할 때 지자체장의 허가를 받아야 한다. 국토부는 토허구역을 집중 모니터링하고, 이상 거래 및 투기 행위 등 위법의심행위가 확인되면 엄정 대응에 나선다는 계획이다. 정부는 용인 반도체 국가산업단지 개발과 서울 용산국제업무지구 사업 등 대규모 개발 사업을 진행할 때도 사업 예정 지역과 주변 지역을 토허구역으로 지정해왔다."
     },
     {
-     "id": "s2-c1-a6",
-     "outlet": "경향신문",
-     "lean": "prog",
-     "title": "민주당, ‘검찰 보완수사권 폐지’ 형소법 개정안 발의",
-     "url": "https://www.khan.co.kr/article/202607092148005/?utm_source=khan_rss&utm_medium=rss&utm_campaign=politic_news",
-     "timeAgo": "9시간 전",
-     "summary": "보완수사요구권 실효성은 강화더불어민주당이 9일 검찰의 보완수사권 폐지를 골자로 하는 형사소송법 개정안을 발의했다. 국민의힘은 장윤기 사건으로 검찰의 보완수사 필요성이 입증됐다며 경찰이 수사권을 독점할 경우 국민이 피해를 볼 수 있다는 등 이유로 반대 입장을 밝혔다.  민주당은 10일 국회 법제사법위원회 제1법안심사소위를 열고 개정안 심사에 착수한다. 민주당···"
+     "id": "rss-c2-a5",
+     "outlet": "뉴시스",
+     "lean": "center",
+     "title": "반도체 개발 투기 막는다…광주 군공항 일대 364㎢ '토허제' 지정",
+     "url": "https://www.newsis.com/view/NISX20260709_0003703222",
+     "timeAgo": "10시간 전",
+     "summary": "[서울=뉴시스] 홍찬선 기자 = 정부가 최대 800조원이 투입되는 호남권 반도체 클러스터 조성 계획에 따른 부동산 투기를 차단하기 위해 광주 군 공항 부지와 인근 지역을 토지거래허가구역으로 지정했다. 대규모 개발 계획 발표 직후 토지 투기 수요가 유입될 가능성이 있다고 보고 선제적인 시장 관리에 나선 것이다.국토교통부와 전남광주통합특별시는 9일 중앙도시계획위원회 심의를 거쳐 광주 군 공항 부지와 인근 지역을 토지거래허가구역으로 지정했다고 밝혔다.이번 토지거래허가구역 지정은 정부가 지난 6일 3대 메가프로젝트 중 하나인 호남권 반도체 클러스터의 조성 부지가 광주 군공항 지역으로 결정된 데 따른 후속 조치다.삼성전자와 SK하이닉스가 총 800조원을 투자하는 반도체 생산단지 입지로 광주 군 공항 부지가 확정되면서 주변 토지시장 과열과 투기 가능성이 커졌다는 판단이 반영됐다.토지거래허가구역 지정 대상은 총 364.19㎢ 규모다. 광산구(124.98㎢), 동구(22.66㎢), 서구(26.94㎢), 남구(44.76㎢), 북구(28.72㎢), 나주시(97.93㎢), 장성군(5.43㎢), 화순군(12.77㎢) 등이 포함됐다.지정 기간은 오는 14일부터 2028년 7월13일까지 2년이다. 토지거래허가구역에서는 일정 규모 이상의 토지를 거래할 경우 관할 시장·군수·구청장의 허가를 받아야 한다. 주거용 토지는 실거주, 상업·공업용 토지는 실제 사업 목적이 인정돼야 거래가 가능해 투기성 거래가 제한된다. 허가를 받은 뒤에도 일정 기간 허가받은 목적대로 토지를 이용해야 한다.국토부와 전남광주통합특별시는 \"지정된 토지거래허가구역을 집중 모니터링하고, 이상 거래 및 투기 행위 등 위법의심행위가 확인될 경우 관계기관과 협조하여 엄정 대응할 계획\"이라고 밝혔다.\n◎공감언론 뉴시스 mania@newsis.com"
     }
    ],
-   "_repUrl": "https://www.seoul.co.kr/news/editOpinion/editorial/2026/07/10/20260710027006?wlog_tag3=naver",
-   "background": "검찰 수사권 조정과 보완수사권 문제는 검찰개혁 논의의 핵심 쟁점 중 하나였습니다. 수사 공백과 권한 배분 문제를 둘러싸고 여야와 법조계의 입장차가 계속 이어져 왔습니다.",
+   "_repUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008650204",
+   "background": "대규모 국가산단이나 교통 개발 계획이 발표되면 주변 부동산 가격이 급등해 투기 우려가 커지는 경우가 많다. 토지거래허가구역 지정은 이런 가격 불안을 선제적으로 억제할 때 자주 쓰는 수단이다.",
    "importance": 6,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "cr3-c0-b",
@@ -4913,16 +4151,16 @@
    "imageUrl": "https://img.newspim.com/news/2026/07/09/2607092042286600_t1.jpg",
    "imageSourceUrl": "https://www.newspim.com/news/view/20260709001347",
    "summary": "[서울=뉴스핌] 고인원 기자= 비트코인 가격은 9일 미국과 이란의 군사적 충돌 확대와 국제유가 상승, 글로벌 채권 매도에도 6만2000~6만3000달러 선을 유지하며 비교적 견조한 흐름을 나타냈다.시장에서는 중동 긴장이 고조될 때마다 급락했던 과거와 달리 최근",
-   "outletCount": 6,
+   "outletCount": 5,
    "timeAgo": "7시간 전",
    "publishedAt": "2026-07-09T13:29:14.000Z",
    "bias": {
-    "prog": 14,
-    "center": 72,
-    "cons": 14
+    "prog": 0,
+    "center": 83,
+    "cons": 17
    },
    "biasWarning": false,
-   "frameProg": "호르무즈 뇌관 결국 터졌나hellip;미middot;이란 충돌 격화에 협상 '신기루'",
+   "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
    "frameCons": "비트코인, 미국·이란 지정학적 갈등에 약세… 6만2000달러선",
    "firstSeen": "2026-07-09T00:49:46.841Z",
    "articles": [
@@ -4979,100 +4217,83 @@
      "url": "http://www.yonhapnewstv.co.kr/news/AKR20260709092957wHx",
      "timeAgo": "19분 전",
      "summary": "비트코인이 미·이란 간 군사 긴장 고조와 유가 급등 등 글로벌 지정학적 악재의 영향으로 한때 6만 2,000달러 선이 붕괴되는 등 하락세를 보였으나, 장 후반 현물 ETF 중심의 저가 매수세 유입 기대감 속에 지지선 확보에 나서고 있습니다. 빗썸 AI 코인시세에 따르면 오늘(9일) 오전 8시 기준 가상자산 시장 내 가격 상승 자산은 99개, 보합 263개, 하락은 102개로 집계되었습니다. 자정 이후 변동성을 거친 시장은 약보합에서 강보합으로 전환되며 전반적인 혼조세를 나타내고 있습니다. 최근 미 증시는 트럼프 대통령의 추가 공습 시사로 유가가 치솟으며 투자 심리가 위축돼 하락했으나, 장 후반 장기전 부인 소식에 낙폭을 일부 만회하며 마감했습니다. 가상자산 시장 역시 이러한 위험회피 심리에 동반 영향을 받는 흐름을 보였습니다. 시장 전문가들은 향후 단기 방향성을 가릴 핵심 지표로 비트코인의 6만 2,000달러 선 지지 여부와 함께 기관 중심의 저가 매수 자금 유입 지속성에 주목하고 있습니다. 투자 심리는 여전히 얼어붙은 상태입니다. 가상자산 투심을 보여주는 공포·탐욕 지수는 22포인트를 기록하며 투자자들의 위축된 심리가 깊게 반영된 ’공포’ 단계를 보이고 있습니다. 한편, 시장의 전반적인 혼조세 속에서도 특정 테마를 중심으로는 활발한 매매 공방과 함께 강세 종목들이 포착되고 있습니다. 현재 실시간 인기 섹터로는 메이저, 디파이(DeFi), 레이어2 등이 꼽히며, 해당 섹터들을 중심으로 투자 자금이 집중되면서 높은 가격 변동성이 발생하고 있습니다. 실시간 이슈 코인으로는 오리진프로토콜(OGN), 매버릭프로토콜(MAV), 아이겐클라우드(EIGEN)가 주목받고 있습니다. #빗썸 #코인시세 #비트코인 연합뉴스TV 기사문의 및 제보 : 카톡/라인 jebo23 김동욱(DK1@yna.co.kr)"
-    },
-    {
-     "id": "cr3-c0-b-a6",
-     "outlet": "프레시안",
-     "lean": "prog",
-     "title": "호르무즈 뇌관 결국 터졌나hellip;미middot;이란 충돌 격화에 협상 '신기루'",
-     "url": "https://www.pressian.com/pages/articles/2026070917273710876&amp;ref=rss",
-     "timeAgo": "8시간 전",
-     "summary": "호르무즈 해협을 두고 미국과 이란이 거듭 무력 충돌하며 휴전이 위태로워졌다. 도널드 트럼프 미국 대통령은 전면전 재개를 꺼리는 듯 했지만 한층 강해진 충돌이 최종 합의 전망을 어둡게 하고 불안정 국면 지속에 기여할 거라는 관측에 힘이 실리고 있다. 이란에서도 아야톨라 알리 하메네이 이란 전 최고지도자 장례식을 계기로 온건파에 분노가 쏟아지는 분위기다.\n\n미"
     }
    ],
    "_repUrl": "https://www.newspim.com/news/view/20260709001347",
    "importance": 6,
    "background": "가상자산은 지정학 리스크가 커질 때 주식과 함께 위험자산으로 묶여 매도 압력을 받는 경우가 많다. 최근 시장은 현물 ETF 자금 흐름과 중동 변수에 동시에 민감하게 반응하고 있다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
-   "id": "pm1-c0",
-   "category": "예측시장",
-   "title": "'맞히면 수익' 폴리마켓 논란…방미심위 판단 절차 착수",
-   "imageUrl": "https://img.sbs.co.kr/newimg/news/20260706/202199441_1280.jpg",
-   "imageSourceUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008644137&plink=ORI&cooper=NAVER",
-   "summary": "방미심위 통신심의소위원회는 이날 회의를 열고 폴리마켓 측에 의견진술 기회를 부여한 뒤 시정 요구 여부를 최종적으로 결정하기로 의결했습니다. 폴리마켓은 정치&middot;경제&middot;선거&middot;스포츠 등 각종 이슈의 결과를 예측해 '예&middot;아니오' 지분을 거래하는 블록체인 기반 예측시장 플랫폼입니다.",
+   "id": "s2-c1",
+   "category": "정치",
+   "title": "[사설] 보완수사권 폐지 가속… 정부는 與 처분만 기다리면 되나",
+   "imageUrl": "https://img.seoul.co.kr//img/upload/2026/07/09/SSC_20260709234413_O2.jpg",
+   "imageSourceUrl": "https://www.seoul.co.kr/news/editOpinion/editorial/2026/07/10/20260710027006?wlog_tag3=naver",
+   "summary": "서울신문 사설은 보완수사권 폐지 논의가 빠르게 진행되는 상황에서 정부가 여당 설득에 소극적이라고 비판했습니다. 사설은 법무부가 야당에만 형사소송법 보완을 요청할 것이 아니라 당정 협의를 통해 여당을 상대로도 책임 있게 조정에 나서야 한다고 주장했습니다.",
    "outletCount": 4,
-   "timeAgo": "3일 전",
-   "publishedAt": "2026-07-06T13:25:00.000Z",
+   "timeAgo": "21분 전",
+   "publishedAt": "2026-07-09T21:32:00.000Z",
    "bias": {
     "prog": 0,
-    "center": 50,
-    "cons": 50
+    "center": 80,
+    "cons": 20
    },
    "biasWarning": false,
    "frameProg": "진보 성향으로 분류된 기사가 적습니다.",
-   "frameCons": "‘맞히면 수익’ 폴리마켓 사행성 논란…방미심위 심의 착수",
-   "firstSeen": "2026-07-07T00:39:39.967Z",
+   "frameCons": "[사설] 보완수사권 폐지 문제점을 야당이 제기해달라는 법무장관",
+   "firstSeen": "2026-07-09T21:53:50.912Z",
    "articles": [
     {
-     "id": "pm1-c0-a0",
-     "outlet": "SBS",
+     "id": "s2-c1-a0",
+     "outlet": "서울신문",
      "lean": "center",
-     "title": "'맞히면 수익' 폴리마켓 논란…방미심위 판단 절차 착수",
-     "url": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008644137&plink=ORI&cooper=NAVER",
-     "timeAgo": "3일 전",
-     "summary": "▲ 방미심위 통신심의소위원회 자료사진 방송미디어통신심의위원회는 해외 예측시장 플랫폼 '폴리마켓'(Polymarket)에 대한 시정 요구 여부를 결정하기에 앞서 사업자 의견을 먼저 청취하기로 했다고 6일 밝혔습니다...."
+     "title": "[사설] 보완수사권 폐지 가속… 정부는 與 처분만 기다리면 되나",
+     "url": "https://www.seoul.co.kr/news/editOpinion/editorial/2026/07/10/20260710027006?wlog_tag3=naver",
+     "timeAgo": "1시간 전",
+     "summary": "서울신문 사설은 보완수사권 폐지 논의가 빠르게 진행되는 상황에서 정부가 여당 설득에 소극적이라고 비판했습니다. 사설은 법무부가 야당에만 형사소송법 보완을 요청할 것이 아니라 당정 협의를 통해 여당을 상대로도 책임 있게 조정에 나서야 한다고 주장했습니다."
     },
     {
-     "id": "pm1-c0-a1",
-     "outlet": "뉴시스",
+     "id": "s2-c1-a1",
+     "outlet": "연합뉴스TV",
      "lean": "center",
-     "title": "방미심위, '사행성 논란' 폴리마켓 심의 착수",
-     "url": "https://www.newsis.com/view/NISX20260706_0003697336",
-     "timeAgo": "3일 전",
-     "summary": "방송미디어통신심의위원회(방미심위)는 해외 예측시장 플랫폼 '폴리마켓'(Polymarket)에 대한 시정 요구 여부를 결정하기에 앞서 사업자에게 의견진술 기회를 부여한다고 6일 밝혔다. 방미심위 통신심의소위원회는 이날..."
+     "title": "민주, '보완수사권 폐지' 발의…보완수사요구권은 강화",
+     "url": "http://www.yonhapnewstv.co.kr/news/MYH20260710003126Yny",
+     "timeAgo": "6시간 전",
+     "summary": "더불어민주당이 검찰의 직접 보완수사권을 완전히 없애는 것을 골자로 하는 형사소송법 개정안을 발의했습니다. 여권 내에서도 우려가 제기되는 가운데 국민의힘은 '범죄자 천국'을 만들겠다는 것이냐며 강력..."
     },
     {
-     "id": "pm1-c0-a2",
-     "outlet": "동아일보",
-     "lean": "cons",
-     "title": "‘맞히면 수익’ 폴리마켓 사행성 논란…방미심위 심의 착수",
-     "url": "https://www.donga.com/news/Economy/article/all/20260706/134243916/1",
-     "timeAgo": "3일 전",
-     "summary": "방송미디어통신심의위원회가 해외 예측시장 플랫폼 ‘폴리마켓’의 사행성 여부에 대한 판단 절차에 들어갔다. 방미심위 통신심의소위원회는 6일 회의를 열고 폴리마켓 측의 의견을 들은 뒤 시정 요구 여부를 최종..."
-    },
-    {
-     "id": "pm1-c0-a3",
-     "outlet": "연합뉴스",
-     "lean": "center",
-     "title": "'맞히면 수익' 폴리마켓 논란…방미심위 판단 절차 착수",
-     "url": "https://www.yna.co.kr/view/AKR20260706077400017?input=1195m",
-     "timeAgo": "3일 전",
-     "summary": "블록체인 예측시장 사행성 여부 집중 검토 방송미디어통신심의위원회는 해외 예측시장 플랫폼 '폴리마켓'(Polymarket)에 대한 시정 요구 여부를 결정하기에 앞서 사업자 의견을 먼저 청취하기로 했다고 6일 밝혔다...."
-    },
-    {
-     "id": "pm1-c0-a4",
-     "outlet": "매일경제",
-     "lean": "cons",
-     "title": "'사실상 사행성 도박?' 폴리마켓 제재 기로...방미심위, 의견 청취",
-     "url": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00006&news_seq_no=5204209",
-     "timeAgo": "3일 전",
-     "summary": "방송미디어통신심의위원회가 해외 예측시장 플랫폼 '폴리마켓'(Polymarket)의 사업자 의견을 청취하기로 했습니다. 방미심위 통신심의소위원회는 오늘(6일) 회의를 열고 폴리마켓에 대한 시정 요구 여부를 결정하기에 앞서..."
-    },
-    {
-     "id": "pm1-c0-a5",
+     "id": "s2-c1-a2",
      "outlet": "조선일보",
      "lean": "cons",
-     "title": "계열사 대부 업체들에 낮은 금리로 자금 대여...공정위, 명륜당 제재 절차 착수",
-     "url": "https://www.chosun.com/national/national_general/2026/07/06/IA7GQTYSNZHGFGP47WYSGI2T2A/",
-     "timeAgo": "21시간 전"
+     "title": "[사설] 보완수사권 폐지 문제점을 야당이 제기해달라는 법무장관",
+     "url": "https://www.chosun.com/opinion/editorial/2026/07/10/ISJC2T2ZHJBFPCERIYFQ36AIHE/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+     "timeAgo": "6시간 전",
+     "summary": "정 원내대표가 최근 검찰 보완수사로 경찰 수사 과정의 증거 인멸이 드러난 ‘광주 여고생 피살’ 사건을 언급하며 보완수사 존치를 요구하자 이같이 말한 것이다. 보완수사 폐지로 생길 수 있는 여러 문제를 야당에게 대신..."
+    },
+    {
+     "id": "s2-c1-a3",
+     "outlet": "YTN",
+     "lean": "center",
+     "title": "'보완수사권 폐지' 또 발의...국힘은 저지 파상공세",
+     "url": "https://www.ytn.co.kr/_ln/0101_202607092342235040",
+     "timeAgo": "7시간 전",
+     "summary": "사실상 당의 '공식 개정안'으로, 핵심 내용은 검찰 보완수사권의 완전폐지입니다. [김 한 규 / 더불어민주당 원내정책수석부대표 : 수사권 조정에 관해서는, 형사소송법 전체에 걸쳐서 검사가 수사의 주체자로 되어 있는..."
+    },
+    {
+     "id": "s2-c1-a4",
+     "outlet": "국민일보",
+     "lean": "center",
+     "title": "‘이달 내 보완수사권 폐지’ 가시화 속 “숙고 필요” 신중론도",
+     "url": "https://www.kmib.co.kr/article/view.asp?arcid=1783588168&code=11121100&cp=nv",
+     "timeAgo": "11시간 전",
+     "summary": "조정식 국회의장은 여야 원내 지도부를 만나 제헌절인 오는 17일까지 22대 국회 후반기 원 구성을 마칠 것을 촉구했다. 더 큰 변수는 여론 동향에 따른 당내 우려다. 행정안전위원장인 김영진 의원은 라디오 인터뷰에서..."
     }
    ],
-   "_repUrl": "https://news.sbs.co.kr/news/endPage.do?news_id=N1008644137&plink=ORI&cooper=NAVER",
+   "_repUrl": "https://www.seoul.co.kr/news/editOpinion/editorial/2026/07/10/20260710027006?wlog_tag3=naver",
+   "background": "검찰 수사권 조정과 보완수사권 문제는 검찰개혁 논의의 핵심 쟁점 중 하나였습니다. 수사 공백과 권한 배분 문제를 둘러싸고 여야와 법조계의 입장차가 계속 이어져 왔습니다.",
    "importance": 6,
-   "background": "폴리마켓은 각종 이슈 결과를 예측해 거래하는 구조로 성장했지만, 국내에서는 사실상 사행성 도박과 유사하다는 지적을 받아 왔다. 가상자산을 활용한 해외 예측시장 서비스에 한국 규제가 어디까지 미칠지가 쟁점이다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "cr4-c1",
@@ -5126,7 +4347,7 @@
    "_repUrl": "https://www.sedaily.com/article/20065989?ref=naver",
    "importance": 6,
    "background": "스테이블코인은 국제 송금 속도와 비용을 줄일 수 있어 기업 간 결제 실험이 빠르게 늘고 있다. 전통 금융사와 대기업이 직접 검증에 나서는 사례는 제도권 활용 가능성을 가늠하는 신호로 받아들여진다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "s3-c0-b-b",
@@ -5222,7 +4443,7 @@
     }
    ],
    "_repUrl": "https://www.etoday.co.kr/news/view/2601800",
-   "summarizedAt": "2026-07-09T22:01:02.748Z",
+   "summarizedAt": "2026-07-10T00:59:17.161Z",
    "importance": 5,
    "background": "변동성이 큰 장세에서는 실적과 해외 일정, 노사 변수처럼 주가에 바로 영향을 주는 재료에 수급이 몰리기 쉽다. 반도체와 자동차는 국내 증시 시가총액과 투자심리에 미치는 영향이 특히 크다."
   },
@@ -5323,7 +4544,7 @@
    "publicTake": "현수막 수사와 구속 시도를 두고 표현의 자유 침해라는 불만이 많습니다.",
    "background": "부정선거와 반중 정서를 결합한 선동성 현수막은 최근 극우 성향 정치세력의 오프라인 동원 수단으로 활용돼 왔습니다. 수사기관은 불법 정치자금 조성과 혐오 조장 여부를 함께 들여다보고 있습니다.",
    "importance": 5,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "i1-c0-c",
@@ -5422,7 +4643,7 @@
    "publicTake": "댓글마다 의견이 다양하게 엇갈리는 분위기입니다.",
    "background": "북한은 김일성 사망일마다 금수산태양궁전 참배와 충성 결집 메시지를 반복해 왔습니다. 다만 5년·10년 단위의 정주년이 아닐 때는 행사 규모를 상대적으로 낮추는 경우가 많습니다.",
    "importance": 5,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "i6-c0-b",
@@ -5520,7 +4741,7 @@
    "_repUrl": "https://www.joongang.co.kr/article/25443959",
    "background": "정부는 현지 범죄와 치안, 분쟁 위험을 바탕으로 국가별 여행경보 단계를 조정한다. 중남미와 동남아 일부 지역은 보이스피싱 조직과 납치 범죄로 한국인 안전 문제가 지속적으로 제기돼 왔다.",
    "importance": 5,
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "i5-c1-b-b",
@@ -5618,7 +4839,7 @@
    "_repUrl": "https://www.joongang.co.kr/article/25443182",
    "importance": 5,
    "background": "중동 지역 긴장이 높아질 때마다 정부는 교민 보호와 출입국 지원, 현지 공관 대응을 동시에 강화해 왔습니다. 외교부 내부에서는 장기 비상 대응 인력의 피로도와 지원 체계도 반복적으로 과제가 됩니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "pm6-c0-b",
@@ -5714,7 +4935,7 @@
     }
    ],
    "_repUrl": "https://www.news1.kr/industry/general-industry/6222431",
-   "summarizedAt": "2026-07-09T22:01:02.748Z",
+   "summarizedAt": "2026-07-10T00:59:17.161Z",
    "importance": 5,
    "background": "동남아는 전력 인프라 투자와 산업단지 확대로 전력기기 수요가 빠르게 늘고 있습니다. 국내 전력장비 업체들은 베트남을 거점으로 아세안 수출 확대를 추진해 왔습니다."
   },
@@ -5796,7 +5017,7 @@
    "_repUrl": "https://biz.sbs.co.kr/article_hub/20000320647?division=NAVER",
    "importance": 5,
    "background": "폴리마켓과 칼시 같은 예측시장은 정치와 스포츠를 넘어 문화 지표까지 상품화하며 빠르게 확장되고 있다. 기존에도 문제였던 스트리밍 조작이 베팅 수익과 결합하면 시장 교란 유인이 더 커질 수 있다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "pm1-c1",
@@ -5849,11 +5070,11 @@
    "_repUrl": "https://biz.sbs.co.kr/article_hub/20000320721?division=NAVER",
    "importance": 5,
    "background": "예측시장 플랫폼은 선거와 스포츠 같은 대형 이벤트가 있을 때 거래가 급증하는 경향이 있습니다. 북중미 월드컵은 미국 플랫폼 성장세를 다시 키운 대형 촉매로 꼽힙니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "cr3-c1",
-   "category": "크립토",
+   "category": "경제",
    "title": "DSRV, 금융사 온체인 금융 운영 플랫폼 '포탈' 출시",
    "imageUrl": "https://image.edaily.co.kr/images/Photo/files/NP/S/2026/07/PS26070900916.jpg",
    "imageSourceUrl": "https://www.edaily.co.kr/news/newspath.asp?newsid=04355846645512880",
@@ -5893,7 +5114,7 @@
    "_repUrl": "https://www.edaily.co.kr/news/newspath.asp?newsid=04355846645512880",
    "importance": 5,
    "background": "국내 금융권은 스테이블코인과 토큰화 자산 확산에 대비해 블록체인 기반 금융 인프라 실험을 확대하고 있다. 온체인 금융 운영 도구는 기관의 디지털자산 진입 장벽을 낮추는 핵심 요소로 평가된다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   },
   {
    "id": "pm2-c1",
@@ -5964,8 +5185,8 @@
    "_repUrl": "https://www.edaily.co.kr/news/newspath.asp?newsid=04664166645486968",
    "importance": 4,
    "background": "미국에서는 폴리마켓과 칼시를 중심으로 예측시장 산업이 빠르게 커지고 있습니다. 블록체인 기반 플랫폼들은 거래 접근성과 글로벌 유동성을 강점으로 내세우며 시장 진입을 시도하고 있습니다.",
-   "summarizedAt": "2026-07-09T22:01:02.748Z"
+   "summarizedAt": "2026-07-10T00:59:17.161Z"
   }
  ],
- "summarizedAt": "2026-07-09T22:01:02.748Z"
+ "summarizedAt": "2026-07-10T00:59:17.161Z"
 }
