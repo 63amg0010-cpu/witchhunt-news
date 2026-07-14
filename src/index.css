@@ -413,7 +413,16 @@ ul { list-style: none; margin: 0; padding: 0; }
   color: var(--ink);
   word-break: keep-all;
 }
-.vs-pane__take { margin: 0; font-size: 14px; font-weight: 500; line-height: 1.55; color: var(--ink-soft); word-break: keep-all; }
+/* 진영별 논조 문장 — 이 섹션의 주인공이라 또렷하게 (무채색 유지) */
+.vs-pane__take {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.62;
+  color: var(--ink);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
 .netizen__mood { margin: 4px 0 0; font-size: 15px; font-weight: 600; line-height: 1.5; color: var(--ink); word-break: keep-all; }
 .netizen__src { margin-top: 10px; font-size: 11px; font-weight: 600; color: var(--ink-faint); }
 .vs-pane__more { display: inline-block; margin-top: 10px; font-size: 12px; font-weight: 700; }

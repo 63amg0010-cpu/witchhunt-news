@@ -2,6 +2,7 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
+import { pickContrast } from './lib-contrast.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const feedPath = join(ROOT, 'public', 'feed.json')
@@ -67,6 +68,23 @@ if (skipped) console.log(`⚠️ 인코딩 깨진 요약 ${skipped}건 건너뜀
 for (const ev of feed.events) {
   if (Array.isArray(ev.articles)) ev.articles.forEach((a, i) => { a.id = `${ev.id}-a${i}` })
 }
+
+// ★ 진영별 논조(views) 적용 — 기사 id가 확정된 뒤에 넣어야 '근거 기사 링크'가 어긋나지 않는다.
+//   AI는 viewLeft/viewRight 문장만 주고, 어느 진영·매체·기사인지는 여기서 규칙대로 채운다.
+let vn = 0
+for (const ev of feed.events) {
+  const v = summaries[ev.id]
+  if (!v || typeof v !== 'object') continue
+  if (!ok(v.viewLeft) || !ok(v.viewRight)) continue
+  const { left, right } = pickContrast(ev)
+  if (!left || !right) continue
+  ev.views = {
+    left: { lean: left.lean, outlet: left.outlet, articleId: left.id, text: decodeEntities(v.viewLeft.trim()) },
+    right: { lean: right.lean, outlet: right.outlet, articleId: right.id, text: decodeEntities(v.viewRight.trim()) },
+  }
+  vn++
+}
+if (vn) console.log(`✅ 진영별 논조 ${vn}건 적용`)
 
 feed.events.sort((a, b) => {
   const ai = typeof a.importance === 'number' ? a.importance : 0

@@ -1,4 +1,4 @@
-import type { Article, Lean, NewsEvent } from '../types'
+import type { Article, Lean, NewsEvent, ViewTake } from '../types'
 import LeanBadge from '../components/LeanBadge'
 import Thumbnail from '../components/Thumbnail'
 import SummaryBox from '../components/SummaryBox'
@@ -11,7 +11,21 @@ interface Props {
   onOpenArticle: (articleId: string) => void
 }
 
-// 시각 비교 한 칸 — 실제 보도한 매체(진보/중도/보수)의 헤드라인
+// ★ 진영별 논조 한 칸 — "이 진영은 무엇을 주장하는가"(AI가 그 진영 기사 본문을 읽고 쓴 문장)
+function ViewPane({ view, onOpen }: { view: ViewTake; onOpen: (id: string) => void }) {
+  const lean = view.lean
+  return (
+    <button className={`vs-pane vs-pane--${lean}`} onClick={() => onOpen(view.articleId)}>
+      <div className={`vs-pane__tag vs-pane__tag--${lean}`}>
+        {LEAN_KO[lean]} 매체 · {view.outlet}
+      </div>
+      <p className="vs-pane__take">{view.text}</p>
+      <span className={`vs-pane__more vs-pane__more--${lean}`}>근거 기사 보기 ›</span>
+    </button>
+  )
+}
+
+// (구버전 대비) 논조가 아직 없는 사건은 헤드라인 비교로 대신 보여준다
 function ComparePane({ article, onOpen }: { article: Article; onOpen: (id: string) => void }) {
   const lean = article.lean
   return (
@@ -113,17 +127,29 @@ export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
         </div>
       </div>
 
-      {/* ★ 같은 사건, 시각 비교 — 좌·우 제목이 실제로 다를 때만 표시 */}
-      {showContrast && (
+      {/* ★ 진영별 논조 — 각 진영이 이 사건을 어떻게 보는지(주장) */}
+      {event.views ? (
         <>
-          <h2 className="compare__title">같은 사건, 시각 비교</h2>
-          <p className="compare__sub">이 사건을 보도한 매체 중 시각이 가장 다른 둘을 골라 비교했어요.</p>
+          <h2 className="compare__title">진영별로 이렇게 봅니다</h2>
+          <p className="compare__sub">각 진영 기사를 읽고, 어떤 시각으로 이 사건을 다루는지 정리했어요.</p>
           <div className="compare__pair">
-            <ComparePane article={left!} onOpen={onOpenArticle} />
-            <ComparePane article={right!} onOpen={onOpenArticle} />
+            <ViewPane view={event.views.left} onOpen={onOpenArticle} />
+            <ViewPane view={event.views.right} onOpen={onOpenArticle} />
           </div>
           {noProg && <p className="compare__blindspot">👁 이 사건은 진보 매체 보도가 없어요.</p>}
         </>
+      ) : (
+        showContrast && (
+          <>
+            <h2 className="compare__title">같은 사건, 시각 비교</h2>
+            <p className="compare__sub">이 사건을 보도한 매체 중 시각이 가장 다른 둘을 골라 비교했어요.</p>
+            <div className="compare__pair">
+              <ComparePane article={left!} onOpen={onOpenArticle} />
+              <ComparePane article={right!} onOpen={onOpenArticle} />
+            </div>
+            {noProg && <p className="compare__blindspot">👁 이 사건은 진보 매체 보도가 없어요.</p>}
+          </>
+        )
       )}
 
       {/* 사건 간단 요약 */}

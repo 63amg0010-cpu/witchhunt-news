@@ -22,6 +22,14 @@ export interface Article {
 }
 
 // 사건(이슈) 하나
+// 한 진영의 논조 한 칸 (근거가 된 실제 기사로 이동할 수 있게 articleId를 함께 들고 있다)
+export interface ViewTake {
+  lean: Lean
+  outlet: string
+  articleId: string
+  text: string
+}
+
 export interface NewsEvent {
   id: string
   category: '정치' | '경제' | '사회' | '국제' | '주식' | '크립토' | '예측시장'
@@ -32,6 +40,12 @@ export interface NewsEvent {
   background?: string // 사건 배경 설명 (맥락) — 있을 때만
   importance?: number // 코덱스가 매긴 중요도 1~10 (정렬용) — 있을 때만
   publicTake?: string // 네티즌 반응 — 공감 많은 댓글들의 '전체 분위기' 한 줄 — 있을 때만
+  // 진영별 논조 — AI가 양 진영 대표기사 본문을 읽고 "각 진영이 무엇을 주장하는지" 쓴 것.
+  // (있는 진영 중 가장 벌어진 둘. 진보가 없으면 중도 vs 보수가 될 수 있다)
+  views?: {
+    left: ViewTake
+    right: ViewTake
+  }
   outletCount: number // 보도 언론사 수 (보도량 = 정렬 보조)
   timeAgo: string // "3시간 전" 같은 표시
   publishedAt?: string // 대표기사 보도 시각(ISO) — 최신순 정렬·시간 재계산용

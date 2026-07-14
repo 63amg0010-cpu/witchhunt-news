@@ -3,6 +3,7 @@ import { readFileSync, writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import { fetchRetry, sleep } from './lib-fetch.mjs'
+import { pickContrast } from './lib-contrast.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const feed = JSON.parse(readFileSync(join(ROOT, 'public', 'feed.json'), 'utf8'))
@@ -41,14 +42,39 @@ async function getText(url, id) {
 //  ① 배경이 아직 없는 '새' 사건 (요약 필요)
 //  ② 중요한 사건(중요도 7+)인데 '대중의 시각'이 아직 없는 것 (publicTake 채울 기회 부여)
 // → 반응 많은 큰 사건(특검 등)은 이미 요약이 있어도 publicTake를 받을 수 있게 됨.
+//  ③ 진영별 논조(views)가 아직 없는데 '비교 가능한'(진영 2개 이상) 사건 → 논조 채울 기회 부여
+//     (진영이 하나뿐이라 비교 자체가 불가능한 사건은 영원히 대상이 되지 않게 걸러낸다)
+const needsViews = (ev) => {
+  if (ev.views) return false
+  const { left, right } = pickContrast(ev)
+  return !!(left && right)
+}
 const targets = feed.events.filter(
-  (ev) => !ev.background || (!ev.publicTake && (ev.importance ?? 0) >= 7),
+  (ev) => !ev.background || (!ev.publicTake && (ev.importance ?? 0) >= 7) || needsViews(ev),
 )
 
 const out = []
 for (const ev of targets) {
   const text = await getText(ev._repUrl || ev.imageSourceUrl, ev.id)
-  out.push({ id: ev.id, title: ev.title, text })
+  const item = { id: ev.id, title: ev.title, text }
+
+  // ★ 진영별 논조용: 가장 벌어진 두 진영의 대표기사 본문도 함께 받아온다.
+  //   (AI가 이 둘을 읽고 "진보 매체는 ~라고 본다 / 보수 매체는 ~라고 본다"를 씀)
+  const { left, right } = pickContrast(ev)
+  if (left && right) {
+    await sleep(300)
+    const leftText = await getText(left.url, `${ev.id}(${left.lean})`)
+    await sleep(300)
+    const rightText = await getText(right.url, `${ev.id}(${right.lean})`)
+    if (leftText || rightText) {
+      item.views = {
+        left: { lean: left.lean, outlet: left.outlet, title: left.title, text: leftText },
+        right: { lean: right.lean, outlet: right.outlet, title: right.title, text: rightText },
+      }
+    }
+  }
+
+  out.push(item)
   await sleep(300) // 연달아 때리지 않게 짧은 텀 (연결이 끊기는 것 방지)
 }
 writeFileSync(join(ROOT, '_articles.json'), JSON.stringify(out, null, 1), 'utf8')
