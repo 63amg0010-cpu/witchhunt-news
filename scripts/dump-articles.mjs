@@ -2,16 +2,26 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
+import { fetchRetry, sleep } from './lib-fetch.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const feed = JSON.parse(readFileSync(join(ROOT, 'public', 'feed.json'), 'utf8'))
 
-async function getText(url) {
+// 실패 이유를 남겨두면(아래 로그) 자동화가 왜 본문을 못 받았는지 다음에 바로 안다.
+const failed = []
+
+async function getText(url, id) {
+  if (!url) {
+    failed.push(`${id}: 주소 없음`)
+    return ''
+  }
   try {
-    const ctrl = new AbortController()
-    const timer = setTimeout(() => ctrl.abort(), 7000)
-    const r = await fetch(url, { redirect: 'follow', signal: ctrl.signal, headers: { 'User-Agent': 'Mozilla/5.0 (compatible; HannunBot/1.0)' } })
-    clearTimeout(timer)
+    // 자동화 회차에서 fetch가 일시적으로 죽는 일이 있어 재시도한다(3회, 각 15초)
+    const r = await fetchRetry(
+      url,
+      { redirect: 'follow', headers: { 'User-Agent': 'Mozilla/5.0 (compatible; HannunBot/1.0)' } },
+      { retries: 3, timeoutMs: 15000 },
+    )
     const html = await r.text()
     return html
       .replace(/<script[\s\S]*?<\/script>/gi, ' ')
@@ -21,7 +31,8 @@ async function getText(url) {
       .replace(/\s+/g, ' ')
       .trim()
       .slice(0, 1600)
-  } catch {
+  } catch (e) {
+    failed.push(`${id}: ${e?.cause?.message || e?.message || e}`)
     return ''
   }
 }
@@ -36,8 +47,16 @@ const targets = feed.events.filter(
 
 const out = []
 for (const ev of targets) {
-  const text = await getText(ev._repUrl || ev.imageSourceUrl)
+  const text = await getText(ev._repUrl || ev.imageSourceUrl, ev.id)
   out.push({ id: ev.id, title: ev.title, text })
+  await sleep(300) // 연달아 때리지 않게 짧은 텀 (연결이 끊기는 것 방지)
 }
 writeFileSync(join(ROOT, '_articles.json'), JSON.stringify(out, null, 1), 'utf8')
+
+const ok = out.filter((x) => x.text && x.text.length > 0).length
 console.log(`✅ _articles.json 저장 (새 사건 ${out.length}건 / 전체 ${feed.events.length}건)`)
+console.log(`   본문 확보 ${ok}/${out.length}건`)
+if (failed.length) {
+  console.log(`⚠️ 본문 실패 ${failed.length}건 (원인):`)
+  for (const f of failed) console.log(`   - ${f}`)
+}

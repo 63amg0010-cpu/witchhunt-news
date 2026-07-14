@@ -8,6 +8,7 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
+import { fetchRetry, sleep } from './lib-fetch.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const feed = JSON.parse(readFileSync(join(ROOT, 'public', 'feed.json'), 'utf8'))
@@ -50,17 +51,21 @@ function moodLine(comments) {
 async function naverComments(title) {
   try {
     const q = encodeURIComponent(keyword(title))
-    const r = await fetch(`https://openapi.naver.com/v1/search/news.json?query=${q}&display=20&sort=sim`, {
-      headers: { 'X-Naver-Client-Id': env.NAVER_CLIENT_ID, 'X-Naver-Client-Secret': env.NAVER_CLIENT_SECRET },
-    })
+    // 자동화 회차에서 fetch가 일시적으로 죽는 일이 있어 재시도한다
+    const r = await fetchRetry(
+      `https://openapi.naver.com/v1/search/news.json?query=${q}&display=20&sort=sim`,
+      { headers: { 'X-Naver-Client-Id': env.NAVER_CLIENT_ID, 'X-Naver-Client-Secret': env.NAVER_CLIENT_SECRET } },
+      { retries: 3, timeoutMs: 15000 },
+    )
     const items = (await r.json()).items || []
     let best = []
     for (const it of items.filter((x) => /article\/(\d+)\/(\d+)/.test(x.link)).slice(0, 6)) {
       const [, oid, aid] = it.link.match(/article\/(\d+)\/(\d+)/)
       try {
-        const cb = await fetch(
+        const cb = await fetchRetry(
           `https://apis.naver.com/commentBox/cbox/web_naver_list_jsonp.json?ticket=news&pool=cbox5&lang=ko&country=KR&objectId=news${oid}%2C${aid}&pageSize=15&page=1&sort=FAVORITE`,
           { headers: { 'User-Agent': UA, Referer: `https://n.news.naver.com/mnews/article/${oid}/${aid}` } },
+          { retries: 3, timeoutMs: 15000 },
         )
         const j = JSON.parse((await cb.text()).replace(/^[^(]*\(/, '').replace(/\);?\s*$/, ''))
         const list = (j?.result?.commentList || [])
@@ -101,6 +106,7 @@ for (const ev of targets) {
     applied++
   }
   console.log(`  · ${ev.title.slice(0, 26)} → 댓글 ${comments.length}개${comments.length >= 3 ? '' : ' (적어서 건너뜀)'}`)
+  await sleep(300) // 연달아 때리지 않게 짧은 텀
 }
 
 // 참고용 원본(_reactions.json) + feed.json에 직접 반영
