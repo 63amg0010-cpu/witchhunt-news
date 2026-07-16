@@ -86,6 +86,27 @@ for (const ev of feed.events) {
 }
 if (vn) console.log(`✅ 진영별 논조 ${vn}건 적용`)
 
+// ★ 논조 링크 자동 치유 — build-feed가 사건을 새로 묶으면 기사 번호가 바뀌어
+//   기존에 붙어있던 views의 articleId가 어긋난다. 매번 현재 기사에 맞게 다시 연결한다.
+//   (같은 진영·매체 기사로 재매칭, 그 진영 기사가 아예 없어졌으면 논조를 통째로 뗀다)
+let relinked = 0, viewsDropped = 0
+for (const ev of feed.events) {
+  if (!ev.views) continue
+  const ids = new Set((ev.articles || []).map((a) => a.id))
+  let broke = false
+  for (const side of ['left', 'right']) {
+    const v = ev.views[side]
+    if (!v) { broke = true; break }
+    if (ids.has(v.articleId)) continue
+    const m = ev.articles.find((a) => a.lean === v.lean && a.outlet === v.outlet)
+      || ev.articles.find((a) => a.lean === v.lean)
+    if (m) { v.articleId = m.id; v.outlet = m.outlet; relinked++ }
+    else { broke = true; break }
+  }
+  if (broke) { delete ev.views; viewsDropped++ }
+}
+if (relinked || viewsDropped) console.log(`🔗 논조 링크 재연결 ${relinked}건 / 진영 없어져 제거 ${viewsDropped}건`)
+
 feed.events.sort((a, b) => {
   const ai = typeof a.importance === 'number' ? a.importance : 0
   const bi = typeof b.importance === 'number' ? b.importance : 0

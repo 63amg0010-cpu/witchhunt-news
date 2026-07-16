@@ -49,8 +49,18 @@ const needsViews = (ev) => {
   const { left, right } = pickContrast(ev)
   return !!(left && right)
 }
+//  ④ 요약이 'AI 요약'이 아니라 네이버 원문조각(문장 안 끝남·HTML코드·이중공백)인 사건 → 다시 요약
+//     (수집 실패 회차에 원문조각으로 들어온 요약이 계속 남는 것을 자동 치유)
+const summaryBroken = (ev) => {
+  const t = (ev.summary || '').trim()
+  if (!t) return true
+  if (!/[.!?]$/.test(t)) return true
+  if (/&[a-zA-Z]+;|&#\d+;/.test(t)) return true
+  if (/ {2,}/.test(t)) return true
+  return false
+}
 const targets = feed.events.filter(
-  (ev) => !ev.background || (!ev.publicTake && (ev.importance ?? 0) >= 7) || needsViews(ev),
+  (ev) => !ev.background || (!ev.publicTake && (ev.importance ?? 0) >= 7) || needsViews(ev) || summaryBroken(ev),
 )
 
 const out = []
