@@ -71,6 +71,8 @@ const TOPICS = [
   { id: 'i4', query: '일본', category: '국제' },
   { id: 'i5', query: '중동 정세', category: '국제' },
   { id: 'i6', query: '우크라이나', category: '국제' },
+  { id: 'i7', query: '이란', category: '국제' }, // 미국-이란 전쟁 등 이란발 큰 이슈 포착
+  { id: 'i8', query: '이스라엘', category: '국제' },
   // 주식
   { id: 'st1', query: '코스피 코스닥', category: '주식' },
   { id: 'st2', query: '증시 종목', category: '주식' },
@@ -612,8 +614,16 @@ async function main() {
 
   // 새 사건 + 기존 사건 합치기 (같은 사건은 하나로, 요약·배경은 보존)
   const cutoff = Date.now() - KEEP_DAYS * 24 * 60 * 60 * 1000
+  // 기사 자체가 너무 오래된 사건은 제외 — 뉴스 적은 분야(크립토·예측시장)를 오래된 기사로
+  // 억지로 채우면서 '13일 전 뉴스'가 뜨던 문제 방지. (publishedAt 기준 5일)
+  const DISPLAY_MAX_AGE = 5 * 24 * 60 * 60 * 1000
+  const tooOld = (e) => {
+    const p = e.publishedAt ? Date.parse(e.publishedAt) : NaN
+    return !Number.isNaN(p) && Date.now() - p > DISPLAY_MAX_AGE
+  }
   const merged = mergeEvents([...all, ...oldEvents])
     .filter((e) => !e.firstSeen || Date.parse(e.firstSeen) >= cutoff) // 3일 지난 건 정리
+    .filter((e) => !tooOld(e)) // 기사가 5일 넘게 오래된 건 제외(오래된 padding 방지)
     .sort((a, b) => (b.outletCount || 0) - (a.outletCount || 0))
 
   // 진보 매체 RSS는 위에서 수집한 feedPool을 재사용한다. 같은 피드를 다시 받지 않는다.
@@ -627,10 +637,11 @@ async function main() {
 
   // 분야별 최소 보장(각 6개) 후 나머지는 보도량 순으로 채워 전체 40개까지
   const PER_CAT_MIN = 3
-  // 뉴스 양이 적은 분야는 최소 보장을 더 높게 / 국내 큰 사건이 밀리지 않게 사회·경제도 상향
-  const CAT_MIN = { 주식: 5, 크립토: 5, 예측시장: 5, 사회: 5, 경제: 5 }
-  // 한 분야가 화면을 독점하지 않게 상한(국제는 전쟁 등으로 과다해지기 쉬움)
-  const CAT_MAX = { 국제: 12 }
+  // 뉴스 양이 적은 니치 분야(크립토·예측시장)는 최소를 낮춰, 오래된 기사로 억지로 채우지 않게 함.
+  // 사회·경제는 국내 큰 사건이 밀리지 않게 유지.
+  const CAT_MIN = { 주식: 4, 크립토: 3, 예측시장: 3, 사회: 5, 경제: 5 }
+  // 한 분야 독점 방지 상한. 국제는 전쟁 등 큰 이슈 때 더 담기게 15로 상향.
+  const CAT_MAX = { 국제: 15 }
   const minFor = (c) => CAT_MIN[c] ?? PER_CAT_MIN
   const maxFor = (c) => CAT_MAX[c] ?? Infinity
   const TOTAL = 60
