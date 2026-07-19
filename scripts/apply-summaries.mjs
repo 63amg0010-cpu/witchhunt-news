@@ -75,9 +75,10 @@ let vn = 0
 for (const ev of feed.events) {
   const v = summaries[ev.id]
   if (!v || typeof v !== 'object') continue
-  if (!ok(v.viewLeft) || !ok(v.viewRight)) continue
+  // 이번에 다시 요약된 사건인데 AI가 논조를 안 줬으면(=진영 안 갈리는 사건으로 판단) 기존 논조도 제거
+  if (!ok(v.viewLeft) || !ok(v.viewRight)) { delete ev.views; continue }
   const { left, right } = pickContrast(ev)
-  if (!left || !right) continue
+  if (!left || !right) { delete ev.views; continue }
   ev.views = {
     left: { lean: left.lean, outlet: left.outlet, articleId: left.id, text: decodeEntities(v.viewLeft.trim()) },
     right: { lean: right.lean, outlet: right.outlet, articleId: right.id, text: decodeEntities(v.viewRight.trim()) },
