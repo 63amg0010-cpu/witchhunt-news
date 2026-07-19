@@ -431,8 +431,9 @@ function enrichWithProg(events, progArticles) {
     const at = [...stemSet(tokenize(a.title))].filter((t) => !MATCH_STOP.has(t))
     if (at.length < 2) continue
     let best = null
-    let bestShared = 1 // 대표 제목과 의미있는 단어 2개 이상 겹쳐야 같은 사건으로 봄
+    let bestShared = 0
     for (const { e, toks } of evToks) {
+      if (toks.length < 2) continue
       let s = 0
       // 어미·부분 단어도 같은 단어로 인정 (구속영장↔영장, 재선거↔재선거론 등)
       for (const x of at) {
@@ -440,7 +441,11 @@ function enrichWithProg(events, progArticles) {
           if (x === y || (x.length >= 3 && y.includes(x)) || (y.length >= 3 && x.includes(y))) { s++; break }
         }
       }
-      if (s > bestShared) { bestShared = s; best = e }
+      // ⚠️ 단어 2개 우연히 겹치는 것만으로 엉뚱한 기사가 붙던 문제(예: '사망' 같은 흔한 단어) 방지.
+      //   3개 이상 겹치면 확실한 같은 사건으로 인정, 2개만 겹치면 '짧은 쪽 제목의 절반 이상'일 때만.
+      const ratio = s / Math.min(at.length, toks.length)
+      const good = s >= 3 || (s >= 2 && ratio >= 0.5)
+      if (good && s > bestShared) { bestShared = s; best = e }
     }
     // 진보는 비교를 위해 자리 제한을 넉넉히(12) — 큰 사건이 이미 8개로 꽉 차도 진보가 들어가게
     if (!best || best.articles.length >= 12) continue
