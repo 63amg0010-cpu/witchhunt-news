@@ -11,16 +11,16 @@ interface Props {
   onOpenArticle: (articleId: string) => void
 }
 
-// ★ 진영별 논조 한 칸 — "이 진영은 무엇을 주장하는가"(AI가 그 진영 기사 본문을 읽고 쓴 문장)
+// ★ 진영 주장 한 칸 — "이 진영은 이 사건을 두고 무엇을 주장하는가"
 function ViewPane({ view, onOpen }: { view: ViewTake; onOpen: (id: string) => void }) {
   const lean = view.lean
   return (
     <button className={`vs-pane vs-pane--${lean}`} onClick={() => onOpen(view.articleId)}>
       <div className={`vs-pane__tag vs-pane__tag--${lean}`}>
-        {LEAN_KO[lean]} 매체 · {view.outlet}
+        {LEAN_KO[lean]} 진영
       </div>
       <p className="vs-pane__take">{view.text}</p>
-      <span className={`vs-pane__more vs-pane__more--${lean}`}>근거 기사 보기 ›</span>
+      <span className={`vs-pane__more vs-pane__more--${lean}`}>근거 기사 보기 · {view.outlet} ›</span>
     </button>
   )
 }
@@ -131,7 +131,9 @@ export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
       {event.views ? (
         <>
           <h2 className="compare__title">진영별로 이렇게 봅니다</h2>
-          <p className="compare__sub">각 진영 기사를 읽고, 어떤 시각으로 이 사건을 다루는지 정리했어요.</p>
+          {event.views.issue
+            ? <p className="compare__issue"><b>쟁점</b> {event.views.issue}</p>
+            : <p className="compare__sub">같은 사건을 두고 각 진영이 무엇을 주장하는지 정리했어요.</p>}
           <div className="compare__pair">
             <ViewPane view={event.views.left} onOpen={onOpenArticle} />
             <ViewPane view={event.views.right} onOpen={onOpenArticle} />

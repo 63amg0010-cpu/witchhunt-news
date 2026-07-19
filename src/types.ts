@@ -40,9 +40,10 @@ export interface NewsEvent {
   background?: string // 사건 배경 설명 (맥락) — 있을 때만
   importance?: number // 코덱스가 매긴 중요도 1~10 (정렬용) — 있을 때만
   publicTake?: string // 네티즌 반응 — 공감 많은 댓글들의 '전체 분위기' 한 줄 — 있을 때만
-  // 진영별 논조 — AI가 양 진영 대표기사 본문을 읽고 "각 진영이 무엇을 주장하는지" 쓴 것.
+  // 진영별 주장 — AI가 양 진영 기사를 읽고 "각 진영이 이 사건을 두고 무엇을 주장하는지" 쓴 것.
   // (있는 진영 중 가장 벌어진 둘. 진보가 없으면 중도 vs 보수가 될 수 있다)
   views?: {
+    issue?: string // 쟁점 한 줄 — 두 진영이 '무엇을 두고' 갈리는지
     left: ViewTake
     right: ViewTake
   }

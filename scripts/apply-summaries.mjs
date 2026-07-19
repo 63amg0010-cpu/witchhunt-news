@@ -82,6 +82,7 @@ for (const ev of feed.events) {
     left: { lean: left.lean, outlet: left.outlet, articleId: left.id, text: decodeEntities(v.viewLeft.trim()) },
     right: { lean: right.lean, outlet: right.outlet, articleId: right.id, text: decodeEntities(v.viewRight.trim()) },
   }
+  if (ok(v.issue)) ev.views.issue = decodeEntities(v.issue.trim()) // 쟁점 한 줄(있으면)
   vn++
 }
 if (vn) console.log(`✅ 진영별 논조 ${vn}건 적용`)

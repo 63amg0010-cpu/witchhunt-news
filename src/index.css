@@ -389,6 +389,19 @@ ul { list-style: none; margin: 0; padding: 0; }
    =========================================================== */
 .compare__title { font-size: 18px; font-weight: 800; margin: 26px 2px 4px; }
 .compare__sub { font-size: 13px; color: var(--ink-soft); margin: 0 2px 12px; word-break: keep-all; line-height: 1.5; }
+/* 쟁점 한 줄 — 두 진영이 '무엇을 두고' 갈리는지 (무채색, 또렷하게) */
+.compare__issue {
+  margin: 0 0 12px;
+  padding: 11px 14px;
+  border-radius: 12px;
+  background: #f0f1f4;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--ink);
+  word-break: keep-all;
+}
+.compare__issue b { font-weight: 800; margin-right: 6px; }
 .compare__pair { display: flex; flex-direction: column; gap: 10px; }
 .vs-pane {
   display: block;

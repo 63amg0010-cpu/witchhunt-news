@@ -8,7 +8,7 @@
    - `background`
    - `importance` (1~10 정수)
    - `category` (정치·경제·사회·국제·주식·크립토·예측시장 중 하나)
-   - `views`가 있는 항목만 추가로 `viewLeft`, `viewRight` (진영별 논조 — AGENTS.md 규칙)
+   - `views`가 있는 항목만 추가로 `issue`(쟁점 한 줄), `viewLeft`(진보 진영 주장), `viewRight`(보수 진영 주장) — AGENTS.md 규칙
 3. 결과를 **오직 하나의 JSON 객체**로 `_summaries.json`에 저장한다.
    - 형태: `{ "id": { "summary","background","importance","category", (해당시)"viewLeft","viewRight" }, ... }`
    - ⚠️ 기존 `_summaries.json`이 있어도 **무시하고, 이번 `_articles.json`의 id들만 담은 새 객체로 덮어쓴다**(병합 금지).
