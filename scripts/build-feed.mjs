@@ -14,7 +14,10 @@ import { sortForDisplay } from './lib-order.mjs'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
 const NOW = new Date().toISOString()
-const KEEP_DAYS = 3 // 최근 며칠치 사건을 계속 유지(누적)
+// 한 사건이 피드에 머무는 최대 기간(처음 등장 시점 기준).
+// ⚠️ 이게 길면, 같은 사건에 새 기사가 계속 붙어 시간표시만 갱신되면서
+//    "어제도 본 뉴스가 오늘도 새 것처럼" 계속 자리를 차지한다. → 1.5일로 짧게 유지.
+const KEEP_DAYS = 1.5
 
 // --- .env에서 네이버 키 읽기 ---
 function loadEnv() {
@@ -621,7 +624,7 @@ async function main() {
   const cutoff = Date.now() - KEEP_DAYS * 24 * 60 * 60 * 1000
   // 기사 자체가 너무 오래된 사건은 제외 — 뉴스 적은 분야(크립토·예측시장)를 오래된 기사로
   // 억지로 채우면서 '13일 전 뉴스'가 뜨던 문제 방지. (publishedAt 기준 5일)
-  const DISPLAY_MAX_AGE = 5 * 24 * 60 * 60 * 1000
+  const DISPLAY_MAX_AGE = 1.5 * 24 * 60 * 60 * 1000
   const tooOld = (e) => {
     const p = e.publishedAt ? Date.parse(e.publishedAt) : NaN
     return !Number.isNaN(p) && Date.now() - p > DISPLAY_MAX_AGE
