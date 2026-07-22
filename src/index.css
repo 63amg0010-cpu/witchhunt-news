@@ -385,7 +385,13 @@ ul { list-style: none; margin: 0; padding: 0; }
 .ev-badge--blindspot.ev-badge--cons { color: var(--lean-cons); }
 .ev-badge--blindspot.ev-badge--center { color: var(--lean-center); }
 
-.biasbar__unit { margin-left: auto; font-size: 11px; font-weight: 600; color: var(--ink-faint); }
+/* '개 언론사'는 숫자 바로 옆에 붙인다 (오른쪽 끝으로 밀면 무슨 단위인지 안 보임) */
+.biasbar__unit {
+  margin-left: -7px; /* 범례 gap을 상쇄해 '보수 2' 바로 옆에 붙게 */
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-faint);
+}
 
 /* ===========================================================
    같은 사건, 진영별 시각 (상세화면 핵심 — 진보 vs 보수 대비)
@@ -669,13 +675,16 @@ ul { list-style: none; margin: 0; padding: 0; }
 .biasbar-large__seg--prog { background: var(--lean-prog); }
 .biasbar-large__seg--center { background: var(--lean-center); }
 .biasbar-large__seg--cons { background: var(--lean-cons); }
+/* 진보/중도/보수 숫자와 '개 언론사'를 나란히 — 양끝으로 벌리면 단위가 멀어져 안 읽힌다 */
 .biasbar-large__legend {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
   margin-top: 10px;
   font-size: 12px;
   font-weight: 700;
 }
+.biasbar-large__legend .biasbar__unit { margin-left: -7px; }
 
 /* 제목으로 보는 프레임 차이 (좌우 비교) */
 .frame-compare {
