@@ -86,8 +86,11 @@ function mergeInto(target, ev) {
   if (ev.firstSeen && (!target.firstSeen || ev.firstSeen < target.firstSeen)) {
     target.firstSeen = ev.firstSeen
   }
-  // 기사 시각(publishedAt)은 더 최신 쪽으로 (최신순 정렬용)
-  if (ev.publishedAt && (!target.publishedAt || ev.publishedAt > target.publishedAt)) {
+  // 기사 시각(publishedAt)은 **더 이른 쪽으로** 고정한다.
+  // ⚠️ 예전엔 '더 최신 쪽으로' 갱신했는데, 그러면 어제 사건에 오늘 기사가 붙을 때마다
+  //    시각이 새로 덮여서 "어제 뉴스가 2시간 전으로 표시되고 맨 위로 올라오는" 문제가 났다.
+  //    사건이 처음 벌어진 시각을 유지해야 나이가 정직하게 보이고, 오래되면 제때 빠진다.
+  if (ev.publishedAt && (!target.publishedAt || ev.publishedAt < target.publishedAt)) {
     target.publishedAt = ev.publishedAt
   }
   recompute(target)

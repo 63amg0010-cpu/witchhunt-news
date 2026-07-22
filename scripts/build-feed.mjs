@@ -459,10 +459,12 @@ function enrichWithProg(events, progArticles) {
       timeAgo: timeAgo(a.pubDate), summary: a.summary || undefined,
     })
     best.outletCount = (best.outletCount || 0) + 1
-    // 붙인 진보 기사가 더 최근이면 사건 시각도 갱신
-    const pt = Date.parse(a.pubDate)
-    if (!Number.isNaN(pt) && (!best.publishedAt || pt > Date.parse(best.publishedAt))) {
-      best.publishedAt = new Date(pt).toISOString()
+    // ⚠️ 사건 시각(publishedAt)은 갱신하지 않는다.
+    //    진보 기사가 더 최신이라고 시각을 덮으면, 어제 사건이 '방금 뉴스'처럼 표시되고
+    //    맨 위로 올라온다. 사건이 처음 벌어진 시각을 그대로 둔다.
+    if (!best.publishedAt) {
+      const pt = Date.parse(a.pubDate)
+      if (!Number.isNaN(pt)) best.publishedAt = new Date(pt).toISOString()
     }
     added++
   }
@@ -630,9 +632,16 @@ async function main() {
     return !Number.isNaN(p) && Date.now() - p > DISPLAY_MAX_AGE
   }
   const merged = mergeEvents([...all, ...oldEvents])
-    .filter((e) => !e.firstSeen || Date.parse(e.firstSeen) >= cutoff) // 3일 지난 건 정리
-    .filter((e) => !tooOld(e)) // 기사가 5일 넘게 오래된 건 제외(오래된 padding 방지)
+    .filter((e) => !e.firstSeen || Date.parse(e.firstSeen) >= cutoff) // 오래 머문 사건 정리
+    .filter((e) => !tooOld(e)) // 기사가 너무 오래된 건 제외
     .sort((a, b) => (b.outletCount || 0) - (a.outletCount || 0))
+
+  // ⚠️ 표시 시각 정직화: 사건 시각은 '피드에 처음 등장한 시각'보다 최신일 수 없다.
+  //   (어제 사건에 오늘 기사가 붙어 "2시간 전"으로 둔갑하던 것 차단 — 이미 저장된 잘못된 값도 교정)
+  for (const e of merged) {
+    if (!e.firstSeen || !e.publishedAt) continue
+    if (Date.parse(e.publishedAt) > Date.parse(e.firstSeen)) e.publishedAt = e.firstSeen
+  }
 
   // 진보 매체 RSS는 위에서 수집한 feedPool을 재사용한다. 같은 피드를 다시 받지 않는다.
   const progArticles = feedPool.filter((a) => a.lean === 'prog')
