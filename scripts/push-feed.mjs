@@ -49,5 +49,5 @@ function deploy() {
 
 // 뉴스(feed)와, (수동으로 새로 만들어진 경우) 토론(debates)을 커밋·푸시한 뒤 배포한다.
 // feed가 안 바뀌었어도 배포를 1회 하여, 이전 회차가 배포에 실패해 라이브가 뒤처졌던 것도 자동 복구한다.
-commitAndPush('public/feed.json public/debates.json', '뉴스 자동 갱신')
+commitAndPush('public/feed.json public/debates.json public/issues.json', '뉴스 자동 갱신')
 deploy()
