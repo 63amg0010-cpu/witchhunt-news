@@ -1,16 +1,19 @@
 import { useEffect, useState } from 'react'
 import type { IssueExplain } from '../types'
 import { fetchIssues } from '../lib/issues'
+import { splitSentences } from '../lib/text'
 
 interface Props {
+  openIdx: number | null // 열려 있는 해설(브라우저 기록이 관리 → 폰 뒤로가기 정상 동작)
+  onOpenIssue: (idx: number) => void
+  onBack: () => void
   onOpenEvent: (id: string) => void
 }
 
 // 이슈 해설 — 뉴스가 '무슨 일'만 알려준다면, 여기선 '무슨 뜻이고 나한테 무슨 상관인지'를 풀어준다.
-export default function IssueScreen({ onOpenEvent }: Props) {
+export default function IssueScreen({ openIdx, onOpenIssue, onBack, onOpenEvent }: Props) {
   const [issues, setIssues] = useState<IssueExplain[]>([])
   const [loading, setLoading] = useState(true)
-  const [openIdx, setOpenIdx] = useState<number | null>(null)
 
   useEffect(() => {
     let alive = true
@@ -39,7 +42,7 @@ export default function IssueScreen({ onOpenEvent }: Props) {
     return (
       <div className="screen">
         <div className="detail-top">
-          <button className="back-btn" onClick={() => setOpenIdx(null)}>
+          <button className="back-btn" onClick={onBack}>
             <span className="back-btn__chev">‹</span> 뒤로
           </button>
           <span className="muted" style={{ fontSize: 13, fontWeight: 700 }}>{it.category}</span>
@@ -106,7 +109,7 @@ export default function IssueScreen({ onOpenEvent }: Props) {
         </div>
       ) : (
         issues.map((it, i) => (
-          <button key={i} className="issue-card" onClick={() => setOpenIdx(i)}>
+          <button key={i} className="issue-card" onClick={() => onOpenIssue(i)}>
             <div className="issue-card__cat">{it.category}</div>
             <div className="issue-card__title">{it.title}</div>
             <div className="issue-card__one">{it.oneLine}</div>
@@ -118,12 +121,22 @@ export default function IssueScreen({ onOpenEvent }: Props) {
   )
 }
 
+// 긴 글은 문장 두 개씩 묶어 문단으로 — 한 덩어리로 붙어 있으면 읽기 힘들다
+function toParagraphs(text: string): string[] {
+  const out: string[] = []
+  for (const chunk of text.split(/\n+/)) {
+    const ss = splitSentences(chunk)
+    for (let i = 0; i < ss.length; i += 2) out.push(ss.slice(i, i + 2).join(' '))
+  }
+  return out.filter(Boolean)
+}
+
 function IssueBlock({ icon, label, text, highlight }: { icon: string; label: string; text: string; highlight?: boolean }) {
   if (!text) return null
   return (
     <div className={`issue-block ${highlight ? 'issue-block--hl' : ''}`}>
       <div className="issue-block__label">{icon} {label}</div>
-      {text.split(/\n+/).map((p, i) => (
+      {toParagraphs(text).map((p, i) => (
         <p key={i} className="issue-block__text">{p}</p>
       ))}
     </div>

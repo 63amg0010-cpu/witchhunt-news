@@ -21,6 +21,7 @@ interface Nav {
   openEventId: string | null
   openArticleId: string | null
   page?: 'outletBias' | null // 부가 화면(언론사 성향 분류 등)
+  openIssue?: number | null // 이슈 해설 상세(목록에서 몇 번째) — 기록에 넣어야 뒤로가기가 목록으로 돌아감
   category?: string // 홈 카테고리(주요 사건/정치/…) — 기록에 저장해 뒤로가기 시 복원
   _scroll?: number // 이 화면을 떠날 때의 스크롤 위치(뒤로가기 복원용)
 }
@@ -107,6 +108,8 @@ export default function App() {
   const changeTab = (t: Tab) =>
     goTo({ tab: t, openEventId: null, openArticleId: null, page: null, category: '주요 사건' })
   const openOutletBias = () => goTo({ ...nav, page: 'outletBias' })
+  // 이슈 해설 상세 열기 — 기록에 쌓아야 폰 뒤로가기가 '이슈 목록'으로 정상 복귀한다
+  const openIssue = (idx: number) => goTo({ ...nav, openIssue: idx })
   // 홈 카테고리 변경: 기록을 새로 쌓지 않고 현재 기록만 갱신 (뒤로가기 한 번에 빠져나오게)
   const changeCategory = (c: string) => {
     const next = { ...nav, category: c }
@@ -153,7 +156,14 @@ export default function App() {
       />
     )
   } else if (nav.tab === 'issue') {
-    content = <IssueScreen onOpenEvent={openEvent} />
+    content = (
+      <IssueScreen
+        openIdx={nav.openIssue ?? null}
+        onOpenIssue={openIssue}
+        onBack={goBack}
+        onOpenEvent={openEvent}
+      />
+    )
   } else if (nav.tab === 'bias') {
     content = <BiasFeedScreen events={events} onOpenEvent={openEvent} />
   } else if (nav.tab === 'me') {
@@ -172,7 +182,8 @@ export default function App() {
   }
 
   // 상세(사건/기사)·언론사 분류 화면에서는 하단 탭바를 숨긴다 — 읽는 데 방해되지 않게
-  const showNav = !selectedEvent && nav.page !== 'outletBias'
+  // 읽기에 집중하는 화면(사건 상세·기사·언론사 분류·이슈 해설 상세)에서는 하단 탭을 숨긴다
+  const showNav = !selectedEvent && nav.page !== 'outletBias' && !(nav.tab === 'issue' && nav.openIssue != null)
 
   return (
     <div className={`app-shell ${showNav ? '' : 'app-shell--flush'}`}>

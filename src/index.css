@@ -170,7 +170,10 @@ ul { list-style: none; margin: 0; padding: 0; }
 .tabs::-webkit-scrollbar { display: none; }
 .tab {
   flex: 0 0 auto;
-  padding: 9px 16px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px;
+  min-height: 40px; /* 누르기 편하게 */
   border-radius: var(--radius-pill);
   background: #e9eaee;
   color: var(--ink-soft);
@@ -607,10 +610,12 @@ ul { list-style: none; margin: 0; padding: 0; }
 .back-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 3px;
   font-size: 15px;
   font-weight: 700;
-  padding: 7px 14px 7px 11px;
+  padding: 0 15px 0 12px;
+  min-height: 44px; /* 손가락으로 누르기 편한 최소 크기(접근성 권장) */
   color: var(--ink);
   background: #eceef1;
   border-radius: var(--radius-pill);
@@ -1034,7 +1039,9 @@ ul { list-style: none; margin: 0; padding: 0; }
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 3px;
+  min-height: 44px; /* 손가락으로 누르기 편한 최소 크기 */
   color: var(--ink-faint);
   font-size: 10.5px;
   font-weight: 700;
@@ -1100,13 +1107,14 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .issue-oneline {
   margin: 0 0 6px;
-  padding: 13px 15px;
+  padding: 15px 16px;
   border-radius: 14px;
   background: var(--ink);
   color: #fff;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 1.55;
+  line-height: 1.65;
+  letter-spacing: -0.2px;
   word-break: keep-all;
 }
 .issue-block {
@@ -1119,10 +1127,11 @@ ul { list-style: none; margin: 0; padding: 0; }
 .issue-block--hl { background: #f5f6f8; box-shadow: none; border: 2px solid var(--ink-faint); }
 .issue-block--terms { background: #f6f7f9; box-shadow: none; }
 .issue-block__label {
-  font-size: 13.5px;
+  font-size: 14.5px;
   font-weight: 800;
   color: var(--ink);
-  margin-bottom: 9px;
+  margin-bottom: 11px;
+  letter-spacing: -0.2px;
 }
 .issue-block__note {
   margin: -3px 0 9px;
@@ -1131,12 +1140,13 @@ ul { list-style: none; margin: 0; padding: 0; }
   line-height: 1.5;
 }
 .issue-block__text {
-  margin: 0 0 9px;
-  font-size: 15.5px;
+  margin: 0 0 13px; /* 문단 사이를 넉넉히 — 붙어 있으면 눈이 지침 */
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.75;
-  color: var(--ink);
-  word-break: keep-all;
+  line-height: 1.8; /* 한글은 줄간격이 넉넉해야 읽기 편하다 */
+  color: #24272e;
+  letter-spacing: -0.2px;
+  word-break: keep-all; /* 한글 단어가 중간에서 안 끊기게 */
   overflow-wrap: break-word;
 }
 .issue-block__text:last-child { margin-bottom: 0; }
@@ -1149,8 +1159,8 @@ ul { list-style: none; margin: 0; padding: 0; }
   border-bottom: 1px solid var(--line);
 }
 .issue-term:last-child { border-bottom: none; padding-bottom: 0; }
-.issue-term b { font-size: 14px; font-weight: 800; color: var(--ink); }
-.issue-term span { font-size: 14px; line-height: 1.65; color: var(--ink-soft); word-break: keep-all; }
+.issue-term b { font-size: 15px; font-weight: 800; color: var(--ink); }
+.issue-term span { font-size: 15px; line-height: 1.75; color: var(--ink-soft); word-break: keep-all; }
 
 .issue-intent {
   margin-top: 10px;
@@ -1158,8 +1168,8 @@ ul { list-style: none; margin: 0; padding: 0; }
   border-radius: 12px;
   background: #f5f6f8;
 }
-.issue-intent__label { font-size: 14px; font-weight: 800; color: var(--ink); margin-bottom: 5px; }
-.issue-intent__text { margin: 0; font-size: 14.5px; line-height: 1.7; color: var(--ink-soft); word-break: keep-all; }
+.issue-intent__label { font-size: 15px; font-weight: 800; color: var(--ink); margin-bottom: 6px; }
+.issue-intent__text { margin: 0; font-size: 15.5px; line-height: 1.78; color: #3a3f49; letter-spacing: -0.2px; word-break: keep-all; }
 
 .issue-goto {
   display: block;
@@ -1394,12 +1404,15 @@ ul { list-style: none; margin: 0; padding: 0; }
 .debate-filter-row::-webkit-scrollbar { display: none; }
 .debate-filter-chip {
   flex: none;
-  padding: 6px 13px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 14px;
+  min-height: 38px; /* 누르기 편하게 */
   border: 0;
   border-radius: 999px;
   background: #f0f1f4;
   color: var(--ink-soft);
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 700;
   white-space: nowrap;
   cursor: pointer;
