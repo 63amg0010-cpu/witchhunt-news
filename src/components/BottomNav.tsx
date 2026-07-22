@@ -7,6 +7,7 @@ interface Props {
 
 const ITEMS: { key: Tab; label: string; icon: string }[] = [
   { key: 'home', label: '홈', icon: '🏠' },
+  { key: 'issue', label: '이슈 해설', icon: '🔍' },
   { key: 'bias', label: '편향경고', icon: '⚠️' },
   { key: 'debate', label: '토론', icon: '💬' },
   { key: 'me', label: '내 정보', icon: '👤' },

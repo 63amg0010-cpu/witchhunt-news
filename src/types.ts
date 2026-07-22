@@ -22,6 +22,29 @@ export interface Article {
 }
 
 // 사건(이슈) 하나
+// ===== 이슈 해설 =====
+// 뉴스가 '무슨 일'만 알려준다면, 이슈 해설은 '무슨 뜻이고 나한테 무슨 상관인지'를 쉽게 풀어준다.
+export interface IssueTerm {
+  word: string // 어려운 말
+  desc: string // 쉬운 풀이
+}
+export interface IssueIntent {
+  label: string // 해석의 짧은 이름 (예: "협상용 압박")
+  text: string // 그렇게 보는 이유
+}
+export interface IssueExplain {
+  eventId?: string // 연결된 사건(있으면 그 뉴스로 이동)
+  category: string
+  title: string // 쉬운 말로 다시 지은 이슈 제목
+  oneLine: string // 한 줄 요약
+  whatHappened: string // 무슨 일이 있었나 (사실 정리)
+  terms: IssueTerm[] // 어려운 말 풀이
+  meaning: string // 이게 무슨 의미냐면
+  intents: IssueIntent[] // 왜 이런 일이 벌어졌나 (가능한 해석들 — 단정하지 않음)
+  impact: string // 나한테 무슨 상관?
+  watch: string // 앞으로 이걸 보면 된다
+}
+
 // 한 진영의 논조 한 칸 (근거가 된 실제 기사로 이동할 수 있게 articleId를 함께 들고 있다)
 export interface ViewTake {
   lean: Lean

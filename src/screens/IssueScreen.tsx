@@ -1,0 +1,131 @@
+import { useEffect, useState } from 'react'
+import type { IssueExplain } from '../types'
+import { fetchIssues } from '../lib/issues'
+
+interface Props {
+  onOpenEvent: (id: string) => void
+}
+
+// 이슈 해설 — 뉴스가 '무슨 일'만 알려준다면, 여기선 '무슨 뜻이고 나한테 무슨 상관인지'를 풀어준다.
+export default function IssueScreen({ onOpenEvent }: Props) {
+  const [issues, setIssues] = useState<IssueExplain[]>([])
+  const [loading, setLoading] = useState(true)
+  const [openIdx, setOpenIdx] = useState<number | null>(null)
+
+  useEffect(() => {
+    let alive = true
+    fetchIssues().then((d) => {
+      if (!alive) return
+      setIssues(d.issues)
+      setLoading(false)
+    })
+    return () => { alive = false }
+  }, [])
+
+  if (loading) {
+    return (
+      <div className="screen">
+        <div className="placeholder-empty">
+          <div className="placeholder-empty__icon">🔍</div>
+          <div className="placeholder-empty__text">이슈 해설을 불러오는 중…</div>
+        </div>
+      </div>
+    )
+  }
+
+  // 상세 보기
+  if (openIdx !== null && issues[openIdx]) {
+    const it = issues[openIdx]
+    return (
+      <div className="screen">
+        <div className="detail-top">
+          <button className="back-btn" onClick={() => setOpenIdx(null)}>
+            <span className="back-btn__chev">‹</span> 뒤로
+          </button>
+          <span className="muted" style={{ fontSize: 13, fontWeight: 700 }}>{it.category}</span>
+        </div>
+
+        <h1 className="issue-title">{it.title}</h1>
+        <p className="issue-oneline">{it.oneLine}</p>
+
+        <IssueBlock icon="📰" label="무슨 일이 있었나" text={it.whatHappened} />
+
+        {it.terms?.length > 0 && (
+          <div className="issue-block issue-block--terms">
+            <div className="issue-block__label">💡 어려운 말 풀이</div>
+            {it.terms.map((t, i) => (
+              <div key={i} className="issue-term">
+                <b>{t.word}</b>
+                <span>{t.desc}</span>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <IssueBlock icon="🧩" label="이게 무슨 의미냐면" text={it.meaning} />
+
+        {it.intents?.length > 0 && (
+          <div className="issue-block">
+            <div className="issue-block__label">🎯 왜 이런 일이 벌어졌나</div>
+            <p className="issue-block__note">아래는 가능한 해석입니다. 어느 하나로 단정할 수 없어요.</p>
+            {it.intents.map((v, i) => (
+              <div key={i} className="issue-intent">
+                <div className="issue-intent__label">{i + 1}. {v.label}</div>
+                <p className="issue-intent__text">{v.text}</p>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <IssueBlock icon="🏠" label="나한테 무슨 상관?" text={it.impact} highlight />
+        <IssueBlock icon="👀" label="앞으로 이걸 보면 됩니다" text={it.watch} />
+
+        {it.eventId && (
+          <button className="issue-goto" onClick={() => onOpenEvent(it.eventId!)}>
+            이 뉴스 원문·진영별 시각 보기 ›
+          </button>
+        )}
+      </div>
+    )
+  }
+
+  // 목록
+  return (
+    <div className="screen">
+      <div className="page-head">
+        <div className="page-head__title">이슈 해설</div>
+        <div className="page-head__sub">
+          요즘 이슈, 무슨 뜻이고 나한테 무슨 상관인지 쉽게 풀어드려요.
+        </div>
+      </div>
+
+      {issues.length === 0 ? (
+        <div className="placeholder-empty" style={{ height: '40vh' }}>
+          <div className="placeholder-empty__icon">🔍</div>
+          <div className="placeholder-empty__text">아직 해설이 없어요</div>
+        </div>
+      ) : (
+        issues.map((it, i) => (
+          <button key={i} className="issue-card" onClick={() => setOpenIdx(i)}>
+            <div className="issue-card__cat">{it.category}</div>
+            <div className="issue-card__title">{it.title}</div>
+            <div className="issue-card__one">{it.oneLine}</div>
+            <span className="issue-card__more">쉽게 풀어보기 ›</span>
+          </button>
+        ))
+      )}
+    </div>
+  )
+}
+
+function IssueBlock({ icon, label, text, highlight }: { icon: string; label: string; text: string; highlight?: boolean }) {
+  if (!text) return null
+  return (
+    <div className={`issue-block ${highlight ? 'issue-block--hl' : ''}`}>
+      <div className="issue-block__label">{icon} {label}</div>
+      {text.split(/\n+/).map((p, i) => (
+        <p key={i} className="issue-block__text">{p}</p>
+      ))}
+    </div>
+  )
+}

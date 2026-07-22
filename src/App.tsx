@@ -10,9 +10,10 @@ import BiasFeedScreen from './screens/BiasFeedScreen'
 import MyInfoScreen from './screens/MyInfoScreen'
 import OutletBiasScreen from './screens/OutletBiasScreen'
 import DebateScreen from './screens/DebateScreen'
+import IssueScreen from './screens/IssueScreen'
 
 // 하단 네비 탭 종류 (다른 파일에서도 씀)
-export type Tab = 'home' | 'bias' | 'debate' | 'me'
+export type Tab = 'home' | 'issue' | 'bias' | 'debate' | 'me'
 
 // 지금 어느 화면을 보고 있는지 (브라우저 기록과 연동해 폰 뒤로가기 지원)
 interface Nav {
@@ -151,6 +152,8 @@ export default function App() {
         onOpenOutletBias={openOutletBias}
       />
     )
+  } else if (nav.tab === 'issue') {
+    content = <IssueScreen onOpenEvent={openEvent} />
   } else if (nav.tab === 'bias') {
     content = <BiasFeedScreen events={events} onOpenEvent={openEvent} />
   } else if (nav.tab === 'me') {

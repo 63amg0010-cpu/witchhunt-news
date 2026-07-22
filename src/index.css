@@ -1030,16 +1030,148 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .nav-item {
   flex: 1;
+  min-width: 0; /* 탭이 5개라 좁아져도 글자가 넘치지 않게 */
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 3px;
   color: var(--ink-faint);
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 700;
+  white-space: nowrap;
 }
 .nav-item__icon { font-size: 20px; line-height: 1; }
 .nav-item--active { color: var(--ink); }
+
+/* ===========================================================
+   이슈 해설 — 뉴스의 '속뜻'을 쉽게 풀어주는 코너
+   =========================================================== */
+.issue-card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-top: 12px;
+  padding: 16px;
+  background: var(--card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+.issue-card__cat {
+  display: inline-block;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  background: #f0f1f4;
+  color: var(--ink-soft);
+  font-size: 11px;
+  font-weight: 800;
+}
+.issue-card__title {
+  margin-top: 9px;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.36;
+  letter-spacing: -0.3px;
+  color: var(--ink);
+  word-break: keep-all;
+}
+.issue-card__one {
+  margin-top: 7px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  word-break: keep-all;
+}
+.issue-card__more {
+  display: inline-block;
+  margin-top: 11px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+/* 상세 */
+.issue-title {
+  margin: 8px 0 6px;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1.32;
+  letter-spacing: -0.4px;
+  word-break: keep-all;
+}
+.issue-oneline {
+  margin: 0 0 6px;
+  padding: 13px 15px;
+  border-radius: 14px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.55;
+  word-break: keep-all;
+}
+.issue-block {
+  margin-top: 14px;
+  padding: 15px 16px;
+  border-radius: var(--radius-card);
+  background: var(--card);
+  box-shadow: var(--shadow-card);
+}
+.issue-block--hl { background: #f5f6f8; box-shadow: none; border: 2px solid var(--ink-faint); }
+.issue-block--terms { background: #f6f7f9; box-shadow: none; }
+.issue-block__label {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 9px;
+}
+.issue-block__note {
+  margin: -3px 0 9px;
+  font-size: 12.5px;
+  color: var(--ink-faint);
+  line-height: 1.5;
+}
+.issue-block__text {
+  margin: 0 0 9px;
+  font-size: 15.5px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--ink);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.issue-block__text:last-child { margin-bottom: 0; }
+
+.issue-term {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--line);
+}
+.issue-term:last-child { border-bottom: none; padding-bottom: 0; }
+.issue-term b { font-size: 14px; font-weight: 800; color: var(--ink); }
+.issue-term span { font-size: 14px; line-height: 1.65; color: var(--ink-soft); word-break: keep-all; }
+
+.issue-intent {
+  margin-top: 10px;
+  padding: 12px 13px;
+  border-radius: 12px;
+  background: #f5f6f8;
+}
+.issue-intent__label { font-size: 14px; font-weight: 800; color: var(--ink); margin-bottom: 5px; }
+.issue-intent__text { margin: 0; font-size: 14.5px; line-height: 1.7; color: var(--ink-soft); word-break: keep-all; }
+
+.issue-goto {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 15px;
+  border-radius: var(--radius-card);
+  background: var(--ink);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 800;
+}
 
 .debate-list {
   margin-top: 8px;
