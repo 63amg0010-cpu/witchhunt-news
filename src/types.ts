@@ -18,6 +18,7 @@ export interface Article {
   title: string // 그 언론사가 뽑은 제목
   url: string // 원문 링크 (1단계에서는 가상)
   timeAgo?: string // 그 기사 보도 시각 ("3시간 전") — 있을 때만
+  publishedAt?: string // 기사 원문 보도 시각(ISO) — 시간 표시를 다시 계산할 때 사용
   summary?: string // 기사 간단 요약 (네이버 검색 결과의 설명) — 있을 때만
 }
 

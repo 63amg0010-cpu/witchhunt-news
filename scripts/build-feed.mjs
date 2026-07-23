@@ -215,6 +215,13 @@ const stripHtml = (s) =>
     .replace(/&#39;|&apos;/g, "'").replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&')
     .trim()
 
+// 기사 원문 시각을 화면에서 다시 계산할 수 있도록 안전한 ISO 시각으로 남긴다.
+function articlePublishedAt(pubDate) {
+  const t = pubDate ? Date.parse(pubDate) : NaN
+  if (Number.isNaN(t) || t > Date.now()) return undefined
+  return new Date(t).toISOString()
+}
+
 function timeAgo(pubDate) {
   const t = pubDate ? Date.parse(pubDate) : NaN
   if (Number.isNaN(t)) return '최근'
@@ -456,7 +463,7 @@ function enrichWithProg(events, progArticles) {
     best.articles.push({
       id: `${best.id}-p${best.articles.length}`,
       outlet: a.outlet, lean: 'prog', title: a.title, url: a.url,
-      timeAgo: timeAgo(a.pubDate), summary: a.summary || undefined,
+      timeAgo: timeAgo(a.pubDate), publishedAt: articlePublishedAt(a.pubDate), summary: a.summary || undefined,
     })
     best.outletCount = (best.outletCount || 0) + 1
     // ⚠️ 사건 시각(publishedAt)은 갱신하지 않는다.
@@ -522,7 +529,7 @@ function buildEvents(topic, cands) {
       articles: picked.map((c, i) => ({
         id: `${topic.id}-c${idx}-a${i}`,
         outlet: c.outlet, lean: c.lean, title: c.title, url: c.url,
-        timeAgo: timeAgo(c.pubDate), summary: c.summary || undefined,
+        timeAgo: timeAgo(c.pubDate), publishedAt: articlePublishedAt(c.pubDate), summary: c.summary || undefined,
       })),
       _repUrl: rep.url, // AI 요약 단계에서 본문 가져올 주소
     })
@@ -580,7 +587,7 @@ function buildEventsFromFeeds(feedPool) {
       articles: picked.map((c, i) => ({
         id: `rss-c${idx}-a${i}`,
         outlet: c.outlet, lean: c.lean, title: c.title, url: c.url,
-        timeAgo: timeAgo(c.pubDate), summary: c.summary || undefined,
+        timeAgo: timeAgo(c.pubDate), publishedAt: articlePublishedAt(c.pubDate), summary: c.summary || undefined,
       })),
       _repUrl: rep.url,
     })
