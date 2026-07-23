@@ -9,6 +9,17 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
+
+// 해설 썸네일 — 연결된 사건이 이미 갖고 있는 대표 사진을 그대로 쓴다(추가 수집 없음)
+let feedImages = {}
+try {
+  const feed = JSON.parse(readFileSync(join(ROOT, 'public', 'feed.json'), 'utf8'))
+  for (const e of feed.events || []) {
+    if (e.imageUrl && !String(e.imageUrl).includes('picsum')) {
+      feedImages[e.id] = { imageUrl: e.imageUrl, imageSourceUrl: e.imageSourceUrl }
+    }
+  }
+} catch { /* 피드 없으면 썸네일 없이 진행 */ }
 const KEEP_DAYS = 3 // 해설은 뉴스보다 오래 유효(이슈는 며칠 감)
 const MAX_KEEP = 8
 
@@ -39,7 +50,12 @@ const valid = (x) =>
   ![x.title, x.oneLine, x.whatHappened, x.meaning, x.impact, x.watch].some(corrupt)
 
 const NOW = new Date().toISOString()
-const fresh = incoming.filter(valid).map((x) => ({ ...x, terms: x.terms || [], createdAt: x.createdAt || NOW }))
+const fresh = incoming.filter(valid).map((x) => ({
+  ...x,
+  terms: x.terms || [],
+  createdAt: x.createdAt || NOW,
+  ...(feedImages[x.eventId] || {}), // 연결된 사건의 대표 사진을 썸네일로
+}))
 if (incoming.length !== fresh.length) console.log(`⚠️ 형식 이상/깨짐 ${incoming.length - fresh.length}건 제외`)
 
 // 기존 해설 불러오기

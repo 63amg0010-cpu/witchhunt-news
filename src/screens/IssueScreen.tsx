@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import type { IssueExplain } from '../types'
 import { fetchIssues } from '../lib/issues'
 import { splitSentences } from '../lib/text'
+import Thumbnail from '../components/Thumbnail'
 
 interface Props {
   openIdx: number | null // 열려 있는 해설(브라우저 기록이 관리 → 폰 뒤로가기 정상 동작)
@@ -48,6 +49,7 @@ export default function IssueScreen({ openIdx, onOpenIssue, onBack, onOpenEvent 
           <span className="muted" style={{ fontSize: 13, fontWeight: 700 }}>{it.category}</span>
         </div>
 
+        <Thumbnail src={it.imageUrl} ogUrl={it.imageSourceUrl} className="thumb--hero" />
         <h1 className="issue-title">{it.title}</h1>
         <p className="issue-oneline">{it.oneLine}</p>
 
@@ -110,10 +112,13 @@ export default function IssueScreen({ openIdx, onOpenIssue, onBack, onOpenEvent 
       ) : (
         issues.map((it, i) => (
           <button key={i} className="issue-card" onClick={() => onOpenIssue(i)}>
-            <div className="issue-card__cat">{it.category}</div>
-            <div className="issue-card__title">{it.title}</div>
-            <div className="issue-card__one">{it.oneLine}</div>
-            <span className="issue-card__more">쉽게 풀어보기 ›</span>
+            <Thumbnail src={it.imageUrl} ogUrl={it.imageSourceUrl} className="thumb--issue" />
+            <div className="issue-card__body">
+              <div className="issue-card__cat">{it.category}</div>
+              <div className="issue-card__title">{it.title}</div>
+              <div className="issue-card__one">{it.oneLine}</div>
+              <span className="issue-card__more">쉽게 풀어보기 ›</span>
+            </div>
           </button>
         ))
       )}

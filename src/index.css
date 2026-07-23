@@ -1067,11 +1067,14 @@ ul { list-style: none; margin: 0; padding: 0; }
   width: 100%;
   text-align: left;
   margin-top: 12px;
-  padding: 16px;
   background: var(--card);
   border-radius: var(--radius-card);
   box-shadow: var(--shadow-card);
+  overflow: hidden; /* 사진이 카드 둥근 모서리를 넘지 않게 */
 }
+.issue-card__body { padding: 15px 16px 16px; }
+/* 해설 카드 사진 — 목록에서 눈에 띄게 가로로 넓게 */
+.thumb--issue { width: 100%; height: 150px; }
 .issue-card__cat {
   display: inline-block;
   padding: 3px 9px;

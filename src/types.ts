@@ -34,6 +34,8 @@ export interface IssueIntent {
 }
 export interface IssueExplain {
   eventId?: string // 연결된 사건(있으면 그 뉴스로 이동)
+  imageUrl?: string // 썸네일 — 연결된 사건의 대표 사진을 재사용
+  imageSourceUrl?: string // 사진 원본을 찾을 기사 주소(og:image 대체용)
   category: string
   title: string // 쉬운 말로 다시 지은 이슈 제목
   oneLine: string // 한 줄 요약
