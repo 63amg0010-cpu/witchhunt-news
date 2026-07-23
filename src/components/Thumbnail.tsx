@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { IconNews } from './icons'
 
 interface Props {
   src?: string // 바로 쓸 사진 주소 (feed.json의 실제 og:image, 또는 샘플 사진)
@@ -9,7 +10,7 @@ interface Props {
 // 썸네일 사진.
 // - src에 이미 진짜 사진 주소가 있으면(빌드 때 feed.json에 넣어둔 og:image) 그대로 쓴다. (배포 환경)
 // - 진짜 사진이 없고 ogUrl만 있으면 /og 중계로 찾아온다. (개발 서버 전용)
-// - 둘 다 없으면 회색 자리표시(📰).
+// - 둘 다 없으면 회색 자리표시를 보인다.
 export default function Thumbnail({ src, ogUrl, className }: Props) {
   // picsum(샘플 자리표시)이 아닌 실제 사진 주소면 바로 사용
   const direct = src && !src.includes('picsum') ? src : null
@@ -47,7 +48,7 @@ export default function Thumbnail({ src, ogUrl, className }: Props) {
       {show && (
         <img className="thumb__img" src={image} alt="" loading="lazy" onError={() => setFailed(true)} />
       )}
-      <span className="thumb__icon">📰</span>
+      <span className="thumb__icon"><IconNews size={28} /></span>
     </div>
   )
 }

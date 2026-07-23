@@ -1,6 +1,7 @@
 import type { NewsEvent } from '../types'
 import { LEAN_LABEL } from '../types'
 import { partisanTilt } from '../lib/bias'
+import { IconCheck } from '../components/icons'
 
 interface Props {
   events: NewsEvent[]
@@ -16,7 +17,7 @@ export default function BiasFeedScreen({ events, onOpenEvent }: Props) {
   return (
     <div className="screen">
       <div className="page-head">
-        <div className="page-head__title">⚠️ 편향 경고</div>
+        <div className="page-head__title">편향 경고</div>
         <p className="page-head__sub">
           특정 진영의 언론사에 보도가 쏠려 있는 사건들이에요.
           한쪽 시각만 접하지 않도록 참고하세요.
@@ -25,7 +26,7 @@ export default function BiasFeedScreen({ events, onOpenEvent }: Props) {
 
       {warned.length === 0 ? (
         <div className="placeholder-empty" style={{ height: '50vh' }}>
-          <div className="placeholder-empty__icon">✅</div>
+          <div className="placeholder-empty__icon"><IconCheck size={40} /></div>
           <div className="placeholder-empty__text">지금은 한쪽으로 쏠린 사건이 없어요</div>
         </div>
       ) : (

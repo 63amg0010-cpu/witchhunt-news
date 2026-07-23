@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
+import type { ReactNode } from 'react'
 import type { IssueExplain } from '../types'
 import { fetchIssues } from '../lib/issues'
 import { splitSentences } from '../lib/text'
 import Thumbnail from '../components/Thumbnail'
+import { IconBulb, IconHome, IconNews, IconPieces, IconSearch, IconTarget, IconWatch } from '../components/icons'
 
 interface Props {
   openIdx: number | null // 열려 있는 해설(브라우저 기록이 관리 → 폰 뒤로가기 정상 동작)
@@ -30,7 +32,7 @@ export default function IssueScreen({ openIdx, onOpenIssue, onBack, onOpenEvent 
     return (
       <div className="screen">
         <div className="placeholder-empty">
-          <div className="placeholder-empty__icon">🔍</div>
+          <div className="placeholder-empty__icon"><IconSearch size={40} /></div>
           <div className="placeholder-empty__text">이슈 해설을 불러오는 중…</div>
         </div>
       </div>
@@ -53,11 +55,11 @@ export default function IssueScreen({ openIdx, onOpenIssue, onBack, onOpenEvent 
         <h1 className="issue-title">{it.title}</h1>
         <p className="issue-oneline">{it.oneLine}</p>
 
-        <IssueBlock icon="📰" label="무슨 일이 있었나" text={it.whatHappened} />
+        <IssueBlock icon={<IconNews size={16} />} label="무슨 일이 있었나" text={it.whatHappened} />
 
         {it.terms?.length > 0 && (
           <div className="issue-block issue-block--terms">
-            <div className="issue-block__label">💡 어려운 말 풀이</div>
+            <div className="issue-block__label"><IconBulb size={16} />어려운 말 풀이</div>
             {it.terms.map((t, i) => (
               <div key={i} className="issue-term">
                 <b>{t.word}</b>
@@ -67,11 +69,11 @@ export default function IssueScreen({ openIdx, onOpenIssue, onBack, onOpenEvent 
           </div>
         )}
 
-        <IssueBlock icon="🧩" label="이게 무슨 의미냐면" text={it.meaning} />
+        <IssueBlock icon={<IconPieces size={16} />} label="이게 무슨 의미냐면" text={it.meaning} />
 
         {it.intents?.length > 0 && (
           <div className="issue-block">
-            <div className="issue-block__label">🎯 왜 이런 일이 벌어졌나</div>
+            <div className="issue-block__label"><IconTarget size={16} />왜 이런 일이 벌어졌나</div>
             {/* 해석이 하나뿐일 땐 '단정할 수 없다'는 안내와 번호가 어색하므로 문구를 바꾼다 */}
             <p className="issue-block__note">
               {it.intents.length === 1
@@ -89,8 +91,8 @@ export default function IssueScreen({ openIdx, onOpenIssue, onBack, onOpenEvent 
           </div>
         )}
 
-        <IssueBlock icon="🏠" label="나한테 무슨 상관?" text={it.impact} highlight />
-        <IssueBlock icon="👀" label="앞으로 이걸 보면 됩니다" text={it.watch} />
+        <IssueBlock icon={<IconHome size={16} />} label="나한테 무슨 상관?" text={it.impact} highlight />
+        <IssueBlock icon={<IconWatch size={16} />} label="앞으로 이걸 보면 됩니다" text={it.watch} />
 
         {it.eventId && (
           <button className="issue-goto" onClick={() => onOpenEvent(it.eventId!)}>
@@ -113,7 +115,7 @@ export default function IssueScreen({ openIdx, onOpenIssue, onBack, onOpenEvent 
 
       {issues.length === 0 ? (
         <div className="placeholder-empty" style={{ height: '40vh' }}>
-          <div className="placeholder-empty__icon">🔍</div>
+          <div className="placeholder-empty__icon"><IconSearch size={40} /></div>
           <div className="placeholder-empty__text">아직 해설이 없어요</div>
         </div>
       ) : (
@@ -143,11 +145,11 @@ function toParagraphs(text: string): string[] {
   return out.filter(Boolean)
 }
 
-function IssueBlock({ icon, label, text, highlight }: { icon: string; label: string; text: string; highlight?: boolean }) {
+function IssueBlock({ icon, label, text, highlight }: { readonly icon: ReactNode; readonly label: string; readonly text: string; readonly highlight?: boolean }) {
   if (!text) return null
   return (
     <div className={`issue-block ${highlight ? 'issue-block--hl' : ''}`}>
-      <div className="issue-block__label">{icon} {label}</div>
+      <div className="issue-block__label">{icon}{label}</div>
       {toParagraphs(text).map((p, i) => (
         <p key={i} className="issue-block__text">{p}</p>
       ))}

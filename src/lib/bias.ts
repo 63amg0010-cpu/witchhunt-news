@@ -3,6 +3,9 @@ import type { Lean, NewsEvent } from '../types'
 
 export const LEAN_KO: Record<Lean, string> = { prog: '진보', center: '중도', cons: '보수' }
 
+// 정치·사회·국제 밖의 뉴스는 진영별 보도 차이를 편향 경고로 해석하기 어렵다.
+const PARTISAN_TILT_CATEGORIES: readonly NewsEvent['category'][] = ['정치', '사회', '국제'] as const
+
 // 사건을 보도한 언론사를 진영별로 센다 (기사 목록 기준, 최대 8건 표본)
 export function leanCounts(ev: NewsEvent): { prog: number; center: number; cons: number } {
   const c = { prog: 0, center: 0, cons: 0 }
@@ -53,6 +56,7 @@ export interface BiasBadge {
 //  - kind 'blindspot' : 한쪽 진영이 3곳+ 보도했는데 반대편은 0곳 → 'lean'은 빠진(반대) 진영
 //  - kind 'tilt'      : 양쪽 다 있지만 한쪽이 진영 보도의 75% 이상 → 'lean'은 쏠린 진영
 export function partisanTilt(ev: NewsEvent): { lean: 'prog' | 'cons'; kind: 'tilt' | 'blindspot' } | null {
+  if (!PARTISAN_TILT_CATEGORIES.includes(ev.category)) return null
   const c = leanCounts(ev)
   const partisan = c.prog + c.cons
   if (partisan < 3) return null

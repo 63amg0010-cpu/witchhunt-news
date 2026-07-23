@@ -158,32 +158,45 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 /* ===========================================================
-   카테고리 탭 (둥근 알약형)
+   카테고리 탭 (상단 고정 밑줄형)
    =========================================================== */
 .tabs {
   display: flex;
-  gap: 8px;
+  gap: 0;
   overflow-x: auto;
-  padding: 8px 2px 4px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  min-height: 45px;
+  margin: 0 -16px;
+  padding: 0 16px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
   scrollbar-width: none;
 }
 .tabs::-webkit-scrollbar { display: none; }
 .tab {
   flex: 0 0 auto;
-  display: inline-flex;
-  align-items: center;
-  padding: 0 16px;
-  min-height: 40px; /* 누르기 편하게 */
-  border-radius: var(--radius-pill);
-  background: #e9eaee;
+  position: relative;
+  min-height: 44px; /* 누르기 편하게 */
+  padding: 0 14px;
   color: var(--ink-soft);
   font-size: 14px;
   font-weight: 700;
   white-space: nowrap;
 }
 .tab--active {
+  color: var(--ink);
+  font-weight: 800;
+}
+.tab--active::after {
+  position: absolute;
+  right: 14px;
+  bottom: -1px;
+  left: 14px;
+  height: 2px;
   background: var(--ink);
-  color: #fff;
+  content: "";
 }
 .subtabs {
   display: flex;
@@ -368,15 +381,16 @@ ul { list-style: none; margin: 0; padding: 0; }
    사건 카드 편향 뱃지 (쏠림 / 블라인드스팟)
    =========================================================== */
 .ev-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   margin-top: 8px;
   padding: 3px 10px;
   border-radius: var(--radius-pill);
   font-size: 12px;
   font-weight: 800;
 }
-.ev-badge--tilt::before { content: "⚠ "; }
-.ev-badge--blindspot::before { content: "👁 "; }
+.ev-badge__icon { flex: 0 0 auto; }
 .ev-badge--tilt.ev-badge--prog { color: var(--lean-prog); background: rgba(59, 111, 224, 0.12); }
 .ev-badge--tilt.ev-badge--cons { color: var(--lean-cons); background: rgba(225, 73, 63, 0.12); }
 .ev-badge--tilt.ev-badge--center { color: var(--lean-center); background: rgba(138, 144, 156, 0.16); }
@@ -453,7 +467,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .vs-pane--empty { background: var(--bg); border-left-color: var(--line); box-shadow: none; }
 .vs-pane__empty { margin: 0; font-size: 14px; color: var(--ink-faint); }
 .compare__note { margin: 0; padding: 14px 16px; font-size: 14px; color: var(--ink-faint); background: var(--bg); border-radius: var(--radius-card); word-break: keep-all; }
-.compare__blindspot { margin: 10px 2px 0; font-size: 13px; font-weight: 700; color: var(--ink-soft); word-break: keep-all; }
+.compare__blindspot { display: flex; align-items: center; gap: 4px; margin: 10px 2px 0; font-size: 13px; font-weight: 700; color: var(--ink-soft); word-break: keep-all; }
 
 /* ===========================================================
    성향 막대 (카드용 작은 막대)
@@ -519,7 +533,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .thumb__icon {
   color: #b4b9c3;
-  font-size: 26px;
+  display: inline-flex;
 }
 .thumb--large { width: 100%; height: 172px; }
 .thumb--small {
@@ -528,7 +542,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   height: 86px;
   border-radius: 14px;
 }
-.thumb--small .thumb__icon { font-size: 20px; }
+.thumb--small .thumb__icon svg { width: 20px; height: 20px; }
 .thumb--hero {
   width: 100%;
   height: 200px;
@@ -1023,8 +1037,17 @@ ul { list-style: none; margin: 0; padding: 0; }
   color: var(--ink-faint);
   text-align: center;
 }
-.placeholder-empty__icon { font-size: 40px; }
+.placeholder-empty__icon { display: inline-flex; }
 .placeholder-empty__text { font-size: 15px; font-weight: 600; }
+.spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid var(--line);
+  border-top-color: var(--ink-faint);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
 
 /* ===========================================================
    하단 고정 네비게이션
@@ -1056,7 +1079,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   font-weight: 700;
   white-space: nowrap;
 }
-.nav-item__icon { font-size: 20px; line-height: 1; }
+.nav-item__icon { display: inline-flex; line-height: 1; }
 .nav-item--active { color: var(--ink); }
 
 /* ===========================================================
@@ -1139,6 +1162,9 @@ ul { list-style: none; margin: 0; padding: 0; }
 .issue-block--hl { background: #f5f6f8; box-shadow: none; border: 2px solid var(--ink-faint); }
 .issue-block--terms { background: #f6f7f9; box-shadow: none; }
 .issue-block__label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: 14.5px;
   font-weight: 800;
   color: var(--ink);

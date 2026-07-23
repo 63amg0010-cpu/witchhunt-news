@@ -9,11 +9,10 @@ import ArticleScreen from './screens/ArticleScreen'
 import BiasFeedScreen from './screens/BiasFeedScreen'
 import MyInfoScreen from './screens/MyInfoScreen'
 import OutletBiasScreen from './screens/OutletBiasScreen'
-import DebateScreen from './screens/DebateScreen'
 import IssueScreen from './screens/IssueScreen'
 
 // 하단 네비 탭 종류 (다른 파일에서도 씀)
-export type Tab = 'home' | 'issue' | 'bias' | 'debate' | 'me'
+export type Tab = 'home' | 'issue' | 'bias' | 'me'
 
 // 지금 어느 화면을 보고 있는지 (브라우저 기록과 연동해 폰 뒤로가기 지원)
 interface Nav {
@@ -124,7 +123,7 @@ export default function App() {
     content = (
       <div className="screen">
         <div className="placeholder-empty">
-          <div className="placeholder-empty__icon">📡</div>
+          <div className="spinner" role="status" aria-label="실시간 뉴스를 불러오는 중" />
           <div className="placeholder-empty__text">실시간 뉴스를 불러오는 중…</div>
         </div>
       </div>
@@ -168,17 +167,6 @@ export default function App() {
     content = <BiasFeedScreen events={events} onOpenEvent={openEvent} />
   } else if (nav.tab === 'me') {
     content = <MyInfoScreen onOpenOutletBias={openOutletBias} />
-  } else if (nav.tab === 'debate') {
-    content = <DebateScreen events={events} onOpenEvent={openEvent} />
-  } else {
-    content = (
-      <div className="screen">
-        <div className="placeholder-empty">
-          <div className="placeholder-empty__icon">💬</div>
-          <div className="placeholder-empty__text">토론 기능은 준비 중이에요</div>
-        </div>
-      </div>
-    )
   }
 
   // 상세(사건/기사)·언론사 분류 화면에서는 하단 탭바를 숨긴다 — 읽는 데 방해되지 않게

@@ -3,6 +3,7 @@ import type { NewsEvent } from '../types'
 import Header from '../components/Header'
 import EventCard from '../components/EventCard'
 import BiasBriefing from '../components/BiasBriefing'
+import { IconNews } from '../components/icons'
 import { eventRegion, REGIONS } from '../lib/region'
 
 const CATEGORIES = ['주요 사건', '정치', '경제', '주식', '크립토', '예측시장', '사회', '국제'] as const
@@ -37,17 +38,7 @@ export default function HomeScreen({ events, usingSample, updatedAt, category, o
     <div className="screen">
       <Header updatedAt={updatedAt} />
 
-      {/* 실시간 뉴스를 못 불러왔을 때 안내 */}
-      {usingSample && (
-        <div className="sample-note">
-          실시간 뉴스를 불러오지 못해 <b>샘플 데이터</b>를 보여주고 있어요.
-        </div>
-      )}
-
-      {/* 오늘의 편향 브리핑 — 이 앱의 핵심(진영별 보도 비교) */}
-      <BiasBriefing events={events} onOpenBiasFeed={onOpenBiasFeed} />
-
-      {/* 카테고리 탭 (둥근 알약형) */}
+      {/* 카테고리 탭 — 스크롤해도 위에 남아 현재 분류를 바로 바꾼다 */}
       <div className="tabs">
         {CATEGORIES.map((c) => (
           <button
@@ -74,6 +65,16 @@ export default function HomeScreen({ events, usingSample, updatedAt, category, o
         </div>
       )}
 
+      {/* 실시간 뉴스를 못 불러왔을 때 안내 */}
+      {usingSample && (
+        <div className="sample-note">
+          실시간 뉴스를 불러오지 못해 <b>샘플 데이터</b>를 보여주고 있어요.
+        </div>
+      )}
+
+      {/* 오늘의 편향 브리핑 — 이 앱의 핵심(진영별 보도 비교) */}
+      <BiasBriefing events={events} onOpenBiasFeed={onOpenBiasFeed} />
+
       {/* 언론사 성향 분류표 바로가기 */}
       <button className="outlet-link" onClick={onOpenOutletBias}>
         <span className="outlet-link__dots">
@@ -86,7 +87,7 @@ export default function HomeScreen({ events, usingSample, updatedAt, category, o
       {/* 대표 사건 큰 카드 + 나머지 작은 카드 */}
       {list.length === 0 ? (
         <div className="placeholder-empty" style={{ height: '40vh' }}>
-          <div className="placeholder-empty__icon">🗞️</div>
+          <div className="placeholder-empty__icon"><IconNews size={40} /></div>
           <div className="placeholder-empty__text">이 분류에는 표시할 사건이 없어요</div>
         </div>
       ) : (

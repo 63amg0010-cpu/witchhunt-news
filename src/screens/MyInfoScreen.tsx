@@ -2,28 +2,31 @@ interface Props {
   onOpenOutletBias: () => void
 }
 
-// 내 정보 화면 (간단히) — 로그인 안내 + 설정 메뉴
-// '언론사 성향 분류'만 실제 동작, 나머지는 아직 자리만.
-const PLACEHOLDER_MENU = ['관심 카테고리 설정', '알림 설정', '공지사항', '앱 정보']
-
 export default function MyInfoScreen({ onOpenOutletBias }: Props) {
   return (
     <div className="screen">
       <div className="page-head">
-        <div className="page-head__title">내 정보</div>
+        <div className="page-head__title">정보</div>
       </div>
 
-      {/* 로그인 안내 */}
-      <div className="profile-card">
-        <div className="profile-card__avatar">👤</div>
+      <section className="profile-card" aria-labelledby="service-introduction-title">
         <div>
-          <div className="profile-card__name">게스트</div>
-          <div className="profile-card__login">로그인 기능은 준비 중이에요</div>
+          <div id="service-introduction-title" className="profile-card__name">WitchHunt는 이런 서비스예요</div>
+          <div className="profile-card__login">
+            같은 사건을 진보·중도·보수 언론이 각각 어떻게 다루는지 비교해 보여줘요. 한쪽 시각만 접하면 놓치는 부분을 줄이는 게 목표예요. 언론사 성향 분류는 절대적 판정이 아니라 참고용이며, 계속 보완하고 있어요.
+          </div>
         </div>
-        <button className="login-btn login-btn--soon" disabled>준비 중</button>
-      </div>
+      </section>
 
-      {/* 설정 메뉴 — '언론사 성향 분류'만 실제 동작, 나머지는 준비 중 */}
+      <section aria-labelledby="usage-guide-title">
+        <div id="usage-guide-title" className="page-head__sub">이용 안내</div>
+        <ul className="menu-list">
+          <li className="menu-item">홈 — 사건별로 진영 보도 분포를 비교</li>
+          <li className="menu-item">이슈 해설 — 어려운 이슈를 쉬운 말로 풀이</li>
+          <li className="menu-item">편향경고 — 보도가 한쪽에 쏠린 사건 모음</li>
+        </ul>
+      </section>
+
       <ul className="menu-list">
         <li>
           <button className="menu-item" onClick={onOpenOutletBias}>
@@ -31,14 +34,6 @@ export default function MyInfoScreen({ onOpenOutletBias }: Props) {
             <span className="menu-item__arrow">›</span>
           </button>
         </li>
-        {PLACEHOLDER_MENU.map((m) => (
-          <li key={m}>
-            <button className="menu-item menu-item--soon" disabled>
-              {m}
-              <span className="menu-item__soon">준비 중</span>
-            </button>
-          </li>
-        ))}
       </ul>
     </div>
   )

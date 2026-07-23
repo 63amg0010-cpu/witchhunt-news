@@ -2,6 +2,7 @@ import type { NewsEvent } from '../types'
 import BiasBar from './BiasBar'
 import Thumbnail from './Thumbnail'
 import { biasBadge, displayLeanCounts } from '../lib/bias'
+import { IconAlert, IconEye } from './icons'
 
 interface Props {
   event: NewsEvent
@@ -13,7 +14,13 @@ interface Props {
 function BiasTag({ event }: { event: NewsEvent }) {
   const b = biasBadge(event)
   if (!b) return null
-  return <span className={`ev-badge ev-badge--${b.kind} ev-badge--${b.lean}`}>{b.text}</span>
+  const Icon = b.kind === 'tilt' ? IconAlert : IconEye
+  return (
+    <span className={`ev-badge ev-badge--${b.kind} ev-badge--${b.lean}`}>
+      <Icon size={12} className="ev-badge__icon" />
+      {b.text}
+    </span>
+  )
 }
 
 // 사건 카드 — 대표 사건은 큰 카드(사진+굵은 제목), 나머지는 작은 카드(오른쪽 작은 사진)

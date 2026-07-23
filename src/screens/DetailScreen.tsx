@@ -4,6 +4,7 @@ import Thumbnail from '../components/Thumbnail'
 import SummaryBox from '../components/SummaryBox'
 import { splitSentences } from '../lib/text'
 import { displayLeanCounts, LEAN_KO } from '../lib/bias'
+import { IconEye } from '../components/icons'
 
 interface Props {
   event: NewsEvent
@@ -11,7 +12,7 @@ interface Props {
   onOpenArticle: (articleId: string) => void
 }
 
-// ★ 진영 주장 한 칸 — "이 진영은 이 사건을 두고 무엇을 주장하는가"
+// 진영 주장 한 칸 — "이 진영은 이 사건을 두고 무엇을 주장하는가"
 function ViewPane({ view, onOpen }: { view: ViewTake; onOpen: (id: string) => void }) {
   const lean = view.lean
   return (
@@ -127,7 +128,7 @@ export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
         </div>
       </div>
 
-      {/* ★ 진영별 논조 — 각 진영이 이 사건을 어떻게 보는지(주장) */}
+      {/* 진영별 논조 — 각 진영이 이 사건을 어떻게 보는지(주장) */}
       {event.views ? (
         <>
           <h2 className="compare__title">진영별로 이렇게 봅니다</h2>
@@ -138,7 +139,7 @@ export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
             <ViewPane view={event.views.left} onOpen={onOpenArticle} />
             <ViewPane view={event.views.right} onOpen={onOpenArticle} />
           </div>
-          {noProg && <p className="compare__blindspot">👁 이 사건은 진보 매체 보도가 없어요.</p>}
+          {noProg && <p className="compare__blindspot"><IconEye size={14} />이 사건은 진보 매체 보도가 없어요.</p>}
         </>
       ) : (
         showContrast && (
@@ -149,7 +150,7 @@ export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
               <ComparePane article={left!} onOpen={onOpenArticle} />
               <ComparePane article={right!} onOpen={onOpenArticle} />
             </div>
-            {noProg && <p className="compare__blindspot">👁 이 사건은 진보 매체 보도가 없어요.</p>}
+            {noProg && <p className="compare__blindspot"><IconEye size={14} />이 사건은 진보 매체 보도가 없어요.</p>}
           </>
         )
       )}
@@ -160,7 +161,7 @@ export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
       {/* 사건 배경 설명 (있을 때만) */}
       {event.background && (
         <div className="article-summary article-summary--bg">
-          <div className="article-summary__label">📌 배경 설명</div>
+          <div className="article-summary__label">배경 설명</div>
           <div className="article-summary__body">
             {splitSentences(event.background).map((s, i) => (
               <p key={i} className="article-summary__line">{s}</p>
@@ -169,10 +170,10 @@ export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
         </div>
       )}
 
-      {/* 🗣 네티즌 반응 — 공감 많은 댓글들의 '전체 분위기' 한 줄 (배경 설명 아래, 있을 때만) */}
+      {/* 네티즌 반응 — 공감 많은 댓글들의 전체 분위기 한 줄 (배경 설명 아래, 있을 때만) */}
       {typeof event.publicTake === 'string' && event.publicTake && (
         <div className="article-summary netizen">
-          <div className="article-summary__label">🗣 네티즌 반응</div>
+          <div className="article-summary__label">네티즌 반응</div>
           <p className="netizen__mood">{event.publicTake}</p>
           <div className="netizen__src">네이버 뉴스 댓글의 전체 분위기 · 보수 성향이 강한 편 · 참고용</div>
         </div>
