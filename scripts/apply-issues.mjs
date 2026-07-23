@@ -10,7 +10,15 @@ import { dirname, join } from 'node:path'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 
-// 해설 썸네일 — 연결된 사건이 이미 갖고 있는 대표 사진을 그대로 쓴다(추가 수집 없음)
+// 해설 썸네일 우선순위:
+//   ① issue-images.json에 직접 지정한 그림(코덱스로 만든 일러스트) — 언론사 사진이 글씨
+//      스크린샷이거나 없을 때 쓰려고 사람이 지정해둔 것
+//   ② 연결된 사건의 대표 사진(추가 수집 없음)
+let manualImages = {}
+try {
+  manualImages = JSON.parse(readFileSync(join(ROOT, 'scripts', 'issue-images.json'), 'utf8'))
+} catch { /* 없으면 무시 */ }
+
 let feedImages = {}
 try {
   const feed = JSON.parse(readFileSync(join(ROOT, 'public', 'feed.json'), 'utf8'))
@@ -54,7 +62,8 @@ const fresh = incoming.filter(valid).map((x) => ({
   ...x,
   terms: x.terms || [],
   createdAt: x.createdAt || NOW,
-  ...(feedImages[x.eventId] || {}), // 연결된 사건의 대표 사진을 썸네일로
+  ...(feedImages[x.eventId] || {}), // ② 연결된 사건의 대표 사진
+  ...(manualImages[x.eventId] ? { imageUrl: manualImages[x.eventId], imageSourceUrl: undefined } : {}), // ① 직접 지정 그림이 있으면 그게 우선
 }))
 if (incoming.length !== fresh.length) console.log(`⚠️ 형식 이상/깨짐 ${incoming.length - fresh.length}건 제외`)
 

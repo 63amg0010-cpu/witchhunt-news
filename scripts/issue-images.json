@@ -1,0 +1,7 @@
+{
+ "_설명": "이슈 해설 썸네일 직접 지정. 언론사 사진이 '글씨 스크린샷'이거나 없을 때 쓰는 그림(코덱스 생성). 여기 있으면 언론사 사진보다 우선 적용된다. 키=사건 id, 값=/issue-img/파일명",
+ "i7-c0": "/issue-img/iran.png",
+ "i1-c0": "/issue-img/nk-ship.png",
+ "p5-c0-b": "/issue-img/election.png",
+ "p4-c1": "/issue-img/hacking.png"
+}
