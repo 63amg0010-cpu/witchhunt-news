@@ -9,7 +9,8 @@
 2. 각 항목마다 `AGENTS.md` 규칙대로 아래를 만든다:
    `title`(쉬운 말 제목), `oneLine`(한 줄), `whatHappened`(무슨 일이 있었나 3~5문장),
    `terms`(어려운 말 풀이 0~3개), `meaning`(이게 무슨 의미냐면 4~6문장),
-   `intents`(가능한 해석 2~3개, 각 label+text), `impact`(나한테 무슨 상관 3~5문장),
+   `intents`(가능한 해석, 각 label+text — ⚠️ **개수 정해놓고 채우지 말 것.** 근거 있는 것만, 2개면 2개),
+   `impact`(나한테 무슨 상관 3~5문장),
    `watch`(앞으로 볼 것 2~4문장)
 3. 결과를 **순수 JSON 배열**로 `_issue_out.json`에 저장한다.
    - 형태: `[ { "eventId","category","title","oneLine","whatHappened","terms":[{"word","desc"}],"meaning","intents":[{"label","text"}],"impact","watch" } ]`

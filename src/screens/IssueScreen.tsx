@@ -72,10 +72,17 @@ export default function IssueScreen({ openIdx, onOpenIssue, onBack, onOpenEvent 
         {it.intents?.length > 0 && (
           <div className="issue-block">
             <div className="issue-block__label">🎯 왜 이런 일이 벌어졌나</div>
-            <p className="issue-block__note">아래는 가능한 해석입니다. 어느 하나로 단정할 수 없어요.</p>
+            {/* 해석이 하나뿐일 땐 '단정할 수 없다'는 안내와 번호가 어색하므로 문구를 바꾼다 */}
+            <p className="issue-block__note">
+              {it.intents.length === 1
+                ? '아래는 가능한 해석입니다. 확정된 사실은 아니에요.'
+                : '아래는 가능한 해석입니다. 어느 하나로 단정할 수 없어요.'}
+            </p>
             {it.intents.map((v, i) => (
               <div key={i} className="issue-intent">
-                <div className="issue-intent__label">{i + 1}. {v.label}</div>
+                <div className="issue-intent__label">
+                  {it.intents.length > 1 ? `${i + 1}. ` : ''}{v.label}
+                </div>
                 <p className="issue-intent__text">{v.text}</p>
               </div>
             ))}
