@@ -1098,6 +1098,13 @@ ul { list-style: none; margin: 0; padding: 0; }
 .issue-card__body { padding: 15px 16px 16px; }
 /* 해설 카드 사진 — 목록에서 눈에 띄게 가로로 넓게 */
 .thumb--issue { width: 100%; height: 150px; }
+.issue-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 700;
+}
 .issue-card__cat {
   display: inline-block;
   padding: 3px 9px;
@@ -1139,6 +1146,11 @@ ul { list-style: none; margin: 0; padding: 0; }
   line-height: 1.32;
   letter-spacing: -0.4px;
   word-break: keep-all;
+}
+.issue-meta {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 700;
 }
 .issue-oneline {
   margin: 0 0 6px;

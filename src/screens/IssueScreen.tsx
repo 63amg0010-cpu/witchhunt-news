@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
 import type { IssueExplain } from '../types'
-import { fetchIssues } from '../lib/issues'
+import { fetchIssues, formatIssueDate } from '../lib/issues'
 import { splitSentences } from '../lib/text'
 import Thumbnail from '../components/Thumbnail'
 import { IconBulb, IconHome, IconNews, IconPieces, IconSearch, IconTarget, IconWatch } from '../components/icons'
@@ -42,17 +42,20 @@ export default function IssueScreen({ openIdx, onOpenIssue, onBack, onOpenEvent 
   // 상세 보기
   if (openIdx !== null && issues[openIdx]) {
     const it = issues[openIdx]
+    const createdAt = formatIssueDate(it.createdAt)
     return (
       <div className="screen">
         <div className="detail-top">
           <button className="back-btn" onClick={onBack}>
             <span className="back-btn__chev">‹</span> 뒤로
           </button>
-          <span className="muted" style={{ fontSize: 13, fontWeight: 700 }}>{it.category}</span>
         </div>
 
         <Thumbnail src={it.imageUrl} ogUrl={it.imageSourceUrl} className="thumb--hero" />
         <h1 className="issue-title">{it.title}</h1>
+        <div className="issue-meta muted">
+          {createdAt ? `${createdAt} 올림 · ${it.category}` : it.category}
+        </div>
         <p className="issue-oneline">{it.oneLine}</p>
 
         <IssueBlock icon={<IconNews size={16} />} label="무슨 일이 있었나" text={it.whatHappened} />
@@ -119,17 +122,23 @@ export default function IssueScreen({ openIdx, onOpenIssue, onBack, onOpenEvent 
           <div className="placeholder-empty__text">아직 해설이 없어요</div>
         </div>
       ) : (
-        issues.map((it, i) => (
-          <button key={i} className="issue-card" onClick={() => onOpenIssue(i)}>
-            <Thumbnail src={it.imageUrl} ogUrl={it.imageSourceUrl} className="thumb--issue" />
-            <div className="issue-card__body">
-              <div className="issue-card__cat">{it.category}</div>
-              <div className="issue-card__title">{it.title}</div>
-              <div className="issue-card__one">{it.oneLine}</div>
-              <span className="issue-card__more">쉽게 풀어보기 ›</span>
-            </div>
-          </button>
-        ))
+        issues.map((it, i) => {
+          const createdAt = formatIssueDate(it.createdAt)
+          return (
+            <button key={i} className="issue-card" onClick={() => onOpenIssue(i)}>
+              <Thumbnail src={it.imageUrl} ogUrl={it.imageSourceUrl} className="thumb--issue" />
+              <div className="issue-card__body">
+                <div className="issue-card__meta">
+                  <span className="issue-card__cat">{it.category}</span>
+                  {createdAt && <span className="muted">· {createdAt}</span>}
+                </div>
+                <div className="issue-card__title">{it.title}</div>
+                <div className="issue-card__one">{it.oneLine}</div>
+                <span className="issue-card__more">쉽게 풀어보기 ›</span>
+              </div>
+            </button>
+          )
+        })
       )}
     </div>
   )
