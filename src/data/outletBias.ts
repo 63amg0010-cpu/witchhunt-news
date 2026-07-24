@@ -43,6 +43,13 @@ const OUTLET_LEAN: Record<string, Lean> = {
   이데일리: 'center',
   파이낸셜뉴스: 'center',
   중앙일보: 'center',
+  토큰포스트: 'center',
+  코인리더스: 'center',
+  블록미디어: 'center',
+  코인데스크코리아: 'center',
+  디센터: 'center',
+  시사저널: 'center',
+  전자신문: 'center',
 
   // --- 보수 성향으로 흔히 분류 ---
   조선일보: 'cons',
@@ -107,6 +114,14 @@ const DOMAIN_OUTLET: Record<string, { name: string; lean: Lean }> = {
   'fnnews.com': { name: '파이낸셜뉴스', lean: 'center' },
   'joongang.co.kr': { name: '중앙일보', lean: 'center' },
   'joins.com': { name: '중앙일보', lean: 'center' },
+  // 전문지(크립토·예측시장·IT — 정파성 낮아 중도 취급)
+  'tokenpost.kr': { name: '토큰포스트', lean: 'center' },
+  'coinreaders.com': { name: '코인리더스', lean: 'center' },
+  'blockmedia.co.kr': { name: '블록미디어', lean: 'center' },
+  'coindeskkorea.com': { name: '코인데스크코리아', lean: 'center' },
+  'decenter.kr': { name: '디센터', lean: 'center' },
+  'sisajournal.com': { name: '시사저널', lean: 'center' },
+  'etnews.com': { name: '전자신문', lean: 'center' },
 
   // 보수
   'chosun.com': { name: '조선일보', lean: 'cons' },

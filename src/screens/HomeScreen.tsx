@@ -6,7 +6,7 @@ import BiasBriefing from '../components/BiasBriefing'
 import { IconNews } from '../components/icons'
 import { eventRegion, REGIONS } from '../lib/region'
 
-const CATEGORIES = ['주요 사건', '정치', '경제', '주식', '크립토', '예측시장', '사회', '국제'] as const
+const CATEGORIES = ['주요 사건', '정치', '국제', '경제', '사회', '주식', '크립토', '예측시장'] as const
 
 interface Props {
   events: NewsEvent[]
