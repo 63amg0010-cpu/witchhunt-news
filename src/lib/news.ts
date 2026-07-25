@@ -68,8 +68,8 @@ function eventTimeMs(e: NewsEvent, now: number): number {
   return 0
 }
 
-// 최근일수록 촘촘하게 나눈 시간대 묶음 (분 단위 경계)
-const BUCKET_MIN = [15, 30, 60, 120, 240, 480, 960, 1440, 2880]
+// 최근 6시간은 1시간 단위, 이후 3시간 단위로 촘촘히 — 묶음 안에서만 중요도순
+const BUCKET_MIN = [15, 30, 60, 120, 180, 240, 300, 360, 540, 720, 900, 1080, 1260, 1440, 2160, 2880]
 function timeBucket(ms: number, now: number): number {
   const min = (now - ms) / 60000
   for (let i = 0; i < BUCKET_MIN.length; i++) if (min < BUCKET_MIN[i]) return i
