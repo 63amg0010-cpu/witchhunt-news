@@ -40,10 +40,11 @@ async function getText(url, id) {
 
 // 코덱스에 넘길 사건 고르기:
 //  ① 배경이 아직 없는 '새' 사건 (요약 필요)
-//  ② 중요한 사건(중요도 7+)인데 '대중의 시각'이 아직 없는 것 (publicTake 채울 기회 부여)
-// → 반응 많은 큰 사건(특검 등)은 이미 요약이 있어도 publicTake를 받을 수 있게 됨.
+//  ② 요약이 깨진 사건
 //  ③ 진영별 논조(views)가 아직 없는데 '비교 가능한'(진영 2개 이상) 사건 → 논조 채울 기회 부여
 //     (진영이 하나뿐이라 비교 자체가 불가능한 사건은 영원히 대상이 되지 않게 걸러낸다)
+// 코덱스가 항목별 품질을 유지할 수 있도록 회차당 후속 보완 대상 수를 제한한다.
+const TARGET_MAX = 20
 const needsViews = (ev) => {
   if (ev.views) return false
   const { left, right } = pickContrast(ev)
@@ -59,9 +60,25 @@ const summaryBroken = (ev) => {
   if (/ {2,}/.test(t)) return true
   return false
 }
-const targets = feed.events.filter(
-  (ev) => !ev.background || (!ev.publicTake && (ev.importance ?? 0) >= 7) || needsViews(ev) || summaryBroken(ev),
+const newTargets = feed.events.filter((ev) => !ev.background)
+const brokenSummaryTargets = feed.events.filter((ev) => ev.background && summaryBroken(ev))
+const priorityTargets = [...newTargets, ...brokenSummaryTargets]
+const prioritizedIds = new Set(priorityTargets.map((ev) => ev.id))
+// 후속 보완(논조 백로그·네티즌 반응)은 상한 안에서만 — 논조를 먼저, 남으면 반응 순
+const viewBacklog = feed.events.filter((ev) => !prioritizedIds.has(ev.id) && needsViews(ev))
+// 중요 사건(중요도 7+)인데 네티즌 반응(publicTake)이 아직 없는 것
+const takeBacklog = feed.events.filter(
+  (ev) => !prioritizedIds.has(ev.id) && ev.background && !summaryBroken(ev) && !needsViews(ev) && !ev.publicTake && (ev.importance ?? 0) >= 7,
 )
+const remainingSlots = Math.max(0, TARGET_MAX - priorityTargets.length)
+const viewTargets = viewBacklog.slice(0, remainingSlots)
+const takeTargets = takeBacklog.slice(0, Math.max(0, remainingSlots - viewTargets.length))
+const targets = [...priorityTargets, ...viewTargets, ...takeTargets]
+const deferredViews = viewBacklog.length - targets.filter((ev) => needsViews(ev)).length
+
+if (deferredViews > 0) {
+  console.log(`ℹ️ 논조 백로그 ${viewBacklog.length}건 중 ${deferredViews}건은 다음 회차로 미룸`)
+}
 
 const out = []
 for (const ev of targets) {
