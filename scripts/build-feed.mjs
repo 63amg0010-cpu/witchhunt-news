@@ -184,6 +184,7 @@ const DOMAIN_OUTLET = {
   // 전문지(크립토·예측시장·IT — 정파성 낮아 중도 취급)
   'tokenpost.kr': { name: '토큰포스트', lean: 'center' },
   'coinreaders.com': { name: '코인리더스', lean: 'center' },
+  'digitaltoday.co.kr': { name: '디지털투데이', lean: 'center' },
   'blockmedia.co.kr': { name: '블록미디어', lean: 'center' },
   'coindeskkorea.com': { name: '코인데스크코리아', lean: 'center' },
   'decenter.kr': { name: '디센터', lean: 'center' },

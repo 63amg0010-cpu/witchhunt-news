@@ -54,7 +54,7 @@ const corrupt = (s) => {
 }
 const valid = (x) =>
   x && x.title && x.oneLine && x.whatHappened && x.meaning && x.impact && x.watch &&
-  Array.isArray(x.intents) && x.intents.length >= 2 &&
+  Array.isArray(x.intents) && x.intents.length >= 1 && // AGENTS 규칙상 근거 있는 해석 1개도 정상(억지로 채우지 않음)
   ![x.title, x.oneLine, x.whatHappened, x.meaning, x.impact, x.watch].some(corrupt)
 
 const NOW = new Date().toISOString()
