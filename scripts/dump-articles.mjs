@@ -55,6 +55,8 @@ const needsViews = (ev) => {
 const summaryBroken = (ev) => {
   const t = (ev.summary || '').trim()
   if (!t) return true
+  // 말줄임표로 끝나면 네이버 원문이 중간에서 잘린 것 — '.'으로 끝나 보여도 AI 요약이 아니다
+  if (/(\.\.\.|…|⋯)$/.test(t)) return true
   if (!/[.!?]$/.test(t)) return true
   if (/&[a-zA-Z]+;|&#\d+;/.test(t)) return true
   if (/ {2,}/.test(t)) return true
