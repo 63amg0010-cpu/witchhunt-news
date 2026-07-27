@@ -170,15 +170,6 @@ export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
         </div>
       )}
 
-      {/* 네티즌 반응 — 공감 많은 댓글들의 전체 분위기 한 줄 (배경 설명 아래, 있을 때만) */}
-      {typeof event.publicTake === 'string' && event.publicTake && (
-        <div className="article-summary netizen">
-          <div className="article-summary__label">네티즌 반응</div>
-          <p className="netizen__mood">{event.publicTake}</p>
-          <div className="netizen__src">네이버 뉴스 댓글의 전체 분위기 · 보수 성향이 강한 편 · 참고용</div>
-        </div>
-      )}
-
       {/* 전체 기사 목록 */}
       <h2 className="section-title">전체 기사 {event.articles.length}건</h2>
       <ul>

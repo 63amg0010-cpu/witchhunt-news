@@ -66,16 +66,11 @@ const newTargets = feed.events.filter((ev) => !ev.background)
 const brokenSummaryTargets = feed.events.filter((ev) => ev.background && summaryBroken(ev))
 const priorityTargets = [...newTargets, ...brokenSummaryTargets]
 const prioritizedIds = new Set(priorityTargets.map((ev) => ev.id))
-// 후속 보완(논조 백로그·네티즌 반응)은 상한 안에서만 — 논조를 먼저, 남으면 반응 순
+// 후속 보완 대상은 논조 백로그만 남기며, 회차당 상한 안에서만 처리한다.
 const viewBacklog = feed.events.filter((ev) => !prioritizedIds.has(ev.id) && needsViews(ev))
-// 중요 사건(중요도 7+)인데 네티즌 반응(publicTake)이 아직 없는 것
-const takeBacklog = feed.events.filter(
-  (ev) => !prioritizedIds.has(ev.id) && ev.background && !summaryBroken(ev) && !needsViews(ev) && !ev.publicTake && (ev.importance ?? 0) >= 7,
-)
 const remainingSlots = Math.max(0, TARGET_MAX - priorityTargets.length)
 const viewTargets = viewBacklog.slice(0, remainingSlots)
-const takeTargets = takeBacklog.slice(0, Math.max(0, remainingSlots - viewTargets.length))
-const targets = [...priorityTargets, ...viewTargets, ...takeTargets]
+const targets = [...priorityTargets, ...viewTargets]
 const deferredViews = viewBacklog.length - targets.filter((ev) => needsViews(ev)).length
 
 if (deferredViews > 0) {

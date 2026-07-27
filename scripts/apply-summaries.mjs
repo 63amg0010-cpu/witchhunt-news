@@ -44,6 +44,7 @@ function decodeEntities(s) {
 let n = 0
 let skipped = 0
 for (const ev of feed.events) {
+  delete ev.publicTake
   const v = summaries[ev.id]
   if (!v) continue
   if (typeof v === 'string') {
@@ -55,9 +56,6 @@ for (const ev of feed.events) {
     if (ok(v.background)) ev.background = decodeEntities(v.background.trim())
     if (typeof v.importance === 'number') ev.importance = v.importance
     if (typeof v.category === 'string' && ['정치', '경제', '사회', '국제', '주식', '크립토', '예측시장'].includes(v.category)) ev.category = v.category
-    // 네티즌 반응: 코덱스가 '구체적인 한 줄'을 주면 그것으로 덮어쓰고(무엇에 대한 어떤 반응),
-    // 없으면 fetch-reactions.mjs가 미리 넣어둔 '일반 분위기 한 줄'이 그대로 남는다(안전망).
-    if (ok(v.publicTake)) ev.publicTake = decodeEntities(v.publicTake.trim())
   }
   if (ev.summary && ev.articles && ev.articles[0]) ev.articles[0].summary = ev.summary
   n++

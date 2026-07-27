@@ -28,9 +28,8 @@ Log "[1/6] 뉴스 수집 build-feed"
 Log "[2/6] 본문·논조자료 dump-articles"
 & $node scripts/dump-articles.mjs 2>&1 | ForEach-Object { Add-Content -LiteralPath $log -Value $_ -Encoding utf8 }
 
-# 3) 네티즌 반응 (AI 아님, 토큰 0)
-Log "[3/6] 네티즌 반응 fetch-reactions"
-& $node scripts/fetch-reactions.mjs 2>&1 | ForEach-Object { Add-Content -LiteralPath $log -Value $_ -Encoding utf8 }
+# 3) (제거됨 2026-07-27) 네티즌 반응 — 정해진 몇 문구만 반복돼 정보값이 없어 기능 삭제.
+#    scripts/fetch-reactions.mjs 파일은 되살릴 수 있게 보존만 해둠.
 
 # 4) AI 요약·논조 (codex gpt-5.5 high) — 여기만 토큰을 쓴다
 #    오래된 요약이 섞이지 않게 먼저 지운다(병합 방지). codex가 _summaries.json을 새로 만든다.
