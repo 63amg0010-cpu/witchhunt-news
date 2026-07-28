@@ -9,6 +9,7 @@
 //     로 public/debates.json을 생성한 뒤, 이 스크립트를 실행하면 함께 배포된다.
 import { execSync } from 'node:child_process'
 import { existsSync, readFileSync, unlinkSync, writeFileSync } from 'node:fs'
+import { isPublishable } from './lib-quality.mjs'
 
 const cwd = process.cwd()
 const OPT = { cwd, stdio: 'inherit' }
@@ -56,7 +57,7 @@ function hideUnsummarized() {
   const path = 'public/feed.json'
   const feed = JSON.parse(readFileSync(path, 'utf8'))
   const all = feed.events || []
-  const ready = all.filter((e) => e.background) // 배경 설명이 있으면 AI 요약을 거친 사건
+  const ready = all.filter(isPublishable) // 배경 있고 + 요약이 원문 조각이 아닌 사건만
   const hidden = all.length - ready.length
   if (hidden === 0) return
   if (ready.length < FLOOR) {

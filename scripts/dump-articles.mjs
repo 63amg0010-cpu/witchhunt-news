@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import { fetchRetry, sleep } from './lib-fetch.mjs'
 import { pickContrast } from './lib-contrast.mjs'
+import { summaryBroken } from './lib-quality.mjs'
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const feed = JSON.parse(readFileSync(join(ROOT, 'public', 'feed.json'), 'utf8'))
@@ -52,16 +53,7 @@ const needsViews = (ev) => {
 }
 //  ④ 요약이 'AI 요약'이 아니라 네이버 원문조각(문장 안 끝남·HTML코드·이중공백)인 사건 → 다시 요약
 //     (수집 실패 회차에 원문조각으로 들어온 요약이 계속 남는 것을 자동 치유)
-const summaryBroken = (ev) => {
-  const t = (ev.summary || '').trim()
-  if (!t) return true
-  // 말줄임표로 끝나면 네이버 원문이 중간에서 잘린 것 — '.'으로 끝나 보여도 AI 요약이 아니다
-  if (/(\.\.\.|…|⋯)$/.test(t)) return true
-  if (!/[.!?]$/.test(t)) return true
-  if (/&[a-zA-Z]+;|&#\d+;/.test(t)) return true
-  if (/ {2,}/.test(t)) return true
-  return false
-}
+//     판정 기준은 push-feed의 배포 제외 기준과 같아야 하므로 lib-quality에 모아 뒀다.
 const newTargets = feed.events.filter((ev) => !ev.background)
 const brokenSummaryTargets = feed.events.filter((ev) => ev.background && summaryBroken(ev))
 // ⚠️ 상한은 '우선대상에도' 적용한다. 예전엔 새 사건+깨진 요약이 무제한이라 30건 넘게 몰렸고,
