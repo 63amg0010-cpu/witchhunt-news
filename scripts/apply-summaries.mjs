@@ -1,5 +1,5 @@
 // _summaries.json(AI 요약)을 public/feed.json에 합쳐 넣는다.
-import { readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import { pickContrast } from './lib-contrast.mjs'
@@ -8,8 +8,16 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const feedPath = join(ROOT, 'public', 'feed.json')
 const feed = JSON.parse(readFileSync(feedPath, 'utf8'))
 
+// codex가 시간 안에 아무것도 못 쓰면 _summaries.json이 아예 없다.
+// 예전엔 여기서 크래시(ENOENT)가 나 feed.summarizedAt이 통째로 날아갔다 → 조용히 건너뛴다.
+const sumPath = join(ROOT, '_summaries.json')
+if (!existsSync(sumPath)) {
+  console.log('⚠️ _summaries.json 없음 — 이번 회차 합치기 건너뜀(기존 요약 유지)')
+  process.exit(0)
+}
+
 // 코덱스 출력이 ```json 펜스나 앞뒤 잡텍스트를 포함해도 JSON만 뽑아낸다 (BOM 포함 처리)
-let rawSum = readFileSync(join(ROOT, '_summaries.json'), 'utf8')
+let rawSum = readFileSync(sumPath, 'utf8')
 const s0 = rawSum.indexOf('{')
 const s1 = rawSum.lastIndexOf('}')
 if (s0 >= 0 && s1 > s0) rawSum = rawSum.slice(s0, s1 + 1)

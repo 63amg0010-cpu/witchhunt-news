@@ -34,7 +34,7 @@ Log "[2/6] 본문·논조자료 dump-articles"
 # 4) AI 요약·논조 (codex gpt-5.5 high) — 여기만 토큰을 쓴다
 #    오래된 요약이 섞이지 않게 먼저 지운다(병합 방지). codex가 _summaries.json을 새로 만든다.
 #    ⚠️ codex는 작업을 다 마쳐도 프로세스가 안 죽고 매달리는 버릇이 있다.
-#    → _summaries.json을 다 쓴 뒤이므로, 시간(최대 12분) 주고 안 끝나면 트리째 죽이고(좀비 방지) 넘어간다.
+#    → _summaries.json을 다 쓴 뒤이므로, 시간(최대 20분) 주고 안 끝나면 트리째 죽이고(좀비 방지) 넘어간다.
 Log "[4/6] AI 요약·논조 codex(gpt-5.5 high)"
 $sumFile = Join-Path $proj '_summaries.json'
 Remove-Item -LiteralPath $sumFile -ErrorAction SilentlyContinue
@@ -42,8 +42,8 @@ $codexLog = Join-Path $logDir 'codex-last.log'
 # cmd 경유로 프롬프트를 stdin에 흘려넣고 출력을 파일로 (트리 종료를 위해 PID 확보)
 $cmdLine = "type `"$proj\scripts\summarize-prompt.md`" | `"$codex`" exec -C `"$proj`" -m gpt-5.5 -c model_reasoning_effort=high > `"$codexLog`" 2>&1"
 $proc = Start-Process -FilePath 'cmd.exe' -ArgumentList '/c', $cmdLine -PassThru -WindowStyle Hidden
-if (-not $proc.WaitForExit(12 * 60 * 1000)) {
-  Log "  codex 12분 초과 — 트리 종료(요약은 이미 파일에 있음)"
+if (-not $proc.WaitForExit(20 * 60 * 1000)) {
+  Log "  codex 20분 초과 — 트리 종료(요약은 이미 파일에 있음)"
   & taskkill /PID $proc.Id /T /F 2>&1 | Out-Null
 }
 # codex가 남긴 자식 프로세스(좀비) 한 번 더 정리

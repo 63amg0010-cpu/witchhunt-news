@@ -25,3 +25,4 @@ cloudflared.exe
 # OS / 에디터 부산물
 .DS_Store
 Thumbs.db
+_feed_pending.json

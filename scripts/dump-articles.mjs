@@ -64,15 +64,22 @@ const summaryBroken = (ev) => {
 }
 const newTargets = feed.events.filter((ev) => !ev.background)
 const brokenSummaryTargets = feed.events.filter((ev) => ev.background && summaryBroken(ev))
-const priorityTargets = [...newTargets, ...brokenSummaryTargets]
+// ⚠️ 상한은 '우선대상에도' 적용한다. 예전엔 새 사건+깨진 요약이 무제한이라 30건 넘게 몰렸고,
+//    그러면 codex가 제한 시간 안에 아무것도 못 써서 회차 전체가 실패하는 악순환이 났다.
+const priorityAll = [...newTargets, ...brokenSummaryTargets]
+const priorityTargets = priorityAll.slice(0, TARGET_MAX)
 const prioritizedIds = new Set(priorityTargets.map((ev) => ev.id))
-// 후속 보완 대상은 논조 백로그만 남기며, 회차당 상한 안에서만 처리한다.
+// 후속 보완 대상은 논조 백로그만 남기며, 남는 자리에서만 처리한다.
 const viewBacklog = feed.events.filter((ev) => !prioritizedIds.has(ev.id) && needsViews(ev))
 const remainingSlots = Math.max(0, TARGET_MAX - priorityTargets.length)
 const viewTargets = viewBacklog.slice(0, remainingSlots)
 const targets = [...priorityTargets, ...viewTargets]
-const deferredViews = viewBacklog.length - targets.filter((ev) => needsViews(ev)).length
+const deferredPriority = priorityAll.length - priorityTargets.length
+const deferredViews = viewBacklog.length - viewTargets.length
 
+if (deferredPriority > 0) {
+  console.log(`ℹ️ 요약 대상 ${priorityAll.length}건 중 ${deferredPriority}건은 다음 회차로 미룸(상한 ${TARGET_MAX})`)
+}
 if (deferredViews > 0) {
   console.log(`ℹ️ 논조 백로그 ${viewBacklog.length}건 중 ${deferredViews}건은 다음 회차로 미룸`)
 }
