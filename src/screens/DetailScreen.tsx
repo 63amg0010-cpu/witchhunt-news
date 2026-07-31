@@ -18,10 +18,10 @@ function ViewPane({ view, onOpen }: { view: ViewTake; onOpen: (id: string) => vo
   return (
     <button className={`vs-pane vs-pane--${lean}`} onClick={() => onOpen(view.articleId)}>
       <div className={`vs-pane__tag vs-pane__tag--${lean}`}>
-        {LEAN_KO[lean]} 진영
+        {LEAN_KO[lean]} · {view.outlet}
       </div>
       <p className="vs-pane__take">{view.text}</p>
-      <span className={`vs-pane__more vs-pane__more--${lean}`}>근거 기사 보기 · {view.outlet} ›</span>
+      <span className={`vs-pane__more vs-pane__more--${lean}`}>근거 기사 보기 ›</span>
     </button>
   )
 }
@@ -40,16 +40,15 @@ function ComparePane({ article, onOpen }: { article: Article; onOpen: (id: strin
   )
 }
 
-// 그 사건을 실제로 보도한 매체 중 '가장 양극단' 두 시각을 고른다.
-// (진보가 없으면 중도 vs 보수처럼, 있는 시각 중 가장 벌어진 둘)
+// 그 사건을 실제로 보도한 진보·보수 매체의 대표기사만 고른다.
+// (중도 매체는 어느 쪽에도 포함하지 않으며, 한쪽이라도 없으면 비교하지 않는다.)
 function pickContrast(event: NewsEvent): { left?: Article; right?: Article } {
-  const order: Lean[] = ['prog', 'center', 'cons']
   const repByLean: Partial<Record<Lean, Article>> = {}
-  for (const a of event.articles) if (!repByLean[a.lean]) repByLean[a.lean] = a
-  const present = order.filter((l) => repByLean[l])
-  if (present.length === 0) return {}
-  if (present.length === 1) return { left: repByLean[present[0]] }
-  return { left: repByLean[present[0]], right: repByLean[present[present.length - 1]] }
+  for (const a of event.articles) {
+    if ((a.lean === 'prog' || a.lean === 'cons') && !repByLean[a.lean]) repByLean[a.lean] = a
+  }
+  if (!repByLean.prog || !repByLean.cons) return {}
+  return { left: repByLean.prog, right: repByLean.cons }
 }
 
 const T_STOP = new Set(['있다', '없다', '대한', '위해', '관련', '이번', '오늘', '지난', '종합', '속보', '단독', '기자', '뉴스', '대통령', '정부', '오전', '오후'])
@@ -134,7 +133,7 @@ export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
           <h2 className="compare__title">진영별로 이렇게 봅니다</h2>
           {event.views.issue
             ? <p className="compare__issue"><b>쟁점</b> {event.views.issue}</p>
-            : <p className="compare__sub">같은 사건을 두고 각 진영이 무엇을 주장하는지 정리했어요.</p>}
+            : <p className="compare__sub">진보·보수 매체가 이 사건에서 무엇을 앞세웠는지 정리했어요.</p>}
           <div className="compare__pair">
             <ViewPane view={event.views.left} onOpen={onOpenArticle} />
             <ViewPane view={event.views.right} onOpen={onOpenArticle} />
