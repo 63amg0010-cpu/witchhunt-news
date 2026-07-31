@@ -17,8 +17,17 @@ $logDir = Join-Path $proj 'logs'
 if (-not (Test-Path $logDir)) { New-Item -ItemType Directory -Path $logDir | Out-Null }
 $log = Join-Path $logDir ("pipeline-" + (Get-Date -Format 'yyyyMMdd') + ".log")
 function Log($m) { $line = (Get-Date -Format 'HH:mm:ss') + "  $m"; Write-Output $line; Add-Content -LiteralPath $log -Value $line -Encoding utf8 }
+function Warn-PreviousDeployFailure {
+  $marker = Join-Path $proj '_deploy_failed.json'
+  if (-not (Test-Path $marker)) { return }
+  $failedAt = $null
+  try { $failedAt = (Get-Content -LiteralPath $marker -Raw | ConvertFrom-Json).failedAt } catch { }
+  $when = if ($failedAt) { " (실패 시각: $failedAt)" } else { '' }
+  Log "🚨 이전 회차 배포 실패 상태 — 라이브가 낡았을 수 있음(vercel login 필요)$when"
+}
 
 Log "===== 파이프라인 시작 ====="
+Warn-PreviousDeployFailure
 
 # 1) 뉴스 수집 (AI 아님, 토큰 0)
 Log "[1/6] 뉴스 수집 build-feed"
@@ -84,4 +93,5 @@ if ($needIssue) {
 Log "[6/6] 배포 push-feed"
 & $node scripts/push-feed.mjs 2>&1 | ForEach-Object { Add-Content -LiteralPath $log -Value $_ -Encoding utf8 }
 
+Warn-PreviousDeployFailure
 Log "===== 파이프라인 끝 ====="
