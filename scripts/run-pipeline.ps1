@@ -72,7 +72,12 @@ Log "[5.5] 이슈 해설 대상 고르기 build-issues"
 $issueIn = Join-Path $proj '_issue_in.json'
 $needIssue = $false
 if (Test-Path $issueIn) {
-  try { $needIssue = ((Get-Content -LiteralPath $issueIn -Raw | ConvertFrom-Json) | Measure-Object).Count -gt 0 } catch { $needIssue = $false }
+  # ⚠️ PowerShell 5.1의 ConvertFrom-Json은 UTF-8 한글 파일을 깨뜨려 파싱에 실패한다(=0건 오판).
+  #    그래서 개수 세기는 node에 맡긴다. (이 버그로 이슈 해설이 일주일간 생성되지 않았음)
+  try {
+    $cnt = & $node -e "const a=JSON.parse(require('fs').readFileSync(process.argv[1],'utf8'));console.log(Array.isArray(a)?a.length:0)" $issueIn
+    $needIssue = ([int]$cnt) -gt 0
+  } catch { $needIssue = $false }
 }
 if ($needIssue) {
   Log "  새 이슈 있음 → codex로 해설 작성(gpt-5.5 high)"
