@@ -26,8 +26,46 @@ function Warn-PreviousDeployFailure {
   Log "🚨 이전 회차 배포 실패 상태 — 라이브가 낡았을 수 있음(vercel login 필요)$when"
 }
 
+# 개발용 노트북에서 고친 코드를 자동 반영하기 위한 단계다.
+# 동기화에 실패해도 기존 코드로 나머지 파이프라인을 계속 진행한다.
+# 이 파일(run-pipeline.ps1) 자체가 갱신된 경우에는 다음 회차부터 반영된다.
+function Sync-LatestCode {
+  Log "[0/6] 최신 코드 확인"
+  try {
+    $beforeOutput = & git rev-parse HEAD 2>&1
+    $beforeExitCode = $LASTEXITCODE
+    $beforeOutput | ForEach-Object { Add-Content -LiteralPath $log -Value $_ -Encoding utf8 }
+    $beforeHead = [string]($beforeOutput | Select-Object -Last 1)
+
+    & git pull --rebase --autostash origin master 2>&1 | ForEach-Object { Add-Content -LiteralPath $log -Value $_ -Encoding utf8 }
+    $pullExitCode = $LASTEXITCODE
+    if ($pullExitCode -ne 0) {
+      & git rebase --abort 2>&1 | ForEach-Object { Add-Content -LiteralPath $log -Value $_ -Encoding utf8 }
+      Log "  ⚠️ 최신 코드 동기화 실패(exit $pullExitCode) — 기존 코드로 계속 진행"
+      return
+    }
+
+    $afterOutput = & git rev-parse HEAD 2>&1
+    $afterExitCode = $LASTEXITCODE
+    $afterOutput | ForEach-Object { Add-Content -LiteralPath $log -Value $_ -Encoding utf8 }
+    $afterHead = [string]($afterOutput | Select-Object -Last 1)
+    if (($beforeExitCode -ne 0) -or ($afterExitCode -ne 0)) {
+      Log "  ⚠️ 커밋 확인 오류 — 기존 코드로 계속 진행"
+    } elseif ($beforeHead -eq $afterHead) {
+      Log "  이미 최신 상태"
+    } else {
+      Log "  최신 코드 반영: $beforeHead → $afterHead"
+    }
+  } catch {
+    Log "  ⚠️ 최신 코드 동기화 예외: $($_.Exception.Message) — 기존 코드로 계속 진행"
+  }
+}
+
 Log "===== 파이프라인 시작 ====="
 Warn-PreviousDeployFailure
+
+# 0) 최신 코드 받아오기
+Sync-LatestCode
 
 # 1) 뉴스 수집 (AI 아님, 토큰 0)
 Log "[1/6] 뉴스 수집 build-feed"
