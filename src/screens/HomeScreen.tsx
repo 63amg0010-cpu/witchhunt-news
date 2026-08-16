@@ -73,7 +73,9 @@ export default function HomeScreen({ events, usingSample, updatedAt, category, o
       )}
 
       {/* 오늘의 편향 브리핑 — 이 앱의 핵심(진영별 보도 비교) */}
-      <BiasBriefing events={events} onOpenBiasFeed={onOpenBiasFeed} />
+      {categoryList.length > 0 && (
+        <BiasBriefing events={categoryList} onOpenBiasFeed={onOpenBiasFeed} />
+      )}
 
       {/* 언론사 성향 분류표 바로가기 */}
       <button className="outlet-link" onClick={onOpenOutletBias}>
@@ -86,9 +88,10 @@ export default function HomeScreen({ events, usingSample, updatedAt, category, o
 
       {/* 대표 사건 큰 카드 + 나머지 작은 카드 */}
       {list.length === 0 ? (
-        <div className="placeholder-empty" style={{ height: '40vh' }}>
+        <div className="placeholder-empty placeholder-empty--news" style={{ height: '40vh' }}>
           <div className="placeholder-empty__icon"><IconNews size={40} /></div>
-          <div className="placeholder-empty__text">이 분류에는 표시할 사건이 없어요</div>
+          <div className="placeholder-empty__text">아직 이 분야 소식이 없습니다.</div>
+          <div className="placeholder-empty__subtext">새 뉴스가 들어오면 여기에 표시됩니다.</div>
         </div>
       ) : (
         <>

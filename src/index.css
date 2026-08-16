@@ -1040,6 +1040,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .placeholder-empty__icon { display: inline-flex; }
 .placeholder-empty__text { font-size: 15px; font-weight: 600; }
+.placeholder-empty--news { gap: 8px; }
+.placeholder-empty__subtext { font-size: 13px; color: var(--ink-faint); }
 .spinner {
   width: 28px;
   height: 28px;

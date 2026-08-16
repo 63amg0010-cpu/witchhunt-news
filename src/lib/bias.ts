@@ -41,6 +41,39 @@ export function displayLeanCounts(ev: NewsEvent): { prog: number; center: number
   return out
 }
 
+// 카드와 상세 화면에 표시하는 언론사 수·비율을 하나의 계산 결과로 맞춘다.
+export function displayBias(ev: NewsEvent): {
+  counts: { prog: number; center: number; cons: number }
+  total: number
+  pct: { prog: number; center: number; cons: number }
+} {
+  const counts = displayLeanCounts(ev)
+  const total = counts.prog + counts.center + counts.cons
+  const pct = { prog: 0, center: 0, cons: 0 }
+  if (total === 0) return { counts, total, pct }
+
+  const keys = ['prog', 'center', 'cons'] as const
+  const raw = { prog: 0, center: 0, cons: 0 }
+  for (const k of keys) {
+    if (counts[k] === 0) continue
+    raw[k] = (counts[k] / total) * 100
+    pct[k] = Math.floor(raw[k])
+  }
+
+  // 최대잔여법: 표본에 있는 진영만 대상으로 합계가 정확히 100이 되게 한다.
+  let remainder = 100 - (pct.prog + pct.center + pct.cons)
+  const order = keys
+    .filter((k) => counts[k] > 0)
+    .sort((a, b) => raw[b] - Math.floor(raw[b]) - (raw[a] - Math.floor(raw[a])))
+  for (const k of order) {
+    if (remainder <= 0) break
+    pct[k]++
+    remainder--
+  }
+
+  return { counts, total, pct }
+}
+
 // 사건에 붙일 편향 뱃지.
 //  - 'tilt'      : 한쪽 진영(진보/보수)에 60% 이상 쏠림 (강한 경고)
 //  - 'blindspot' : 한쪽 진영이 이 사건을 아예 안 다룸 (놓치기 쉬운 반대편 시각)

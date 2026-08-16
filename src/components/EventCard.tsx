@@ -1,7 +1,7 @@
 import type { NewsEvent } from '../types'
 import BiasBar from './BiasBar'
 import Thumbnail from './Thumbnail'
-import { biasBadge, displayLeanCounts } from '../lib/bias'
+import { biasBadge, displayBias } from '../lib/bias'
 import { IconAlert, IconEye } from './icons'
 
 interface Props {
@@ -25,7 +25,7 @@ function BiasTag({ event }: { event: NewsEvent }) {
 
 // 사건 카드 — 대표 사건은 큰 카드(사진+굵은 제목), 나머지는 작은 카드(오른쪽 작은 사진)
 export default function EventCard({ event, variant, onClick }: Props) {
-  const counts = displayLeanCounts(event)
+  const { counts, total, pct } = displayBias(event)
 
   if (variant === 'large') {
     return (
@@ -33,11 +33,11 @@ export default function EventCard({ event, variant, onClick }: Props) {
         <Thumbnail src={event.imageUrl} ogUrl={event.imageSourceUrl} className="thumb--large" />
         <div className="card-large__body">
           <div className="card-large__meta">
-            {event.category} · {event.outletCount}개 언론사 보도 · {event.timeAgo}
+            {event.category} · {total}개 언론사 보도 · {event.timeAgo}
           </div>
           <h2 className="card-large__title">{event.title}</h2>
           <BiasTag event={event} />
-          <BiasBar bias={event.bias} counts={counts} />
+          <BiasBar pct={pct} counts={counts} />
         </div>
       </button>
     )
@@ -48,14 +48,14 @@ export default function EventCard({ event, variant, onClick }: Props) {
       <div className="card-small__row">
         <div className="card-small__text">
           <div className="card-small__meta">
-            {event.category} · {event.outletCount}개 언론사 보도 · {event.timeAgo}
+            {event.category} · {total}개 언론사 보도 · {event.timeAgo}
           </div>
           <h3 className="card-small__title">{event.title}</h3>
           <BiasTag event={event} />
         </div>
         <Thumbnail src={event.imageUrl} ogUrl={event.imageSourceUrl} className="thumb--small" />
       </div>
-      <BiasBar bias={event.bias} counts={counts} />
+      <BiasBar pct={pct} counts={counts} />
     </button>
   )
 }

@@ -3,7 +3,7 @@ import LeanBadge from '../components/LeanBadge'
 import Thumbnail from '../components/Thumbnail'
 import SummaryBox from '../components/SummaryBox'
 import { splitSentences } from '../lib/text'
-import { displayLeanCounts, LEAN_KO } from '../lib/bias'
+import { displayBias, LEAN_KO } from '../lib/bias'
 import { IconEye } from '../components/icons'
 
 interface Props {
@@ -76,7 +76,7 @@ function titlesDiffer(a: string, b: string): boolean {
 
 // 사건 상세 화면
 export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
-  const counts = displayLeanCounts(event)
+  const { counts, total, pct } = displayBias(event)
   const { left, right } = pickContrast(event)
   // 좌·우 제목이 충분히 다를 때만 '시각 비교'를 보여준다 (거의 같은 제목 두 개는 비교가 아님)
   const showContrast = !!(left && right && titlesDiffer(left.title, right.title))
@@ -97,7 +97,7 @@ export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
       {/* 제목 + 보도 언론사 수 · 시간 */}
       <h1 className="detail-title">{event.title}</h1>
       <div className="detail-meta">
-        {event.outletCount}개 언론사 보도 · {event.timeAgo}
+        {total}개 언론사 보도 · {event.timeAgo}
       </div>
 
       {/* 큰 성향 분포 막대 (막대 안에 퍼센트, 아래에 언론사 수) */}
@@ -109,14 +109,14 @@ export default function DetailScreen({ event, onBack, onOpenArticle }: Props) {
           </span>
         </div>
         <div className="biasbar-large__track">
-          <div className="biasbar-large__seg biasbar-large__seg--prog" style={{ width: `${event.bias.prog}%` }}>
-            {event.bias.prog}%
+          <div className="biasbar-large__seg biasbar-large__seg--prog" style={{ width: `${pct.prog}%` }}>
+            {pct.prog}%
           </div>
-          <div className="biasbar-large__seg biasbar-large__seg--center" style={{ width: `${event.bias.center}%` }}>
-            {event.bias.center}%
+          <div className="biasbar-large__seg biasbar-large__seg--center" style={{ width: `${pct.center}%` }}>
+            {pct.center}%
           </div>
-          <div className="biasbar-large__seg biasbar-large__seg--cons" style={{ width: `${event.bias.cons}%` }}>
-            {event.bias.cons}%
+          <div className="biasbar-large__seg biasbar-large__seg--cons" style={{ width: `${pct.cons}%` }}>
+            {pct.cons}%
           </div>
         </div>
         <div className="biasbar-large__legend">

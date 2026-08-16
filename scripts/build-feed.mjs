@@ -14,10 +14,11 @@ import { sortForDisplay } from './lib-order.mjs'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
 const NOW = new Date().toISOString()
-// 한 사건이 피드에 머무는 최대 기간(처음 등장 시점 기준).
-// ⚠️ 이게 길면, 같은 사건에 새 기사가 계속 붙어 시간표시만 갱신되면서
-//    "어제도 본 뉴스가 오늘도 새 것처럼" 계속 자리를 차지한다. → 1.5일로 짧게 유지.
-const KEEP_DAYS = 1.5
+// 한 사건이 피드에 머무는 최대 기간(처음 등장 시점·기사 발행 시점 기준).
+// ⚠️ 기본 분야는 길게 두면 같은 사건이 계속 자리를 차지하므로 1.5일로 짧게 유지한다.
+// 뉴스 빈도가 낮은 니치 분야는 1.5일이면 탭이 통째로 빌 수 있어 더 오래 유지한다.
+const DEFAULT_MAX_AGE_DAYS = 1.5
+const CAT_MAX_AGE_DAYS = { 주식: 3, 크립토: 3, 예측시장: 5 }
 
 // --- .env에서 네이버 키 읽기 ---
 function loadEnv() {
@@ -410,10 +411,12 @@ function recomputeEvent(e) {
   e.frameCons = cons ? cons.title : '보수 성향으로 분류된 기사가 적습니다.'
 }
 
-// 너무 흔해서 단독으로 매칭하면 엉뚱한 사건에 붙는 단어들 (이재명·정부 두 개만 겹치는 식)
+// 시기·기간 표현은 사건이 언제 일어났는지만 가리켜 사건을 구분하지 못하므로 날씨 기사가 사고 기사에 붙는 식의 오매칭을 일으킨다.
 const MATCH_STOP = new Set([
   '이재명', '대통령', '정부', '국민', '한국', '우리', '오늘', '당원',
   '의혹', '간부', '위원장', '조사', '논란', '만에', '이후', '당일', '직후',
+  '연휴', '광복절', '명절', '설날', '추석', '주말', '휴일', '오전', '오후',
+  '새벽', '저녁', '올해', '내년', '지난해', '상반기', '하반기', '전국',
 ])
 
 // 한국어 조사 제거(간단 어간) — "위원장은/위원장에"→"위원장", "선관위가"→"선관위"로 맞춤
@@ -444,27 +447,41 @@ function enrichWithProg(events, progArticles) {
   }
   // 사건은 대표 제목의 '주절'(…앞)만 사용 — 곁가지 문구로 엉뚱한 기사가 붙는 걸 막음
   const evToks = events.map((e) => ({ e, toks: coreTokens(e.title) }))
+  const tokenDocFreq = new Map()
+  for (const { toks } of evToks) {
+    for (const token of toks) tokenDocFreq.set(token, (tokenDocFreq.get(token) || 0) + 1)
+  }
   let added = 0
+  let rareAdded = 0
   for (const a of progArticles) {
     // 진보 기사는 제목 전체를 사용 (재현율 확보)
     const at = [...stemSet(tokenize(a.title))].filter((t) => !MATCH_STOP.has(t))
     if (at.length < 2) continue
     let best = null
     let bestShared = 0
+    let bestRareRescued = false
     for (const { e, toks } of evToks) {
-      if (toks.length < 2) continue
+      if (toks.size < 2) continue
       let s = 0
+      let hasRareShared = false
       // 어미·부분 단어도 같은 단어로 인정 (구속영장↔영장, 재선거↔재선거론 등)
       for (const x of at) {
         for (const y of toks) {
-          if (x === y || (x.length >= 3 && y.includes(x)) || (y.length >= 3 && x.includes(y))) { s++; break }
+          if (x === y || (x.length >= 3 && y.includes(x)) || (y.length >= 3 && x.includes(y))) {
+            s++
+            if (tokenDocFreq.get(y) === 1) hasRareShared = true
+            break
+          }
         }
       }
-      // ⚠️ 단어 2개 우연히 겹치는 것만으로 엉뚱한 기사가 붙던 문제(예: '사망' 같은 흔한 단어) 방지.
-      //   3개 이상 겹치면 확실한 같은 사건으로 인정, 2개만 겹치면 '짧은 쪽 제목의 절반 이상'일 때만.
-      const ratio = s / Math.min(at.length, toks.length)
-      const good = s >= 3 || (s >= 2 && ratio >= 0.5)
-      if (good && s > bestShared) { bestShared = s; best = e }
+      // ⚠️ 3개 이상 겹치거나, 2개가 겹치면서 현재 사건 목록의 희소 단어가 포함된 경우만 같은 사건으로 인정한다.
+      //   실측에서 비율 조건은 신규 10건 중 2건이 오매칭이었지만, 희소 단어 조건은 6건 중 오매칭이 없어 정확도를 우선한다.
+      const good = s >= 3 || (s >= 2 && hasRareShared)
+      if (good && s > bestShared) {
+        bestShared = s
+        best = e
+        bestRareRescued = s === 2 && hasRareShared
+      }
     }
     // 진보는 비교를 위해 자리 제한을 넉넉히(12) — 큰 사건이 이미 8개로 꽉 차도 진보가 들어가게
     if (!best || best.articles.length >= 12) continue
@@ -483,9 +500,10 @@ function enrichWithProg(events, progArticles) {
       if (!Number.isNaN(pt)) best.publishedAt = new Date(pt).toISOString()
     }
     added++
+    if (bestRareRescued) rareAdded++
   }
   for (const { e } of evToks) recomputeEvent(e)
-  return added
+  return { added, rareAdded }
 }
 
 function buildEvents(topic, cands) {
@@ -639,16 +657,14 @@ async function main() {
   }
 
   // 새 사건 + 기존 사건 합치기 (같은 사건은 하나로, 요약·배경은 보존)
-  const cutoff = Date.now() - KEEP_DAYS * 24 * 60 * 60 * 1000
-  // 기사 자체가 너무 오래된 사건은 제외 — 뉴스 적은 분야(크립토·예측시장)를 오래된 기사로
-  // 억지로 채우면서 '13일 전 뉴스'가 뜨던 문제 방지. (publishedAt 기준 5일)
-  const DISPLAY_MAX_AGE = 1.5 * 24 * 60 * 60 * 1000
+  const maxAgeMs = (e) => (CAT_MAX_AGE_DAYS[e.category] ?? DEFAULT_MAX_AGE_DAYS) * 24 * 60 * 60 * 1000
+  // 기사 자체가 분야별 표시 기간보다 오래된 사건은 제외한다.
   const tooOld = (e) => {
     const p = e.publishedAt ? Date.parse(e.publishedAt) : NaN
-    return !Number.isNaN(p) && Date.now() - p > DISPLAY_MAX_AGE
+    return !Number.isNaN(p) && Date.now() - p > maxAgeMs(e)
   }
   const merged = mergeEvents([...all, ...oldEvents])
-    .filter((e) => !e.firstSeen || Date.parse(e.firstSeen) >= cutoff) // 오래 머문 사건 정리
+    .filter((e) => !e.firstSeen || Date.parse(e.firstSeen) >= Date.now() - maxAgeMs(e)) // 오래 머문 사건 정리
     .filter((e) => !tooOld(e)) // 기사가 너무 오래된 건 제외
     .sort((a, b) => (b.outletCount || 0) - (a.outletCount || 0))
 
@@ -696,8 +712,8 @@ async function main() {
   }
   const events = picked
   // 진보 RSS 기사를 최종 사건들에 붙임 (같은 사건의 진보 시각 보강)
-  const progAdded = enrichWithProg(events, progArticles)
-  console.log(`진보 RSS ${progArticles.length}건 수집 → 사건에 ${progAdded}건 보강`)
+  const { added: progAdded, rareAdded: progRareAdded } = enrichWithProg(events, progArticles)
+  console.log(`진보 RSS ${progArticles.length}건 수집 → 사건에 ${progAdded}건 보강 (희소 단어 조건으로 ${progRareAdded}건 추가)`)
   // 사건 번호(id) 중복 방지: 어제·오늘 사건이 같은 번호를 달고 둘 다 남는 경우를 막는다.
   // (중복이면 -b, -c … 를 붙여 고유하게. 앱에서 엉뚱한 사건이 열리거나 요약이 잘못 적용되는 걸 방지)
   const usedIds = new Set()
