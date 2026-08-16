@@ -1,9 +1,13 @@
 name: Vercel Production Deploy
 
 on:
-  push:
-    branches:
-      - master
+  # ⚠️ 2026-08-17: VERCEL_ORG_ID / VERCEL_PROJECT_ID 값이 현재 프로젝트와 맞지 않아
+  #    ("Could not retrieve Project Settings") 매 푸시마다 실패 메일이 쌓이던 상태였다.
+  #    자동 실행(push)을 잠시 끄고 수동 실행만 남긴다. 배포는 기존 노트북의 push-feed.mjs가 계속 담당.
+  #    → 두 비밀값을 올바른 값으로 고친 뒤 아래 push 블록의 주석을 풀면 자동 배포가 되살아난다.
+  # push:
+  #   branches:
+  #     - master
   workflow_dispatch:
 
 jobs:
