@@ -126,6 +126,7 @@ function recordDeploymentResult(expectedGeneratedAt, verification, deployOutput)
 //   codex가 시간 안에 못 끝낸 회차에서 '네이버 원문 조각'이 요약인 채로 라이브에 나가던 문제를 막는다.
 //   (그런 사건은 feed에 그대로 남아 다음 회차에 다시 요약을 시도한다. 화면에만 안 보일 뿐이다.)
 const FLOOR = 30 // 이 밑으로 줄어들면 걸러내지 않는다(화면이 텅 비는 것 방지)
+const MIN_PUBLISH_EVENTS = 20
 function hideUnsummarized() {
   const path = 'public/feed.json'
   const feed = JSON.parse(readFileSync(path, 'utf8'))
@@ -144,6 +145,28 @@ function hideUnsummarized() {
   console.log(`🛡️ 미요약 ${hidden}건은 이번 배포에서 제외(다음 회차에 재시도) — ${ready.length}건 배포`)
 }
 hideUnsummarized()
+
+// 2026-08-14에 0건 피드가 배포된 사고를 막는 최종 안전장치다.
+// hideUnsummarized()는 사건이 0건이면 hidden도 0이라 FLOOR 검사를 거치지 않기 때문에 최종 배포용 개수로 막는다.
+const publishFeed = JSON.parse(readFileSync('public/feed.json', 'utf8'))
+const publishEventCount = Array.isArray(publishFeed.events) ? publishFeed.events.length : 0
+if (publishEventCount < MIN_PUBLISH_EVENTS) {
+  if (existsSync('_feed_pending.json')) {
+    writeFileSync('public/feed.json', readFileSync('_feed_pending.json', 'utf8'), 'utf8')
+    unlinkSync('_feed_pending.json')
+  }
+  const reason = `사건 ${publishEventCount}건뿐이라 배포 중단(최소 ${MIN_PUBLISH_EVENTS}건 필요)`
+  writeFileSync(DEPLOY_FAILURE_MARKER, JSON.stringify({
+    failedAt: new Date().toISOString(),
+    reason,
+    eventCount: publishEventCount,
+  }, null, 2), 'utf8')
+  console.error('\n============================================================')
+  console.error(`🚨 ${reason}`)
+  console.error('   라이브는 직전 정상 상태를 유지하며, 다음 회차에 자동으로 복구됩니다.')
+  console.error('============================================================\n')
+  process.exit(1)
+}
 
 // 미요약 사건을 잠시 숨긴 '배포용 feed'의 시각을, 복원하기 전에 반드시 기억한다.
 let expectedGeneratedAt = null
