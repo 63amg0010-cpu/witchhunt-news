@@ -1,7 +1,7 @@
 ﻿# =====================================================================
 # WitchHunt 뉴스 자동 갱신 — 윈도우 작업 스케줄러가 3시간마다 실행
 #   Codex 앱에 의존하지 않고, 노트북만 켜져 있으면 돈다.
-#   순서: 수집 → 본문·논조자료 → AI요약/논조(codex gpt-5.5 high) → 합치기 → 배포
+#   순서: 수집 → 본문·논조자료 → AI요약/논조(codex gpt-6.1-sol medium) → 합치기 → 배포
 #   로그: logs/pipeline-YYYYMMDD.log 에 남는다.
 # =====================================================================
 $ErrorActionPreference = 'Continue'
@@ -78,16 +78,16 @@ Log "[2/6] 본문·논조자료 dump-articles"
 # 3) (제거됨 2026-07-27) 네티즌 반응 — 정해진 몇 문구만 반복돼 정보값이 없어 기능 삭제.
 #    scripts/fetch-reactions.mjs 파일은 되살릴 수 있게 보존만 해둠.
 
-# 4) AI 요약·논조 (codex gpt-5.5 high) — 여기만 토큰을 쓴다
+# 4) AI 요약·논조 (codex gpt-6.1-sol medium) — 여기만 토큰을 쓴다
 #    오래된 요약이 섞이지 않게 먼저 지운다(병합 방지). codex가 _summaries.json을 새로 만든다.
 #    ⚠️ codex는 작업을 다 마쳐도 프로세스가 안 죽고 매달리는 버릇이 있다.
 #    → _summaries.json을 다 쓴 뒤이므로, 시간(최대 20분) 주고 안 끝나면 트리째 죽이고(좀비 방지) 넘어간다.
-Log "[4/6] AI 요약·논조 codex(gpt-5.5 high)"
+Log "[4/6] AI 요약·논조 codex(gpt-6.1-sol medium)"
 $sumFile = Join-Path $proj '_summaries.json'
 Remove-Item -LiteralPath $sumFile -ErrorAction SilentlyContinue
 $codexLog = Join-Path $logDir 'codex-last.log'
 # cmd 경유로 프롬프트를 stdin에 흘려넣고 출력을 파일로 (트리 종료를 위해 PID 확보)
-$cmdLine = "type `"$proj\scripts\summarize-prompt.md`" | `"$codex`" exec -C `"$proj`" -m gpt-5.5 -c model_reasoning_effort=high > `"$codexLog`" 2>&1"
+$cmdLine = "type `"$proj\scripts\summarize-prompt.md`" | `"$codex`" exec -C `"$proj`" -m gpt-6.1-sol -c model_reasoning_effort=medium > `"$codexLog`" 2>&1"
 $proc = Start-Process -FilePath 'cmd.exe' -ArgumentList '/c', $cmdLine -PassThru -WindowStyle Hidden
 if (-not $proc.WaitForExit(20 * 60 * 1000)) {
   Log "  codex 20분 초과 — 트리 종료(요약은 이미 파일에 있음)"
@@ -118,10 +118,10 @@ if (Test-Path $issueIn) {
   } catch { $needIssue = $false }
 }
 if ($needIssue) {
-  Log "  새 이슈 있음 → codex로 해설 작성(gpt-5.5 high)"
+  Log "  새 이슈 있음 → codex로 해설 작성(gpt-6.1-sol medium)"
   Remove-Item -LiteralPath (Join-Path $proj '_issue_out.json') -ErrorAction SilentlyContinue
   $issueLog = Join-Path $logDir 'codex-issue.log'
-  $cmd2 = "type `"$proj\scripts\issue-prompt.md`" | `"$codex`" exec -C `"$proj`" -m gpt-5.5 -c model_reasoning_effort=high > `"$issueLog`" 2>&1"
+  $cmd2 = "type `"$proj\scripts\issue-prompt.md`" | `"$codex`" exec -C `"$proj`" -m gpt-6.1-sol -c model_reasoning_effort=medium > `"$issueLog`" 2>&1"
   $p2 = Start-Process -FilePath 'cmd.exe' -ArgumentList '/c', $cmd2 -PassThru -WindowStyle Hidden
   if (-not $p2.WaitForExit(12 * 60 * 1000)) {
     Log "  codex(이슈) 12분 초과 — 트리 종료"
